@@ -8,7 +8,7 @@
 						<div class="header-row">
 							<div class="header-column justify-content-start">
 								<div class="header-logo px-3">
-									<a href="index.html">
+									<a href="/Login">
 										<img src="img/logo_ameg.png" width="210" height="100" alt="" />
 									</a>
 								</div>
@@ -19,22 +19,22 @@
 										<nav class="collapse">
 											<ul class="nav flex-column flex-lg-row" id="mainNav">
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="index.html">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Login">
 														INICIO
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="convocatoria_ameg.html">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Convocatoria">
 														CONVOCATORIA
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="info_ameg.html">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Info">
 														INSTRUCCIONES PARA AUTORES
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="registro_ameg.html">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Registro">
 														REGISTROS DE TRABAJO
 													</a>
 												</li>

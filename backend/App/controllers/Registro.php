@@ -6,7 +6,7 @@ use \Core\View;
 use \Core\MasterDom;
 use \App\models\Login AS LoginDao;
 
-class Login{
+class Registro{
     private $_contenedor;
 
     public function index() {
