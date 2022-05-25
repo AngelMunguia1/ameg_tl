@@ -76,14 +76,16 @@
 
 			<div role="main" class="main">
 
-				<section class="section bg-img-ameg">
-					<h3 class="text-center">Los trabajos que se presentarán durante el congreso se dividen en 4 categorías principales</h3>
+				<section class="section" style="background-image: url('img/poster_ameg_h.png'); background-size: cover;">
+					<h2 class="font-weight-bold text-center">
+						Los trabajos que se presentarán durante el congreso se dividen en 4 categorías principales
+					</h2>
 					<br><br>
 					<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
 						<div class="row align-items-center">
 							<div class="col-lg-3">
 								<a href="#">
-									<div class="ameg-shadow-box-btn text-center">
+									<div class="ameg-shadow-box-btn bg-white text-center">
 										<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajos de ingreso</h2>
 										<img width="70" src="vendor/iconos/mesa1.png"/>
 									</div>
@@ -91,7 +93,7 @@
 							</div>
 							<div class="col-lg-3">
 								<a href="#">
-									<div class="ameg-shadow-box-btn icon-box-info text-center">
+									<div class="ameg-shadow-box-btn bg-white icon-box-info text-center">
 										<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajo libre oral</h2>
 										<img width="70" src="vendor/iconos/mesa2.png"/>
 									</div>
@@ -99,7 +101,7 @@
 							</div>
 							<div class="col-lg-3">
 								<a href="#">
-									<div class="ameg-shadow-box-btn icon-box-info text-center">
+									<div class="ameg-shadow-box-btn bg-white icon-box-info text-center">
 										<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajos en cartel</h2>
 										<img width="70" src="vendor/iconos/mesa3.png"/>
 									</div>
@@ -107,7 +109,7 @@
 							</div>
 							<div class="col-lg-3">
 								<a href="#">
-									<div class="ameg-shadow-box-btn text-center">
+									<div class="ameg-shadow-box-btn bg-white text-center">
 										<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajos en video</h2>
 										<img width="70" src="vendor/iconos/mesa4.png"/>
 									</div>

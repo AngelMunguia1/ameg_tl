@@ -6801,6 +6801,13 @@ a.close.disabled {
 	padding: 20px;
 }
 
+.bg-img-ameg {
+	background-image: url('img/poster_ameg_h.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
@@ -6879,13 +6886,7 @@ button.bg-dark:focus {
 
 .bg-white {
 	background-color: #fff !important;
-}
-
-.bg-img-ameg {
-	background-image: url('/backend/public/img/poster_ameg_h.png');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
+	opacity: 97%;
 }
 
 .bg-transparent {
