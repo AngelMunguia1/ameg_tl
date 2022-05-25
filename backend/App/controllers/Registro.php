@@ -4,7 +4,7 @@ defined("APPPATH") OR die("Access denied");
 
 use \Core\View;
 use \Core\MasterDom;
-use \App\models\Login AS LoginDao;
+use \App\models\Principal AS PrincipalDao;
 
 class Registro{
     private $_contenedor;
@@ -175,14 +175,14 @@ html;
     }
 
     public function isUserValidate(){
-        echo (count(LoginDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
+        echo (count(PrincipalDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
     }
 
     public function verificarUsuario(){
         $usuario = new \stdClass();
         $usuario->_usuario = MasterDom::getData("usuario");
         $usuario->_password = MD5(MasterDom::getData("password"));
-        $user = LoginDao::getById($usuario);
+        $user = PrincipalDao::getById($usuario);
         if (count($user)>=1) {
             $user['nombre'] = utf8_encode($user['nombre']);
             echo json_encode($user);
@@ -192,7 +192,7 @@ html;
     public function crearSession(){
         $usuario = new \stdClass();
         $usuario->_usuario = MasterDom::getData("usuario");
-        $user = LoginDao::getById($usuario);
+        $user = PrincipalDao::getById($usuario);
         session_start();
         $_SESSION['usuario'] = $user['usuario'];
         $_SESSION['nombre'] = $user['nombre'];

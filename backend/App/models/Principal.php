@@ -5,7 +5,7 @@ defined("APPPATH") OR die("Access denied");
 use \Core\Database;
 use \App\interfaces\Crud;
 
-class Login{
+class Principal{
 
     public static function getById($usuario){
         $mysqli = Database::getInstance(true);

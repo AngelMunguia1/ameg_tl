@@ -8,7 +8,7 @@
 						<div class="header-row">
 							<div class="header-column justify-content-start">
 								<div class="header-logo px-3">
-									<a href="/Login">
+									<a href="/Principal">
 										<img src="img/logo_ameg.png" width="210" height="100" alt="" />
 									</a>
 								</div>
@@ -19,7 +19,7 @@
 										<nav class="collapse">
 											<ul class="nav flex-column flex-lg-row" id="mainNav">
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Login">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Principal">
 														INICIO
 													</a>
 												</li>
@@ -44,7 +44,7 @@
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega dropdown-mega-style-2">
-													<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="#">
+													<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/IniciaSesion">
 														<i class="fa fa-user"></i>
 														&nbsp;
 														LOGIN

@@ -107,7 +107,7 @@
 			<section id="" class="bg-dark-4 text-left">
 				<div class="text-left">
 					<div class="px-lg-3 pb-3 mb-4 text-left">
-						&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="text-center text-white">REGISTRO</h1>
+						&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="text-center text-white">INICIO DE SESIÓN</h1>
 					</div>
 				</section>
 
@@ -195,18 +195,7 @@
 											
 											<div class="col-md-7 ameg-shadow-box-tre ">
 												<div class="col-md-12">
-													<div class="row">
-														<div class="col-md-6">
-															<a href="#">
-																<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">Registro para trabajos de ingreso</h2>
-															</a>
-														</div>
-														<div class="col-md-6">
-															<a href="#">
-																<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">Registro para trabajos libres y en video</h2>
-															</a>
-														</div>
-													</div>
+													<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Ingresa tus datos para iniciar sesión</h2>
 												</div>
 												<div class="col-md-12">
 													<div class="row">
