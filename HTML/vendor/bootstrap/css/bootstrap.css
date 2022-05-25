@@ -6756,7 +6756,13 @@ a.close.disabled {
 
 .ameg-shadow-box{
   	padding: 65px;
- 	box-shadow: 5px 5px 5px 8px #E2EDFF;
+ 	box-shadow: 1px 1px 1px 2px #E2EDFF;
+}
+
+.ameg-shadow-box-ins{
+	padding: 65px;
+   box-shadow: 1px 1px 1px 2px #E2EDFF;
+   background-color:#212529;
 }
 
 .ameg-shadow-box-two{
