@@ -3426,7 +3426,7 @@ input[type="button"].btn-block {
 
 /* color letras de AMEG */
 .text-ameg{
-	color:#70C7D2;
+	color:#33ADC9;
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
@@ -6756,13 +6756,19 @@ a.close.disabled {
 }
 
 .ameg-shadow-box-two{
-	padding: 75px;
-   box-shadow: 5px 5px 5px 8px #E2EDFF;
+	padding: 15px;
+    box-shadow: 1px 1px 1px 3px #E2EDFF;
 }
 
 .ameg-shadow-box-tre{
-	padding: 15px;
+   padding: 15px;
    box-shadow: 5px 5px 5px 8px #E2EDFF;
+}
+
+.bg-ameg{
+	background-color: #d9edf6;
+	color: #FFFFFF;
+	padding: 20px;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
