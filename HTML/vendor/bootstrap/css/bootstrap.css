@@ -61,10 +61,6 @@ body {
 	color: #212529;
 	text-align: left;
 	background-color: #fff;
-	background-image: url('/HTML/img/bg-ameg.jpeg');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -6996,6 +6992,10 @@ button.bg-dark:focus {
 .rounded-circle {
 	border-radius: 50% !important;
 }
+
+ol.normal {
+	list-style-type: circle;
+  }
 
 .rounded-pill {
 	border-radius: 50rem !important;
