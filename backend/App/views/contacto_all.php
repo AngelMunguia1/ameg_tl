@@ -114,7 +114,7 @@
 														<b class="font-weight-bold text-color-dblue">
 															Tel. 5523-5204
 														</b>  Contacto: 
-														<a href="#" class="font-weight-bold text-color-aqua">
+														<a href="mailto: asociados@amegendoscopia.org.mx" class="font-weight-bold text-color-aqua">
 															asociados@amegendoscopia.org.mx
 														</a>
 													</h2>
