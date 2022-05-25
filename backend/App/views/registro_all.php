@@ -107,7 +107,7 @@
 			<section id="" class="bg-dark-4 text-left">
 				<div class="text-left">
 					<div class="px-lg-3 pb-3 mb-4 text-left">
-						&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="text-center text-white">REGISTRO</h1>
+						&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold  text-center text-white">REGISTRO</h1>
 					</div>
 				</section>
 

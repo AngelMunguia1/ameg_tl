@@ -58,6 +58,12 @@ class IniciaSesion{
 
 		<!-- Head Libs -->
 		<script src="/vendor/modernizr/modernizr.min.js"></script>
+
+        <!--     CONGRESO LIBRERIAS     -->
+
+
+        <!-- CSS Files -->
+        <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
         
 html;
         $extraFooter =<<<html

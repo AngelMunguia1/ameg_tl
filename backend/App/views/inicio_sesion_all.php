@@ -43,8 +43,6 @@
 														<i class="fa fa-user"></i>
 														&nbsp;
 														INICIA SESIÓN
-														&nbsp;
-														<i class="fa-solid fa-angle-down"></i>
 													</a>
 												</li>
 												<li class="dropdown">
@@ -107,7 +105,7 @@
 			<section id="" class="bg-dark-4 text-left">
 				<div class="text-left">
 					<div class="px-lg-3 pb-3 mb-4 text-left">
-						&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="text-center text-white">INICIO DE SESIÓN</h1>
+						&nbsp;&nbsp;&nbsp;&nbsp;<h2 class="text-center text-white">INICIO DE SESIÓN</h2>
 					</div>
 				</section>
 
@@ -192,90 +190,32 @@
 												</div>	
 											</div>
 											
-											
 											<div class="col-md-7 ameg-shadow-box-tre ">
 												<div class="col-md-12">
-													<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Ingresa tus datos para iniciar sesión</h2>
+													<h3 class="font-weight-bold text-center text-color-dark text-4 mb-3">Ingresa tus datos para iniciar sesión</h3>
 												</div>
 												<div class="col-md-12">
-													<div class="row">
-														<div class="col-md-3">
-															<br>
-															<p>Datos de acceso a la plataforma OBLIGATORIO*</p>
-															<br><br><br><br>
-															<p>Datos personales OBLIGATORIO*</p>
+													<div class="card card-plain mt-7">
+														<div class="card-header pb-0 text-start">
+															<h5 class="font-weight-bolder text-info text-dark text-center">
+																Asociación Mexicana de Endoscopia Gastrointestinal y Colegio de Profesionistas A. C.
+															</h5>
+															<div id="counter" class="group text-center mt-4">
+															</div>
+															<p class="mb-0 mt-5">Introduzca el correo electrónico con el cual usted fue registrado para poder iniciar sesión</p>
 														</div>
-														<div class="col-md-9">
-														<form class="form-horizontal" method="post">
-															<fieldset>
-																<legend class="text-center header"></legend>
-										
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="fname" name="name" type="text" placeholder="Email" class="form-control ameg-shadow-box-two">
-																	</div>
+														<!-- Button trigger modal -->                                
+														<div class="card-body">
+															<form role="form" class="text-start" id="login" action="/Login/crearSession" method="POST" class="form-horizontal">
+																<label style="font-weight:bold; font-size: 15px">Correo electrónico</label>
+																<div class="mb-5">
+																	<input type="email" name="usuario" id="usuario" class="form-control" placeholder="usuario@grupolahe.com" aria-label="Email">
 																</div>
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="lname" name="name" type="text" placeholder="Contraseña" class="form-control ameg-shadow-box-two">
-																	</div>
+
+																<div class="text-center">
+																	<button  type="button" id="btnEntrar" class="btn bg-gradient-secondary w-100 mt-1 mb-0"><b style="color: #FFFFFF">ENTRAR</b></button>
 																</div>
-																<br><br>
-										
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="email" name="email" type="text" placeholder="Nombre" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-										
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="phone" name="phone" type="text" placeholder="Apellido paterno" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="phone" name="phone" type="text" placeholder="Apellido materno" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="phone" name="phone" type="text" placeholder="Lugar de nacimiento" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="phone" name="phone" type="text" placeholder="Fecha de nacimiento" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="phone" name="phone" type="text" placeholder="edad" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="phone" name="phone" type="text" placeholder="sexo" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-										
-										
-																<div class="form-group">
-																	<div class="col-md-12 text-center">
-																		<button type="submit" class="btn btn-primary btn-lg">Submit</button>
-																	</div>
-																</div>
-															</fieldset>
-														</form>
+															</form>
 														</div>
 													</div>
 												</div>
