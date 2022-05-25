@@ -113,6 +113,16 @@ ol ul,
 ul ol {
 	margin-bottom: 0;
 }
+.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+}
 
 dt {
 	font-weight: 700;
@@ -6735,6 +6745,11 @@ a.close.disabled {
 	background-color: #007bff !important;
 }
 
+.ameg-bg{
+	padding: 10px;
+	background-color: #D9EDF6;
+}
+
 .ameg-shadow-box{
   	padding: 65px;
  	box-shadow: 5px 5px 5px 8px #E2EDFF;
@@ -6742,6 +6757,11 @@ a.close.disabled {
 
 .ameg-shadow-box-two{
 	padding: 75px;
+   box-shadow: 5px 5px 5px 8px #E2EDFF;
+}
+
+.ameg-shadow-box-tre{
+	padding: 15px;
    box-shadow: 5px 5px 5px 8px #E2EDFF;
 }
 
