@@ -10082,6 +10082,22 @@ ol.normal {
 .text-center {
 	text-align: center !important;
 }
+.text-color-dblue{
+	color: #2f5496;
+}
+.text-color-blue{
+	color: #4473c4;
+}
+.text-color-pink{
+	color: #b310b6;
+}
+.text-color-purple{
+	color: #7030a0;
+}
+.text-color-aqua{
+	color: #58cee8;
+}
+
 
 @media (min-width: 576px) {
 	.text-sm-left {
