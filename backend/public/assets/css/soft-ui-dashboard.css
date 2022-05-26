@@ -4473,7 +4473,6 @@ fieldset:disabled .btn {
     right: 0;
     left: auto;
   }
-}
 
 .dropup .dropdown-menu[data-bs-popper] {
   top: auto;

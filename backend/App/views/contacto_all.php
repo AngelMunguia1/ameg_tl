@@ -110,20 +110,16 @@
 									<div class="ameg-shadow-box-tre container text-center">
 										<div class="row">
 											<div class="col">
-													<h2 class="font-weight-bold text-center" style="margin: 55px;">Informes: 
+													<h2 class="font-weight-bold text-center" style="margin: 35px;">Informes: 
 														<b class="font-weight-bold text-color-dblue">
 															Tel. 5523-5204
-														</b>  Contacto: 
+														</b>
+													</h2>
+													<h2> Contacto:
 														<a href="mailto: asociados@amegendoscopia.org.mx" class="font-weight-bold text-color-aqua">
 															asociados@amegendoscopia.org.mx
 														</a>
 													</h2>
-													<h4 class="font-weight-bold text-center" style="margin: 55px;">
-														<a href="#" class="font-weight-bold text-color-purple" data-toggle="modal" data-target="#doc_programa">
-															(link) CONSULTE EL REGLAMENTO DE ADMISION Y DE EVALUACIÓN DE TRABAJOS
-														</a>
-													</h4>
-										
 											</div>
 										</div>
 										<!-- <span class="top-sub-title text-color-light opacity-6">MULTI PURPOSE CONCEPTS</span> -->

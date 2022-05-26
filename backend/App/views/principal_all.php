@@ -97,6 +97,12 @@
 
 			<div role="main" class="main">
 
+				<section class="section bg-light-5">
+					<img src="img/poster_ameg_h_1.png" 
+					style="background-size: auto 100%; background-repeat: no-repeat; 
+					max-width: 100%; background-position: center;">
+				</section>
+				<br>
 				<section class="section" style="background-image: url('img/bg-ameg.jpeg'); background-size: cover;">
 					<h2 class="font-weight-bold text-center">
 						Los trabajos que se presentarán durante el congreso se dividen en 4 categorías principales

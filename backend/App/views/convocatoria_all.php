@@ -123,10 +123,10 @@
 												<h5 class="font-weight-bold text-center text-color-pink">CATEGORÍAS</h5>
 												<br>
 												<br>
-												<h5 class="font-weight-bold text-center text-color-purple">TRABAJOS DE INGRESO</h5>
-												<h5 class="font-weight-bold text-center text-color-blue">TRABAJO LIBRE ORAL</h5>
-												<h5 class="font-weight-bold text-center text-color-purple">TRABAJO EN VIDEO</h5>
-												<h5 class="font-weight-bold text-center text-color-blue">TRABAJO EN CARTEL</h5>
+												<h5 class="font-weight-bold ameg-shadow-box-cua align-items-center text-center text-color-purple">TRABAJOS DE INGRESO</h5>
+												<h5 class="font-weight-bold ameg-shadow-box-cua align-items-center text-center text-color-blue">TRABAJO LIBRE ORAL</h5>
+												<h5 class="font-weight-bold ameg-shadow-box-cua align-items-center text-center text-color-purple">TRABAJO EN VIDEO</h5>
+												<h5 class="font-weight-bold ameg-shadow-box-cua align-items-center text-center text-color-blue">TRABAJO EN CARTEL</h5>
 												<br>
 													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	Los trabajos deberán someterse estrictamente al Reglamento del Comité de Admisión y 
 														de Evaluación de Trabajos, 

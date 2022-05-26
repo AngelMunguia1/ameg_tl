@@ -6795,6 +6795,15 @@ a.close.disabled {
    box-shadow: 5px 5px 5px 8px #E2EDFF;
 }
 
+.ameg-shadow-box-cua{
+	padding: 15px;
+	box-shadow: 2px 2px 2px 2px #2f5496;
+	text-align : center; /* text alignment */
+  	width : 30%;
+  	margin : 15px auto;
+	align-items: center;
+ }
+
 .bg-ameg{
 	background-color: #d9edf6;
 	color: #FFFFFF;
