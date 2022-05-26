@@ -29,7 +29,7 @@
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" data-toggle="modal" data-target="#doc_programa">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Instrucciones">
 														INSTRUCCIONES PARA AUTORES
 													</a>
 												</li>
@@ -81,30 +81,9 @@
 				</div>
 			</header>
 
-		<div class="modal" id="doc_programa" role="dialog" aria-labelledby="doc_programaLabel" aria-hidden="true" >
-            <div class="modal-dialog modal-size-2" role="document" style="max-width: 990px;">
-                <div class="modal-content">
-                    <div class="modal-header text-center">
-                        <h5 class="modal-title text-center" id="doc_programaLabel">Instrucciones para autores</h5>
-                        <button type="button" class="btn bg-gradient-danger" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <iframe src="https://www.flipbookpdf.net/web/site/c3869f9ba5e8f296eb96629df8d314af1b1c8886FBP19835591.pdf.html" frameborder="0" style="width: -webkit-fill-available;
-    					max-width: -webkit-fill-available; height:700px;"></iframe>
-                    </div>
-                    <!-- <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-
 			<section id="" class="bg-dark-4 text-left">
 				<div class="text-left">
-					<div class="px-lg-3 pb-3 mb-4 text-left">
+					<div class="px-lg-3 pb-3 text-left">
 						&nbsp;&nbsp;&nbsp;&nbsp;<h2 class="text-center text-white">INICIO DE SESIÓN</h2>
 					</div>
 				</section>
@@ -155,7 +134,7 @@
 						</div>
 					</div>
 				</section> -->
-				<section class="section bg-white section-text-overlay">
+				<section class="section bg-white section-text-overlay" style="background-image: url('img/bg-ameg.jpeg'); background-size: cover;">
 					<!-- <span class="text-background font-primary font-weight-bold text-color-light appear-animation" data-appear-animation="textBgFadeInUp" data-appear-animation-delay="500" data-plugin-options="{'accY': 100}">EASY AS 123</span> -->
 					<!-- <h3 class="text-center">Los trabajos que se presentarán durante el congreso se dividen en 3 categorías principales</h3> -->
 					<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
@@ -190,7 +169,7 @@
 												</div>	
 											</div>
 											
-											<div class="col-md-7 ameg-shadow-box-tre ">
+											<div class="col-md-7 ameg-shadow-box-tre bg-white">
 												<div class="col-md-12">
 													<h3 class="font-weight-bold text-center text-color-dark text-4 mb-3">Ingresa tus datos para iniciar sesión</h3>
 												</div>

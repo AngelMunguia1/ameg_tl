@@ -3,6 +3,7 @@
  * Copyright 2011-2020 The Bootstrap Authors
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ *ESTE ES EL BUENO
  */
 :root {
 	--blue: #007bff;
@@ -6804,10 +6805,16 @@ a.close.disabled {
 	align-items: center;
  }
 
+ .ameg-shadow-box-cua:hover{
+	transform: translateY(-5px);
+   	box-shadow: 2px 2px 2px 5px #2f5496;
+}
+
 .bg-ameg{
 	background-color: #d9edf6;
 	color: #FFFFFF;
 	padding: 20px;
+	opacity: 92%;
 }
 
 .bg-img-ameg {
@@ -6895,7 +6902,7 @@ button.bg-dark:focus {
 
 .bg-white {
 	background-color: #fff !important;
-	opacity: 93%;
+	opacity: 92%;
 }
 
 .bg-transparent {

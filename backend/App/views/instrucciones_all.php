@@ -86,7 +86,7 @@
 			<section id="" class="bg-dark-4 text-left">
 				<div class="text-left">
 					<div class="px-lg-3 pb-3 text-left">
-						&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold  text-center text-white">REGISTRO</h1>
+						&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold  text-center text-white">INSTRUCCIONES PARA AUTORES</h1>
 					</div>
 				</section>
 
@@ -151,7 +151,6 @@
 										<div class="row">
 											<div class="col">
 												<div class="row">
-							
 													<div class="col-md-10 bg-ameg">
 															<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">INSTRUCCIONES</h2>
 															<h3 class="text-left text-color-dark text-4 mb-3">PARA REGISTRAR TU TRABAJO</h3>
@@ -160,19 +159,11 @@
 															<p class="text-justify">3. Sube tus datos</p>
 															<p class="text-justify">Si ya tienes cuenta inicia sesión dando clic en el botón superior derecho del menú principal</p>
 													</div>
-												</div>
-												<br>
-												<div class="row">
-													<div class="col-md-10 bg-ameg">
-															<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">ATENCIÓN</h2>
-															<h3 class="text-left text-color-dark text-4 mb-3">URGENTE</h3>
-															<p class="text-justify">Trabajos de ingreso: favor de considerar...</p>
-													</div>
 												</div>	
 											</div>
 											
 											
-											<div class="col-md-7 ameg-shadow-box-tre bg-white">
+											<div class="col-md-9 ameg-shadow-box-tre bg-white">
 												<div class="col-md-12">
 													<div class="row">
 														<div class="col-md-6">

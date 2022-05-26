@@ -29,7 +29,7 @@
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" data-toggle="modal" data-target="#doc_programa">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Instrucciones">
 														INSTRUCCIONES PARA AUTORES
 													</a>
 												</li>
@@ -78,7 +78,7 @@
             <div class="modal-dialog modal-size-2" role="document" style="max-width: 990px;">
                 <div class="modal-content">
                     <div class="modal-header text-center">
-                        <h5 class="modal-title text-center" id="doc_programaLabel">Instrucciones para autores</h5>
+                        <h5 class="modal-title text-center" id="doc_programaLabel">REGLAMENTO DE ADMISIÓN Y DE EVALUACIÓN DE TRABAJOS</h5>
                         <button type="button" class="btn bg-gradient-danger" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
@@ -96,7 +96,7 @@
         </div>
 
 			<div role="main" class="main">
-				<section class="section bg-white section-text-overlay">
+				<section class="section bg-white section-text-overlay" style="background-image: url('img/bg-ameg.jpeg'); background-size: cover;">
 					<!-- <span class="text-background font-primary font-weight-bold text-color-light appear-animation" data-appear-animation="textBgFadeInUp" data-appear-animation-delay="500" data-plugin-options="{'accY': 100}">EASY AS 123</span> -->
 					<!-- <h3 class="text-center">Los trabajos que se presentarán durante el congreso se dividen en 3 categorías principales</h3> -->
 					<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
@@ -107,7 +107,7 @@
 									<!-- <div class="icon-box-icon pr-3">
 										<img width="42" src="vendor/linear-icons/screen.svg" alt="" data-icon data-plugin-options="{'color': '#FFF', 'animated': true, 'delay': 600}" />
 									</div> -->
-									<div class="ameg-shadow-box-tre container text-center">
+									<div class="ameg-shadow-box-tre bg-white container text-center">
 										<div class="row">
 											<div class="col">
 												<h2 class="font-weight-bold text-center text-color-dblue" style="margin-left: 55px; margin-right: 55px;">
@@ -121,8 +121,6 @@
 												</h4>
 												<br>
 												<h5 class="font-weight-bold text-center text-color-pink">CATEGORÍAS</h5>
-												<br>
-												<br>
 												<h5 class="font-weight-bold ameg-shadow-box-cua align-items-center text-center text-color-purple">TRABAJOS DE INGRESO</h5>
 												<h5 class="font-weight-bold ameg-shadow-box-cua align-items-center text-center text-color-blue">TRABAJO LIBRE ORAL</h5>
 												<h5 class="font-weight-bold ameg-shadow-box-cua align-items-center text-center text-color-purple">TRABAJO EN VIDEO</h5>
@@ -153,7 +151,7 @@
 														</p>
 													</p>
 													<br>
-													<p class="font-weight-bold text-justify text-color-dblue" style="margin-left: 150px; margin-right: 150px;">
+													<p class="font-weight-bold text-justify text-color-dblue" style="margin:20px auto; width : 60%;">
 														Esta Convocatoria invita a registrar a concurso a los mejores trabajos de investigación 
 													en las categorías   orales sobre las bases establecidas en el Reglamento del Comité de 
 													Admisión y de Evaluación de Trabajos, siendo premiados:
@@ -177,7 +175,7 @@
 														</a>
 													</h5>
 													<h5 class="font-weight-bold text-center">
-														<a href="#" class="font-weight-bold text-color-purple">
+														<a data-toggle="modal" data-target="#doc_programa" class="font-weight-bold text-color-purple">
 															(link) CONSULTE EL REGLAMENTO DE ADMISION Y DE EVALUACIÓN DE TRABAJOS
 														</a>
 													</h5>
