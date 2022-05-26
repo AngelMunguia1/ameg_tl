@@ -190,16 +190,16 @@ html;
         if($id >= 1){
           // $this->alerta($id,'add');
           echo '<script>
-            alert("Usuario Registrada con exito");
-            window.location.href = "/Principal";
+            alert("Usuario registrado con éxito");
+            window.location.href = "/IniciaSesion";
           </script>';
   
          
         }else{
           // $this->alerta($id,'error');
           echo '<script>
-          alert("Error al registrar la aistencia, consulte a soporte");
-          
+          alert("Error al registrar usuario, consulte a soporte");
+          window.location.href = "/Principal";
         </script>';
         }
   

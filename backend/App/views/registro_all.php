@@ -194,7 +194,7 @@
 																<div class="form-group">
 																	
 																	<div class="col-md-8">
-																		<input id="usuario" name="usuario" type="text" placeholder="Email" class="form-control ameg-shadow-box-two">
+																		<input id="usuario" name="usuario" type="text" placeholder="Email" class="form-control ameg-shadow-box-two" require="required">
 																	</div>
 																</div>
 																<div class="form-group">
@@ -273,58 +273,60 @@
 	</body>
 </html>
 
-    <!-- <script>
-        $(document).ready(function() {
+<!-- <script>
+            $(document).ready(function(){
+              $('#confirm_usuario').attr("disabled", true);
+              $.validator.addMethod("checkUserCorreo",function(value, element) {
+                var response = false;
+                  $.ajax({
+                      type:"POST",
+                      async: false,
+                      url: "/Register/isUserValidateUser",
+                      data: {email: $("#email").val()},
+                      success: function(data) {
+                          if(data=="true"){
+                              $('#btn_registro_email').attr("disabled", false);
+                              $('#confirm_email').attr("disabled", false);
+                              $('#email').attr("disabled", true);
 
-            $("#form_paymet_ticket").on("submit",function(event){
-                event.preventDefault();
-                
-                    var formData = new FormData(document.getElementById("form_paymet_ticket"));
-                    console.log(formData);
-                    $.ajax({
-                    url:"/Home/uploadTicket",
-                    type: "POST",
-                    data: formData,
-                    cache: false,
-                    contentType: false,
-                    processData: false,
-                    beforeSend: function(){
-                        console.log("Procesando....");
+                              response = true;
+                          }else{
+                              $('#btn_registro_email').attr("disabled", true);
+                              $('#confirm_email').attr("disabled", true);
+                              document.getElementById("confirm_email").value = "";
+                          }
+                      }
+                  });
 
-                    
-                    },
-                    success: function(respuesta){
-                        
-                        
-                        if(respuesta == 'success'){
-                           // $('#modal_payment_ticket').modal('toggle');
-                            Swal.fire(
-                                'OK',
-                                'Se ha guardado tu ticket correctamente!!',
-                                'success'
-                            )
+                  return response;
+              },"<b>Usted ya se encuentra registrado en la plataforma verifique su información.<b>");
 
-                            setTimeout(() => {
-                                window.location.reload();
-                            }, 100);
-                            
-                            
-                        }
-                        
-                        console.log(respuesta);
 
-                    },
-                    error:function (respuesta)
-                    {
-                        console.log(respuesta);
-                    }
+              $("#email_form").validate({
+                 rules:{
+                      email:{
+                          required: true,
+                          checkUserCorreo: true
+                      },
+                      confirm_email:{
+                          required: true,
+                          equalTo:"#email"
+                      }
+                  },
+                  messages:{
+                      email:{
+                          required: "Este campo es requerido",
+                      },
+                      confirm_email:{
+                          required: "Este campo es requerido",
+                          equalTo: "El Correo Eléctronico no coincide",
+                      }
+                  }
+              });
+              
 
-                });
-            });
-
-        });
-         
-    
-    </script> -->
+          });
+          
+        </script> -->
 
 <?php echo $footer; ?>
