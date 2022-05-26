@@ -4,7 +4,8 @@ defined("APPPATH") OR die("Access denied");
 
 use \Core\View;
 use \Core\MasterDom;
-use \App\models\Principal AS PrincipalDao;
+use \App\interfaces\Crud;
+use \App\models\Registro AS RegistroDao;
 
 class Registro{
     private $_contenedor;
@@ -174,36 +175,67 @@ html;
         View::render("registro_all");
     }
 
-    public function isUserValidate(){
-        echo (count(PrincipalDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
-    }
+    public function registroAdd() {
 
-    public function verificarUsuario(){
-        $usuario = new \stdClass();
-        $usuario->_usuario = MasterDom::getData("usuario");
-        $usuario->_password = MD5(MasterDom::getData("password"));
-        $user = PrincipalDao::getById($usuario);
-        if (count($user)>=1) {
-            $user['nombre'] = utf8_encode($user['nombre']);
-            echo json_encode($user);
+        $data = new \stdClass();
+        $data->_usuario = MasterDom::getData('usuario');
+        $data->_contrasena = MasterDom::getData('contrasena');
+        $data->_nombre = MasterDom::getData('nombre');
+        $data->_apellidop = MasterDom::getData('apellidop');
+        $data->_apellidom = MasterDom::getData('apellidom');
+        $data->_cedula_profesional = MasterDom::getData('cedula_profesional');
+        $data->_cedula_especialista = MasterDom::getData('cedula_especialista');
+    
+        $id = RegistroDao::insert($data);
+        if($id >= 1){
+          // $this->alerta($id,'add');
+          echo '<script>
+            alert("Usuario Registrada con exito");
+            window.location.href = "/Principal";
+          </script>';
+  
+         
+        }else{
+          // $this->alerta($id,'error');
+          echo '<script>
+          alert("Error al registrar la aistencia, consulte a soporte");
+          
+        </script>';
         }
-    }
+  
+  
+      }
 
-    public function crearSession(){
-        $usuario = new \stdClass();
-        $usuario->_usuario = MasterDom::getData("usuario");
-        $user = PrincipalDao::getById($usuario);
-        session_start();
-        $_SESSION['usuario'] = $user['usuario'];
-        $_SESSION['nombre'] = $user['nombre'];
-        header("location: /Home/");
-    }
+    // public function isUserValidate(){
+    //     echo (count(PrincipalDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
+    // }
 
-    public function cerrarSession(){
-        unset($_SESSION);
-        session_unset();
-        session_destroy();
-        header("Location: /Login/");
-    }
+    // public function verificarUsuario(){
+    //     $usuario = new \stdClass();
+    //     $usuario->_usuario = MasterDom::getData("usuario");
+    //     $usuario->_password = MD5(MasterDom::getData("password"));
+    //     $user = PrincipalDao::getById($usuario);
+    //     if (count($user)>=1) {
+    //         $user['nombre'] = utf8_encode($user['nombre']);
+    //         echo json_encode($user);
+    //     }
+    // }
+
+    // public function crearSession(){
+    //     $usuario = new \stdClass();
+    //     $usuario->_usuario = MasterDom::getData("usuario");
+    //     $user = PrincipalDao::getById($usuario);
+    //     session_start();
+    //     $_SESSION['usuario'] = $user['usuario'];
+    //     $_SESSION['nombre'] = $user['nombre'];
+    //     header("location: /Home/");
+    // }
+
+    // public function cerrarSession(){
+    //     unset($_SESSION);
+    //     session_unset();
+    //     session_destroy();
+    //     header("Location: /Login/");
+    // }
 
 }
