@@ -4,9 +4,9 @@ defined("APPPATH") OR die("Access denied");
 
 use \Core\View;
 use \Core\MasterDom;
-use \App\models\Principal AS PrincipalDao;
+use \App\models\Inicio AS InicioDao;
 
-class Principal{
+class Inicio{
     private $_contenedor;
 
     public function index() {
@@ -178,18 +178,18 @@ html;
 html;
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
-        View::render("principal_all");
+        View::render("inicio_all");
     }
 
     public function isUserValidate(){
-        echo (count(PrincipalDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
+        echo (count(InicioDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
     }
 
     public function verificarUsuario(){
         $usuario = new \stdClass();
         $usuario->_usuario = MasterDom::getData("usuario");
         $usuario->_password = MD5(MasterDom::getData("password"));
-        $user = PrincipalDao::getById($usuario);
+        $user = InicioDao::getById($usuario);
         if (count($user)>=1) {
             $user['nombre'] = utf8_encode($user['nombre']);
             echo json_encode($user);
@@ -199,7 +199,7 @@ html;
     public function crearSession(){
         $usuario = new \stdClass();
         $usuario->_usuario = MasterDom::getData("usuario");
-        $user = PrincipalDao::getById($usuario);
+        $user = InicioDao::getById($usuario);
         session_start();
         $_SESSION['usuario'] = $user['usuario'];
         $_SESSION['nombre'] = $user['nombre'];

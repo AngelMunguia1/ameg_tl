@@ -4,9 +4,9 @@ defined("APPPATH") OR die("Access denied");
 
 use \Core\View;
 use \Core\MasterDom;
-use \App\models\Principal AS PrincipalDao;
+use \App\models\Login AS LoginDao;
 
-class IniciaSesion{
+class Login{
     private $_contenedor;
 
     public function index() {
@@ -38,6 +38,11 @@ class IniciaSesion{
 		<link rel="stylesheet" href="/vendor/owl.carousel/assets/owl.theme.default.min.css">
 		<link rel="stylesheet" href="/vendor/magnific-popup/magnific-popup.min.css">
 		<link rel="stylesheet" href="/master/style-switcher/bootstrap-colorpicker/css/bootstrap-colorpicker.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+           <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 
 
@@ -79,6 +84,10 @@ html;
 				</div>
 			</footer>
 
+            <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/validate/jquery.validate.js"></script>
+
 		<!-- Vendor -->
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
@@ -117,13 +126,14 @@ html;
         <script>
             $(document).ready(function(){
                 $.validator.addMethod("checkUserName",function(value, element) {
-                  var response = false;
+                var response = false;
                     $.ajax({
                         type:"POST",
                         async: false,
                         url: "/Login/isUserValidate",
                         data: {usuario: $("#usuario").val()},
                         success: function(data) {
+                            console.log(data);
                             if(data=="true"){
                                 $('#btnEntrar').attr("disabled", false);
                                 response = true;
@@ -134,23 +144,29 @@ html;
                     });
 
                     return response;
-                },"The user is not registered in our database");
+                },"Este usuario no esta registrado");
 
                 $("#login").validate({
                     rules:{
-                        usuario:{
-                            required: true,
-                            checkUserName: true
-                        }
-                    },
-                    messages:{
-                        usuario:{
-                            required: "This field is required",
-                        }
-                    }
-                });
+                         usuario:{
+                             required: true,
+                             checkUserName: true
+                         },
+                         contrasena:{
+                             required: true,
+                         }
+                     },
+                     messages:{
+                         usuario:{
+                             required: "Este campo es requerido",
+                         },
+                         contrasena:{
+                             required: "Este campo es requerido",
+                         }
+                     }
+                 });
 
-                $("#btnEntrar").click(function(){
+                 $("#btnEntrar").click(function(){
                     $.ajax({
                         type: "POST",
                         url: "/Login/verificarUsuario",
@@ -163,10 +179,10 @@ html;
                                     $("#login").append('<input type="hidden" name="nombre" id="nombre" value="'+usuario.nombre+'"/>');
                                     $("#login").submit();
                             }else{
-                                alertify.alert("Error de autenticación <br> El usuario o contraseña es incorrecta");
+                                alert("Error de autenticación");
                             }
                             }else{
-                                alertify.alert("Error de autenticación <br> El usuario o contraseña es incorrecta");
+                                alert("El usuario o contraseña es incorrecta");
                             }
                         }
                     });
@@ -177,18 +193,21 @@ html;
 html;
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
-        View::render("inicio_sesion_all");
+        View::render("login");
     }
 
     public function isUserValidate(){
-        echo (count(PrincipalDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
+        echo (count(LoginDao::getUserByEmail($_POST['usuario']))>=1)? 'true' : 'false';
     }
 
     public function verificarUsuario(){
         $usuario = new \stdClass();
         $usuario->_usuario = MasterDom::getData("usuario");
-        $usuario->_password = MD5(MasterDom::getData("password"));
-        $user = PrincipalDao::getById($usuario);
+        $usuario->_contrasena = MD5(MasterDom::getData("contrasena"));
+        //$usuario->_contrasena = MasterDom::getData("contrasena");
+        // var_dump($usuario);
+        $user = LoginDao::getUserRAById($usuario);
+        // 
         if (count($user)>=1) {
             $user['nombre'] = utf8_encode($user['nombre']);
             echo json_encode($user);
@@ -198,11 +217,14 @@ html;
     public function crearSession(){
         $usuario = new \stdClass();
         $usuario->_usuario = MasterDom::getData("usuario");
-        $user = PrincipalDao::getById($usuario);
+        $usuario->_contrasena = MasterDom::getData("contrasena");
+        $user = LoginDao::getUserRAById($usuario);
         session_start();
         $_SESSION['usuario'] = $user['usuario'];
         $_SESSION['nombre'] = $user['nombre'];
-        header("location: /Home/");
+        $_SESSION['id_usuario'] = $user['id_usuario'];
+
+        header("location: /Principal");
     }
 
     public function cerrarSession(){

@@ -8,7 +8,7 @@
 						<div class="header-row">
 							<div class="header-column justify-content-start">
 								<div class="header-logo px-3">
-									<a href="/Principal">
+									<a href="/Inicio">
 										<img src="img/logo_ameg.png" width="210" height="100" alt="" />
 									</a>
 								</div>
@@ -19,7 +19,7 @@
 										<nav class="collapse">
 											<ul class="nav flex-column flex-lg-row" id="mainNav">
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Principal">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Inicio">
 														INICIO
 													</a>
 												</li>
@@ -39,7 +39,7 @@
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega dropdown-mega-style-2">
-													<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/IniciaSesion">
+													<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login">
 														<i class="fa fa-user"></i>
 														&nbsp;
 														INICIA SESIÓN
@@ -185,14 +185,14 @@
 														</div>
 														<!-- Button trigger modal -->                                
 														<div class="card-body">
-															<form role="form" class="text-start" id="login" action="/Principal/crearSession" method="POST" class="form-horizontal">
+															<form role="form" class="text-start" id="login" action="/Login/crearSession" method="POST" class="form-horizontal">
 																<label style="font-weight:bold; font-size: 15px">Correo electrónico</label>
 																<div class="mb-5">
-																	<input type="email" name="usuario" id="usuarios" class="form-control" placeholder="usuario@grupolahe.com" aria-label="Email">
+																	<input type="email" name="usuario" id="usuario" class="form-control" placeholder="usuario@grupolahe.com" aria-label="Email">
 																</div>
 																<label style="font-weight:bold; font-size: 15px">Contraseña</label>
 																<div class="mb-5">
-																	<input type="password" name="usuario" id="usuarios" class="form-control" placeholder="asdfg" aria-label="Email">
+																	<input type="password" name="contrasena" id="contrasena" class="form-control" placeholder="" aria-label="Email">
 																</div>
 																
 																<div class="text-center">
@@ -227,59 +227,5 @@
 
 	</body>
 </html>
-
-    <script>
-        $( document ).ready(function() {
-
-            $("#form_paymet_ticket").on("submit",function(event){
-                event.preventDefault();
-                
-                    var formData = new FormData(document.getElementById("form_paymet_ticket"));
-                    console.log(formData);
-                    $.ajax({
-                    url:"/Home/uploadTicket",
-                    type: "POST",
-                    data: formData,
-                    cache: false,
-                    contentType: false,
-                    processData: false,
-                    beforeSend: function(){
-                        console.log("Procesando....");
-
-                    
-                    },
-                    success: function(respuesta){
-                        
-                        
-                        if(respuesta == 'success'){
-                           // $('#modal_payment_ticket').modal('toggle');
-                            Swal.fire(
-                                'OK',
-                                'Se ha guardado tu ticket correctamente!!',
-                                'success'
-                            )
-
-                            setTimeout(() => {
-                                window.location.reload();
-                            }, 100);
-                            
-                            
-                        }
-                        
-                        console.log(respuesta);
-
-                    },
-                    error:function (respuesta)
-                    {
-                        console.log(respuesta);
-                    }
-
-                });
-            });
-
-        });
-         
-    
-    </script>
 
 <?php echo $footer; ?>

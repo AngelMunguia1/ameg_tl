@@ -5,21 +5,15 @@ defined("APPPATH") OR die("Access denied");
 use \Core\Database;
 use \App\interfaces\Crud;
 
-class IniciaSesion implements Crud{
- 
-    public static function getAll(){}
-    public static function insert($suscripcion){}
-    public static function update($suscripcion){}
-    public static function delete($id){}
+class Inicio{
 
     public static function getById($usuario){
         $mysqli = Database::getInstance(true);
         $query =<<<sql
-        SELECT * FROM usuarios WHERE usuario LIKE :usuario AND contrasena LIKE :password 
+         SELECT * FROM utilerias_administradores WHERE usuario LIKE :usuario
 sql;
         $params = array(
-            ':usuario'=> $usuario->_usuario,
-            ':password'=>$usuario->_password
+            ':usuario'=> $usuario->_usuario
         );
 
         return $mysqli->queryOne($query,$params);
@@ -28,7 +22,7 @@ sql;
     public static function getUser($usuario){
         $mysqli = Database::getInstance(true);
         $query =<<<sql
-        SELECT * FROM usuarios WHERE usuario = '$usuario' AND status = 1
+        SELECT * FROM utilerias_administradores WHERE usuario = '$usuario'
 sql;
 
         return $mysqli->queryAll($query);
