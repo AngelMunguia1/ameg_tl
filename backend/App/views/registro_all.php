@@ -194,7 +194,7 @@
 																<div class="form-group">
 																	
 																	<div class="col-md-8">
-																		<input id="email" name="email" type="text" placeholder="Email" class="form-control ameg-shadow-box-two">
+																		<input id="usuario" name="usuario" type="text" placeholder="Email" class="form-control ameg-shadow-box-two">
 																	</div>
 																</div>
 																<div class="form-group">

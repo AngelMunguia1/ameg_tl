@@ -28,8 +28,8 @@ class Registro implements Crud{
     public static function insert($data){
         $mysqli = Database::getInstance(1);
         $query=<<<sql
-            INSERT INTO usuarios(id_usuario, id_rol, id_titulo,nombre, apellidop, apellidom, email, password, cedula_profesional, cedula_especialista)
-            VALUES(null, 6, 4, :nombre, :apellidop, :apellidom, :email, :password, :cedula_profesional, :cedula_especialista);
+            INSERT INTO usuarios(id_usuario, id_rol, id_titulo,nombre, apellidop, apellidom, usuario, password, cedula_profesional, cedula_especialista)
+            VALUES(null, 6, 4, :nombre, :apellidop, :apellidom, :usuario, MD5(:password), :cedula_profesional, :cedula_especialista);
 sql;
 
 
@@ -38,7 +38,7 @@ sql;
             ':nombre'=>$data->_nombre,
             ':apellidop'=>$data->_apellidop,
             ':apellidom'=>$data->_apellidom,
-            ':email'=>$data->_email,
+            ':usuario'=>$data->_usuario,
             ':password'=>$data->_password,
             ':cedula_profesional'=>$data->_cedula_profesional,
             ':cedula_especialista'=>$data->_cedula_especialista,

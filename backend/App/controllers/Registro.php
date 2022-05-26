@@ -178,7 +178,7 @@ html;
     public function registroAdd() {
 
         $data = new \stdClass();
-        $data->_email = MasterDom::getData('email');
+        $data->_usuario = MasterDom::getData('usuario');
         $data->_password = MasterDom::getData('password');
         $data->_nombre = MasterDom::getData('nombre');
         $data->_apellidop = MasterDom::getData('apellidop');
