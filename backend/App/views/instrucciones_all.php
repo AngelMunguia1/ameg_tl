@@ -159,9 +159,11 @@
 												
 												<button style="margin: 10px; background-color: #1883ba; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff;" id="mostrar_trabajo_libre_oral">TRABAJO LIBRE ORAL</button>
 											
+												<button style="margin: 10px; background-color: #1883ba; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff;" id="mostrar_trabajo_en_cartel">TRABAJO EN CARTEL</button>
+
 												<button style="margin: 10px; background-color: #1883ba; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff;" id="mostrar_trabajo_video">TRABAJO EN VIDEO</button>
 												
-												<button style="margin: 10px; background-color: #1883ba; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff;" id="mostrar_trabajo_en_cartel">TRABAJO EN CARTEL</button>
+											
 											</div>
 										</div>
 									</div>
