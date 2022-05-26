@@ -54,7 +54,7 @@ class Contenedor extends Controller{
 		<link rel="stylesheet" href="/vendor/magnific-popup/magnific-popup.min.css">
 		<link rel="stylesheet" href="/master/style-switcher/bootstrap-colorpicker/css/bootstrap-colorpicker.css">
 
-
+		<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
 
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="/css/theme.css">

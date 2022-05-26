@@ -40,7 +40,7 @@ class Instrucciones{
 		<link rel="stylesheet" href="/master/style-switcher/bootstrap-colorpicker/css/bootstrap-colorpicker.css">
 
 
-
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 		<!-- Theme CSS -->
 		<link rel="stylesheet" href="/css/theme.css">
 		<link rel="stylesheet" href="/css/theme-elements.css">
