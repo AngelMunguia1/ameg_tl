@@ -173,18 +173,9 @@
 											
 											
 											<div class="col-md-7 ameg-shadow-box-tre bg-white">
-												<div class="col-md-12">
-													<div class="row">
-														<div class="col-md-6">
-															<a href="#">
-																<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">Registro para trabajos de ingreso</h2>
-															</a>
-														</div>
-														<div class="col-md-6">
-															<a href="#">
-																<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">Registro para trabajos libres y en video</h2>
-															</a>
-														</div>
+												<div class="col-md-12 text-center">
+													<div class="row text-center">
+														<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Registro de nuevo usuario</h2>
 													</div>
 												</div>
 												<div class="col-md-12">
@@ -196,20 +187,20 @@
 															<p>Datos personales OBLIGATORIO*</p>
 														</div>
 														<div class="col-md-9">
-														<form class="form-horizontal" method="post">
+														<form class="form-horizontal" id="add" action="/Registro/registroAdd" method="POST">
 															<fieldset>
 																<legend class="text-center header"></legend>
 										
 																<div class="form-group">
 																	
 																	<div class="col-md-8">
-																		<input id="fname" name="name" type="text" placeholder="Email" class="form-control ameg-shadow-box-two">
+																		<input id="email" name="email" type="text" placeholder="Email" class="form-control ameg-shadow-box-two">
 																	</div>
 																</div>
 																<div class="form-group">
 																	
 																	<div class="col-md-8">
-																		<input id="lname" name="name" type="text" placeholder="Contraseña" class="form-control ameg-shadow-box-two">
+																		<input id="password" name="password" type="password" placeholder="Contraseña" class="form-control ameg-shadow-box-two">
 																	</div>
 																</div>
 																<br><br>
@@ -217,51 +208,38 @@
 																<div class="form-group">
 																	
 																	<div class="col-md-8">
-																		<input id="email" name="email" type="text" placeholder="Nombre" class="form-control ameg-shadow-box-two">
+																		<input id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control ameg-shadow-box-two">
 																	</div>
 																</div>
 										
 																<div class="form-group">
 																	
 																	<div class="col-md-8">
-																		<input id="phone" name="phone" type="text" placeholder="Apellido paterno" class="form-control ameg-shadow-box-two">
+																		<input id="apellidop" name="apellidop" type="text" placeholder="Apellido paterno" class="form-control ameg-shadow-box-two">
 																	</div>
 																</div>
 																<div class="form-group">
 																	
 																	<div class="col-md-8">
-																		<input id="phone" name="phone" type="text" placeholder="Apellido materno" class="form-control ameg-shadow-box-two">
+																		<input id="apellidom" name="apellidom" type="text" placeholder="Apellido materno" class="form-control ameg-shadow-box-two">
 																	</div>
 																</div>
 																<div class="form-group">
 																	
 																	<div class="col-md-8">
-																		<input id="phone" name="phone" type="text" placeholder="Lugar de nacimiento" class="form-control ameg-shadow-box-two">
+																		<input id="cedula_profesional" name="cedula_profesional" type="text" placeholder="Cédula profesional" class="form-control ameg-shadow-box-two">
 																	</div>
 																</div>
 																<div class="form-group">
 																	
 																	<div class="col-md-8">
-																		<input id="phone" name="phone" type="text" placeholder="Fecha de nacimiento" class="form-control ameg-shadow-box-two">
+																		<input id="cedula_especialista" name="cedula_especialista" type="text" placeholder="Cédula especialista" class="form-control ameg-shadow-box-two">
 																	</div>
-																</div>
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="phone" name="phone" type="text" placeholder="edad" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="phone" name="phone" type="text" placeholder="sexo" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-										
+																</div>						
 										
 																<div class="form-group">
 																	<div class="col-md-12 text-center">
-																		<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+																		<button type="submit" class="btn btn-primary btn-lg" id="btn_upload" name="btn_upload">REGISTRAME</button>
 																	</div>
 																</div>
 															</fieldset>
@@ -295,8 +273,8 @@
 	</body>
 </html>
 
-    <script>
-        $( document ).ready(function() {
+    <!-- <script>
+        $(document).ready(function() {
 
             $("#form_paymet_ticket").on("submit",function(event){
                 event.preventDefault();
@@ -347,6 +325,6 @@
         });
          
     
-    </script>
+    </script> -->
 
 <?php echo $footer; ?>

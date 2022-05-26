@@ -185,12 +185,16 @@
 														</div>
 														<!-- Button trigger modal -->                                
 														<div class="card-body">
-															<form role="form" class="text-start" id="login" action="/Login/crearSession" method="POST" class="form-horizontal">
+															<form role="form" class="text-start" id="login" action="/Principal/crearSession" method="POST" class="form-horizontal">
 																<label style="font-weight:bold; font-size: 15px">Correo electrónico</label>
 																<div class="mb-5">
-																	<input type="email" name="usuario" id="usuario" class="form-control" placeholder="usuario@grupolahe.com" aria-label="Email">
+																	<input type="email" name="usuario" id="usuarios" class="form-control" placeholder="usuario@grupolahe.com" aria-label="Email">
 																</div>
-
+																<label style="font-weight:bold; font-size: 15px">Contraseña</label>
+																<div class="mb-5">
+																	<input type="password" name="usuario" id="usuarios" class="form-control" placeholder="asdfg" aria-label="Email">
+																</div>
+																
 																<div class="text-center">
 																	<button  type="button" id="btnEntrar" class="btn bg-gradient-secondary w-100 mt-1 mb-0"><b style="color: #FFFFFF">ENTRAR</b></button>
 																</div>
