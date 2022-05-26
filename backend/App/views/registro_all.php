@@ -200,7 +200,7 @@
 																<div class="form-group">
 																	
 																	<div class="col-md-8">
-																		<input id="password" name="password" type="password" placeholder="Contraseña" class="form-control ameg-shadow-box-two">
+																		<input id="contrasena" name="contrasena" type="password" placeholder="Contraseña" class="form-control ameg-shadow-box-two">
 																	</div>
 																</div>
 																<br><br>

@@ -179,7 +179,7 @@ html;
 
         $data = new \stdClass();
         $data->_usuario = MasterDom::getData('usuario');
-        $data->_password = MasterDom::getData('password');
+        $data->_contrasena = MasterDom::getData('contrasena');
         $data->_nombre = MasterDom::getData('nombre');
         $data->_apellidop = MasterDom::getData('apellidop');
         $data->_apellidom = MasterDom::getData('apellidom');
