@@ -2881,6 +2881,10 @@ fieldset:disabled a.btn {
 	box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
 }
 
+.btn-outline-relog {
+	border-color: #000000;
+}
+
 .btn-outline-primary {
 	color: #007bff;
 	border-color: #007bff;
@@ -6755,7 +6759,7 @@ a.close.disabled {
 
 .ameg-bg{
 	padding: 10px;
-	background-color: #D9EDF6;
+	background-color: #70c7d2 !important;
 }
 
 .ameg-shadow-box{
@@ -6796,7 +6800,7 @@ a.close.disabled {
 }
 
 .bg-ameg{
-	background-color: #d9edf6;
+	background-color: #F0F9FA !important;
 	color: #FFFFFF;
 	padding: 20px;
 }

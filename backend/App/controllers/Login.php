@@ -33,6 +33,19 @@ class Login{
 
 html;
         $extraFooter =<<<html
+
+        <footer id="footer">
+        <div class="bg-light mt-0">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col">
+                        <p>GRUPO LAHE. © 2022. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </footer>
+
         <script src="/js/jquery.min.js"></script>
         <script src="/js/validate/jquery.validate.js"></script>
         <script src="/js/alertify/alertify.min.js"></script>

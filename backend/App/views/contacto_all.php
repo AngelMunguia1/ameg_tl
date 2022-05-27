@@ -86,7 +86,7 @@
 									<!-- <div class="icon-box-icon pr-3">
 										<img width="42" src="vendor/linear-icons/screen.svg" alt="" data-icon data-plugin-options="{'color': '#FFF', 'animated': true, 'delay': 600}" />
 									</div> -->
-									<div class="ameg-shadow-box-tre bg-white container text-center">
+									<div class="container text-center">
 										<div class="row">
 											<div class="col">
 													<h2 class="font-weight-bold text-center" style="margin: 35px;">Informes: 

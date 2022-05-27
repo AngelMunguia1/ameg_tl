@@ -62,7 +62,7 @@ class Contacto{
 html;
         $extraFooter =<<<html
         <footer id="footer" class="mt-0">
-				<div class="footer-copyright bg-light mt-0">
+				<div class="bg-light mt-0">
 					<div class="container mt-3">
 						<div class="row text-center">
 							<div class="col">

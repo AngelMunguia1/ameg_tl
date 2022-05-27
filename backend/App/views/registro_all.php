@@ -34,22 +34,22 @@
 													INSTRUCCIONES PARA AUTORES
 												</a>
 											</li>
-											<!--<li class="dropdown dropdown-mega">
+											<li class="dropdown dropdown-mega">
 													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Registro/">
 														REGISTRO DE USUARIO
 													</a>
-											</li>-->
+											</li>
 											<li class="dropdown dropdown-mega dropdown-mega-style-2">
 												<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login/">
 													<i class="fa fa-user"></i>
 													&nbsp;
-													INICIA SESIÓN
+													LOGIN
 													&nbsp;
 													<i class="fa-solid fa-angle-down"></i>
 												</a>
 											</li>
 											<li class="dropdown">
-												<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Contacto">
+												<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Contacto/">
 													CONTACTO
 												</a>
 											</li>
@@ -84,10 +84,10 @@
 			</div>
 		</header>
 
-		<section id="" class="bg-dark-4 text-left">
+		<section id="" class="bg-purple-fecha text-left">
 			<div class="text-left">
 				<div class="px-lg-3 pb-3 text-left">
-					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold  text-center text-white">REGISTRO</h1>
+					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold text-center text-white">REGISTRO</h1>
 				</div>
 		</section>
 
@@ -137,7 +137,7 @@
 						</div>
 					</div>
 				</section> -->
-			<section class="section bg-white section-text-overlay" style="background-image: url('img/bg-ameg.jpeg'); background-size: cover;">
+			<section class="section bg-white section-text-overlay" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;">
 				<!-- <span class="text-background font-primary font-weight-bold text-color-light appear-animation" data-appear-animation="textBgFadeInUp" data-appear-animation-delay="500" data-plugin-options="{'accY': 100}">EASY AS 123</span> -->
 				<!-- <h3 class="text-center">Los trabajos que se presentarán durante el congreso se dividen en 3 categorías principales</h3> -->
 				<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
@@ -150,30 +150,23 @@
 									</div> -->
 							<div class="container text-center">
 								<div class="row">
-									<div class="col">
+									<div class="col-md-4">
 										<div class="row">
 
 											<div class="col-md-10 bg-ameg">
 												<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">INSTRUCCIONES</h2>
-												<h3 class="text-left text-color-dark text-4 mb-3">PARA REGISTRAR TU TRABAJO</h3>
+												<h3 class="text-left text-color-dark text-4 mb-3">PARA REGISTRARTE COMO USUARIO</h3>
 												<p class="text-justify">1. Registra tus datos</p>
 												<p class="text-justify">2. Ingresa a la plataforma</p>
-												<p class="text-justify">3. Sube tus datos</p>
-												<p class="text-justify">Si ya tienes cuenta inicia sesión dando clic en el botón superior derecho del menú principal</p>
-											</div>
-										</div>
-										<br>
-										<div class="row">
-											<div class="col-md-10 bg-ameg">
-												<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">ATENCIÓN</h2>
-												<h3 class="text-left text-color-dark text-4 mb-3">URGENTE</h3>
-												<p class="text-justify">Trabajos de ingreso: favor de considerar...</p>
+												<p class="text-justify">3. Ahora podrás registrar tus trabajos</p>
+												<p class="text-justify">Si ya tienes cuenta, inicia sesión dando clic en el botón superior derecho del menú principal o has clic 
+													<a href="/Login/" class="font-weight-bold" style="text-decoration: underline;">AQUÍ</a> 
+												</p>
 											</div>
 										</div>
 									</div>
 
-
-									<div class="col-md-7 ameg-shadow-box-tre bg-white">
+									<div class="col-md-8 ameg-shadow-box-tre bg-white">
 										<div class="col-md-12 text-center">
 											<div class="row text-center">
 												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Registro de nuevo usuario</h2>

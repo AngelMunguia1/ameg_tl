@@ -2548,6 +2548,8 @@ output {
   line-height: 1.42857143;
   color: #555;
 }
+
+
 .form-control {
   display: block;
   width: 100%;
@@ -2556,7 +2558,7 @@ output {
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
-  background-color: #fff;
+  background-color: #70C7D2;
   background-image: none;
   border: 1px solid #ccc;
   border-radius: 4px;

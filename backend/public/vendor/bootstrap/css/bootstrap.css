@@ -2047,7 +2047,7 @@ pre code {
 .table-responsive > .table-bordered {
 	border: 0;
 }
-
+/*ESTE FORM CONTROL*/
 .form-control {
 	display: block;
 	width: 100%;
@@ -2057,7 +2057,7 @@ pre code {
 	font-weight: 400;
 	line-height: 1.5;
 	color: #495057;
-	background-color: #fff;
+	background-color: rgb(218,223,255);
 	background-clip: padding-box;
 	border: 1px solid #ced4da;
 	border-radius: 0.25rem;
@@ -2082,7 +2082,7 @@ pre code {
 
 .form-control:focus {
 	color: #495057;
-	background-color: #fff;
+	background-color: rgb(228,233,255);
 	border-color: #80bdff;
 	outline: 0;
 	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
@@ -6756,7 +6756,13 @@ a.close.disabled {
 
 .ameg-bg{
 	padding: 10px;
-	background-color: #D9EDF6;
+	background-color: #70c7d2 !important;
+}
+
+.btn-ameg-bg{
+		padding: 10px;
+		background-color: #5C1F69 !important;
+		color: #FFFFFF;
 }
 
 .ameg-shadow-box{
@@ -6804,17 +6810,11 @@ a.close.disabled {
   	margin : 15px auto;
 	align-items: center;
  }
-
- .ameg-shadow-box-cua:hover{
-	transform: translateY(-5px);
-   	box-shadow: 2px 2px 2px 5px #2f5496;
-}
-
+/*ESTE INSTRUCCIONES*/
 .bg-ameg{
-	background-color: #d9edf6;
+	background-color: #F0F9FA !important;
 	color: #FFFFFF;
 	padding: 20px;
-	opacity: 95%;
 }
 
 .bg-img-ameg {
@@ -6903,6 +6903,14 @@ button.bg-dark:focus {
 .bg-white {
 	background-color: #fff !important;
 	opacity: 97%;
+}
+
+.bg-purple-fecha {
+	background-color: #5C1F69 !important;
+}
+
+.bg-blue-relog {
+	background-color: #70c7d2 !important;
 }
 
 .bg-transparent {

@@ -62,8 +62,8 @@ class Convocatoria{
 html;
         $extraFooter =<<<html
         <footer id="footer" class="mt-0">
-				<div class="footer-copyright bg-light mt-0">
-					<div class="container mt-3">
+				<div class="bg-light mt-0">
+					<div class="container">
 						<div class="row text-center">
 							<div class="col">
 								<p>GRUPO LAHE. © 2022. All Rights Reserved</p>

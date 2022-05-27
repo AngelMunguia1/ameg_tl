@@ -34,11 +34,11 @@
 													INSTRUCCIONES PARA AUTORES
 												</a>
 											</li>
-											<!--<li class="dropdown dropdown-mega">
+											<li class="dropdown dropdown-mega">
 													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Registro/">
 														REGISTRO DE USUARIO
 													</a>
-											</li>-->
+											</li>
 											<li class="dropdown dropdown-mega dropdown-mega-style-2">
 												<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login/">
 													<i class="fa fa-user"></i>

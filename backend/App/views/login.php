@@ -40,13 +40,13 @@
                                                     REGISTRO DE USUARIO
                                                 </a>
                                             </li>
-                                            <!--<li class="dropdown dropdown-mega dropdown-mega-style-2">
+                                            <li class="dropdown dropdown-mega dropdown-mega-style-2">
                                                 <a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login/">
                                                     <i class="fa fa-user"></i>
                                                     &nbsp;
                                                     LOGIN
                                                 </a>
-                                            </li>-->
+                                            </li>
                                             <li class="dropdown">
                                                 <a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Contacto/">
                                                     CONTACTO
@@ -83,10 +83,10 @@
             </div>
         </header>
 
-        <section id="" class="bg-dark-4 text-left">
+        <section id="" class="bg-purple-fecha text-left">
             <div class="text-left">
-                <div class="px-lg-3 pb-3 text-left">
-                    &nbsp;&nbsp;&nbsp;&nbsp;<h2 class="text-center text-white">INICIO DE SESIÓN</h2>
+                <div class="font-weight-bold px-lg-3 pb-3 text-left">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<h1 class="text-center text-white font-weight-bold">INICIO DE SESIÓN</h1>
                 </div>
         </section>
 
@@ -149,29 +149,19 @@
                             </div> -->
                             <div class="container text-center">
                                 <div class="row">
-                                    <div class="col">
-                                        <div class="row">
-
-                                            <div class="col-md-10 bg-ameg">
-                                                <h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">INSTRUCCIONES</h2>
-                                                <h3 class="text-left text-color-dark text-4 mb-3">PARA REGISTRAR TU TRABAJO</h3>
-                                                <p class="text-justify">1. Registra tus datos</p>
-                                                <p class="text-justify">2. Ingresa a la plataforma</p>
-                                                <p class="text-justify">3. Sube tus datos</p>
-                                                <p class="text-justify">Si ya tienes cuenta inicia sesión dando clic en el botón superior derecho del menú principal</p>
-                                            </div>
-                                        </div>
-                                        <br>
+                                    <!-- <div class="col-md-4">
                                         <div class="row">
                                             <div class="col-md-10 bg-ameg">
-                                                <h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">ATENCIÓN</h2>
-                                                <h3 class="text-left text-color-dark text-4 mb-3">URGENTE</h3>
-                                                <p class="text-justify">Trabajos de ingreso: favor de considerar...</p>
+                                                <h2 class="font-weight-bold text-left text-4 mb-3">INSTRUCCIONES</h2>
+                                                <h3 class="text-left text-4 mb-3">PARA REGISTRAR TU TRABAJO</h3>
+                                                <p class="text-justify">1. Ingresa tus datos</p>
+                                                <p class="text-justify">2. Revisa que tus datos sean correctos</p>
+                                                <p class="text-justify">3. Ingresa al sistema</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
 
-                                    <div class="col-md-7 ameg-shadow-box-tre bg-white">
+                                    <div class="col-md-12 ameg-shadow-box-tre bg-white">
                                         <div class="col-md-12">
                                             <h3 class="font-weight-bold text-center text-color-dark text-4 mb-3">Ingresa tus datos para iniciar sesión</h3>
                                         </div>
@@ -183,22 +173,22 @@
                                                     </h5>
                                                     <div id="counter" class="group text-center mt-4">
                                                     </div>
-                                                    <p class="mb-0 mt-5">Introduzca el correo electrónico con el cual usted fue registrado para poder iniciar sesión</p>
+                                                    <p class="mb-0 mt-0 text-center">Introduzca el correo electrónico con el cual usted fue registrado para poder iniciar sesión</p>
                                                 </div>
                                                 <!-- Button trigger modal -->
                                                 <div class="card-body">
-                                                    <form role="form" class="text-start" id="login" action="/Login/crearSession" method="POST" class="form-horizontal">
-                                                        <label style="font-weight:bold; font-family: "Arial", sans-serif; font-size: 15px">Correo electrónico</label>
+                                                    <form role="form" class="text-start text-center" id="login" action="/Login/crearSession" method="POST" class="form-horizontal">
+                                                        <label style="font-weight:bold; font-size: 15px;">Correo electrónico</label>
                                                         <div class="mb-5">
-                                                            <input type="email" name="usuario" id="usuario" class="form-control" placeholder="usuario@grupolahe.com" aria-label="Email">
+                                                            <input type="email" name="usuario" id="usuario" class="form-control text-center" placeholder="usuario@grupolahe.com" aria-label="Email">
                                                         </div>
-                                                        <label style="font-weight:bold; font-family: "Arial", sans-serif; font-size: 15px">Contraseña</label>
+                                                        <label style="font-weight:bold; font-size: 15px;">Contraseña</label>
                                                         <div class="mb-5">
-                                                            <input type="password" name="password" id="password" class="form-control" placeholder="•••••••••" aria-label="Password">
+                                                            <input type="password" name="password" id="password" class="form-control text-center btn-outline-relog" placeholder="•••••••••" aria-label="Password">
                                                         </div>
 
-                                                        <div class="text-center">
-                                                            <button  type="button" id="btnEntrar" class="btn bg-gradient-secondary text-center w-60 mt-1 mb-0"><b style="color: #FFFFFF font-family: "Arial", sans-serif;">ENTRAR</b></button>
+                                                        <div class="text-center" style="margin: auto; width : 60%; text-align:center;">
+                                                            <button  type="button" id="btnEntrar" class="btn bg-gradient-secondary text-center w-60 mt-1 mb-0"><b style="color: #FFFFFF;">ENTRAR</b></button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -220,7 +210,7 @@
         </div>
 
     </div>
-    </section> -->
+    </section>
 
     <hr class="my-0">
 

@@ -107,7 +107,7 @@
 									<!-- <div class="icon-box-icon pr-3">
 										<img width="42" src="vendor/linear-icons/screen.svg" alt="" data-icon data-plugin-options="{'color': '#FFF', 'animated': true, 'delay': 600}" />
 									</div> -->
-									<div class="ameg-shadow-box-tre bg-white container text-center">
+									<div class="container text-center">
 										<div class="row">
 											<div class="col">
 												<h2 class="font-weight-bold text-center text-color-dblue" style="margin-left: 55px; margin-right: 55px;">
@@ -129,21 +129,25 @@
 													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	Los trabajos deberán someterse estrictamente al Reglamento del Comité de Admisión y 
 														de Evaluación de Trabajos, 
 														que se encuentra en la página web de la Asociación www.amegendoscopia.org.mx.</p>
-													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	En la página web se encontrarán los enlaces específicos para recepción de documentos y de trabajos libres según la categoría correspondiente a partir del 01 de junio de 2022.</p>
-													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	Sólo se recibirán los trabajos ingresados a la plataforma del 01 al 30 de junio de 2022.</p>
+													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	En la página web se encontrarán los enlaces específicos para recepción de documentos y de trabajos libres según la categoría correspondiente a partir del 
+														<b font-weight-bold style="text-decoration:underline;">01 de junio de 2022.</b>
+													</p>
+													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	Sólo se recibirán los trabajos ingresados a la plataforma del
+														<b font-weight-bold style="text-decoration:underline;">01 al 30 de junio de 2022.</b>
+													</p>
 													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	Únicamente el Autor del trabajo podrá presentarlo en la Reunión Nacional.</p>
 													<br>
 													<p class="font-weight-bold text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	Recepción de resúmenes y documentos:
-														<p class="text-left text-color-dblue" style="margin-left: 55px;">
+														<p class="font-weight-bold text-left text-color-dblue" style="margin-left: 55px; text-decoration:underline;">
 															www.amegendoscopia.org.mx
 														</p>
-														<p class="text-left text-color-dblue" style="margin-left: 55px;">
+														<p class="font-weight-bold text-left text-color-dblue" style="margin-left: 55px; text-decoration:underline;">
 															A partir del 01 de junio de 2022
 														</p>
 													</p>
 													<br>
 													<p class="font-weight-bold text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	Fecha límite de recepción de resúmenes y documentos
-														<p class="text-color-dblue text-left" style="margin-left: 55px;">
+														<p class="font-weight-bold text-color-dblue text-left" style="margin-left: 55px; text-decoration:underline;">
 															30 de junio de 2022, 23:59 hrs.
 														</p>
 														<p class="text-color-dblue text-left" style="margin-left: 55px;">
@@ -170,10 +174,10 @@
 													
 													
 													<h5 class="font-weight-bold text-center">Informes: 
-														<b class="font-weight-bold text-color-dblue">
+														<b class="font-weight-bold text-color-dblue" style="text-decoration: underline;">
 															Tel. 5523 5204
 														</b>  Contacto: 
-														<a href="#" class="font-weight-bold text-color-aqua">
+														<a href="#" class="font-weight-bold text-color-aqua" style="text-decoration: underline;">
 															asociados@amegendoscopia.org.mx
 														</a>
 													</h5>

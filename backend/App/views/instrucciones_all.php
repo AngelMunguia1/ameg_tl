@@ -84,10 +84,10 @@
 			</div>
 		</header>
 
-		<section id="" class="bg-dark-4 text-left">
+		<section id="" class="bg-purple-fecha text-left">
 			<div class="text-left">
 				<div class="px-lg-3 pb-3 text-left">
-					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold  text-center text-white">INSTRUCCIONES PARA AUTORES</h1>
+					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold text-center text-white">INSTRUCCIONES PARA AUTORES</h1>
 				</div>
 		</section>
 
@@ -155,13 +155,13 @@
 											<div class="col-md-10 bg-ameg">
 												<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">CATEGORIAS</h2>
 											
-												<button style="margin: 10px; background-color: #1883ba; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff;"  id="mostrar_trabajo_ingreso">TRABAJOS DE INGRESO</button>
+												<button style="margin: 10px; background-color: #5C1F69; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff; width:90%;"  id="mostrar_trabajo_ingreso">TRABAJOS DE INGRESO</button>
 												
-												<button style="margin: 10px; background-color: #1883ba; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff;" id="mostrar_trabajo_libre_oral">TRABAJO LIBRE ORAL</button>
+												<button style="margin: 10px; background-color: #5C1F69; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff; width:90%;" id="mostrar_trabajo_libre_oral">TRABAJO LIBRE ORAL</button>
 											
-												<button style="margin: 10px; background-color: #1883ba; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff;" id="mostrar_trabajo_en_cartel">TRABAJO EN CARTEL</button>
+												<button style="margin: 10px; background-color: #5C1F69; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff; width:90%;" id="mostrar_trabajo_en_cartel">TRABAJO EN CARTEL</button>
 
-												<button style="margin: 10px; background-color: #1883ba; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff;" id="mostrar_trabajo_video">TRABAJO EN VIDEO</button>
+												<button style="margin: 10px; background-color: #5C1F69; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff; width:90%;" id="mostrar_trabajo_video">TRABAJO EN VIDEO</button>
 												
 											
 											</div>
