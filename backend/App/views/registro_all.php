@@ -1,64 +1,65 @@
 <?php echo $header; ?>
-	<body>
-		<div class="body">
 
-			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 70}">
-				<div class="header-body">
-					<div class="header-container">
-						<div class="header-row">
-							<div class="header-column justify-content-start">
-								<div class="header-logo px-3">
-									<a href="/Inicio/">
-										<img src="/img/logo_ameg.png" width="210" height="100" alt="" />
-									</a>
+<body>
+	<div class="body">
+
+		<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 70}">
+			<div class="header-body">
+				<div class="header-container">
+					<div class="header-row">
+						<div class="header-column justify-content-start">
+							<div class="header-logo px-3">
+								<a href="/Inicio/">
+									<img src="/img/logo_ameg.png" width="210" height="100" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="header-column justify-content-center">
+							<div class="header-nav justify-content-lg-center">
+								<div class="header-nav-main header-nav-main-dark header-nav-main-effect-1 header-nav-main-sub-effect-1">
+									<nav class="collapse">
+										<ul class="nav flex-column flex-lg-row" id="mainNav">
+											<li class="dropdown dropdown-mega">
+												<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Inicio/">
+													INICIO
+												</a>
+											</li>
+											<li class="dropdown dropdown-mega">
+												<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Convocatoria/">
+													CONVOCATORIA
+												</a>
+											</li>
+											<li class="dropdown dropdown-mega">
+												<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Instrucciones/">
+													INSTRUCCIONES PARA AUTORES
+												</a>
+											</li>
+											<li class="dropdown dropdown-mega">
+												<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Registro/">
+													REGISTROS DE TRABAJO
+												</a>
+											</li>
+											<li class="dropdown dropdown-mega dropdown-mega-style-2">
+												<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login/">
+													<i class="fa fa-user"></i>
+													&nbsp;
+													INICIA SESIÓN
+													&nbsp;
+													<i class="fa-solid fa-angle-down"></i>
+												</a>
+											</li>
+											<li class="dropdown">
+												<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Contacto">
+													CONTACTO
+												</a>
+											</li>
+										</ul>
+									</nav>
 								</div>
 							</div>
-							<div class="header-column justify-content-center">
-								<div class="header-nav justify-content-lg-center">
-									<div class="header-nav-main header-nav-main-dark header-nav-main-effect-1 header-nav-main-sub-effect-1">
-										<nav class="collapse">
-											<ul class="nav flex-column flex-lg-row" id="mainNav">
-												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Inicio/">
-														INICIO
-													</a>
-												</li>
-												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Convocatoria/">
-														CONVOCATORIA
-													</a>
-												</li>
-												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Instrucciones/">
-														INSTRUCCIONES PARA AUTORES
-													</a>
-												</li>
-												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Registro/">
-														REGISTROS DE TRABAJO
-													</a>
-												</li>
-												<li class="dropdown dropdown-mega dropdown-mega-style-2">
-													<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login/">
-														<i class="fa fa-user"></i>
-														&nbsp;
-														INICIA SESIÓN
-														&nbsp;
-														<i class="fa-solid fa-angle-down"></i>
-													</a>
-												</li>
-												<li class="dropdown">
-													<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Contacto">
-														CONTACTO
-													</a>
-												</li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-							</div>
-							<div class="header-column justify-content-end">
-								<!-- <div class="header-button d-none d-sm-flex mx-3">
+						</div>
+						<div class="header-column justify-content-end">
+							<!-- <div class="header-button d-none d-sm-flex mx-3">
 									<a href="https://themeforest.net/item/ezy-responsive-multipurpose-html5-template/21814871" class="btn btn-outline btn-rounded btn-primary btn-4 btn-icon-effect-1" target="_blank">
 										<span class="wrap">
 											<span>BUY EZY</span>
@@ -66,33 +67,33 @@
 										</span>
 									</a>
 								</div> -->
-								<button class="header-btn-collapse-nav mx-3" data-toggle="collapse" data-target=".header-nav-main nav">
-									<span class="hamburguer">
-										<span></span>
-										<span></span>
-										<span></span>
-									</span>
-									<span class="close">
-										<span></span>
-										<span></span>
-									</span>
-								</button>
-							</div>
+							<button class="header-btn-collapse-nav mx-3" data-toggle="collapse" data-target=".header-nav-main nav">
+								<span class="hamburguer">
+									<span></span>
+									<span></span>
+									<span></span>
+								</span>
+								<span class="close">
+									<span></span>
+									<span></span>
+								</span>
+							</button>
 						</div>
 					</div>
 				</div>
-			</header>
+			</div>
+		</header>
 
-			<section id="" class="bg-dark-4 text-left">
-				<div class="text-left">
-					<div class="px-lg-3 pb-3 text-left">
-						&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold  text-center text-white">REGISTRO</h1>
-					</div>
-				</section>
+		<section id="" class="bg-dark-4 text-left">
+			<div class="text-left">
+				<div class="px-lg-3 pb-3 text-left">
+					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold  text-center text-white">REGISTRO</h1>
+				</div>
+		</section>
 
-			<div role="main" class="main">
-				
-				<!-- <section class="section bg-light-5">
+		<div role="main" class="main">
+
+			<!-- <section class="section bg-light-5">
 					<div class="container-fluid">
 						<div class="responsive-images responsive-images-left">
 							<div class="position-absolute z-index-1 d-none d-xl-block appear-animation" data-appear-animation="fadeInDownShorter">
@@ -136,142 +137,169 @@
 						</div>
 					</div>
 				</section> -->
-				<section class="section bg-white section-text-overlay" style="background-image: url('img/bg-ameg.jpeg'); background-size: cover;">
-					<!-- <span class="text-background font-primary font-weight-bold text-color-light appear-animation" data-appear-animation="textBgFadeInUp" data-appear-animation-delay="500" data-plugin-options="{'accY': 100}">EASY AS 123</span> -->
-					<!-- <h3 class="text-center">Los trabajos que se presentarán durante el congreso se dividen en 3 categorías principales</h3> -->
-					<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
-						<div class="row align-items-center">
-							
-							<div class="container">
-								<!-- <div class="icon-box icon-box-style-1 flex-column flex-lg-row appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300"> -->
-									<!-- <div class="icon-box-icon pr-3">
+			<section class="section bg-white section-text-overlay" style="background-image: url('img/bg-ameg.jpeg'); background-size: cover;">
+				<!-- <span class="text-background font-primary font-weight-bold text-color-light appear-animation" data-appear-animation="textBgFadeInUp" data-appear-animation-delay="500" data-plugin-options="{'accY': 100}">EASY AS 123</span> -->
+				<!-- <h3 class="text-center">Los trabajos que se presentarán durante el congreso se dividen en 3 categorías principales</h3> -->
+				<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
+					<div class="row align-items-center">
+
+						<div class="container">
+							<!-- <div class="icon-box icon-box-style-1 flex-column flex-lg-row appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300"> -->
+							<!-- <div class="icon-box-icon pr-3">
 										<img width="42" src="vendor/linear-icons/screen.svg" alt="" data-icon data-plugin-options="{'color': '#FFF', 'animated': true, 'delay': 600}" />
 									</div> -->
-									<div class="container text-center">
+							<div class="container text-center">
+								<div class="row">
+									<div class="col">
 										<div class="row">
-											<div class="col">
-												<div class="row">
-							
-													<div class="col-md-10 bg-ameg">
-															<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">INSTRUCCIONES</h2>
-															<h3 class="text-left text-color-dark text-4 mb-3">PARA REGISTRAR TU TRABAJO</h3>
-															<p class="text-justify">1. Registra tus datos</p>
-															<p class="text-justify">2. Ingresa a la plataforma</p>
-															<p class="text-justify">3. Sube tus datos</p>
-															<p class="text-justify">Si ya tienes cuenta inicia sesión dando clic en el botón superior derecho del menú principal</p>
-													</div>
-												</div>
-												<br>
-												<div class="row">
-													<div class="col-md-10 bg-ameg">
-															<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">ATENCIÓN</h2>
-															<h3 class="text-left text-color-dark text-4 mb-3">URGENTE</h3>
-															<p class="text-justify">Trabajos de ingreso: favor de considerar...</p>
-													</div>
-												</div>	
-											</div>
-											
-											
-											<div class="col-md-7 ameg-shadow-box-tre bg-white">
-												<div class="col-md-12 text-center">
-													<div class="row text-center">
-														<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Registro de nuevo usuario</h2>
-													</div>
-												</div>
-												<div class="col-md-12">
-													<div class="row">
-														<div class="col-md-3">
-															<br>
-															<p>Datos de acceso a la plataforma OBLIGATORIO*</p>
-															<br><br><br><br>
-															<p>Datos personales OBLIGATORIO*</p>
-														</div>
-														<div class="col-md-9">
-														<form class="form-horizontal" id="add" action="/Registro/registroAdd" method="POST">
-															<fieldset>
-																<legend class="text-center header"></legend>
-										
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="usuario" name="usuario" type="text" placeholder="Email" class="form-control ameg-shadow-box-two" require="required">
-																	</div>
-																</div>
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="contrasena" name="contrasena" type="password" placeholder="Contraseña" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-																<br><br>
-										
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-										
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="apellidop" name="apellidop" type="text" placeholder="Apellido paterno" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="apellidom" name="apellidom" type="text" placeholder="Apellido materno" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="cedula_profesional" name="cedula_profesional" type="text" placeholder="Cédula profesional" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>
-																<div class="form-group">
-																	
-																	<div class="col-md-8">
-																		<input id="cedula_especialista" name="cedula_especialista" type="text" placeholder="Cédula especialista" class="form-control ameg-shadow-box-two">
-																	</div>
-																</div>						
-										
-																<div class="form-group">
-																	<div class="col-md-12 text-center">
-																		<button type="submit" class="btn btn-primary btn-lg" id="btn_upload" name="btn_upload">REGISTRAME</button>
-																	</div>
-																</div>
-															</fieldset>
-														</form>
-														</div>
-													</div>
-												</div>
-											</div>
 
+											<div class="col-md-10 bg-ameg">
+												<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">INSTRUCCIONES</h2>
+												<h3 class="text-left text-color-dark text-4 mb-3">PARA REGISTRAR TU TRABAJO</h3>
+												<p class="text-justify">1. Registra tus datos</p>
+												<p class="text-justify">2. Ingresa a la plataforma</p>
+												<p class="text-justify">3. Sube tus datos</p>
+												<p class="text-justify">Si ya tienes cuenta inicia sesión dando clic en el botón superior derecho del menú principal</p>
+											</div>
 										</div>
-										<!-- <span class="top-sub-title text-color-light opacity-6">MULTI PURPOSE CONCEPTS</span> -->
-										<!-- <p class="text-color-light opacity-6">EZY comes with tons of design options. Check out all the demos included in the package.</p> -->
+										<br>
+										<div class="row">
+											<div class="col-md-10 bg-ameg">
+												<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">ATENCIÓN</h2>
+												<h3 class="text-left text-color-dark text-4 mb-3">URGENTE</h3>
+												<p class="text-justify">Trabajos de ingreso: favor de considerar...</p>
+											</div>
+										</div>
 									</div>
-								<!-- </div> -->
-							</div>
-							
-						</div>
-					</div>
-				</section>
 
+
+									<div class="col-md-7 ameg-shadow-box-tre bg-white">
+										<div class="col-md-12 text-center">
+											<div class="row text-center">
+												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Registro de nuevo usuario</h2>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="row">
+												<div class="col-md-3">
+													<br>
+													<p>Datos de acceso a la plataforma OBLIGATORIO*</p>
+													<br><br><br><br>
+													<p>Datos personales OBLIGATORIO*</p>
+												</div>
+												<div class="col-md-9">
+													<form class="form-horizontal" id="add" action="/Registro/registroAdd" method="POST">
+														<fieldset>
+															<legend class="text-center header"></legend>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="usuario" name="usuario" type="text" placeholder="Email" class="form-control ameg-shadow-box-two" require="required">
+																   
+																	<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+																	
+																</div>
+															</div>
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="contrasena" name="contrasena" type="password" placeholder="Contraseña" class="form-control ameg-shadow-box-two">
+																	<p style="color: red ;" id="texto_obligatorio"></p>
+																</div>
+															</div>
+															<br><br>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control ameg-shadow-box-two">
+																	<p style="color: red ;" id="texto_obligatorio"></p>
+																</div>
+															</div>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input  onChange="es_vacio()" id="apellidop" name="apellidop" type="text" placeholder="Apellido paterno" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="apellidom" name="apellidom" type="text" placeholder="Apellido materno" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="cedula_profesional" name="cedula_profesional" type="text" placeholder="Cédula profesional" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="cedula_especialista" name="cedula_especialista" type="text" placeholder="Cédula especialista" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+															<div class="form-group">
+																<div class="col-md-12 text-center">
+																	<button disabled="disabled" type="submit" class="btn btn-primary btn-lg"  id="btn_upload" name="btn_upload">REGISTRAME</button>
+																</div>
+															</div>
+														</fieldset>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<!-- <span class="top-sub-title text-color-light opacity-6">MULTI PURPOSE CONCEPTS</span> -->
+								<!-- <p class="text-color-light opacity-6">EZY comes with tons of design options. Check out all the demos included in the package.</p> -->
+							</div>
+							<!-- </div> -->
 						</div>
-						
+
 					</div>
-				</section> -->
-				
-				<hr class="my-0">
-				
-			</div>
+				</div>
+			</section>
+
 		</div>
 
-	</body>
+	</div>
+	</section> -->
+
+	<hr class="my-0">
+
+	</div>
+	</div>
+
+</body>
+
 </html>
+<script>
+function es_vacio(){	
+  var campo1 = document.getElementById("usuario").value;
+  var campo2 = document.getElementById("contrasena").value;
+  var campo3 = document.getElementById("nombre").value;
+  var campo4 = document.getElementById("apellidop").value;
+  var campo5 = document.getElementById("apellidom").value;
+  var campo6 = document.getElementById("cedula_profesional").value;
+  var campo7 = document.getElementById("cedula_especialista").value;
+  if(campo1 != "" && campo2 !="" && campo3 !="" && campo4 !="" && campo5 !="" && campo6 !="" && campo7 !=""){
+    document.getElementById("btn_upload").removeAttribute('disabled');
+
+  }else{
+	document.getElementById("btn_upload").setAttribute('disabled', 'disabled');
+	
+
+  }
+}
+
+
+</script>
 
 <!-- <script>
             $(document).ready(function(){
