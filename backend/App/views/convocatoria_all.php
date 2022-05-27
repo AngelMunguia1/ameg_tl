@@ -157,15 +157,18 @@
 													Admisión y de Evaluación de Trabajos, siendo premiados:
 													</p>
 													<br>
-													<p class="font-weight-bold text-justify" style="color:black; margin-left: 55px; margin-right: 55px;">
-														•	Primer lugar
-													</p>
-													<p class="font-weight-bold text-justify" style="color:black; margin-left: 55px; margin-right: 55px;">
-														•	Segundo lugar
-													</p>
-													<p class="font-weight-bold text-justify" style="color:black; margin-left: 55px; margin-right: 55px;">
-														•	Tercer lugar
-													</p>
+													<center>
+													<p class="font-weight-bold text-justify" style="margin:20px auto; width : 60%;">
+													<img src="/img/trofeo.png" width="30" height="30" alt="" />
+													&nbsp;&nbsp;Primer lugar &nbsp;&nbsp;
+														<img src="/img/trofeo.png" width="30" height="30" alt="" />
+														&nbsp;&nbsp; Segundo lugar &nbsp;&nbsp;
+														 <img src="/img/trofeo.png" width="30" height="30" alt="" />
+														 &nbsp;&nbsp; Tercer lugar 
+													</p><br><br>
+													</center>
+													
+													
 													<h5 class="font-weight-bold text-center">Informes: 
 														<b class="font-weight-bold text-color-dblue">
 															Tel. 5523 5204
