@@ -35,7 +35,7 @@
                                             </a>
                                         </li>
                                         <li class="dropdown dropdown-mega">
-                                            <a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Registro#/">
+                                            <a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/RegistroTrabajo/">
                                                 REGISTROS DE TRABAJOS
                                             </a>
                                         </li>
