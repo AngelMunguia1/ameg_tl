@@ -117,7 +117,7 @@
 												</h2>
 												<h4 class="font-weight-bold text-center text-color-blue">CONVOCA A LA PRESENTACIÓN DE TRABAJOS LIBRES
 													<h4 class="font-weight-bold text-center text-color-blue">Y DE INGRESO DURANTE LA REUNIÓN NACIONAL  2022</h4>
-													<h4 class="font-weight-bold text-center text-color-blue">MÉRIDA YUCATÁN </h4>		
+													<h4 class="font-weight-bold text-center text-color-blue">MÉRIDA, YUCATÁN </h4>		
 												</h4>
 												<br>
 												<h5 class="font-weight-bold text-center text-color-pink">CATEGORÍAS</h5>
