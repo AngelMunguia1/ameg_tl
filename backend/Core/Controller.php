@@ -13,7 +13,7 @@ class Controller{
     	    unset($_SESSION);
                 session_unset();
                 session_destroy();
-                header("Location: /Principal/");
+                header("Location: /Login/");
                 exit();
             }else{
     	    $this->__usuario = $_SESSION['usuario'];

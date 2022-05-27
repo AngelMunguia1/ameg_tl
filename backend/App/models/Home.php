@@ -10,7 +10,7 @@ class Home{
     public static function getById($usuario){
         $mysqli = Database::getInstance(true);
         $query =<<<sql
-         SELECT * FROM utilerias_administradores WHERE usuario LIKE :usuario
+         SELECT * FROM usuarios WHERE usuario LIKE :usuario
 sql;
         $params = array(
             ':usuario'=> $usuario->_usuario
@@ -22,7 +22,7 @@ sql;
     public static function getUser($usuario){
         $mysqli = Database::getInstance(true);
         $query =<<<sql
-        SELECT * FROM utilerias_administradores WHERE usuario = '$usuario'
+        SELECT * FROM usuarios WHERE usuario = '$usuario'
 sql;
 
         return $mysqli->queryAll($query);

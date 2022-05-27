@@ -5,45 +5,32 @@ defined("APPPATH") OR die("Access denied");
 use \Core\Database;
 use \App\interfaces\Crud;
 
-class Login{
- 
-    public static function getUserByEmail($usuario){
-        $mysqli = Database::getInstance(true);
-        $query =<<<sql
-        SELECT *
-        FROM usuarios
-        WHERE usuario = '$usuario'
-sql;
+class Login implements Crud{
 
-        return $mysqli->queryAll($query);
-    }
-
-    public static function getUserRAById($usuario){
-        $mysqli = Database::getInstance(true);
-        $query =<<<sql
-        SELECT * FROM usuarios
-        WHERE usuario LIKE :usuario
-sql;
-        $params = array(
-            ':usuario'=> $usuario->_usuario,
-            ':contrasena'=>$usuario->_contrasena
-        );
-
-        var_dump($params);
-
-        return $mysqli->queryOne($query,$params);
-    }
+    public static function getAll(){}
+    public static function insert($suscripcion){}
+    public static function update($suscripcion){}
+    public static function delete($id){}
 
     public static function getById($usuario){
         $mysqli = Database::getInstance(true);
         $query =<<<sql
-        SELECT * FROM usuarios WHERE id_usuario = :id_usuario AND usuario LIKE :usuario
+        SELECT * FROM usuarios WHERE usuario LIKE :usuario AND contrasena LIKE :password 
 sql;
         $params = array(
             ':usuario'=> $usuario->_usuario,
-            ':contrasena'=>$usuario->_contrasena
+            ':password'=>$usuario->_password
         );
 
         return $mysqli->queryOne($query,$params);
+    }
+
+    public static function getUser($usuario){
+        $mysqli = Database::getInstance(true);
+        $query =<<<sql
+        SELECT * FROM usuarios WHERE usuario = '$usuario'
+sql;
+
+        return $mysqli->queryAll($query);
     }
 }

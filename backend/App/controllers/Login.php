@@ -4,6 +4,7 @@ defined("APPPATH") OR die("Access denied");
 
 use \Core\View;
 use \Core\MasterDom;
+use \App\controllers\Contenedor;
 use \App\models\Login AS LoginDao;
 
 class Login{
@@ -11,23 +12,54 @@ class Login{
 
     public function index() {
         $extraHeader =<<<html
-        <!-- Basic -->
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon.png">
+        <link rel="icon" type="image/png" href="/img/favicon.png">
+        <title>Sistema de trabajo libres de AMEG</title>
 
-		<title>Sistema de trabajo libres de AMEG</title>	
-
-		<meta name="keywords" content="HTML5 Template" />
-		<meta name="description" content="EZY - Responsive HTML5 Template">
-		<meta name="author" content="okler.net">
-
-		<!-- Mobile Metas -->
+        <!-- CSS Files -->
+        <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/alertify/alertify.core.css" />
+        <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
+        
+        <!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 
 		<!-- Web Fonts  -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700,900%7COpen+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
+        
+        
 
-		<!-- Vendor CSS -->
+html;
+        $extraFooter =<<<html
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/validate/jquery.validate.js"></script>
+        <script src="/js/alertify/alertify.min.js"></script>
+        <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+        <!--   Core JS Files   -->
+        <script src="/assets/js/core/popper.min.js"></script>
+        <script src="/assets/js/core/bootstrap.min.js"></script>
+        <script src="/assets/js/plugins/perfect-scrollbar.min.js"></script>
+        <script src="/assets/js/plugins/smooth-scrollbar.min.js"></script>
+        <!-- Kanban scripts -->
+        <script src="/assets/js/plugins/dragula/dragula.min.js"></script>
+        <script src="/assets/js/plugins/jkanban/jkanban.js"></script>
+        <script>
+            var win = navigator.platform.indexOf('Win') > -1;
+            if (win && document.querySelector('#sidenav-scrollbar')) {
+                var options = {
+                    damping: '0.5'
+                }
+                Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+            }
+        </script>
+        <!-- Github buttons -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+
+        
+        <!-- Vendor CSS -->
 		<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.css">
 		<link rel="stylesheet" href="/vendor/fontawesome-free/css/all.min.css">
@@ -63,28 +95,9 @@ class Login{
 
 		<!-- Head Libs -->
 		<script src="/vendor/modernizr/modernizr.min.js"></script>
-
-        <!--     CONGRESO LIBRERIAS     -->
-
-
-        <!-- CSS Files -->
-        <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
-        
-html;
-        $extraFooter =<<<html
-        <footer id="footer" class="mt-0">
-				<div class="footer-copyright bg-light mt-0">
-					<div class="container mt-3">
-						<div class="row text-center">
-							<div class="col">
-								<p>GRUPO LAHE. © 2022. All Rights Reserved</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
-
-            <!-- jQuery -->
+		
+		
+		<!-- jQuery -->
         <script src="/js/jquery.min.js"></script>
         <script src="/js/validate/jquery.validate.js"></script>
 
@@ -121,19 +134,19 @@ html;
 		
 		<!-- Examples -->
 		<script src="/js/examples/examples.landing.js"></script>
+
       
 
         <script>
             $(document).ready(function(){
                 $.validator.addMethod("checkUserName",function(value, element) {
-                var response = false;
+                  var response = false;
                     $.ajax({
                         type:"POST",
                         async: false,
                         url: "/Login/isUserValidate",
                         data: {usuario: $("#usuario").val()},
                         success: function(data) {
-                            console.log(data);
                             if(data=="true"){
                                 $('#btnEntrar').attr("disabled", false);
                                 response = true;
@@ -144,29 +157,29 @@ html;
                     });
 
                     return response;
-                },"Este usuario no esta registrado");
+                },"El usuario no es correcto");
 
                 $("#login").validate({
                     rules:{
-                         usuario:{
-                             required: true,
-                             checkUserName: true
-                         },
-                         contrasena:{
-                             required: true,
-                         }
-                     },
-                     messages:{
-                         usuario:{
-                             required: "Este campo es requerido",
-                         },
-                         contrasena:{
-                             required: "Este campo es requerido",
-                         }
-                     }
-                 });
+                        usuario:{
+                            required: true,
+                            checkUserName: true
+                        },
+                        password:{
+                            required: true,
+                        }
+                    },
+                    messages:{
+                        usuario:{
+                            required: "Este campo es requerido",
+                        },
+                        password:{
+                            required: "Este campo es requerido",
+                        }
+                    }
+                });
 
-                 $("#btnEntrar").click(function(){
+                $("#btnEntrar").click(function(){
                     $.ajax({
                         type: "POST",
                         url: "/Login/verificarUsuario",
@@ -174,21 +187,22 @@ html;
                         success: function(response){
                             if(response!=""){
                                 var usuario = jQuery.parseJSON(response);
-                                // var usuario = $.parseJSON(response);
                                 if(usuario.nombre!=""){
                                     $("#login").append('<input type="hidden" name="autentication" id="autentication" value="OK"/>');
                                     $("#login").append('<input type="hidden" name="nombre" id="nombre" value="'+usuario.nombre+'"/>');
                                     $("#login").submit();
                             }else{
-                                alert("Error de autenticación");
+                                alertify.alert("Error de autenticación <br> El usuario o contraseña es incorrecta");
                             }
                             }else{
-                                alert("El usuario o contraseña es incorrecta");
+                                alertify.alert("Error de autenticación <br> El usuario o contraseña es incorrecta");
                             }
                         }
                     });
                 });
 
+
+          
             });
         </script>
 html;
@@ -198,17 +212,14 @@ html;
     }
 
     public function isUserValidate(){
-        echo (count(LoginDao::getUserByEmail($_POST['usuario']))>=1)? 'true' : 'false';
+        echo (count(LoginDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
     }
 
     public function verificarUsuario(){
         $usuario = new \stdClass();
         $usuario->_usuario = MasterDom::getData("usuario");
-        $usuario->_contrasena = MD5(MasterDom::getData("contrasena"));
-        //$usuario->_contrasena = MasterDom::getData("contrasena");
-        // var_dump($usuario);
-        $user = LoginDao::getUserRAById($usuario);
-        // 
+        $usuario->_password = MD5(MasterDom::getData("password"));
+        $user = LoginDao::getById($usuario);
         if (count($user)>=1) {
             $user['nombre'] = utf8_encode($user['nombre']);
             echo json_encode($user);
@@ -218,21 +229,18 @@ html;
     public function crearSession(){
         $usuario = new \stdClass();
         $usuario->_usuario = MasterDom::getData("usuario");
-        $usuario->_contrasena = MasterDom::getData("contrasena");
-        $user = LoginDao::getUserRAById($usuario);
+        $usuario->_password = MD5(MasterDom::getData("password"));
+        $user = LoginDao::getById($usuario);
         session_start();
         $_SESSION['usuario'] = $user['usuario'];
         $_SESSION['nombre'] = $user['nombre'];
-        $_SESSION['id_usuario'] = $user['id_usuario'];
-
-        header("location: /Inicio/");
+        header("location: /Principal/");
     }
 
     public function cerrarSession(){
-        unset($_SESSION);
-        session_unset();
+        session_start();
+        //session_unset();
         session_destroy();
         header("Location: /Login/");
     }
-
 }

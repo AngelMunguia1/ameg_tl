@@ -191,7 +191,7 @@ html;
           // $this->alerta($id,'add');
           echo '<script>
             alert("Usuario registrado con éxito");
-            window.location.href = "/IniciaSesion";
+            window.location.href = "/Login/";
           </script>';
   
          
@@ -199,7 +199,7 @@ html;
           // $this->alerta($id,'error');
           echo '<script>
           alert("Error al registrar usuario, consulte a soporte");
-          window.location.href = "/Principal";
+          window.location.href = "/Inicio/";
         </script>';
         }
   

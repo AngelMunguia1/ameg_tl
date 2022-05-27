@@ -5,8 +5,10 @@ defined("APPPATH") OR die("Access denied");
 use \Core\View;
 use \Core\MasterDom;
 use \App\models\Home AS HomeDao;
+use \App\controllers\Contenedor;
+use \Core\Controller;
 
-class Home{
+class Home extends Controller{
     private $_contenedor;
 
     public function index() {
@@ -113,7 +115,7 @@ html;
             
             <!-- Examples -->
             <script src="/js/examples/examples.landing.js"></script>
-      
+
 
         <script>
             $(document).ready(function(){
@@ -178,7 +180,7 @@ html;
 html;
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
-        View::render("principal_all");
+        View::render("home_all");
     }
 
     public function isUserValidate(){
@@ -208,7 +210,7 @@ html;
 
     public function cerrarSession(){
         unset($_SESSION);
-        session_unset();
+        //session_unset();
         session_destroy();
         header("Location: /Login/");
     }

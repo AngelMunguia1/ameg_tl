@@ -36,14 +36,14 @@
 											</li>
 											<li class="dropdown dropdown-mega">
 												<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Registro/">
-													REGISTROS DE TRABAJO
+                                                    REGISTRO DE USUARIO
 												</a>
 											</li>
 											<li class="dropdown dropdown-mega dropdown-mega-style-2">
 												<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login/">
 													<i class="fa fa-user"></i>
 													&nbsp;
-													INICIA SESIÓN
+													LOGIN
 													&nbsp;
 													<i class="fa-solid fa-angle-down"></i>
 												</a>
