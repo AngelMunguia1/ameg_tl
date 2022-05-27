@@ -162,7 +162,7 @@
                                     </div> -->
 
                                     <div class="col-md-12 ameg-shadow-box-tre bg-white">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12 text-center">
                                             <h3 class="font-weight-bold text-center text-color-dark text-4 mb-3">Ingresa tus datos para iniciar sesión</h3>
                                         </div>
                                         <div class="col-md-12">

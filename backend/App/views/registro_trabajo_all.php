@@ -35,11 +35,11 @@
 												</a>
 											</li>
 											<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Registro/">
-														REGISTRO DE USUARIO
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/RegistroTrabajo/">
+														REGISTRO DE TRABAJOS
 													</a>
 											</li>
-											<li class="dropdown dropdown-mega dropdown-mega-style-2">
+											<!-- <li class="dropdown dropdown-mega dropdown-mega-style-2">
 												<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login/">
 													<i class="fa fa-user"></i>
 													&nbsp;
@@ -47,12 +47,19 @@
 													&nbsp;
 													<i class="fa-solid fa-angle-down"></i>
 												</a>
-											</li>
+											</li> -->
 											<li class="dropdown">
 												<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Contacto">
 													CONTACTO
 												</a>
 											</li>
+											<li class="dropdown">
+                                            <a href="/Login/cerrarSession" class="dropdown-item dropdown-toggle" style="color:#70C7D2;">
+                                                <i class="fa fa-power-off"></i>
+                                                &nbsp;
+                                                LOGOUT
+                                            </a>
+                                        </li>
 										</ul>
 									</nav>
 								</div>
@@ -84,10 +91,10 @@
 			</div>
 		</header>
 
-		<section id="" class="bg-dark-4 text-left">
-			<div class="text-left">
-				<div class="px-lg-3 pb-3 text-left">
-					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold  text-center text-white">REGISTRO</h1>
+		<section id="" class=" text-center bg-purple-fecha">
+			<div class="text-center">
+				<div class="px-lg-3 pb-3 text-center">
+					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold  text-center text-white">SOLICITUD DE INGRESO</h1>
 				</div>
 		</section>
 
@@ -137,92 +144,352 @@
 						</div>
 					</div>
 				</section> -->
-			<section class="section bg-white section-text-overlay" style="background-image: url('img/bg-ameg.jpeg'); background-size: cover;">
+			<section class="section bg-white text-center section-text-overlay" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;">
 				<!-- <span class="text-background font-primary font-weight-bold text-color-light appear-animation" data-appear-animation="textBgFadeInUp" data-appear-animation-delay="500" data-plugin-options="{'accY': 100}">EASY AS 123</span> -->
 				<!-- <h3 class="text-center">Los trabajos que se presentarán durante el congreso se dividen en 3 categorías principales</h3> -->
-				<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
-					<div class="row align-items-center">
+				<div class="container container-lg-custom align-content-center text-center">
+					<div class="row align-items-center text-center">
 
-						<div class="container">
+						<div class="container text-center">
 							<!-- <div class="icon-box icon-box-style-1 flex-column flex-lg-row appear-animation" data-appear-animation="fadeInLeftShorter" data-appear-animation-delay="300"> -->
 							<!-- <div class="icon-box-icon pr-3">
 										<img width="42" src="vendor/linear-icons/screen.svg" alt="" data-icon data-plugin-options="{'color': '#FFF', 'animated': true, 'delay': 600}" />
 									</div> -->
 							<div class="container text-center">
 								<div class="row">
-									<div class="col-md-12 ameg-shadow-box-tre bg-white">
+									<div class="col-md-9 text-center ameg-shadow-box-tre bg-white">
 										<div class="col-md-12 text-center">
 											<div class="row text-center">
-												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Registro de nuevo usuario</h2>
+												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3" style="color: #42787e !important;">DOMICILIO PARTICULAR</h2>
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="row">
-												<div class="col-md-3">
-													<br>
-													<p>Datos de acceso a la plataforma OBLIGATORIO*</p>
-													<br><br><br><br>
-													<p>Datos personales OBLIGATORIO*</p>
-												</div>
-												<div class="col-md-9">
+
+
+												<div class="col-md-12">
 													<form class="form-horizontal" id="add" action="/Registro/registroAdd" method="POST">
+
 														<fieldset>
 															<legend class="text-center header"></legend>
 
 															<div class="form-group">
+																<div class="col-md-12 row">
+																	<div class="col-md-6">
 
-																<div class="col-md-8">
-																	<input onChange="es_vacio()" id="usuario" name="usuario" type="text" placeholder="Email" class="form-control ameg-shadow-box-two" require="required">
-																   
-																	<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
-																	
-																</div>
-															</div>
-															<div class="form-group">
+																		<input onChange="es_vacio()" id="calle_numero" name="calle_numero" type="text" placeholder="CALLE Y NÚMERO" class="form-control ameg-shadow-box-two" require="required">
 
-																<div class="col-md-8">
-																	<input onChange="es_vacio()" id="contrasena" name="contrasena" type="password" placeholder="Contraseña" class="form-control ameg-shadow-box-two">
-																	<p style="color: red ;" id="texto_obligatorio"></p>
-																</div>
-															</div>
-															<br><br>
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
 
-															<div class="form-group">
+																	</div>
+																	<div class="col-md-6">
 
-																<div class="col-md-8">
-																	<input onChange="es_vacio()" id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control ameg-shadow-box-two">
-																	<p style="color: red ;" id="texto_obligatorio"></p>
+																		<input onChange="es_vacio()" id="colonia" name="colonia" type="text" placeholder="COLONIA" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
 																</div>
 															</div>
 
-															<div class="form-group">
 
-																<div class="col-md-8">
-																	<input  onChange="es_vacio()" id="apellidop" name="apellidop" type="text" placeholder="Apellido paterno" class="form-control ameg-shadow-box-two">
+															<div class="form-group">
+																<div class="col-md-12 row">
+																	<div class="col-md-4">
+
+																		<input onChange="es_vacio()" id="cp" name="cp" type="text" placeholder="C.P." class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-8">
+
+																		<input onChange="es_vacio()" id="delegacion" name="delegacion" type="text" placeholder="DELEGACIÓN O MUNICIPIO" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
 																</div>
 															</div>
-															<div class="form-group">
 
-																<div class="col-md-8">
-																	<input onChange="es_vacio()" id="apellidom" name="apellidom" type="text" placeholder="Apellido materno" class="form-control ameg-shadow-box-two">
+
+															<div class="form-group">
+																<div class="col-md-12 row ">
+																	<div class="col-md-8 ">
+
+																		<input onChange="es_vacio()" id="ciudad_estado" name="ciudad_estado" type="text" placeholder="CIUDAD O ESTADO" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-4">
+
+																		<input onChange="es_vacio()" id="telefono" name="telefono" maxlength="12" type="text" placeholder="TELÉFONO" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
 																</div>
 															</div>
-															<div class="form-group">
 
-																<div class="col-md-8">
-																	<input onChange="es_vacio()" id="cedula_profesional" name="cedula_profesional" type="text" placeholder="Cédula profesional" class="form-control ameg-shadow-box-two">
+															<div class="form-group">
+																<div class="col-md-12 row ">
+																	<div class="col-md-12 ">
+																		<p>SI SU DOMICILIO PARTICULAR ES TAMBIÉN FISCAL MARQUE</p>
+																		<input type="radio" name="color" value="azul"> SI
+																		<input type="radio" name="color" value="azul"> NO
+																	</div>
+
 																</div>
 															</div>
-															<div class="form-group">
 
-																<div class="col-md-8">
-																	<input onChange="es_vacio()" id="cedula_especialista" name="cedula_especialista" type="text" placeholder="Cédula especialista" class="form-control ameg-shadow-box-two">
+
+
+
+															<div class="col-md-12 text-center">
+																<div class="row text-center">
+																	<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3" style="color: #42787e !important;">DOMICILIO DEL CONSULTORIO</h2>
+																</div>
+															</div>
+
+															<div class="form-group">
+																<div class="col-md-12 row">
+																	<div class="col-md-6">
+
+																		<input onChange="es_vacio()" id="calle_numero" name="calle_numero" type="text" placeholder="CALLE Y NÚMERO" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-6">
+
+																		<input onChange="es_vacio()" id="colonia" name="colonia" type="text" placeholder="COLONIA" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																</div>
+															</div>
+
+
+															<div class="form-group">
+																<div class="col-md-12 row">
+																	<div class="col-md-4">
+
+																		<input onChange="es_vacio()" id="cp" name="cp" type="text" placeholder="C.P." class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-8">
+
+																		<input onChange="es_vacio()" id="delegacion" name="delegacion" type="text" placeholder="DELEGACIÓN O MUNICIPIO" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																</div>
+															</div>
+
+
+															<div class="form-group">
+																<div class="col-md-12 row ">
+																	<div class="col-md-8 ">
+
+																		<input onChange="es_vacio()" id="ciudad_estado" name="ciudad_estado" type="text" placeholder="CIUDAD O ESTADO" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-4">
+
+																		<input onChange="es_vacio()" id="telefono" name="telefono" maxlength="12" type="text" placeholder="TELÉFONO" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																</div>
+															</div>
+
+															<div class="form-group">
+																<div class="col-md-12 row ">
+																	<div class="col-md-12 ">
+																		<p>SI SU DOMICILIO DE CONSULTORIO ES TAMBIÉN FISCAL MARQUE (EN CASO DE SER OTRO. FAVOR DE PONERLO)</p>
+																		<input type="radio" name="color" value="azul"> SI
+																		<input type="radio" name="color" value="azul"> NO
+																	</div>
+
+																</div>
+															</div>
+
+
+
+
+															<div class="col-md-12 text-center">
+																<div class="row text-center">
+																	<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3" style="color: #42787e !important;">LUGAR DE TRABAJO</h2>
+																</div>
+															</div>
+
+
+
+															<div class="form-group">
+																<div class="col-md-12 row ">
+																	<div class="col-md-6 ">
+
+																		<input onChange="es_vacio()" id="ciudad_estado" name="ciudad_estado" type="text" placeholder="INSTITUCIÓN O DIVISIÓN" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-3">
+
+																		<input onChange="es_vacio()" id="telefono" name="telefono"  type="text" placeholder="UNIDAD U HOSPITAL" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-3">
+
+																		<input onChange="es_vacio()" id="telefono" name="telefono"  type="text" placeholder="DEPATAMENTO" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																</div>
+															</div>
+
+
+															<div class="form-group">
+																<div class="col-md-12 row ">
+																	<div class="col-md-6 ">
+
+																		<input onChange="es_vacio()" id="ciudad_estado" name="ciudad_estado" type="text" placeholder="CALLE Y NÚMERO" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-3">
+
+																		<input onChange="es_vacio()" id="telefono" name="telefono"  type="text" placeholder="COLONIA" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-3">
+
+																		<input onChange="es_vacio()" id="telefono" name="telefono" type="text" placeholder="C.P." class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																</div>
+															</div>
+
+															
+															<div class="form-group">
+																<div class="col-md-12 row ">
+																	<div class="col-md-6 ">
+
+																		<input onChange="es_vacio()" id="ciudad_estado" name="ciudad_estado" type="text" placeholder="ALCALDÍA O MUNICIPIO" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-6">
+
+																		<input onChange="es_vacio()" id="telefono" name="telefono"  type="text" placeholder="CIUDAD O ESTADO" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+				
+																</div>
+															</div>
+
+
+
+
+															<div class="form-group">
+																<div class="col-md-12 row ">
+																	<div class="col-md-3">
+
+																		<input onChange="es_vacio()" id="ciudad_estado" name="ciudad_estado" type="text" placeholder="TELÉFONO" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-3">
+
+																		<input onChange="es_vacio()" id="telefono" name="telefono"  type="text" placeholder="CELULAR" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-6">
+
+																		<input onChange="es_vacio()" id="telefono" name="telefono" type="text" placeholder="EMAIL" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																</div>
+															</div>
+
+															<div class="form-group">
+																<div class="col-md-12 row ">
+																	<div class="col-md-6">
+
+																		<input onChange="es_vacio()" id="ciudad_estado" name="ciudad_estado" type="text" placeholder="ESPECIALIDAD" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-6">
+
+																		<input onChange="es_vacio()" id="telefono" name="telefono"  type="text" placeholder="HOSPITAL" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+							
+																</div>
+															</div>
+
+															<div class="form-group">
+																<div class="col-md-12 row ">
+																	<div class="col-md-12 ">
+																		<p>¿ES USTED PROFESOR(A) DE ALGUNA INSTITUCIÓN?</p>
+																		<input type="radio" name="color" value="azul"> SI
+																		<input type="radio" name="color" value="azul"> NO
+																	</div>
+
+																</div>
+															</div>
+
+															<div class="form-group">
+																<div class="col-md-12 row ">
+																	<div class="col-md-6">
+
+																		<input onChange="es_vacio()" id="ciudad_estado" name="ciudad_estado" type="text" placeholder="NOMBRE DE LA INSTITUCIÓN" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+																	<div class="col-md-6">
+
+																		<input onChange="es_vacio()" id="telefono" name="telefono"  type="text" placeholder="NOMBRE DEL CURSO" class="form-control ameg-shadow-box-two" require="required">
+
+																		<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+
+																	</div>
+							
 																</div>
 															</div>
 
 															<div class="form-group">
 																<div class="col-md-12 text-center">
-																	<button disabled="disabled" type="submit" class="btn btn-primary btn-lg"  id="btn_upload" name="btn_upload">REGISTRAME</button>
+																	<button disabled="disabled" type="submit" class="btn btn-primary btn-lg" id="btn_upload" name="btn_upload">REGISTRAME</button>
 																</div>
 															</div>
 														</fieldset>
@@ -257,25 +524,23 @@
 
 </html>
 <script>
-function es_vacio(){	
-  var campo1 = document.getElementById("usuario").value;
-  var campo2 = document.getElementById("contrasena").value;
-  var campo3 = document.getElementById("nombre").value;
-  var campo4 = document.getElementById("apellidop").value;
-  var campo5 = document.getElementById("apellidom").value;
-  var campo6 = document.getElementById("cedula_profesional").value;
-  var campo7 = document.getElementById("cedula_especialista").value;
-  if(campo1 != "" && campo2 !="" && campo3 !="" && campo4 !="" && campo5 !="" && campo6 !="" && campo7 !=""){
-    document.getElementById("btn_upload").removeAttribute('disabled');
+	function es_vacio() {
+		var campo1 = document.getElementById("usuario").value;
+		var campo2 = document.getElementById("contrasena").value;
+		var campo3 = document.getElementById("nombre").value;
+		var campo4 = document.getElementById("apellidop").value;
+		var campo5 = document.getElementById("apellidom").value;
+		var campo6 = document.getElementById("cedula_profesional").value;
+		var campo7 = document.getElementById("cedula_especialista").value;
+		if (campo1 != "" && campo2 != "" && campo3 != "" && campo4 != "" && campo5 != "" && campo6 != "" && campo7 != "") {
+			document.getElementById("btn_upload").removeAttribute('disabled');
 
-  }else{
-	document.getElementById("btn_upload").setAttribute('disabled', 'disabled');
-	
-
-  }
-}
+		} else {
+			document.getElementById("btn_upload").setAttribute('disabled', 'disabled');
 
 
+		}
+	}
 </script>
 
 <!-- <script>
