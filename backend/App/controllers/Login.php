@@ -85,42 +85,42 @@ html;
 			</footer>
 
             <!-- jQuery -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/validate/jquery.validate.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/validate/jquery.validate.js"></script>
 
 		<!-- Vendor -->
-		<script src="vendor/jquery/jquery.min.js"></script>
-		<script src="vendor/jquery.appear/jquery.appear.min.js"></script>
-		<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
-		<script src="vendor/jquery.cookie/jquery.cookie.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="vendor/common/common.min.js"></script>
-		<script src="vendor/jquery.validation/jquery.validate.min.js"></script>
-		<script src="vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
-		<script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
-		<script src="vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
-		<script src="vendor/isotope/jquery.isotope.min.js"></script>
-		<script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-		<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-		<script src="vendor/vide/jquery.vide.min.js"></script>
-		<script src="vendor/vivus/vivus.min.js"></script>
-		<script src="master/style-switcher/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+		<script src="/vendor/jquery/jquery.min.js"></script>
+		<script src="/vendor/jquery.appear/jquery.appear.min.js"></script>
+		<script src="/vendor/jquery.easing/jquery.easing.min.js"></script>
+		<script src="/vendor/jquery.cookie/jquery.cookie.js"></script>
+		<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="/vendor/common/common.min.js"></script>
+		<script src="/vendor/jquery.validation/jquery.validate.min.js"></script>
+		<script src="/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+		<script src="/vendor/jquery.gmap/jquery.gmap.min.js"></script>
+		<script src="/vendor/jquery.lazyload/jquery.lazyload.min.js"></script>
+		<script src="/vendor/isotope/jquery.isotope.min.js"></script>
+		<script src="/vendor/owl.carousel/owl.carousel.min.js"></script>
+		<script src="/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+		<script src="/vendor/vide/jquery.vide.min.js"></script>
+		<script src="/vendor/vivus/vivus.min.js"></script>
+		<script src="/master/style-switcher/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
 		
 		<!-- Theme Base, Components and Settings -->
-		<script src="js/theme.js"></script>
+		<script src="/js/theme.js"></script>
 		
 		<!-- Current Page Vendor and Views -->
-		<script src="vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
-		<script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+		<script src="/vendor/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+		<script src="/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 		
 		<!-- Theme Custom -->
-		<script src="js/custom.js"></script>
+		<script src="/js/custom.js"></script>
 		
 		<!-- Theme Initialization Files -->
-		<script async src="js/theme.init.js"></script>
+		<script async src="/js/theme.init.js"></script>
 		
 		<!-- Examples -->
-		<script src="js/examples/examples.landing.js"></script>
+		<script src="/js/examples/examples.landing.js"></script>
       
 
         <script>
@@ -174,6 +174,7 @@ html;
                         success: function(response){
                             if(response!=""){
                                 var usuario = jQuery.parseJSON(response);
+                                // var usuario = $.parseJSON(response);
                                 if(usuario.nombre!=""){
                                     $("#login").append('<input type="hidden" name="autentication" id="autentication" value="OK"/>');
                                     $("#login").append('<input type="hidden" name="nombre" id="nombre" value="'+usuario.nombre+'"/>');
@@ -224,7 +225,7 @@ html;
         $_SESSION['nombre'] = $user['nombre'];
         $_SESSION['id_usuario'] = $user['id_usuario'];
 
-        header("location: /Principal");
+        header("location: /Inicio/");
     }
 
     public function cerrarSession(){

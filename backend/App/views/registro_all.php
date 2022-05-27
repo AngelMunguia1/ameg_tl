@@ -8,8 +8,8 @@
 						<div class="header-row">
 							<div class="header-column justify-content-start">
 								<div class="header-logo px-3">
-									<a href="/Inicio">
-										<img src="img/logo_ameg.png" width="210" height="100" alt="" />
+									<a href="/Inicio/">
+										<img src="/img/logo_ameg.png" width="210" height="100" alt="" />
 									</a>
 								</div>
 							</div>
@@ -19,27 +19,27 @@
 										<nav class="collapse">
 											<ul class="nav flex-column flex-lg-row" id="mainNav">
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Inicio">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Inicio/">
 														INICIO
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Convocatoria">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Convocatoria/">
 														CONVOCATORIA
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Instrucciones">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Instrucciones/">
 														INSTRUCCIONES PARA AUTORES
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Registro">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Registro/">
 														REGISTROS DE TRABAJO
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega dropdown-mega-style-2">
-													<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login">
+													<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login/">
 														<i class="fa fa-user"></i>
 														&nbsp;
 														INICIA SESIÓN

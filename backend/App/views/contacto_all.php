@@ -8,8 +8,8 @@
 						<div class="header-row">
 							<div class="header-column justify-content-start">
 								<div class="header-logo px-3">
-									<a href="/Inicio">
-										<img src="img/logo_ameg.png" width="210" height="100" alt="" />
+									<a href="/Inicio/">
+										<img src="/img/logo_ameg.png" width="210" height="100" alt="" />
 									</a>
 								</div>
 							</div>
@@ -19,32 +19,32 @@
 										<nav class="collapse">
 											<ul class="nav flex-column flex-lg-row" id="mainNav">
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Inicio">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Inicio/">
 														INICIO
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Convocatoria">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Convocatoria/">
 														CONVOCATORIA
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Instrucciones">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Instrucciones/">
 														INSTRUCCIONES PARA AUTORES
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Registro">
+													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Registro/">
 														REGISTROS DE TRABAJO
 													</a>
 												</li>
 												<li class="dropdown">
-													<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Contacto">
+													<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Contacto/">
 														CONTACTO
 													</a>
 												</li>
 												<li class="dropdown dropdown-mega dropdown-mega-style-2">
-													<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login">
+													<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login/">
 														<i class="fa fa-user"></i>
 														&nbsp;
 														LOGIN
@@ -75,7 +75,7 @@
 			</header>
 
 			<div role="main" class="main">
-				<section class="section bg-white section-text-overlay" style="background-image: url('img/bg-ameg.jpeg'); background-size: cover;">
+				<section class="section bg-white section-text-overlay" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;">
 					<!-- <span class="text-background font-primary font-weight-bold text-color-light appear-animation" data-appear-animation="textBgFadeInUp" data-appear-animation-delay="500" data-plugin-options="{'accY': 100}">EASY AS 123</span> -->
 					<!-- <h3 class="text-center">Los trabajos que se presentarán durante el congreso se dividen en 3 categorías principales</h3> -->
 					<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
