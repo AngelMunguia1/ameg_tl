@@ -180,11 +180,13 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
+                                                    <label>Email *</label>
                                                     <input onChange="es_vacio()" id="usuario" name="usuario" type="text" placeholder="Email" class="form-control ameg-shadow-box-two" require="required">
                                                     <p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                        <input onChange="es_vacio()" id="contrasena" name="contrasena" type="password" placeholder="Contraseña para ingresar al sistema" class="form-control ameg-shadow-box-two">
+                                                    <label>Contraseña *</label>
+                                                    <input onChange="es_vacio()" id="contrasena" name="contrasena" type="password" placeholder="Contraseña para ingresar al sistema" class="form-control ameg-shadow-box-two">
                                                         <p style="color: red ;" id="texto_obligatorio"></p>
                                                 </div>
                                             </div>
@@ -193,15 +195,18 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4">
+                                                    <label>Nombre(s) *</label>
                                                     <input onChange="es_vacio()" id="nombre" name="nombre" type="text" placeholder="Nombre(s)" class="form-control ameg-shadow-box-two">
                                                     <p style="color: red ;" id="texto_obligatorio"></p>
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                                        <input  onChange="es_vacio()" id="apellidop" name="apellidop" type="text" placeholder="Apellido paterno" class="form-control ameg-shadow-box-two">
+                                                    <label>Apellido Paterno *</label>
+                                                    <input  onChange="es_vacio()" id="apellidop" name="apellidop" type="text" placeholder="Apellido paterno" class="form-control ameg-shadow-box-two">
                                                 </div>
 
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                                        <input onChange="es_vacio()" id="apellidom" name="apellidom" type="text" placeholder="Apellido materno" class="form-control ameg-shadow-box-two">
+                                                    <label>Apellido Materno *</label>
+                                                    <input onChange="es_vacio()" id="apellidom" name="apellidom" type="text" placeholder="Apellido materno" class="form-control ameg-shadow-box-two">
                                                 </div>
 
                                             </div>
@@ -239,24 +244,29 @@
                                             <div class="row mt-3">
 
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                    <label>Calle *</label>
                                                     <input onChange="es_vacio()" id="calle" name="calle" type="text" placeholder="Calle" class="form-control ameg-shadow-box-two" require="required">
                                                     <p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
                                                 </div>
                                                 <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+                                                    <label># Ext *</label>
                                                     <input onChange="es_vacio()" id="numext" name="numext" type="text" placeholder="# Ext" class="form-control ameg-shadow-box-two">
                                                     <p style="color: red ;" id="texto_obligatorio"></p>
                                                 </div>
 
                                                 <div class="col-12 col-sm-3 mt-3 mt-sm-0">
+                                                    <label># Int </label>
                                                     <input onChange="es_vacio()" id="numint" name="numint" type="text" placeholder="# Int" class="form-control ameg-shadow-box-two">
                                                     <p style="color: red ;" id="texto_obligatorio"></p>
                                                 </div>
 
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                    <label>Colonia *</label>
                                                     <input  onChange="es_vacio()" id="colonia" name="colonia" type="text" placeholder="Colonia" class="form-control ameg-shadow-box-two">
                                                 </div>
 
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                    <label>Alcaldía o Municipio *</label>
                                                     <input onChange="es_vacio()" id="delomun" name="delomun" type="text" placeholder="Alcaldía o Municipio" class="form-control ameg-shadow-box-two">
                                                 </div>
 
@@ -264,6 +274,7 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                    <label>Ciudad *</label>
                                                     <input onChange="es_vacio()" id="ciudad" name="ciudad" type="text" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
@@ -286,15 +297,18 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
+                                                    <label>Código Postal *</label>
                                                     <input onChange="es_vacio()" id="cp" name="cp" type="text" placeholder="Código postal" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                    <label>Telefono Fijo*</label>
                                                     <input onChange="es_vacio()" id="telefono" name="telefono" type="text" placeholder="Teléfono" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
+                                                    <label>Telefono Celular *</label>
                                                     <input onChange="es_vacio()" id="celular" name="celular" type="text" placeholder="Celular" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
@@ -304,10 +318,12 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
+                                                    <label>Lugar de Nacimiento*</label>
                                                     <input onChange="es_vacio()" id="p_lugar_nacimiento" name="p_lugar_nacimiento" type="text" placeholder="Lugar de nacimiento" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                        <input onChange="es_vacio()" id="p_fecha_nacimiento" name="p_fecha_nacimiento" type="date" placeholder="Fecha de nacimiento" class="form-control ameg-shadow-box-two">
+                                                    <label>Fecha de Nacimiento *</label>
+                                                    <input onChange="es_vacio()" id="p_fecha_nacimiento" name="p_fecha_nacimiento" type="date" placeholder="Fecha de nacimiento" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
 
