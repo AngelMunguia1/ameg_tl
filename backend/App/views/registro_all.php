@@ -175,7 +175,7 @@
 										</div>
                                         <form class="form-horizontal" id="add" action="/Registro/registroAdd" method="POST">
 
-
+                                        Los campos marcados con un * son obligatorios.
 
 
                                             <div class="row mt-3">
@@ -267,7 +267,7 @@
 
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Alcaldía o Municipio *</label>
-                                                    <input onChange="es_vacio()" id="delomun" name="delomun" type="text" placeholder="Alcaldía o Municipio" class="form-control ameg-shadow-box-two">
+                                                    <input  id="delomun" name="delomun" type="text" placeholder="Alcaldía o Municipio" class="form-control ameg-shadow-box-two">
                                                 </div>
 
                                             </div>
@@ -275,7 +275,7 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Ciudad *</label>
-                                                    <input onChange="es_vacio()" id="ciudad" name="ciudad" type="text" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="ciudad" name="ciudad" type="text" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
 
@@ -298,41 +298,41 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label>Código Postal *</label>
-                                                    <input onChange="es_vacio()" id="cp" name="cp" type="text" placeholder="Código postal" class="form-control ameg-shadow-box-two">
+                                                    <input  id="cp" name="cp" type="text" placeholder="Código postal" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Telefono Fijo*</label>
-                                                    <input onChange="es_vacio()" id="telefono" name="telefono" type="text" placeholder="Teléfono" class="form-control ameg-shadow-box-two">
+                                                    <input  id="telefono" name="telefono" type="text" placeholder="Teléfono" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label>Telefono Celular *</label>
-                                                    <input onChange="es_vacio()" id="celular" name="celular" type="text" placeholder="Celular" class="form-control ameg-shadow-box-two">
+                                                    <input  id="celular" name="celular" type="text" placeholder="Celular" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <input onChange="es_vacio()" id="telinstitucion" name="telinstitucion" type="text" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two">
+                                                    <input  id="telinstitucion" name="telinstitucion" type="text" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label>Lugar de Nacimiento *</label>
-                                                    <input onChange="es_vacio()" id="p_lugar_nacimiento" name="p_lugar_nacimiento" type="text" placeholder="Lugar de nacimiento" class="form-control ameg-shadow-box-two">
+                                                    <input  id="p_lugar_nacimiento" name="p_lugar_nacimiento" type="text" placeholder="Lugar de nacimiento" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Fecha de Nacimiento *</label>
-                                                    <input onChange="es_vacio()" id="p_fecha_nacimiento" name="p_fecha_nacimiento" type="date" placeholder="Fecha de nacimiento" class="form-control ameg-shadow-box-two">
+                                                    <input  id="p_fecha_nacimiento" name="p_fecha_nacimiento" require type="date" placeholder="Fecha de nacimiento" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
 
 
 
                                             <div class="row mt-3">
-                                                <div class="col-12 col-sm-6">
-                                                    <input onChange="es_vacio()" id="p_edad" name="p_edad" type="text" placeholder="Edad" class="form-control ameg-shadow-box-two">
-                                                </div>
+                                                <!--<div class="col-12 col-sm-6">
+                                                    <input  id="p_edad" name="p_edad" type="text" placeholder="Edad" class="form-control ameg-shadow-box-two">
+                                                </div>-->
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <p>MARQUE SU SEXO</p>
                                                     <input type="radio" name="color" value="azul"> MASCULINO
@@ -340,10 +340,10 @@
                                                 </div>
                                             </div>
                                             <br>
-                                            <div class="row mt-3">
+                                            <!--<div class="row mt-3">
                                                 <div class="col-12 col-md-6 mt-3 mt-sm-0">
                                                     <label>Domicilio *</label>
-                                                    <input onChange="es_vacio()" id="p_domicilio_particular" name="p_domicilio_particular" type="text" placeholder="Domicilio particular" class="form-control ameg-shadow-box-two">
+                                                    <input  id="p_domicilio_particular" name="p_domicilio_particular" type="text" placeholder="Domicilio particular" class="form-control ameg-shadow-box-two">
                                                 </div>
 
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
@@ -358,9 +358,9 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-md-6 mt-3 mt-sm-0">
-                                                    <input onChange="es_vacio()" id="p_cedula" name="p_cedula" type="text" placeholder="Cedula" class="form-control ameg-shadow-box-two">
+                                                    <input  id="p_cedula" name="p_cedula" type="text" placeholder="Cedula" class="form-control ameg-shadow-box-two">
                                                 </div>
-                                            </div>
+                                            </div>-->
 
                                             <br>
                                             <h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Domicilio de Trabajo</h2>
@@ -375,108 +375,110 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label>Extensión *</label>
-                                                    <input onChange="es_vacio()" id="t_extension" name="t_extension" type="text" placeholder="Extensión" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="t_extension" name="t_extension" type="text" placeholder="Extensión" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <input onChange="es_vacio()" id="t_ciudad" name="t_ciudad" type="text" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="t_ciudad" name="t_ciudad" type="text" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input onChange="es_vacio()" id="t_estado" name="t_estado" type="text" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="t_estado" name="t_estado" type="text" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <input onChange="es_vacio()" id="t_cp" name="t_cp" type="text" placeholder="CP" class="form-control ameg-shadow-box-two">
+                                                    <input  id="t_cp" name="t_cp" type="text" placeholder="CP" class="form-control ameg-shadow-box-two">
                                                 </div>
+                                                <!--<div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                    <input  id="tel_institucion" name="tel_institucion" type="text" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two">
+                                                </div>-->
                                             </div>
 
                                             <br>
                                             <h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Escolaridad</h2>
 
                                             <div class="row mt-3">
-                                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <input onChange="es_vacio()" id="tel_institucion" name="tel_institucion" type="text" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two">
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <input onChange="es_vacio()" id="e_facultad" name="e_facultad" type="text" placeholder="Facultad" class="form-control ameg-shadow-box-two" required>
+                                            
+                                                <div class="col-md-12">
+                                                <label>Facultad *</label>
+                                                    <input  id="e_facultad" name="e_facultad" type="text" placeholder="Facultad" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Inicio *</label>
-                                                    <input onChange="es_vacio()" id="e_fecha_inicial" name="e_fecha_inicial" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_fecha_inicial" name="e_fecha_inicial" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Fecha de Fin *</label>
-                                                    <input onChange="es_vacio()" id="e_fecha_fin" name="e_fecha_fin" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_fecha_fin" name="e_fecha_fin" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha Exámen *</label>
-                                                    <input onChange="es_vacio()" id="e_fecha_examen" name="e_fecha_examne" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_fecha_examen" name="e_fecha_examne" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
                                             <div class="row mt-3">
 
                                                 <div class="col-md-4">
                                                     <label>Hospital *</label>
-                                                    <input onChange="es_vacio()" id="e_hospital" name="e_hospital" type="text" placeholder="Hospital" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_hospital" name="e_hospital" type="text" placeholder="Hospital" class="form-control ameg-shadow-box-two" required>
                                                 </div>
 
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Inicio Hospital *</label>
-                                                    <input onChange="es_vacio()" id="e_fecha_inicial_hospital" name="e_fecha_inicial_hospital" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_fecha_inicial_hospital" name="e_fecha_inicial_hospital" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Fecha de Fin Hospital*</label>
-                                                    <input onChange="es_vacio()" id="e_fecha_fin_hospital" name="e_fecha_fin_hospital" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_fecha_fin_hospital" name="e_fecha_fin_hospital" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Residencia *</label>
-                                                    <input onChange="es_vacio()" id="e_residencia" name="e_residencia" type="text" placeholder="Residencia" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_residencia" name="e_residencia" type="text" placeholder="Residencia" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Inicio Residencia *</label>
-                                                    <input onChange="es_vacio()" id="e_fecha_inicial_residencia" name="e_fecha_inicial_residencia" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_fecha_inicial_residencia" name="e_fecha_inicial_residencia" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Fecha Fin de Residencia*</label>
-                                                    <input onChange="es_vacio()" id="e_fecha_fin_residencia" name="e_fecha_fin_residencia" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_fecha_fin_residencia" name="e_fecha_fin_residencia" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Posgrado *</label>
-                                                    <input onChange="es_vacio()" id="e_posgrado" name="e_posgrado" type="text" placeholder="Posgrado" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_posgrado" name="e_posgrado" type="text" placeholder="Posgrado" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Inicio Posgrado *</label>
-                                                    <input onChange="es_vacio()" id="e_fecha_inicial_hposgrado" name="e_fecha_inicial_posgrado" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_fecha_inicial_hposgrado" name="e_fecha_inicial_posgrado" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Fecha Fin de Posgrado *</label>
-                                                    <input onChange="es_vacio()" id="e_fecha_fin_posgrado" name="e_fecha_fin_posgrado" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_fecha_fin_posgrado" name="e_fecha_fin_posgrado" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
                                             <br>
-                                            <h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Pertenece a alguna institución</h2>
+                                            <h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Pertenece a alguna Asociación</h2>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                                    <label>Nombre Institución *</label>
-                                                    <input onChange="es_vacio()" id="inf_institucion" name="inf_institucion" type="text" placeholder="Institución" class="form-control ameg-shadow-box-two">
+                                                    <label>Nombre Asociación *</label>
+                                                    <input  id="inf_institucion" name="inf_institucion" type="text" placeholder="Asociación" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha Ingreso *</label>
-                                                    <input onChange="es_vacio()" id="fecha_ingreso" name="fecha_ingreso" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="fecha_ingreso" name="fecha_ingreso" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Es Socio *</label>
@@ -490,7 +492,7 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Ingreso AMEG *</label>
-                                                    <input onChange="es_vacio()" id="fecha_ingreso_ameg" name="fecha_ingreso_ameg" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="fecha_ingreso_ameg" name="fecha_ingreso_ameg" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
 
                                             </div>
@@ -500,7 +502,7 @@
                                             <div class="row mt-3">
 
                                                 <div class="col-md-12">
-                                                    <button type="submit" class="btn btn-primary btn-lg" id="btn_upload" name="btn_upload">REGISTRAME</button>
+                                                    <button type="submit" class="btn btn-primary btn-lg" disabled="disabled" id="btn_upload" name="btn_upload">REGISTRARME</button>
                                                 </div>
                                             </div>
                                         </form>
@@ -535,11 +537,26 @@
   var campo1 = document.getElementById("usuario").value;
   var campo2 = document.getElementById("contrasena").value;
   var campo3 = document.getElementById("nombre").value;
-  var campo4 = document.getElementById("apellidop").value;
-  var campo5 = document.getElementById("apellidom").value;
-  var campo6 = document.getElementById("cedula_profesional").value;
-  var campo7 = document.getElementById("cedula_especialista").value;
-  if(campo1 != "" && campo2 !="" && campo3 !="" && campo4 !="" && campo5 !="" && campo6 !="" && campo7 !=""){
+  /*var campo4 = document.getElementById("cedpro").value;
+  var campo6 = document.getElementById("cedulaesp").value;
+  var campo7 = document.getElementById("calle").value;
+  var campo8 = document.getElementById("numext").value;
+  var campo9 = document.getElementById("numint").value;
+  var campo10 = document.getElementById("colonia").value;
+  var campo11 = document.getElementById("delomun").value;
+  var campo12 = document.getElementById("ciudad").value;
+  var campo13 = document.getElementById("cp").value;
+  var campo14 = document.getElementById("telefono").value;
+  var campo15 = document.getElementById("celular").value;
+  var campo16 = document.getElementById("p_lugar_nacimiento").value;
+  var campo17 = document.getElementById("t_extension").value;
+  var campo18 = document.getElementById("t_estado").value;
+  var campo19 = document.getElementById("t_cp").value;
+  var campo20 = document.getElementById("e_facultad").value;
+  var campo21 = document.getElementById("inf_institucion").value;*/
+
+
+  if(campo1 != "" && campo2 !="" && campo3 !=""){
     document.getElementById("btn_upload").removeAttribute('disabled');
 
   }else{
