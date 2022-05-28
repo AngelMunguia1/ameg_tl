@@ -136,19 +136,19 @@
 														<b font-weight-bold style="text-decoration:underline; font-size: 20px;">01 al 30 de junio de 2022.</b>
 													</p>
 													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	Únicamente el Autor del trabajo podrá presentarlo en la Reunión Nacional.</p>
-													<br>
-													<p class="font-weight-bold text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	Recepción de resúmenes y documentos:
-														<p class="font-weight-bold text-left text-color-dblue" style="margin-left: 55px; text-decoration:underline; font-size: 20px;">
-															www.amegendoscopia.org.mx
-														</p>
+													
+														
 														<p class="font-weight-bold text-left text-color-dblue" style="margin-left: 55px; text-decoration:underline; font-size: 20px;">
 															A partir del 01 de junio de 2022
 														</p>
-													</p>
-													<br>
+													
+												
 													<p class="font-weight-bold text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	Fecha límite de recepción de resúmenes y documentos
 														<p class="font-weight-bold text-color-dblue text-left" style="margin-left: 55px; text-decoration:underline; font-size: 20px;">
 															30 de junio de 2022, 23:59 hrs.
+														</p>
+														<p class="font-weight-bold text-left text-color-dblue" style="margin-left: 55px; text-decoration:underline; font-size: 20px;">
+															www.amegendoscopia.org.mx
 														</p>
 														<p class="text-color-dblue text-left" style="margin-left: 55px; font-size: 20px;">
 															No habrá prorroga
@@ -169,7 +169,7 @@
 														&nbsp;&nbsp; Segundo lugar &nbsp;&nbsp;
 														 <img src="/img/trofeo.png" width="30" height="30" alt="" />
 														 &nbsp;&nbsp; Tercer lugar 
-													</p><br><br>
+													</p>
 													</center>
 													
 													
@@ -201,11 +201,11 @@
 				
 						</div>
 					</div>
-				<!--</section> 
+				</section> 
 				
 			</div>
 
-		</div>-->
+		</div>
 
 	</body>
 </html>

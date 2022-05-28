@@ -136,8 +136,8 @@
 							</div>
 						</div>
 					</div>
-				</section> -->
-			<section class="section bg-white section-text-overlay" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;">
+				</section> --> 
+			<section class="section  section-text-overlay" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;">
 				<!-- <span class="text-background font-primary font-weight-bold text-color-light appear-animation" data-appear-animation="textBgFadeInUp" data-appear-animation-delay="500" data-plugin-options="{'accY': 100}">EASY AS 123</span> -->
 				<!-- <h3 class="text-center">Los trabajos que se presentarán durante el congreso se dividen en 3 categorías principales</h3> -->
 				<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
@@ -152,7 +152,7 @@
 								<div class="row">
 									<div class="col">
 										<div class="row">
-											<div class="col-md-10 bg-ameg">
+											<div class="col-md-10 " style="background-color:#f0f9fa2e !important ;">
 												<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">CATEGORÍAS</h2>
 											
 												<button style="margin: 10px; background-color: #5C1F69; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff; width:90%;"  id="mostrar_trabajo_ingreso">TRABAJOS DE INGRESO</button>
@@ -169,7 +169,8 @@
 									</div>
 
 
-									<div class="col-md-9 ameg-shadow-box-tre bg-white">
+									<div class="col-md-9 ameg-shadow-box-tre " style="padding: 15px;
+    box-shadow: 5px 5px 5px 8px #5c1f6975">
 										<div class="col-md-12">
 											<div class="row"   id="trabajos_ingreso">
 												<center>

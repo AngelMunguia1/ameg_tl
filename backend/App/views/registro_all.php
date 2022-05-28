@@ -153,7 +153,7 @@
 									<div class="col-md-4">
 										<div class="row">
 
-											<div class="col-md-10 bg-ameg">
+											<div class="col-md-10" style="background-color: #f0f9fa00 !important ;">
 												<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">INSTRUCCIONES</h2>
 												<h3 class="text-left text-color-dark text-4 mb-3">PARA REGISTRARTE COMO USUARIO</h3>
 												<p class="text-justify">1. Registra tus datos</p>
@@ -166,7 +166,8 @@
 										</div>
 									</div>
 
-									<div class="col-md-8 ameg-shadow-box-tre bg-white">
+									<div class="col-md-8 ameg-shadow-box-tre bg-white" style="padding: 15px;
+    box-shadow: 5px 5px 5px 8px #5c1f694a; background-color: #ffffff00 !important;">
 										<div class="col-md-12 text-center">
 											<div class="row text-center">
 												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Solicitud de ingreso</h2>

@@ -161,7 +161,8 @@
                                         </div>
                                     </div> -->
 
-                                    <div class="col-md-12 ameg-shadow-box-tre bg-white">
+                                    <div class="col-md-12  " style="background-color: #ffffff61 !important; padding: 15px;
+    box-shadow: 5px 5px 5px 8px #5c1f6961;">
                                         <div class="col-md-12 text-center">
                                             <h3 class="font-weight-bold text-center text-color-dark text-4 mb-3">Ingresa tus datos para iniciar sesión</h3>
                                         </div>
@@ -188,7 +189,7 @@
                                                         </div>
 
                                                         <div class="text-center" style="margin: auto; width : 60%; text-align:center;">
-                                                            <button  type="button" id="btnEntrar" class="btn bg-gradient-secondary text-center w-60 mt-1 mb-0"><b style="color: #FFFFFF;">ENTRAR</b></button>
+                                                            <center><button  type="button" id="btnEntrar" class="btn bg-gradient-secondary mt-1 mb-0"><b style="color: #FFFFFF; text-align: center;"><center>INICIAR</center></b></button></center>
                                                         </div>
                                                     </form>
                                                 </div>
