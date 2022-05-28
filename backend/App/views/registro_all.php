@@ -228,7 +228,7 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label> Otras </label>
-                                                    <input onChange="es_vacio()" id="cedpro" name="cedpro" type="text" placeholder="Otras Cédulas profesionales" class="form-control ameg-shadow-box-two">
+                                                    <input onChange="es_vacio()" id="cedpro" name="cedpro" type="text" placeholder="Otras Cédulas de Especialidad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
 
