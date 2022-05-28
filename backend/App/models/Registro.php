@@ -25,6 +25,48 @@ sql;
         
     }
 
+    public static function getCountryAll()
+    {
+        $mysqli = Database::getInstance();
+        $query = <<<sql
+      SELECT * FROM paises ORDER BY pais ASC
+sql;
+
+        return $mysqli->queryAll($query);
+        //$mysqli -> set_charset("utf8");
+    }
+
+    public static function getEspecialidad()
+    {
+        $mysqli = Database::getInstance();
+        $query = <<<sql
+      SELECT * FROM especialidades ORDER BY id ASC
+sql;
+
+        return $mysqli->queryAll($query);
+        //$mysqli -> set_charset("utf8");
+    }
+
+    public static function getInstitucion()
+    {
+        $mysqli = Database::getInstance();
+        $query = <<<sql
+      SELECT * FROM instituciones ORDER BY id ASC
+sql;
+
+        return $mysqli->queryAll($query);
+        //$mysqli -> set_charset("utf8");
+    }
+
+    public static function getState($pais)
+    {
+        $mysqli = Database::getInstance();
+        $query = <<<sql
+     SELECT * FROM estados WHERE id_pais = $pais;
+sql;
+        return $mysqli->queryAll($query);
+    }
+
     public static function insert($data){
         $mysqli = Database::getInstance();
         $query=<<<sql

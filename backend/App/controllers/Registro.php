@@ -172,6 +172,9 @@ html;
 html;
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
+        View::set('idCountry',$this->getPais());
+        View::set('idEspecialidad',$this->getEspecialidades());
+        View::set('idInstitucion',$this->getInstituciones());
         View::render("registro_all");
     }
 
@@ -237,5 +240,100 @@ html;
     //     session_destroy();
     //     header("Location: /Login/");
     // }
+
+    public function getPais(){
+        $country = '';
+        $pais = '';
+        foreach (RegistroDao::getCountryAll() as $key => $value) {
+
+            $country.=<<<html
+        <option value="{$value['id_pais']}">{$value['pais']}</option>
+html;
+        }
+        return $country;
+    }
+
+    public function getEspecialidades(){
+        $especialidad = '';
+        $pais = '';
+        foreach (RegistroDao::getEspecialidad() as $key => $value) {
+
+            $especialidad.=<<<html
+        <option value="{$value['id']}">{$value['especialidad']}</option>
+html;
+        }
+        return $especialidad;
+    }
+
+    public function getInstituciones(){
+        $institucion = '';
+
+        foreach (RegistroDao::getInstitucion() as $key => $value) {
+
+            $institucion.=<<<html
+        <option value="{$value['id']}">{$value['institucion']}</option>
+html;
+        }
+        return $institucion;
+    }
+
+    public function ObtenerEstado(){
+        $pais=$_POST['pais'];
+
+
+        if($pais != 156)
+        {
+            $estados = RegistroDao::getState($pais);
+            $html="";
+            foreach ($estados as $estado){
+                $html.='<option value="'.$estado['id_estado'].'">'.$estado['estado'].'</option>';
+            }
+        }
+        else
+        {
+            $html="";
+            $html.='
+                <option value="" disabled selected>Select Option</option>
+                <option value="2537">Aguascalientes</option>
+                <option value="2538">Baja California</option>
+                <option value="2539">Baja California Sur</option>
+                <option value="2540">Campeche</option>
+                <option value="2541">Chiapas</option>
+                <option value="2542">Chihuahua</option>
+                <option value="2543">Coahuila de Zaragoza</option>
+                <option value="2544">Colima</option>
+                <option value="2545">Ciudad de México</option>
+                <option value="2546">Durango</option>
+                <option value="2547">Guanajuato</option>
+                <option value="2548">Guerrero</option>
+                <option value="2549">Hidalgo</option>
+                <option value="2550">Jalisco</option>
+                <option value="2551">Estado de México</option>
+                <option value="2552">Michoacan de Ocampo</option>
+                <option value="2553">Morelos</option>
+                <option value="2554">Nayarit</option>
+                <option value="2555">Nuevo León</option>
+                <option value="2556">Oaxaca</option>
+                <option value="2557">Puebla</option>
+                <option value="2558">Queretaro de Artiaga</option>
+                <option value="2559">Quinta Roo</option>
+                <option value="2560">San Lusi Potosi</option>
+                <option value="2561">Sonora</option>
+                <option value="2562">Tabasco</option>
+                <option value="2563">Tamaulipas</option>
+                <option value="2564">Tlaxcala</option>
+                <option value="2565">Veracruz-Llave</option>
+                <option value="2566">Yucatán</option>
+                <option value="2567">Zacatecas</option>
+                ';
+        }
+
+
+        $respuesta = new respuesta();
+        $respuesta->success = true;
+        $respuesta->html = $html;
+
+        echo json_encode($respuesta);
+    }
 
 }

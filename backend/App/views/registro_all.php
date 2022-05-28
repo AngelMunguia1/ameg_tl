@@ -264,10 +264,17 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <input onChange="es_vacio()" id="pais_id" name="pais_id" type="text" placeholder="País" class="form-control ameg-shadow-box-two">
+                                                    <label>País *</label>
+                                                    <select onchange="actualizaEdos();" class="multisteps-form__select form-control all_input_select" id="pais_id" name="pais_id">
+                                                        <option value="" disabled selected>Selecciona una Opción</option>
+                                                        <?php echo $idCountry; ?>
+                                                    </select>
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <input onChange="es_vacio()" id="estado_id" name="estado_id" type="text" placeholder="Estado" class="form-control ameg-shadow-box-two">
+                                                    <label>Estado *</label>
+                                                    <select class="multisteps-form__select form-control all_input_select" name="estado_id" id="estado_id">
+
+                                                    </select>
                                                 </div>
                                             </div>
 
@@ -313,10 +320,16 @@
                                             <br>
                                             <div class="row mt-3">
                                                 <div class="col-12 col-md-6 mt-3 mt-sm-0">
+                                                    <label>Domicilio *</label>
                                                     <input onChange="es_vacio()" id="p_domicilio_particular" name="p_domicilio_particular" type="text" placeholder="Domicilio particular" class="form-control ameg-shadow-box-two">
                                                 </div>
-                                                <div class="col-12 col-md-6 mt-3 mt-sm-0">
-                                                    <input onChange="es_vacio()" id="p_especialidad" name="p_especialidad" type="text" placeholder="Especialidad" class="form-control ameg-shadow-box-two">
+
+                                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                    <label>Especialidad *</label>
+                                                    <select onchange="actualizaEdos();" class="multisteps-form__select form-control all_input_select" id="p_especialidad" name="p_especialidad">
+                                                        <option value="" disabled selected>Selecciona una Opción</option>
+                                                        <?php echo $idEspecialidad; ?>
+                                                    </select>
                                                 </div>
 
                                             </div>
@@ -332,9 +345,14 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <input onChange="es_vacio()" id="t_institucion" name="t_institucion" type="text" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two">
+                                                    <label>Institución *</label>
+                                                    <select class="multisteps-form__select form-control all_input_select" id="t_institucion" name="t_institucion">
+                                                        <option value="" disabled selected>Selecciona una Opción</option>
+                                                        <?php echo $idInstitucion; ?>
+                                                    </select>
                                                 </div>
                                                 <div class="col-md-6">
+                                                    <label>Extensión *</label>
                                                     <input onChange="es_vacio()" id="t_extension" name="t_extension" type="text" placeholder="Extensión" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
@@ -491,7 +509,7 @@
 
 </html>
 <script>
-function es_vacio(){	
+    function es_vacio(){
   var campo1 = document.getElementById("usuario").value;
   var campo2 = document.getElementById("contrasena").value;
   var campo3 = document.getElementById("nombre").value;
@@ -508,6 +526,27 @@ function es_vacio(){
 
   }
 }
+    function actualizaEdos() {
+        var pais = $('#pais_id').val();
+
+        $.ajax({
+            url: '/Registro/ObtenerEstado',
+            type: 'POST',
+            dataType: 'json',
+            data: {pais:pais},
+
+        })
+            .done(function(json) {
+                if(json.success)
+                {
+                    $("#estado_id").html(json.html);
+                }
+            })
+            .fail(function()
+            {
+            })
+    }
+
 
 
 </script>
