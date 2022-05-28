@@ -243,10 +243,13 @@ html;
         $usuario = new \stdClass();
         $usuario->_usuario = MasterDom::getData("usuario");
         $usuario->_password = MD5(MasterDom::getData("password"));
-        $user = LoginDao::getById($usuario);
-        session_start();
+        $user = LoginDao::getById($usuario);      
+        // session_start();  
+
         $_SESSION['usuario'] = $user['usuario'];
         $_SESSION['nombre'] = $user['nombre'];
+        $_SESSION['id_usuario'] = $user['id_usuario'];
+
         header("location: /RegistroTrabajo/");
     }
 

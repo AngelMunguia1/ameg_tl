@@ -4,11 +4,17 @@ defined("APPPATH") OR die("Access denied");
 
 use \Core\View;
 use \Core\MasterDom;
+use \Core\Controller;
 use \App\interfaces\Crud;
 use \App\models\RegistroTrabajo AS RegistroDao;
 
-class RegistroTrabajo{
+class RegistroTrabajo extends Controller{
     private $_contenedor;
+
+    public function getUsuario()
+    {
+        return $this->__usuario;
+    }
 
     public function index() {
         $extraHeader =<<<html
@@ -170,9 +176,32 @@ html;
             });
         </script>
 html;
+
+            
+
+        $selectCategoria = '';
+        foreach(RegistroDao::getCategorias() as $key => $value){
+            // $selectedPais = ($value['id_pais'] == $userData['id_nationality']) ? 'selected' : '';  
+            $selectCategoria .= <<<html
+                    <option value="{$value['id']}">{$value['categoria']}</option>
+html;
+        }
+
+        $selectEspecialidad = '';
+
+        foreach(RegistroDao::getEspecialidades() as $key => $value){
+            // $selectedPais = ($value['id_pais'] == $userData['id_nationality']) ? 'selected' : '';  
+            $selectEspecialidad .= <<<html
+                    <option value="{$value['id']}">{$value['especialidad']}</option>
+html;
+        }
+
+  
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
-        View::render("registro_trabajo_all");
+        View::set('selectCategoria',$selectCategoria);
+        View::set('selectEspecialidad',$selectEspecialidad);
+        View::render("registro_trabajo_all_2");
     }
 
     public function registroAdd() {
@@ -208,6 +237,14 @@ html;
 
     public function trabajosAdd() {
 
+        $file_adjunto = $_FILES["adjunto"];
+        $file_adjunto_extenso = $_FILES["adjunto_extenso"];
+        $pdf_1 = $this->generateRandomString();
+        $pdf_2 = $this->generateRandomString();
+
+        // var_dump($file_adjunto);
+        // exit;
+
         $data = new \stdClass();
         $data->_categoria_id = MasterDom::getData('categoria_id');
         $data->_especialidad_id = MasterDom::getData('especialidad_id');
@@ -215,37 +252,50 @@ html;
         $data->_titulo_corto = MasterDom::getData('titulo_corto');
         $data->_titulo_en = MasterDom::getData('titulo_en');
         $data->_titulo_es = MasterDom::getData('titulo_es');
-        $data->_adjunto = MasterDom::getData('adjunto');
-        $data->_adjunto_extenso = MasterDom::getData('adjunto_extenso');
+        $data->_adjunto = $pdf_1.'.pdf';
+        $data->_adjunto_extenso = $pdf_2.'.pdf';
         $data->_resumen = MasterDom::getData('resumen');
         $data->_coautores = MasterDom::getData('coautores');
         $data->_autor = MasterDom::getData('autor');
         $data->_postulatrabajo = MasterDom::getData('postulatrabajo');
         $data->_revisiontrabajo = MasterDom::getData('revisiontrabajo');
         $data->_envio_revista = MasterDom::getData('envio_revista');
-    
-        $id = RegistroDao::insert($data);
-        if($id >= 1){
-          // $this->alerta($id,'add');
-        //   echo '<script>
-        //     alert("Usuario registrado con éxito");
-        //     window.location.href = "/Login/";
-        //   </script>';
 
-        echo "success";
-  
-         
-        }else{
-          // $this->alerta($id,'error');
-        //   echo '<script>
-        //   alert("Error al registrar usuario, consulte a soporte");
-        //   window.location.href = "/Inicio/";
-        // </script>';
-        echo "fail";
-        }
+        // var_dump($data);
+        // exit();
+        // move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto/".$pdf_1.'.pdf');
+        // move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".$pdf_2.'.pdf');
+
+        if(move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto/".$pdf_1.'.pdf') && move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".$pdf_2.'.pdf')){
+            $id = RegistroDao::insert($data);
+            if($id >= 1){
+            //   $this->alerta($id,'add');
+              echo '<script>
+                alert("Trabajo registrado con éxito");
+               window.location.href = "/RegistroTrabajo/";
+              </script>';
+    
+            // echo "success";
+      
+             
+            }else{
+              // $this->alerta($id,'error');
+              echo '<script>
+              alert("Error al registrar El trabajo, consulte a soporte");
+             window.location.href = "/RegistroTrabajo/";
+            </script>';
+            // echo "fail";
+            }
+          }
+    
+        
   
   
     }
+
+    function generateRandomString($length = 10) { 
+        return substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length); 
+    } 
 
     // public function isUserValidate(){
     //     echo (count(PrincipalDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
