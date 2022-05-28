@@ -204,7 +204,48 @@ html;
         }
   
   
-      }
+    }
+
+    public function trabajosAdd() {
+
+        $data = new \stdClass();
+        $data->_categoria_id = MasterDom::getData('categoria_id');
+        $data->_especialidad_id = MasterDom::getData('especialidad_id');
+        $data->_usuario_id = MasterDom::getData('usuario_id');
+        $data->_titulo_corto = MasterDom::getData('titulo_corto');
+        $data->_titulo_en = MasterDom::getData('titulo_en');
+        $data->_titulo_es = MasterDom::getData('titulo_es');
+        $data->_adjunto = MasterDom::getData('adjunto');
+        $data->_adjunto_extenso = MasterDom::getData('adjunto_extenso');
+        $data->_resumen = MasterDom::getData('resumen');
+        $data->_coautores = MasterDom::getData('coautores');
+        $data->_autor = MasterDom::getData('autor');
+        $data->_postulatrabajo = MasterDom::getData('postulatrabajo');
+        $data->_revisiontrabajo = MasterDom::getData('revisiontrabajo');
+        $data->_envio_revista = MasterDom::getData('envio_revista');
+    
+        $id = RegistroDao::insert($data);
+        if($id >= 1){
+          // $this->alerta($id,'add');
+        //   echo '<script>
+        //     alert("Usuario registrado con éxito");
+        //     window.location.href = "/Login/";
+        //   </script>';
+
+        echo "success";
+  
+         
+        }else{
+          // $this->alerta($id,'error');
+        //   echo '<script>
+        //   alert("Error al registrar usuario, consulte a soporte");
+        //   window.location.href = "/Inicio/";
+        // </script>';
+        echo "fail";
+        }
+  
+  
+    }
 
     // public function isUserValidate(){
     //     echo (count(PrincipalDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';

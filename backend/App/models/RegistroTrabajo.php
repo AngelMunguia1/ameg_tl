@@ -28,20 +28,25 @@ class RegistroTrabajo implements Crud{
     public static function insert($data){
         $mysqli = Database::getInstance(1);
         $query=<<<sql
-            INSERT INTO usuarios(id_usuario, id_rol, id_titulo,nombre, apellidop, apellidom, usuario, contrasena, cedula_profesional, cedula_especialista)
-            VALUES(null, 0, 0, :nombre, :apellidop, :apellidom, :usuario, MD5(:contrasena), :cedula_profesional, :cedula_especialista);
+            INSERT INTO trabajos2020(categoria_id,especialidad_id,usuario_id,titulo_corto,titulo_en,titulo_es,adjunto,adjunto_extenso,resumen,coautores,autor,postulatrabajo,revisiontrabajo,envio_revista)
+            VALUES(:categoria_id,:especialidad_id,:usuario_id,:titulo_corto,:titulo_en,:titulo_es,:adjunto,:adjunto_extenso,:resumen,:coautores,:autor,:postulatrabajo,:revisiontrabajo,:envio_revista);
 sql;
-
-
             $parametros = array(
             
-            ':nombre'=>$data->_nombre,
-            ':apellidop'=>$data->_apellidop,
-            ':apellidom'=>$data->_apellidom,
-            ':usuario'=>$data->_usuario,
-            ':contrasena'=>$data->_contrasena,
-            ':cedula_profesional'=>$data->_cedula_profesional,
-            ':cedula_especialista'=>$data->_cedula_especialista,
+            ':categoria_id'=>$data->_categoria_id,
+            ':especialidad_id'=>$data->_especialidad_id,
+            ':usuario_id'=>$data->_usuario_id,
+            ':titulo_corto'=>$data->_titulo_corto,
+            ':titulo_en'=>$data->_titulo_en,
+            ':titulo_es'=>$data->_titulo_es,
+            ':adjunto'=>$data->_adjunto,
+            ':adjunto_extenso'=>$data->_adjunto_extenso,
+            ':resumen'=>$data->_resumen,
+            ':coautores'=>$data->_coautores,
+            ':autor'=>$data->_autor,
+            ':postulatrabajo'=>$data->_postulatrabajo,
+            ':revisiontrabajo'=>$data->_revisiontrabajo,
+            ':envio_revista'=>$data->_envio_revista,
            
             );
  
