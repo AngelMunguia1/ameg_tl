@@ -183,8 +183,8 @@ html;
         $data->_nombre = MasterDom::getData('nombre');
         $data->_apellidop = MasterDom::getData('apellidop');
         $data->_apellidom = MasterDom::getData('apellidom');
-        $data->_cedula_profesional = MasterDom::getData('cedula_profesional');
-        $data->_cedula_especialista = MasterDom::getData('cedula_especialista');
+        $data->_cedula_profesional = MasterDom::getData('p_cedula');
+        $data->_cedula_especialista = MasterDom::getData('p_cedula');
     
         $id = RegistroDao::insert($data);
         if($id >= 1){

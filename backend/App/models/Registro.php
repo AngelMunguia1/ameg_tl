@@ -28,21 +28,17 @@ class Registro implements Crud{
     public static function insert($data){
         $mysqli = Database::getInstance(1);
         $query=<<<sql
-            INSERT INTO usuarios(id_usuario, id_rol, id_titulo,nombre, apellidop, apellidom, usuario, contrasena, cedula_profesional, cedula_especialista)
-            VALUES(null, 0, 0, :nombre, :apellidop, :apellidom, :usuario, MD5(:contrasena), :cedula_profesional, :cedula_especialista);
+       INSERT INTO usuarios (id_usuario, nombre, apellidop, apellidom, usuario, contrasena, titulo_id, rol_id, cedpro, cedulaesp, calle, numext, numint, colonia, delomun, estado_id, pais_id, cp, telefono, celular, p_lugar_nacimiento, p_fecha_nacimiento, p_edad, p_sexo, p_domicilio_particular, p_especialidad, p_cedula, t_institucion, t_cargo, t_direccion_institucion, t_telefono, t_extension, t_ciudad, t_estado, t_cp, telinstitucion, e_facultad, e_fecha_inicial, e_fecha_fin, e_fecha_examen, e_hospital, e_fecha_inicial_hospital, e_fecha_fin_hospital, e_residencia, e_fecha_inicial_residencia, e_fecha_fin_residencia, e_posgrado, e_fecha_inicial_posgrado, e_fecha_fin_posgrado, inf_institucion, fecha_ingreso, es_socio, fecha_ingreso_ameg, status) 
+       VALUES (NULL, :nombre, :apellidop, :apellidom, :usuario, :contrasena, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1');
 sql;
 
 
             $parametros = array(
-            
             ':nombre'=>$data->_nombre,
             ':apellidop'=>$data->_apellidop,
             ':apellidom'=>$data->_apellidom,
             ':usuario'=>$data->_usuario,
-            ':contrasena'=>$data->_contrasena,
-            ':cedula_profesional'=>$data->_cedula_profesional,
-            ':cedula_especialista'=>$data->_cedula_especialista,
-           
+            ':contrasena'=>$data->_contrasena
             );
  
             $id = $mysqli->insert($query,$parametros);
