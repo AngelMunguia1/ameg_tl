@@ -160,7 +160,7 @@
 									<div class="col-md-9 text-center ameg-shadow-box-tre bg-white">
 										<div class="col-md-12 text-center">
 											<div class="row text-center">
-												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3" style="color: #42787e !important;">DOMICILIO PARTICULAR</h2>
+												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3" style="color: #42787e !important;">REGISTRO DE TRABAJO</h2>
 											</div>
 										</div>
 										<div class="col-md-12">
