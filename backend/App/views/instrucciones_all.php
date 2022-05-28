@@ -153,7 +153,7 @@
 									<div class="col">
 										<div class="row">
 											<div class="col-md-10 bg-ameg">
-												<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">CATEGORIAS</h2>
+												<h2 class="font-weight-bold text-left text-color-dark text-4 mb-3">CATEGORÍAS</h2>
 											
 												<button style="margin: 10px; background-color: #5C1F69; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff; width:90%;"  id="mostrar_trabajo_ingreso">TRABAJOS DE INGRESO</button>
 												
@@ -161,7 +161,7 @@
 											
 												<button style="margin: 10px; background-color: #5C1F69; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff; width:90%;" id="mostrar_trabajo_en_cartel">TRABAJO EN CARTEL</button>
 
-												<button style="margin: 10px; background-color: #5C1F69; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff; width:90%;" id="mostrar_trabajo_video">TRABAJO EN VIDEO</button>
+												<button style="margin: 10px; background-color: #5C1F69; border-radius: 6px; border: 2px solid #0016b0; font-weight: 600; color: #ffffff; width:90%;" id="mostrar_trabajo_video">TRABAJO EN VÍDEO</button>
 												
 											
 											</div>

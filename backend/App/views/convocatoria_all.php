@@ -110,7 +110,7 @@
 									<div class="container text-center">
 										<div class="row">
 											<div class="col">
-												<h2 class="font-weight-bold text-center text-color-dblue" style="margin-left: 55px; margin-right: 55px;">
+												<!--<h2 class="font-weight-bold text-center text-color-dblue" style="margin-left: 55px; margin-right: 55px;">
 													La Asociación Mexicana de 
 													Endoscopia Gastrointestinal
 													y Colegio de Profesionistas A. C.
@@ -125,44 +125,44 @@
 												<h5 class="font-weight-bold ameg-shadow-box-cua align-items-center text-center text-color-blue">TRABAJO LIBRE ORAL</h5>
 												<h5 class="font-weight-bold ameg-shadow-box-cua align-items-center text-center text-color-purple">TRABAJO EN VIDEO</h5>
 												<h5 class="font-weight-bold ameg-shadow-box-cua align-items-center text-center text-color-blue">TRABAJO EN CARTEL</h5>
-												<br>
-													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	Los trabajos deberán someterse estrictamente al Reglamento del Comité de Admisión y 
+												<br>-->
+													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	Los trabajos deberán someterse estrictamente al Reglamento del Comité de Admisión y 
 														de Evaluación de Trabajos, 
 														que se encuentra en la página web de la Asociación www.amegendoscopia.org.mx.</p>
-													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	En la página web se encontrarán los enlaces específicos para recepción de documentos y de trabajos libres según la categoría correspondiente a partir del 
-														<b font-weight-bold style="text-decoration:underline;">01 de junio de 2022.</b>
+													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	En la página web se encontrarán los enlaces específicos para recepción de documentos y de trabajos libres según la categoría correspondiente a partir del 
+														<b font-weight-bold style="text-decoration:underline; font-size: 20px;">01 de junio de 2022.</b>
 													</p>
-													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	Sólo se recibirán los trabajos ingresados a la plataforma del
-														<b font-weight-bold style="text-decoration:underline;">01 al 30 de junio de 2022.</b>
+													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	Sólo se recibirán los trabajos ingresados a la plataforma del
+														<b font-weight-bold style="text-decoration:underline; font-size: 20px;">01 al 30 de junio de 2022.</b>
 													</p>
-													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	Únicamente el Autor del trabajo podrá presentarlo en la Reunión Nacional.</p>
+													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	Únicamente el Autor del trabajo podrá presentarlo en la Reunión Nacional.</p>
 													<br>
-													<p class="font-weight-bold text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	Recepción de resúmenes y documentos:
-														<p class="font-weight-bold text-left text-color-dblue" style="margin-left: 55px; text-decoration:underline;">
+													<p class="font-weight-bold text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	Recepción de resúmenes y documentos:
+														<p class="font-weight-bold text-left text-color-dblue" style="margin-left: 55px; text-decoration:underline; font-size: 20px;">
 															www.amegendoscopia.org.mx
 														</p>
-														<p class="font-weight-bold text-left text-color-dblue" style="margin-left: 55px; text-decoration:underline;">
+														<p class="font-weight-bold text-left text-color-dblue" style="margin-left: 55px; text-decoration:underline; font-size: 20px;">
 															A partir del 01 de junio de 2022
 														</p>
 													</p>
 													<br>
-													<p class="font-weight-bold text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px;">•	Fecha límite de recepción de resúmenes y documentos
-														<p class="font-weight-bold text-color-dblue text-left" style="margin-left: 55px; text-decoration:underline;">
+													<p class="font-weight-bold text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	Fecha límite de recepción de resúmenes y documentos
+														<p class="font-weight-bold text-color-dblue text-left" style="margin-left: 55px; text-decoration:underline; font-size: 20px;">
 															30 de junio de 2022, 23:59 hrs.
 														</p>
-														<p class="text-color-dblue text-left" style="margin-left: 55px;">
+														<p class="text-color-dblue text-left" style="margin-left: 55px; font-size: 20px;">
 															No habrá prorroga
 														</p>
 													</p>
 													<br>
-													<p class="font-weight-bold text-justify text-color-dblue" style="margin:20px auto; width : 60%;">
+													<p class="font-weight-bold text-justify text-color-dblue" style="margin:20px auto; width : 60%; font-size: 20px;">
 														Esta Convocatoria invita a registrar a concurso a los mejores trabajos de investigación 
 													en las categorías   orales sobre las bases establecidas en el Reglamento del Comité de 
 													Admisión y de Evaluación de Trabajos, siendo premiados:
 													</p>
-													<br>
+													
 													<center>
-													<p class="font-weight-bold text-justify" style="margin:20px auto; width : 60%;">
+													<p class="font-weight-bold text-justify" style="margin:20px auto; width : 60%; font-size: 20px;">
 													<img src="/img/trofeo.png" width="30" height="30" alt="" />
 													&nbsp;&nbsp;Primer lugar &nbsp;&nbsp;
 														<img src="/img/trofeo.png" width="30" height="30" alt="" />
@@ -173,7 +173,7 @@
 													</center>
 													
 													
-													<h5 class="font-weight-bold text-center">Informes: 
+													<!--<h5 class="font-weight-bold text-center">Informes: 
 														<b class="font-weight-bold text-color-dblue" style="text-decoration: underline;">
 															Tel. 5523 5204
 														</b>  Contacto: 
@@ -185,7 +185,7 @@
 														<a data-toggle="modal" data-target="#doc_programa" class="font-weight-bold text-color-purple">
 															(link) CONSULTE EL REGLAMENTO DE ADMISION Y DE EVALUACIÓN DE TRABAJOS
 														</a>
-													</h5>
+													</h5>-->
 										
 											</div>
 										</div>
@@ -201,11 +201,11 @@
 				
 						</div>
 					</div>
-				</section> -->
-				<hr class="my-0">
+				<!--</section> 
+				
 			</div>
 
-		</div>
+		</div>-->
 
 	</body>
 </html>
