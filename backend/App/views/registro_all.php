@@ -318,7 +318,7 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
-                                                    <label>Lugar de Nacimiento*</label>
+                                                    <label>Lugar de Nacimiento *</label>
                                                     <input onChange="es_vacio()" id="p_lugar_nacimiento" name="p_lugar_nacimiento" type="text" placeholder="Lugar de nacimiento" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
