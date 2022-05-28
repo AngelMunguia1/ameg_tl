@@ -192,7 +192,7 @@ html;
         {
             $html="";
             $html.='
-                <option value="" disabled selected>Select Option</option>
+                <option value="" disabled selected>Selecciona un Estado</option>
                 <option value="2537">Aguascalientes</option>
                 <option value="2538">Baja California</option>
                 <option value="2539">Baja California Sur</option>
