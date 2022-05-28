@@ -342,7 +342,7 @@
                                             </div>
 
                                             <br>
-                                            <h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Domicilio de Trabajo con los Siguientes Campos</h2>
+                                            <h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Domicilio de Trabajo</h2>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
