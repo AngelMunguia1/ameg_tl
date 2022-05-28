@@ -257,7 +257,7 @@
                                                 </div>
 
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <input onChange="es_vacio()" id="delomun" name="delomun" type="text" placeholder="Delegación Municipal" class="form-control ameg-shadow-box-two">
+                                                    <input onChange="es_vacio()" id="delomun" name="delomun" type="text" placeholder="Alcaldía o Municipio" class="form-control ameg-shadow-box-two">
                                                 </div>
 
                                             </div>
