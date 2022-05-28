@@ -422,11 +422,11 @@
                                                     <input onChange="es_vacio()" id="e_residencia" name="e_residencia" type="text" placeholder="Residencia" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                                    <label>Fecha Inicial Residencia *</label>
+                                                    <label>Fecha de Inicio Residencia *</label>
                                                     <input onChange="es_vacio()" id="e_fecha_inicial_residencia" name="e_fecha_inicial_residencia" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <label>Fecha Final Residencia*</label>
+                                                    <label>Fecha Fin de Residencia*</label>
                                                     <input onChange="es_vacio()" id="e_fecha_fin_residencia" name="e_fecha_fin_residencia" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
@@ -437,11 +437,11 @@
                                                     <input onChange="es_vacio()" id="e_posgrado" name="e_posgrado" type="text" placeholder="Posgrado" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                                    <label>Fecha Inicial Posgrado *</label>
+                                                    <label>Fecha de Inicio Posgrado *</label>
                                                     <input onChange="es_vacio()" id="e_fecha_inicial_hposgrado" name="e_fecha_inicial_posgrado" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <label>Fecha Final Posgrado *</label>
+                                                    <label>Fecha Fin de Posgrado *</label>
                                                     <input onChange="es_vacio()" id="e_fecha_fin_posgrado" name="e_fecha_fin_posgrado" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
@@ -468,7 +468,7 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                                    <label>Fecha Ingreso AMEG *</label>
+                                                    <label>Fecha de Ingreso AMEG *</label>
                                                     <input onChange="es_vacio()" id="fecha_ingreso_ameg" name="fecha_ingreso_ameg" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
 
