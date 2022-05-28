@@ -228,7 +228,7 @@
                                             </div>
 
                                             <br>
-                                            <h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Domicilio del trabajo</h2>
+                                            <h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Domicilio Particular</h2>
 
 
                                             <div class="row mt-3">
