@@ -94,7 +94,7 @@
 		<section id="" class=" text-center bg-purple-fecha">
 			<div class="text-center">
 				<div class="px-lg-3 pb-3 text-center">
-					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold  text-center text-white">SOLICITUD DE INGRESO</h1>
+					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold  text-center text-white">REGISTRO DE TRABAJO</h1>
 				</div>
 		</section>
 
@@ -301,7 +301,7 @@
 															
 														</div>
 														<div class="row">
-																<div class="button-row d-flex justify-content-center mt-4 col-12">
+																<div class="button-row d-flex justify-content-centergit  mt-4 col-12">
 																	<!-- <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Register" title="Prev">Regresar</a> -->
 																	<button class="btn btn-primary btn-lg" type="submit" title="Next">Enviar</button>
 																</div>
