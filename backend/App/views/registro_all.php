@@ -529,7 +529,6 @@
 }
     function actualizaEdos() {
         var pais = $('#pais_id').val();
-
         $.ajax({
             url: '/Registro/ObtenerEstado',
             type: 'POST',
@@ -545,6 +544,7 @@
             })
             .fail(function()
             {
+                alert("Ocurrio un error al actualizar el estado intenta de nuevo");
             })
     }
 
