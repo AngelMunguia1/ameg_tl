@@ -193,7 +193,7 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4">
-                                                    <input onChange="es_vacio()" id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control ameg-shadow-box-two">
+                                                    <input onChange="es_vacio()" id="nombre" name="nombre" type="text" placeholder="Nombre(s)" class="form-control ameg-shadow-box-two">
                                                     <p style="color: red ;" id="texto_obligatorio"></p>
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
@@ -217,13 +217,18 @@
                                             </div>
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
-                                                    <label> Cédula profesional</label>
+                                                    <label> Cédula profesional *</label>
                                                     <input onChange="es_vacio()" id="cedpro" name="cedpro" type="text" placeholder="Cédula profesional" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <label> Cédula de Especialista</label>
+                                                    <label> Cédula de Especialidad *</label>
                                                     <input onChange="es_vacio()" id="cedulaesp" name="cedulaesp" type="text" placeholder="Cédula especialista" class="form-control ameg-shadow-box-two">
-
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-12 col-sm-6">
+                                                    <label> Otras </label>
+                                                    <input onChange="es_vacio()" id="cedpro" name="cedpro" type="text" placeholder="Cédula profesional" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
 
