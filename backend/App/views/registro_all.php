@@ -387,11 +387,11 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                                    <label>Fecha Inicial *</label>
+                                                    <label>Fecha de Inicio *</label>
                                                     <input onChange="es_vacio()" id="e_fecha_inicial" name="e_fecha_inicial" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <label>Fecha Final *</label>
+                                                    <label>Fecha de Fin *</label>
                                                     <input onChange="es_vacio()" id="e_fecha_fin" name="e_fecha_fin" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
@@ -407,11 +407,11 @@
                                                 </div>
 
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
-                                                    <label>Fecha Inicial Hospital *</label>
+                                                    <label>Fecha de Inicio Hospital *</label>
                                                     <input onChange="es_vacio()" id="e_fecha_inicial_hospital" name="e_fecha_inicial_hospital" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <label>Fecha Final Hospital*</label>
+                                                    <label>Fecha de Fin Hospital*</label>
                                                     <input onChange="es_vacio()" id="e_fecha_fin_hospital" name="e_fecha_fin_hospital" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
@@ -446,7 +446,7 @@
                                                 </div>
                                             </div>
                                             <br>
-                                            <h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Pertenece a Alguna institución (Información de la Institución)</h2>
+                                            <h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Pertenece a alguna institución</h2>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
