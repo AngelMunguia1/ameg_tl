@@ -128,7 +128,7 @@
 					<div class="text-center">
 						<div class="px-lg-2 pb-1 mb-3 text-center">
                             <br>
-							<h3 class="text-center text-white">FECHAS DE RECEPCIÓN</h3	>
+							<h3 class="text-center text-white">A PARTIR DEL 01 DE JUNIO AL 30 DE JUNIO DE 2022</h3	>
 						</div>
 					</div>
 				</section>
