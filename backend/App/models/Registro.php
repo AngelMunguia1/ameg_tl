@@ -11,7 +11,7 @@ class Registro implements Crud{
         $mysqli = Database::getInstance();
         $query=<<<sql
         SELECT * FROM usuarios
-  sql;
+sql;
         return $mysqli->queryAll($query);
           
       }
@@ -26,7 +26,7 @@ class Registro implements Crud{
     }
 
     public static function insert($data){
-        $mysqli = Database::getInstance(1);
+        $mysqli = Database::getInstance();
         $query=<<<sql
        INSERT INTO usuarios (id_usuario, nombre, apellidop, apellidom, usuario, contrasena, titulo_id, rol_id, cedpro, cedulaesp, calle, numext, numint, colonia, delomun, estado_id, pais_id, cp, telefono, celular, p_lugar_nacimiento, p_fecha_nacimiento, p_edad, p_sexo, p_domicilio_particular, p_especialidad, p_cedula, t_institucion, t_cargo, t_direccion_institucion, t_telefono, t_extension, t_ciudad, t_estado, t_cp, telinstitucion, e_facultad, e_fecha_inicial, e_fecha_fin, e_fecha_examen, e_hospital, e_fecha_inicial_hospital, e_fecha_fin_hospital, e_residencia, e_fecha_inicial_residencia, e_fecha_fin_residencia, e_posgrado, e_fecha_inicial_posgrado, e_fecha_fin_posgrado, inf_institucion, fecha_ingreso, es_socio, fecha_ingreso_ameg, status) 
        VALUES (NULL, :nombre, :apellidop, :apellidom, :usuario, :contrasena, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1');
