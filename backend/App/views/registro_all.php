@@ -212,16 +212,16 @@
                                                         <select class="select form-control all_input_select" name="title" id="title" required>
                                                             <option value="Dr.">Dr.</option>
                                                             <option value="Dra.">Dra.</option>
-                                                            <option value="Sr.">Sr.</option>
-                                                            <option value="Sra.">Sra.</option>
                                                         </select>
                                                      </div>
                                             </div>
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
+                                                    <label> Cédula profesional</label>
                                                     <input onChange="es_vacio()" id="cedpro" name="cedpro" type="text" placeholder="Cédula profesional" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                    <label> Cédula de Especialista</label>
                                                     <input onChange="es_vacio()" id="cedulaesp" name="cedulaesp" type="text" placeholder="Cédula especialista" class="form-control ameg-shadow-box-two">
 
                                                 </div>
