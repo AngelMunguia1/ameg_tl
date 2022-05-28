@@ -170,7 +170,7 @@
     box-shadow: 5px 5px 5px 8px #5c1f694a; background-color: #ffffff00 !important;">
 										<div class="col-md-12 text-center">
 											<div class="row text-center">
-												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Solicitud de ingreso</h2>
+												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Registro de Usuario</h2>
 											</div>
 										</div>
                                         <form class="form-horizontal" id="add" action="/Registro/registroAdd" method="POST">
