@@ -403,7 +403,7 @@
 
                                                 <div class="col-md-4">
                                                     <label>Hospital *</label>
-                                                    <input onChange="es_vacio()" id="e_hospital" name="e_hospital" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
+                                                    <input onChange="es_vacio()" id="e_hospital" name="e_hospital" type="text" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
                                                 </div>
 
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
