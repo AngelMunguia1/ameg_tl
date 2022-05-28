@@ -403,7 +403,7 @@
 
                                                 <div class="col-md-4">
                                                     <label>Hospital *</label>
-                                                    <input onChange="es_vacio()" id="e_hospital" name="e_hospital" type="text" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
+                                                    <input onChange="es_vacio()" id="e_hospital" name="e_hospital" type="text" placeholder="Hospital" class="form-control ameg-shadow-box-two" required>
                                                 </div>
 
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
@@ -434,7 +434,7 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Posgrado *</label>
-                                                    <input onChange="es_vacio()" id="e_posgrado" name="e_posgrado" type="text" placeholder="Residencia" class="form-control ameg-shadow-box-two">
+                                                    <input onChange="es_vacio()" id="e_posgrado" name="e_posgrado" type="text" placeholder="Posgrado" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha Inicial Posgrado *</label>
