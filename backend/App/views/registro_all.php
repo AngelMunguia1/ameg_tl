@@ -169,18 +169,12 @@
 									<div class="col-md-8 ameg-shadow-box-tre bg-white">
 										<div class="col-md-12 text-center">
 											<div class="row text-center">
-												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Registro de nuevo usuario</h2>
+												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Solicitud de ingreso</h2>
 											</div>
 										</div>
 										<div class="col-md-12">
 											<div class="row">
-												<div class="col-md-3">
-													<br>
-													<p>Datos de acceso a la plataforma OBLIGATORIO*</p>
-													<br><br><br><br>
-													<p>Datos personales OBLIGATORIO*</p>
-												</div>
-												<div class="col-md-9">
+												<div class="col-md-12 text-center">
 													<form class="form-horizontal" id="add" action="/Registro/registroAdd" method="POST">
 														<fieldset>
 															<legend class="text-center header"></legend>
@@ -189,15 +183,13 @@
 
 																<div class="col-md-8">
 																	<input onChange="es_vacio()" id="usuario" name="usuario" type="text" placeholder="Email" class="form-control ameg-shadow-box-two" require="required">
-																   
 																	<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
-																	
 																</div>
 															</div>
 															<div class="form-group">
 
 																<div class="col-md-8">
-																	<input onChange="es_vacio()" id="contrasena" name="contrasena" type="password" placeholder="Contraseña" class="form-control ameg-shadow-box-two">
+																	<input onChange="es_vacio()" id="contrasena" name="contrasena" type="password" placeholder="Contraseña para ingresar al sistema" class="form-control ameg-shadow-box-two">
 																	<p style="color: red ;" id="texto_obligatorio"></p>
 																</div>
 															</div>
@@ -223,24 +215,175 @@
 																	<input onChange="es_vacio()" id="apellidom" name="apellidom" type="text" placeholder="Apellido materno" class="form-control ameg-shadow-box-two">
 																</div>
 															</div>
+															
 															<div class="form-group">
 
 																<div class="col-md-8">
-																	<input onChange="es_vacio()" id="cedula_profesional" name="cedula_profesional" type="text" placeholder="Cédula profesional" class="form-control ameg-shadow-box-two">
+																	<input onChange="es_vacio()" id="p_lugar_nacimiento" name="p_lugar_nacimiento" type="text" placeholder="Lugar de nacimiento" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="p_fecha_nacimiento" name="p_fecha_nacimiento" type="date" placeholder="Fecha de nacimiento" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="cedpro" name="cedpro" type="text" placeholder="Cédula profesional" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+															
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="cedulaesp" name="cedulaesp" type="text" placeholder="Cédula especialista" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+														</fieldset>
+													</form>
+												</div>
+												<div class="col-md-12 text-center">
+													<div class="row text-center">
+														<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Domicilio del trabajo</h2>
+													</div>
+												</div>
+												<div class="col-md-12 text-center">
+													<form class="form-horizontal" id="add" action="/Registro/registroAdd" method="POST">
+														<fieldset>
+															<legend class="text-center header"></legend>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="calle" name="calle" type="text" placeholder="Calle" class="form-control ameg-shadow-box-two" require="required">
+																   
+																	<p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+																	
 																</div>
 															</div>
 															<div class="form-group">
 
 																<div class="col-md-8">
-																	<input onChange="es_vacio()" id="cedula_especialista" name="cedula_especialista" type="text" placeholder="Cédula especialista" class="form-control ameg-shadow-box-two">
+																	<input onChange="es_vacio()" id="numext" name="numext" type="text" placeholder="Número exterior" class="form-control ameg-shadow-box-two">
+																	<p style="color: red ;" id="texto_obligatorio"></p>
+																</div>
+															</div>
+															<br><br>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="numint" name="numint" type="text" placeholder="Número interior" class="form-control ameg-shadow-box-two">
+																	<p style="color: red ;" id="texto_obligatorio"></p>
 																</div>
 															</div>
 
 															<div class="form-group">
-																<div class="col-md-12 text-center">
-																	<button disabled="disabled" type="submit" class="btn btn-primary btn-lg"  id="btn_upload" name="btn_upload">REGISTRAME</button>
+
+																<div class="col-md-8">
+																	<input  onChange="es_vacio()" id="colonia" name="colonia" type="text" placeholder="Colonia" class="form-control ameg-shadow-box-two">
 																</div>
 															</div>
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="delomun" name="delomun" type="text" placeholder="Delegación Municipal" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="ciudad" name="ciudad" type="text" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="pais_id" name="pais_id" type="text" placeholder="País" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="estado_id" name="estado_id" type="text" placeholder="Estado" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="cp" name="cp" type="text" placeholder="Código postal" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="telefono" name="telefono" type="text" placeholder="Teléfono" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="celular" name="celular" type="text" placeholder="Celular" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="telinstitucion" name="telinstitucion" type="text" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="p_edad" name="p_edad" type="text" placeholder="Edad" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+															<div class="form-group">
+																<div class="col-md-12 row ">
+																	<div class="col-md-12 ">
+																		<p>MARQUE SU SEXO</p>
+																		<input type="radio" name="color" value="azul"> MASCULINO
+																		<input type="radio" name="color" value="azul"> FEMININO
+																	</div>
+																</div>
+															</div>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="p_domicilio_particular" name="p_domicilio_particular" type="text" placeholder="Domicilio particular" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="p_especialidad" name="p_especialidad" type="text" placeholder="Especialidad" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+															<div class="form-group">
+
+																<div class="col-md-8">
+																	<input onChange="es_vacio()" id="p_cargo" name="p_cargo" type="text" placeholder="Cargo" class="form-control ameg-shadow-box-two">
+																</div>
+															</div>
+
+
+
+
 														</fieldset>
 													</form>
 												</div>

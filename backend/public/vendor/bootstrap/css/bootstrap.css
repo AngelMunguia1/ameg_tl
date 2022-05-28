@@ -6901,8 +6901,8 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-	background-color: #fff !important;
-	opacity: 97%;
+	background-color: #FFFFFF !important;
+	opacity: 100%;
 }
 
 .bg-purple-fecha {
