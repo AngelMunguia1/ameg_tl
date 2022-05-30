@@ -1,6 +1,6 @@
 <?php echo $header; ?>
 <body>
-		<div class="body" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;">
+		<div class="body">
 
 			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 70}">
 				<div class="header-body">

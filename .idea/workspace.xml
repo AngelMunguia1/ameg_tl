@@ -17,9 +17,8 @@
       <change beforePath="$PROJECT_DIR$/../Contabilidad/backend/App/views/responsable_all.php" beforeDir="false" afterPath="$PROJECT_DIR$/../Contabilidad/backend/App/views/responsable_all.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Contabilidad/backend/public/assets/css/soft-ui-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Contabilidad/backend/public/assets/css/soft-ui-dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Contabilidad/backend/public/css/bootstrap/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Contabilidad/backend/public/css/bootstrap/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/App/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/App/views/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/App/views/principal_all.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/App/views/principal_all.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/App/views/registro_all.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/App/views/registro_all.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/App/views/contacto_all.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/App/views/contacto_all.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/App/views/recupera_contra_all.php" beforeDir="false" afterPath="$PROJECT_DIR$/backend/App/views/recupera_contra_all.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Contabilidad/backend/App/views/principal_all.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="43" column="56" lean-forward="true" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+            <state relative-caret-position="731">
+              <caret line="43" column="56" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -41,25 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../Contabilidad/backend/App/views/registro_all.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
-              <folding>
-                <element signature="e#991#1013#0#HTML" expanded="true" />
-                <element signature="e#1192#1214#0#HTML" expanded="true" />
-                <element signature="e#1405#1427#0#HTML" expanded="true" />
-                <element signature="e#1874#1896#0#HTML" expanded="true" />
-                <element signature="e#1966#1972#0#HTML" expanded="true" />
-                <element signature="e#2013#2019#0#HTML" expanded="true" />
-                <element signature="e#2192#2214#0#HTML" expanded="true" />
-                <element signature="e#3345#3351#0#HTML" expanded="true" />
-                <element signature="e#3351#3357#0#HTML" expanded="true" />
-                <element signature="e#3357#3363#0#HTML" expanded="true" />
-                <element signature="e#3363#3369#0#HTML" expanded="true" />
-                <element signature="e#7768#7842#0#HTML" expanded="true" />
-                <element signature="e#10963#10983#0#HTML" expanded="true" />
-                <element signature="e#11338#11358#0#HTML" expanded="true" />
-                <element signature="e#11704#11724#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="714">
+              <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -69,38 +51,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
               <caret line="37" column="75" selection-start-line="37" selection-start-column="75" selection-end-line="37" selection-end-column="75" />
-              <folding>
-                <element signature="e#1868#1890#0#HTML" expanded="true" />
-                <element signature="e#2093#2115#0#HTML" expanded="true" />
-                <element signature="e#2187#2193#0#HTML" expanded="true" />
-                <element signature="e#2983#3008#0#HTML" expanded="true" />
-                <element signature="e#3419#3426#1#HTML" expanded="true" />
-                <element signature="e#3692#3788#0#HTML" expanded="true" />
-                <element signature="e#4260#4335#0#HTML" expanded="true" />
-                <element signature="e#5472#5518#0#HTML" expanded="true" />
-                <element signature="e#6717#6763#0#HTML" expanded="true" />
-                <element signature="e#7043#7089#0#HTML" expanded="true" />
-                <element signature="e#7325#7371#0#HTML" expanded="true" />
-                <element signature="e#7521#7567#0#HTML" expanded="true" />
-                <element signature="e#7737#7783#0#HTML" expanded="true" />
-                <element signature="e#7875#7901#0#HTML" expanded="true" />
-                <element signature="e#8015#8041#0#HTML" expanded="true" />
-                <element signature="e#8217#8263#0#HTML" expanded="true" />
-                <element signature="e#8370#8396#0#HTML" expanded="true" />
-                <element signature="e#8516#8542#0#HTML" expanded="true" />
-                <element signature="e#8703#8741#0#HTML" expanded="true" />
-                <element signature="e#9128#9166#0#HTML" expanded="true" />
-                <element signature="e#9254#9260#0#HTML" expanded="true" />
-                <element signature="e#9260#9266#0#HTML" expanded="true" />
-                <element signature="e#9279#9285#0#HTML" expanded="true" />
-                <element signature="e#9285#9291#0#HTML" expanded="true" />
-                <element signature="e#9380#9386#0#HTML" expanded="true" />
-                <element signature="e#9386#9392#0#HTML" expanded="true" />
-                <element signature="e#9407#9413#0#HTML" expanded="true" />
-                <element signature="e#9413#9419#0#HTML" expanded="true" />
-                <element signature="e#9510#9516#0#HTML" expanded="true" />
-                <element signature="e#9516#9522#0#HTML" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -170,7 +120,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -200,9 +149,11 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Contabilidad/backend/App/views" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -237,16 +188,18 @@
       <updated>1653659477411</updated>
       <workItem from="1653659479114" duration="7840000" />
       <workItem from="1653668138574" duration="4744000" />
+      <workItem from="1653947953373" duration="806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12584000" />
+    <option name="totallyTimeSpent" value="13390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -512,32 +465,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Contabilidad/backend/App/views/principal_all.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="43" column="56" lean-forward="true" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+        <state relative-caret-position="731">
+          <caret line="43" column="56" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Contabilidad/backend/App/views/registro_all.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="42" column="44" lean-forward="true" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
-          <folding>
-            <element signature="e#991#1013#0#HTML" expanded="true" />
-            <element signature="e#1192#1214#0#HTML" expanded="true" />
-            <element signature="e#1405#1427#0#HTML" expanded="true" />
-            <element signature="e#1874#1896#0#HTML" expanded="true" />
-            <element signature="e#1966#1972#0#HTML" expanded="true" />
-            <element signature="e#2013#2019#0#HTML" expanded="true" />
-            <element signature="e#2192#2214#0#HTML" expanded="true" />
-            <element signature="e#3345#3351#0#HTML" expanded="true" />
-            <element signature="e#3351#3357#0#HTML" expanded="true" />
-            <element signature="e#3357#3363#0#HTML" expanded="true" />
-            <element signature="e#3363#3369#0#HTML" expanded="true" />
-            <element signature="e#7768#7842#0#HTML" expanded="true" />
-            <element signature="e#10963#10983#0#HTML" expanded="true" />
-            <element signature="e#11338#11358#0#HTML" expanded="true" />
-            <element signature="e#11704#11724#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="714">
+          <caret line="42" column="44" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -545,38 +481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="37" column="75" selection-start-line="37" selection-start-column="75" selection-end-line="37" selection-end-column="75" />
-          <folding>
-            <element signature="e#1868#1890#0#HTML" expanded="true" />
-            <element signature="e#2093#2115#0#HTML" expanded="true" />
-            <element signature="e#2187#2193#0#HTML" expanded="true" />
-            <element signature="e#2983#3008#0#HTML" expanded="true" />
-            <element signature="e#3419#3426#1#HTML" expanded="true" />
-            <element signature="e#3692#3788#0#HTML" expanded="true" />
-            <element signature="e#4260#4335#0#HTML" expanded="true" />
-            <element signature="e#5472#5518#0#HTML" expanded="true" />
-            <element signature="e#6717#6763#0#HTML" expanded="true" />
-            <element signature="e#7043#7089#0#HTML" expanded="true" />
-            <element signature="e#7325#7371#0#HTML" expanded="true" />
-            <element signature="e#7521#7567#0#HTML" expanded="true" />
-            <element signature="e#7737#7783#0#HTML" expanded="true" />
-            <element signature="e#7875#7901#0#HTML" expanded="true" />
-            <element signature="e#8015#8041#0#HTML" expanded="true" />
-            <element signature="e#8217#8263#0#HTML" expanded="true" />
-            <element signature="e#8370#8396#0#HTML" expanded="true" />
-            <element signature="e#8516#8542#0#HTML" expanded="true" />
-            <element signature="e#8703#8741#0#HTML" expanded="true" />
-            <element signature="e#9128#9166#0#HTML" expanded="true" />
-            <element signature="e#9254#9260#0#HTML" expanded="true" />
-            <element signature="e#9260#9266#0#HTML" expanded="true" />
-            <element signature="e#9279#9285#0#HTML" expanded="true" />
-            <element signature="e#9285#9291#0#HTML" expanded="true" />
-            <element signature="e#9380#9386#0#HTML" expanded="true" />
-            <element signature="e#9386#9392#0#HTML" expanded="true" />
-            <element signature="e#9407#9413#0#HTML" expanded="true" />
-            <element signature="e#9413#9419#0#HTML" expanded="true" />
-            <element signature="e#9510#9516#0#HTML" expanded="true" />
-            <element signature="e#9516#9522#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

@@ -75,7 +75,8 @@
 			</header>
 
 			<div role="main" class="main">
-				<section class="section bg-white section-text-overlay" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;">
+				<section class="section bg-white section-text-overlay">
+				<!-- <section class="section bg-white section-text-overlay" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;"> -->
 					<!-- <span class="text-background font-primary font-weight-bold text-color-light appear-animation" data-appear-animation="textBgFadeInUp" data-appear-animation-delay="500" data-plugin-options="{'accY': 100}">EASY AS 123</span> -->
 					<!-- <h3 class="text-center">Los trabajos que se presentarán durante el congreso se dividen en 3 categorías principales</h3> -->
 					<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
@@ -87,19 +88,26 @@
 										<img width="42" src="vendor/linear-icons/screen.svg" alt="" data-icon data-plugin-options="{'color': '#FFF', 'animated': true, 'delay': 600}" />
 									</div> -->
 									<div class="container text-center">
-										<div class="row">
+										<div class="row" style="margin: 0px auto; display:flex; justify-content: center; width:60%; min-width: 325px;">
 											<div class="col">
 													<h4 class="font-weight-bold text-center align-items-center" style="margin: 35px;">Recupera tu contraseña, 
 														<b class="font-weight-bold text-color-dblue">
 															ingresa tu correo electrónico
 														</b>
-                                                        <br><br>
-                                                        <div style="margin: 0px auto; display:flex; justify-content: center;">
-                                                            <input type="email" name="usuario" id="usuario" class="form-control text-center" placeholder="usuario@grupolahe.com" aria-label="Email" style="text-align: center; background-color: #ebafff; width:50%;">
-                                                        </div>
 													</h4>
-													<button type="submit" class="btn btn-primary btn-lg" disabled="disabled" id="btn_upload" name="btn_upload">Recupera mi contraseña</button>
-													<br><br>
+												<div class="card-body">
+                                                    <form role="form" class="text-start text-center" id="email_form_recovery_pass" action="/Register/verifyCodePass" method="POST" class="form-horizontal">
+                                                        <label style="font-weight:bold; font-size: 15px;">Correo electrónico</label>
+														<div style="margin: 0px auto; display:flex; justify-content: center;">
+                                                            <input type="email" name="usuario" id="usuario" class="form-control text-center" placeholder="usuario@grupolahe.com" aria-label="Email" required="required" style="text-align: center; background-color: #ebafff; width:60%;">
+                                                        </div>
+														<br><br>
+													<button type="submit" class="btn btn-danger btn-lg" id="btn_registro_email" name="btn_upload">Recupera mi contraseña</button>
+														<br><br>
+													<a href="/Login/">
+														<button class="btn btn-primary btn-lg">Regresar</button>
+													</a>
+														<br><br>
 													<h4> Correo electrónico de
                                                         <b class="font-weight-bold text-color-dblue">
 															soporte:
@@ -108,6 +116,8 @@
 															contactoejemplo@soporte.com
 														</a>
 													</h4>
+                                                    </form>
+                                                </div>
 											</div>
 										</div>
 										<!-- <span class="top-sub-title text-color-light opacity-6">MULTI PURPOSE CONCEPTS</span> -->

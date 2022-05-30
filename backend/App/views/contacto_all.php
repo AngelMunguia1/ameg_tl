@@ -75,7 +75,8 @@
 			</header>
 
 			<div role="main" class="main">
-				<section class="section bg-white" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;">
+				<section class="section bg-white">
+				<!-- <section class="section bg-white" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;"> -->
 					<!-- <span class="text-background font-primary font-weight-bold text-color-light appear-animation" data-appear-animation="textBgFadeInUp" data-appear-animation-delay="500" data-plugin-options="{'accY': 100}">EASY AS 123</span> -->
 					<!-- <h3 class="text-center">Los trabajos que se presentarán durante el congreso se dividen en 3 categorías principales</h3> -->
 					<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
@@ -120,6 +121,3 @@
 		</div>
 
 	</body>
-</html>
-
-<?php echo $footer; ?>
