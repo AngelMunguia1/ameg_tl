@@ -94,7 +94,7 @@
 		<section id="" class=" text-center bg-purple-fecha">
 			<div class="text-center">
 				<div class="px-lg-3 pb-3 text-center">
-					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold  text-center text-white">REGISTRO DE TRABAJO</h1>
+					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold  text-center text-white text-ameg-size">REGISTRO DE TRABAJO</h1>
 				</div>
 		</section>
 
@@ -157,8 +157,8 @@
 									</div> -->
 							<div class="container text-center">
 								<div class="row">
-								<div style="margin: auto; display:flex; justify-content: center; width:90%; min-width: 325px;">
-									<div class="col-md-9 text-center ameg-shadow-box-tre bg-white">
+								<div style="margin: auto; display:flex; justify-content: center; width:100%; min-width: 325px;">
+									<div class="col-md-9 text-center ameg-shadow-box-ins bg-white">
 										<div class="col-md-12 text-center">
 											<div class="row text-center">
 												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3" style="color: #42787e !important;">REGISTRO DE TRABAJO</h2>
@@ -176,7 +176,7 @@
 														<div class="row">
 															
 															<input type="hidden" id="usuario_id" name="usuario_id" value="<?php echo $_SESSION['id_usuario']; ?>">
-															<div class="col-sm-4 col-12">
+															<div class="col-12 col-lg-4">
 
 																<label class="form-label">Categoria * </label>
 
@@ -188,7 +188,7 @@
 
 															</div>
 
-															<div class="col-sm-4 col-12">
+															<div class="col-12 col-lg-4">
 
 																<label class="form-label">Especialidad * </label>
 

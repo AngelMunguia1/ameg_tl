@@ -86,7 +86,7 @@
         <section id="" class="bg-purple-fecha text-left">
             <div class="text-left">
                 <div class="font-weight-bold px-lg-3 pb-3 text-left">
-                    &nbsp;&nbsp;&nbsp;&nbsp;<h1 class="text-center text-white font-weight-bold">INICIO DE SESIÓN</h1>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<h1 class="text-center text-white font-weight-bold text-ameg-size">INICIO DE SESIÓN</h1>
                 </div>
         </section>
 
@@ -161,7 +161,7 @@
                                         </div>
                                     </div> -->
                                 <div style="margin: 0px auto; display:flex; justify-content: center; width:60%; min-width: 325px;">
-                                    <div class="col-md-12  " style="background-color: #ffffff61 !important; padding: 15px; box-shadow: 5px 5px 5px 8px #5c1f6961;">
+                                    <div class="col-md-12 ameg-shadow-box-ins" style="background-color: #ffffff61 !important;">
                                         <div class="col-md-12 text-center">
                                             <h3 class="font-weight-bold text-center text-color-dark text-4 mb-3">Ingresa tus datos para iniciar sesión</h3>
                                         </div>

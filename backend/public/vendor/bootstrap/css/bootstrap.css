@@ -3223,6 +3223,7 @@ input[type="button"].btn-block {
 .dropdown,
 .dropleft {
 	position: relative;
+	transition-duration: 0.5s;
 }
 
 .dropdown-toggle {
@@ -3266,6 +3267,7 @@ input[type="button"].btn-block {
 
 .dropdown:hover{
 	transform: translateY(-5px);
+	transition-duration: 0.5s;
 }
 
 .dropdown-menu-left {
@@ -6771,25 +6773,67 @@ a.close.disabled {
 }
 
 .ameg-shadow-box-btn{
-	padding: 65px;
-    box-shadow: 1px 1px 1px 2px #E2EDFF;
+	padding: 50px;
+    box-shadow: 1px 1px 1px 1px #b310b6;
+	transition-duration: 0.7s;
 }
 
 .ameg-shadow-box-btn:hover{
 	transform: translateY(-5px);
-    box-shadow: 2px 2px 2px 8px #E2EDFF;
+    box-shadow: 1.5px 1.5px 1.5px 3px #3C4583;
+	transition-duration: 0.7s;
+}
+
+.ameg-shadow-box-btn-uno{
+	padding: 50px;
+    box-shadow: 1px 1px 1px 1px #b310b6;
+	transition-duration: .95s;
+	margin: 5px;
+}
+
+.ameg-shadow-box-btn-uno:hover{
+	transform: translateY(-5px);
+    box-shadow: 2.5px 2.5px 2.5px 6px #C09711;
+	transition-duration: .95s;
+}
+
+.ameg-shadow-box-btn-dos{
+	padding: 50px;
+    box-shadow: 1px 1px 1px 1px #b310b6;
+	transition-duration: 0.7s;
+	margin: 5px;
+}
+
+.ameg-shadow-box-btn-dos:hover{
+	transform: translateY(-5px);
+    box-shadow: 2px 2px 2px 5px #8a9597;
+	/* #C0C0C0 */
+	transition-duration: 0.7s;
+}
+
+.ameg-shadow-box-btn-tres{
+	padding: 50px;
+    box-shadow: 1px 1px 1px 1px #b310b6;
+	transition-duration: 0.5s;
+	margin: 5px;
+}
+
+.ameg-shadow-box-btn-tres:hover{
+	transform: translateY(-5px);
+    box-shadow: 1.5px 1.5px 1.5px 3px #7b4c1e;
+	transition-duration: 0.5s;
 }
 
 .ameg-shadow-box-ins{
-	padding: 65px;
-    box-shadow: 1px 1px 1px 2px #E2EDFF;
-    background-color:#212529;
+	padding: 15px;
+	box-shadow: 5px 5px 5px 8px #5c1f6975;
+	transition-duration: .95s;
 }
 
 .ameg-shadow-box-ins:hover{
 	transform: translateY(-5px);
-   	box-shadow: 2px 2px 2px 8px #E2EDFF;
-   	background-color:#212529;
+   	box-shadow: 10px 7px 7px 5px #5c1f6975;
+	   transition-duration: .95s;
 }
 
 .ameg-shadow-box-two{
@@ -6822,6 +6866,24 @@ a.close.disabled {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+}
+/* TITULOS */
+.text-ameg-size{
+	font-size: 29px;
+	transition-duration: 0.5s;
+}
+.text-ameg-size:hover{
+	font-size: 36px;
+	transition-duration: 0.5s;
+}
+/* TEXTO NORMAL */
+.text-ameg-size-normal{
+	font-size: 20px;
+	transition-duration: 0.5s;
+}
+.text-ameg-size-normal:hover{
+	font-size: 21px;
+	transition-duration: 0.5s;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,

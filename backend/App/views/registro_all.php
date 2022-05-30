@@ -87,7 +87,7 @@
 		<section id="" class="bg-purple-fecha text-left">
 			<div class="text-left">
 				<div class="px-lg-3 pb-3 text-left">
-					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold text-center text-white">REGISTRO</h1>
+					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold text-center text-white text-ameg-size">REGISTRO</h1>
 				</div>
 		</section>
 
@@ -166,7 +166,7 @@
 										</div>
 									</div>
 
-									<div class="col-md-8 ameg-shadow-box-tre bg-white" style="padding: 15px; box-shadow: 5px 5px 5px 8px #5c1f694a; background-color: #ffffff00 !important;">
+									<div class="col-md-8 ameg-shadow-box-ins">
 										<div class="col-md-12 text-center">
 											<div class="row text-center">
 												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Registro de Usuario</h2>

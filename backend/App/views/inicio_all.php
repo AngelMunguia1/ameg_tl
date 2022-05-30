@@ -75,14 +75,13 @@
 			</header>
 
 			<div role="main" class="main">
-
-				<section class="section">
+				<div>
 					<img src="/img/poster_ameg_h_1.png" 
-					style="background-size: auto 100%; background-repeat: no-repeat; 
-					max-width: 100%; background-position: center;">
-				</section>
+					style="background-size: auto 100%;; 
+					max-width: 100%; background-position: center; opacity: 90%;">
+				</div>
 				<br>
-				<section class="section">
+				<div class="">
 					<h2 class="font-weight-bold text-center">
 						Los trabajos que se presentarán durante el congreso se dividen en 4 categorías principales
 					</h2>
@@ -90,45 +89,45 @@
 					<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
 						<div class="row align-items-center">
 							<div class="col-lg-3">
-								<a href="#">
-									<div class="text-center">
+								
+									<div class="text-center ameg-shadow-box-btn">
 										<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajos de ingreso</h2>
 										<img width="70" src="/vendor/iconos/mesa1.png"/>
 									</div>
-								</a>
+	
 							</div>
 							<div class="col-lg-3">
-								<a href="#">
-									<div class="icon-box-info text-center">
+								
+									<div class="icon-box-info text-center ameg-shadow-box-btn">
 										<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajo libre oral</h2>
 										<img width="70" src="/vendor/iconos/mesa2.png"/>
 									</div>
-								</a>
+								
 							</div>
 							<div class="col-lg-3">
-								<a href="#">
-									<div class="icon-box-info text-center">
+								
+									<div class="icon-box-info text-center ameg-shadow-box-btn">
 										<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajos en cartel</h2>
 										<img width="70" src="/vendor/iconos/mesa3.png"/>
 									</div>
-								</a>
+								
 							</div>
 							<div class="col-lg-3">
-								<a href="#">
-									<div class="text-center">
+								
+									<div class="text-center ameg-shadow-box-btn">
 										<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajos en video</h2>
 										<img width="70" src="/vendor/iconos/mesa4.png"/>
 									</div>
-								</a>
+								
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
 				<section id="" class="bg-purple-fecha text-center">
 					<div class="text-center">
 						<div class="px-lg-2 pb-1 mb-3 text-center">
                             <br>
-							<h3 class="text-center text-white">A PARTIR DEL 01 DE JUNIO AL 30 DE JUNIO DE 2022</h3	>
+							<h3 class="text-center text-white text-ameg-size">A PARTIR DEL 01 DE JUNIO AL 30 DE JUNIO DE 2022</h3	>
 						</div>
 					</div>
 				</section>
@@ -137,59 +136,3 @@
 				
 			</div>
 	</body>
-
-    <script>
-        $( document ).ready(function() {
-
-            $("#form_paymet_ticket").on("submit",function(event){
-                event.preventDefault();
-                
-                    var formData = new FormData(document.getElementById("form_paymet_ticket"));
-                    console.log(formData);
-                    $.ajax({
-                    url:"/Home/uploadTicket",
-                    type: "POST",
-                    data: formData,
-                    cache: false,
-                    contentType: false,
-                    processData: false,
-                    beforeSend: function(){
-                        console.log("Procesando....");
-
-                    
-                    },
-                    success: function(respuesta){
-                        
-                        
-                        if(respuesta == 'success'){
-                           // $('#modal_payment_ticket').modal('toggle');
-                            Swal.fire(
-                                'OK',
-                                'Se ha guardado tu ticket correctamente!!',
-                                'success'
-                            )
-
-                            setTimeout(() => {
-                                window.location.reload();
-                            }, 100);
-                            
-                            
-                        }
-                        
-                        console.log(respuesta);
-
-                    },
-                    error:function (respuesta)
-                    {
-                        console.log(respuesta);
-                    }
-
-                });
-            });
-
-        });
-         
-    
-    </script>
-
-<?php echo $footer; ?>

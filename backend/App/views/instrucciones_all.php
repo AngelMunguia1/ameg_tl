@@ -87,7 +87,7 @@
 		<section id="" class="bg-purple-fecha text-left">
 			<div class="text-left">
 				<div class="px-lg-3 pb-3 text-left">
-					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold text-center text-white">INSTRUCCIONES PARA AUTORES</h1>
+					&nbsp;&nbsp;&nbsp;&nbsp;<h1 class="font-weight-bold text-center text-white text-ameg-size">INSTRUCCIONES PARA AUTORES</h1>
 				</div>
 		</section>
 
@@ -169,8 +169,7 @@
 									</div>
 
 
-									<div class="col-md-9 ameg-shadow-box-tre " style="padding: 15px;
-    box-shadow: 5px 5px 5px 8px #5c1f6975">
+									<div class="col-md-9 ameg-shadow-box-ins">
 										<div class="col-md-12">
 											<div class="row"   id="trabajos_ingreso">
 												<center>

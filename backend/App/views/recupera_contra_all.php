@@ -98,6 +98,8 @@
                                                             <input type="email" name="usuario" id="usuario" class="form-control text-center" placeholder="usuario@grupolahe.com" aria-label="Email" style="text-align: center; background-color: #ebafff; width:50%;">
                                                         </div>
 													</h4>
+													<button type="submit" class="btn btn-primary btn-lg" disabled="disabled" id="btn_upload" name="btn_upload">Recupera mi contraseña</button>
+													<br><br>
 													<h4> Correo electrónico de
                                                         <b class="font-weight-bold text-color-dblue">
 															soporte:
