@@ -156,8 +156,8 @@
 										<img width="42" src="vendor/linear-icons/screen.svg" alt="" data-icon data-plugin-options="{'color': '#FFF', 'animated': true, 'delay': 600}" />
 									</div> -->
 							<div class="container text-center">
-								<div class="row">
-								<div style="margin: auto; display:flex; justify-content: center; width:90%; min-width: 325px;">
+								<div class="row" <?=$permiso_form?>>
+								<div style="margin: auto; display:flex; justify-content: center; width:90%; min-width: 325px;" >
 									<div class="col-md-9 text-center ameg-shadow-box-tre bg-white">
 										<div class="col-md-12 text-center">
 											<div class="row text-center">
@@ -169,7 +169,7 @@
 
 
 												<div class="col-md-12">
-												<form class="form-horizontal" id="update_form" action="/RegistroTrabajo/trabajosAdd" method="POST" enctype="multipart/form-data">
+												<form class="form-horizontal" id="update_form" action="/RegistroTrabajo/trabajosAdd" method="POST" enctype="multipart/form-data" >
 
 														
 													<div class="card-body pt-0">
@@ -302,7 +302,17 @@
 															
 															<div class="col-sm-4 col-12" id="cont-url">																
 
-															</div>			
+															</div>
+															
+															<div class="col-12 col-lg-12" id="cont-button-desc">																
+																
+															</div>
+
+															<div class="col-12 col-lg-12" id="cont-leyenda">																
+																
+															</div>
+
+
 
 															
 														</div>
@@ -332,7 +342,7 @@
 		</div>
 
 	</div>
-	</section> -->
+	</section> 
 
 	<hr class="my-0">
 
@@ -371,27 +381,35 @@
 				var categoria = $("option:selected", this).text();
 
 				if(categoria == "Cartel"){
-					
+					$("#cont-adjunto-ext").css("display", "none");
 					$("#cont-adjunto-ext").html(`<label class="form-label">Formato</label>
 													<div class="input-group">
 													<a href="#" class="btn btn-primary w-100" id="formato" name="formato">Descargar</a>
 													</div>`);
 					$("#cont-url").html(``);
+					$("#cont-button-desc").html(`<label class="form-label">Formato</label>
+													<div class="input-group">
+													<a href="#" class="btn btn-primary w-100 d-flex justify-content-center" id="formato" name="formato"><span >Descargar</span></a>
+													</div>`);
+					$("#cont-leyenda").html(``);
 
 				}else if(categoria == "Video"){
-					$("#cont-adjunto-ext").html(`<label class="form-label">Adjunto Extenso *</label>
-													<div class="input-group">
-													<input type="file" class="form-control" id="adjunto_extenso" name="adjunto_extenso" required>
-													</div>`);
+					$("#cont-adjunto-ext").css("display", "none");
+					$("#cont-url").html(``);
+					$("#cont-button-desc").html(``);
+					$("#cont-leyenda").html(`<p class="mt-3 bg-success text-white">Favor de mandar el link del video al correo : videosameg@grupolahe.com</p>`);
 
-					$("#cont-url").html(`<label class="form-label">URL * </label>
-											<input id="url_video" name="url_video" maxlength="150"  class="form-control" type="text" placeholder="" required="">`);
+					// $("#cont-url").html(`<label class="form-label">URL * </label>
+					// 						<input id="url_video" name="url_video" maxlength="150"  class="form-control" type="text" placeholder="" required="">`);
 				}else{
+					$("#cont-adjunto-ext").css("display", "block");
 					$("#cont-adjunto-ext").html(`<label class="form-label">Adjunto Extenso *</label>
 													<div class="input-group">
 													<input type="file" class="form-control" id="adjunto_extenso" name="adjunto_extenso" required>
 													</div>`);
 					$("#cont-url").html(``);
+					$("#cont-button-desc").html(``);
+					$("#cont-leyenda").html(``);
 				}
 				// alert($("#categoria_id option:selected").text());
 				// console.log($(this+"option:selected").text());
@@ -399,6 +417,6 @@
 			});
         });
           
-        </script> 
+</script> 
 
 

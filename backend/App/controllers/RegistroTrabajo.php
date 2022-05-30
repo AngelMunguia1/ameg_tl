@@ -177,6 +177,17 @@ html;
         </script>
 html;
 
+        $id_user = RegistroDao::getUserByEmail($this->getUsuario())[0]['id_usuario'];
+        $categoriasUser = RegistroDao::getCategoriasByUser($id_user);
+        $es_ingreso = '';
+
+        foreach($categoriasUser as $key => $value){
+            if($value['categoria'] == 'Ingreso'){                
+                $es_ingreso = 1;
+            }
+        }
+        $permiso_form = $es_ingreso == 1 ? "style=\"display:none;\"" : "";
+
             
 
         $selectCategoria = '';
@@ -195,12 +206,12 @@ html;
                     <option value="{$value['id']}">{$value['especialidad']}</option>
 html;
         }
-
-  
+        
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
         View::set('selectCategoria',$selectCategoria);
         View::set('selectEspecialidad',$selectEspecialidad);
+        View::set('permiso_form',$permiso_form);
         View::render("registro_trabajo_all_2");
     }
 

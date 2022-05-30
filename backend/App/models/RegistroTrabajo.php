@@ -11,7 +11,16 @@ class RegistroTrabajo implements Crud{
         $mysqli = Database::getInstance();
         $query=<<<sql
         SELECT * FROM usuarios
-  sql;
+sql;
+        return $mysqli->queryAll($query);
+          
+      }
+
+      public static function getUserByEmail($email){
+        $mysqli = Database::getInstance();
+        $query=<<<sql
+        SELECT * FROM usuarios WHERE usuario = '$email'
+sql;
         return $mysqli->queryAll($query);
           
       }
@@ -63,6 +72,20 @@ sql;
 sql;
         return $mysqli->queryAll($query);
       }
+
+      public static function getCategoriasByUser($id){       
+        $mysqli = Database::getInstance();
+        $query=<<<sql
+        SELECT u.nombre, u.apellidop, t.categoria_id, c.categoria
+        FROM usuarios u 
+        INNER JOIN trabajos2020 t ON(u.id_usuario = t.usuario_id)
+        INNER JOIN categorias_trabajos c ON(c.id = t.categoria_id)
+        WHERE u.id_usuario = $id
+sql;
+        return $mysqli->queryAll($query);
+      }
+
+      
 
       public static function getEspecialidades(){       
         $mysqli = Database::getInstance();
