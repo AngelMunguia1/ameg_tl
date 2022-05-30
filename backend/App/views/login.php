@@ -160,9 +160,8 @@
                                             </div>
                                         </div>
                                     </div> -->
-
-                                    <div class="col-md-12  " style="background-color: #ffffff61 !important; padding: 15px;
-    box-shadow: 5px 5px 5px 8px #5c1f6961;">
+                                <div style="margin: 0px auto; display:flex; justify-content: center; width:60%; min-width: 325px;">
+                                    <div class="col-md-12  " style="background-color: #ffffff61 !important; padding: 15px; box-shadow: 5px 5px 5px 8px #5c1f6961;">
                                         <div class="col-md-12 text-center">
                                             <h3 class="font-weight-bold text-center text-color-dark text-4 mb-3">Ingresa tus datos para iniciar sesión</h3>
                                         </div>
@@ -187,8 +186,9 @@
                                                         <div class="mb-5">
                                                             <input type="password" name="password" id="password" class="form-control text-center btn-outline-relog" placeholder="•••••••••" aria-label="Password">
                                                         </div>
-
-                                                        <div class="text-center" style="margin: auto; width : 60%; text-align:center;">
+                                                        <a href="/Recupera/" class="text-center">¿Olvidaste tu contraseña?</a>
+                                                        <br><br>
+                                                        <div class="text-center">
                                                             <center><button  type="button" id="btnEntrar" class="btn bg-gradient-secondary mt-1 mb-0"><b style="color: #FFFFFF; text-align: center;"><center>INICIAR</center></b></button></center>
                                                         </div>
                                                     </form>
@@ -196,6 +196,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
 
                                 </div>
                                 <!-- <span class="top-sub-title text-color-light opacity-6">MULTI PURPOSE CONCEPTS</span> -->

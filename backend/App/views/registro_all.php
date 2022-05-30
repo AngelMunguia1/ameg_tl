@@ -166,14 +166,13 @@
 										</div>
 									</div>
 
-									<div class="col-md-8 ameg-shadow-box-tre bg-white" style="padding: 15px;
-    box-shadow: 5px 5px 5px 8px #5c1f694a; background-color: #ffffff00 !important;">
+									<div class="col-md-8 ameg-shadow-box-tre bg-white" style="padding: 15px; box-shadow: 5px 5px 5px 8px #5c1f694a; background-color: #ffffff00 !important;">
 										<div class="col-md-12 text-center">
 											<div class="row text-center">
 												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Registro de Usuario</h2>
 											</div>
 										</div>
-                                        <form class="form-horizontal" id="add" action="/Registro/registroAdd" method="POST">
+                                        <form class="form-horizontal" onsubmit="validateSocio();" id="add" action="/Registro/registroAdd" method="POST">
 
                                         Los campos marcados con un * son obligatorios.
 
@@ -181,7 +180,7 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label>Email *</label>
-                                                    <input onChange="es_vacio()" id="usuario" name="usuario" type="text" placeholder="Email" class="form-control ameg-shadow-box-two" require="required">
+                                                    <input onChange="es_vacio()" id="usuario" name="usuario" type="email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" placeholder="Email" class="form-control ameg-shadow-box-two" require="required">
                                                     <p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
@@ -201,12 +200,12 @@
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Apellido Paterno *</label>
-                                                    <input  onChange="es_vacio()" id="apellidop" name="apellidop" type="text" placeholder="Apellido paterno" class="form-control ameg-shadow-box-two">
+                                                    <input  onChange="es_vacio()" id="apellidop" name="apellidop" type="text" placeholder="Apellido paterno" class="form-control ameg-shadow-box-two" required>
                                                 </div>
 
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Apellido Materno *</label>
-                                                    <input onChange="es_vacio()" id="apellidom" name="apellidom" type="text" placeholder="Apellido materno" class="form-control ameg-shadow-box-two">
+                                                    <input onChange="es_vacio()" id="apellidom" name="apellidom" type="text" placeholder="Apellido materno" class="form-control ameg-shadow-box-two" required>
                                                 </div>
 
                                             </div>
@@ -214,7 +213,7 @@
                                             <div class="row mt-3">
                                                     <div class="col-12 col-sm-2">
                                                         <label>Prefijo *</label>
-                                                        <select class="select form-control all_input_select" name="title" id="title" required>
+                                                        <select class="select form-control all_input_select" name="prefijo" id="prefijo" required>
                                                             <option value="Dr.">Dr.</option>
                                                             <option value="Dra.">Dra.</option>
                                                         </select>
@@ -223,17 +222,17 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label> Cédula profesional *</label>
-                                                    <input onChange="es_vacio()" id="cedpro" name="cedpro" type="text" placeholder="Cédula profesional" class="form-control ameg-shadow-box-two">
+                                                    <input onChange="es_vacio()" id="cedpro" name="cedpro" type="text" placeholder="Cédula profesional" class="form-control ameg-shadow-box-two" require="required">
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label> Cédula de Especialidad *</label>
-                                                    <input onChange="es_vacio()" id="cedulaesp" name="cedulaesp" type="text" placeholder="Cédula especialista" class="form-control ameg-shadow-box-two">
+                                                    <input onChange="es_vacio()" id="cedulaesp" name="cedulaesp" type="text" placeholder="Cédula especialista" class="form-control ameg-shadow-box-two" require="required">
                                                 </div>
                                             </div>
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label> Otras </label>
-                                                    <input onChange="es_vacio()" id="cedpro" name="cedpro" type="text" placeholder="Otras Cédulas de Especialidad" class="form-control ameg-shadow-box-two">
+                                                    <input onChange="es_vacio()" id="cedotras" name="cedpro" type="text" placeholder="Otras Cédulas de Especialidad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
 
@@ -250,24 +249,24 @@
                                                 </div>
                                                 <div class="col-12 col-sm-3 mt-3 mt-sm-0">
                                                     <label># Ext *</label>
-                                                    <input onChange="es_vacio()" id="numext" name="numext" type="text" placeholder="# Ext" class="form-control ameg-shadow-box-two">
+                                                    <input onChange="es_vacio()" id="numext" name="numext" type="number" placeholder="# Ext" class="form-control ameg-shadow-box-two" required>
                                                     <p style="color: red ;" id="texto_obligatorio"></p>
                                                 </div>
 
                                                 <div class="col-12 col-sm-3 mt-3 mt-sm-0">
                                                     <label># Int </label>
-                                                    <input onChange="es_vacio()" id="numint" name="numint" type="text" placeholder="# Int" class="form-control ameg-shadow-box-two">
+                                                    <input onChange="es_vacio()" id="numint" name="numint" type="number" placeholder="# Int" class="form-control ameg-shadow-box-two">
                                                     <p style="color: red ;" id="texto_obligatorio"></p>
                                                 </div>
 
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Colonia *</label>
-                                                    <input  onChange="es_vacio()" id="colonia" name="colonia" type="text" placeholder="Colonia" class="form-control ameg-shadow-box-two">
+                                                    <input  onChange="es_vacio()" id="colonia" name="colonia" type="text" placeholder="Colonia" class="form-control ameg-shadow-box-two" required>
                                                 </div>
 
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Alcaldía o Municipio *</label>
-                                                    <input  id="delomun" name="delomun" type="text" placeholder="Alcaldía o Municipio" class="form-control ameg-shadow-box-two">
+                                                    <input  id="delomun" name="delomun" type="text" placeholder="Alcaldía o Municipio" class="form-control ameg-shadow-box-two" required>
                                                 </div>
 
                                             </div>
@@ -275,21 +274,21 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Ciudad *</label>
-                                                    <input  id="ciudad" name="ciudad" type="text" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="ciudad" name="ciudad" type="text" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>País *</label>
-                                                    <select onchange="actualizaEdos();" class="multisteps-form__select form-control all_input_select" id="pais_id" name="pais_id">
+                                                    <select onchange="actualizaEdos();" class="multisteps-form__select form-control all_input_select" id="pais_id" name="pais_id" required>
                                                         <option value="" disabled selected>Selecciona una Opción</option>
                                                         <?php echo $idCountry; ?>
                                                     </select>
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Estado *</label>
-                                                    <select class="multisteps-form__select form-control all_input_select" name="estado_id" id="estado_id">
+                                                    <select class="multisteps-form__select form-control all_input_select" name="estado_id" id="estado_id" required>
 
                                                     </select>
                                                 </div>
@@ -298,32 +297,33 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label>Código Postal *</label>
-                                                    <input  id="cp" name="cp" type="text" placeholder="Código postal" class="form-control ameg-shadow-box-two">
+                                                    <input  id="cp" name="cp" type="number" min="-99999" max="99999" placeholder="Código postal" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Telefono Fijo*</label>
-                                                    <input  id="telefono" name="telefono" type="text" placeholder="Teléfono" class="form-control ameg-shadow-box-two">
+                                                    <input  id="telefono" name="telefono" min="-999999999999" max="999999999999" type="number" placeholder="Teléfono" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label>Telefono Celular *</label>
-                                                    <input  id="celular" name="celular" type="text" placeholder="Celular" class="form-control ameg-shadow-box-two">
+                                                    <input  id="celular" name="celular" min="-999999999999" max="999999999999" type="number" placeholder="Celular" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <input  id="telinstitucion" name="telinstitucion" type="text" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two">
+                                                    <label>Teléfono de institución</label>
+                                                    <input  id="telinstitucion" name="telinstitucion" min="-999999999999" max="999999999999" type="number" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label>Lugar de Nacimiento *</label>
-                                                    <input  id="p_lugar_nacimiento" name="p_lugar_nacimiento" type="text" placeholder="Lugar de nacimiento" class="form-control ameg-shadow-box-two">
+                                                    <input  id="p_lugar_nacimiento" name="p_lugar_nacimiento" type="text" placeholder="Lugar de nacimiento" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Fecha de Nacimiento *</label>
-                                                    <input  id="p_fecha_nacimiento" name="p_fecha_nacimiento" require type="date" placeholder="Fecha de nacimiento" class="form-control ameg-shadow-box-two">
+                                                    <input  id="p_fecha_nacimiento" name="p_fecha_nacimiento" require type="date" placeholder="Fecha de nacimiento" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
@@ -368,7 +368,7 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Institución *</label>
-                                                    <select class="multisteps-form__select form-control all_input_select" id="t_institucion" name="t_institucion">
+                                                    <select class="multisteps-form__select form-control all_input_select" id="t_institucion" name="t_institucion" required>
                                                         <option value="" disabled selected>Selecciona una Opción</option>
                                                         <?php echo $idInstitucion; ?>
                                                     </select>
@@ -381,16 +381,19 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                    <label>Ciudad del trabajo</label>
                                                     <input  id="t_ciudad" name="t_ciudad" type="text" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input  id="t_estado" name="t_estado" type="text" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
+                                                    <label>Estado del trabajo</label>
+                                                    <input  id="t_estado" name="t_estado" type="text" placeholder="Estado" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <input  id="t_cp" name="t_cp" type="text" placeholder="CP" class="form-control ameg-shadow-box-two">
+                                                    <label>Código postal del trabajo</label>
+                                                    <input  id="t_cp" name="t_cp" type="number" min="-99999" max="99999" placeholder="CP" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <!--<div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <input  id="tel_institucion" name="tel_institucion" type="text" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two">
@@ -411,7 +414,7 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Inicio *</label>
-                                                    <input  id="e_fecha_inicial" name="e_fecha_inicial" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_fecha_inicial" name="e_fecha_inicial" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Fecha de Fin *</label>
@@ -419,7 +422,7 @@
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha Exámen *</label>
-                                                    <input  id="e_fecha_examen" name="e_fecha_examne" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_fecha_examen" name="e_fecha_examne" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
                                             <div class="row mt-3">
@@ -431,7 +434,7 @@
 
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Inicio Hospital *</label>
-                                                    <input  id="e_fecha_inicial_hospital" name="e_fecha_inicial_hospital" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_fecha_inicial_hospital" name="e_fecha_inicial_hospital" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Fecha de Fin Hospital*</label>
@@ -442,11 +445,11 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Residencia *</label>
-                                                    <input  id="e_residencia" name="e_residencia" type="text" placeholder="Residencia" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_residencia" name="e_residencia" type="text" placeholder="Residencia" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Inicio Residencia *</label>
-                                                    <input  id="e_fecha_inicial_residencia" name="e_fecha_inicial_residencia" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_fecha_inicial_residencia" name="e_fecha_inicial_residencia" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Fecha Fin de Residencia*</label>
@@ -457,11 +460,11 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Posgrado *</label>
-                                                    <input  id="e_posgrado" name="e_posgrado" type="text" placeholder="Posgrado" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_posgrado" name="e_posgrado" type="text" placeholder="Posgrado" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Inicio Posgrado *</label>
-                                                    <input  id="e_fecha_inicial_hposgrado" name="e_fecha_inicial_posgrado" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="e_fecha_inicial_posgrado" name="e_fecha_inicial_posgrado" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Fecha Fin de Posgrado *</label>
@@ -474,11 +477,11 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Nombre Asociación *</label>
-                                                    <input  id="inf_institucion" name="inf_institucion" type="text" placeholder="Asociación" class="form-control ameg-shadow-box-two">
+                                                    <input  id="inf_institucion" name="inf_institucion" type="text" placeholder="Asociación" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha Ingreso *</label>
-                                                    <input  id="fecha_ingreso" name="fecha_ingreso" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="fecha_ingreso" name="fecha_ingreso" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Es Socio *</label>
@@ -492,7 +495,7 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Ingreso AMEG *</label>
-                                                    <input  id="fecha_ingreso_ameg" name="fecha_ingreso_ameg" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <input  id="fecha_ingreso_ameg" name="fecha_ingreso_ameg" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
                                                 </div>
 
                                             </div>
@@ -537,11 +540,13 @@
   var campo1 = document.getElementById("usuario").value;
   var campo2 = document.getElementById("contrasena").value;
   var campo3 = document.getElementById("nombre").value;
-  /*var campo4 = document.getElementById("cedpro").value;
+  var campo4 = document.getElementById("apellidop").value;
+  /*
+  var campo5 = document.getElementById("cedpro").value;
   var campo6 = document.getElementById("cedulaesp").value;
   var campo7 = document.getElementById("calle").value;
   var campo8 = document.getElementById("numext").value;
-  var campo9 = document.getElementById("numint").value;
+  var campo9 = document.getElementById("apellidom").value;
   var campo10 = document.getElementById("colonia").value;
   var campo11 = document.getElementById("delomun").value;
   var campo12 = document.getElementById("ciudad").value;
@@ -553,7 +558,26 @@
   var campo18 = document.getElementById("t_estado").value;
   var campo19 = document.getElementById("t_cp").value;
   var campo20 = document.getElementById("e_facultad").value;
-  var campo21 = document.getElementById("inf_institucion").value;*/
+  var campo21 = document.getElementById("inf_institucion").value;
+  var campo22 = document.getElementById("pais_id").value;
+  var campo23 = document.getElementById("estado_id").value;
+  var campo24 = document.getElementById("p_fecha_nacimiento").value;
+  var campo25 = document.getElementById("t_institucion").value;
+  var campo26 = document.getElementById("e_fecha_inicial").value;
+  var campo27 = document.getElementById("e_fecha_fin").value;
+  var campo28 = document.getElementById("e_fecha_examen").value;
+  var campo29 = document.getElementById("e_hospital").value;
+  var campo30 = document.getElementById("e_fecha_inicial_hospital").value;
+  var campo31 = document.getElementById("e_fecha_fin_hospital").value;
+  var campo32 = document.getElementById("e_residencia").value;
+  var campo33 = document.getElementById("e_fecha_inicial_residencia").value;
+  var campo34 = document.getElementById("e_fecha_fin_residencia").value;
+  var campo35 = document.getElementById("e_posgrado").value;
+  var campo36 = document.getElementById("e_fecha_inicial_posgrado").value;
+  var campo37 = document.getElementById("e_fecha_fin_posgrado").value;
+  var campo35 = document.getElementById("fecha_ingreso").value;
+  var campo35 = document.getElementById("fecha_ingreso_ameg").value;
+  var campo35 = document.getElementById("es_socio").value;*/
 
 
   if(campo1 != "" && campo2 !="" && campo3 !=""){
@@ -561,8 +585,6 @@
 
   }else{
 	document.getElementById("btn_upload").setAttribute('disabled', 'disabled');
-	
-
   }
 }
     function actualizaEdos() {
@@ -586,64 +608,23 @@
             })
     }
 
-
+        function validateSocio(){
+    var socio = document.getElementsById("es_socio");
+    var check1 = 0;
+    for(i=0;i<category.length;i++){
+        if(socio[i].checked){
+        check1++;
+        break;
+        }
+    }
+    
+    if(check1){
+    }else{
+        alert("DEBES ELEGIR UNA OPCIÓN");
+        return false;
+        }
+    }
 
 </script>
-
-<!-- <script>
-            $(document).ready(function(){
-              $('#confirm_usuario').attr("disabled", true);
-              $.validator.addMethod("checkUserCorreo",function(value, element) {
-                var response = false;
-                  $.ajax({
-                      type:"POST",
-                      async: false,
-                      url: "/Register/isUserValidateUser",
-                      data: {email: $("#email").val()},
-                      success: function(data) {
-                          if(data=="true"){
-                              $('#btn_registro_email').attr("disabled", false);
-                              $('#confirm_email').attr("disabled", false);
-                              $('#email').attr("disabled", true);
-
-                              response = true;
-                          }else{
-                              $('#btn_registro_email').attr("disabled", true);
-                              $('#confirm_email').attr("disabled", true);
-                              document.getElementById("confirm_email").value = "";
-                          }
-                      }
-                  });
-
-                  return response;
-              },"<b>Usted ya se encuentra registrado en la plataforma verifique su información.<b>");
-
-
-              $("#email_form").validate({
-                 rules:{
-                      email:{
-                          required: true,
-                          checkUserCorreo: true
-                      },
-                      confirm_email:{
-                          required: true,
-                          equalTo:"#email"
-                      }
-                  },
-                  messages:{
-                      email:{
-                          required: "Este campo es requerido",
-                      },
-                      confirm_email:{
-                          required: "Este campo es requerido",
-                          equalTo: "El Correo Eléctronico no coincide",
-                      }
-                  }
-              });
-              
-
-          });
-          
-        </script> -->
 
 <?php echo $footer; ?>

@@ -157,6 +157,7 @@
 									</div> -->
 							<div class="container text-center">
 								<div class="row">
+								<div style="margin: auto; display:flex; justify-content: center; width:90%; min-width: 325px;">
 									<div class="col-md-9 text-center ameg-shadow-box-tre bg-white">
 										<div class="col-md-12 text-center">
 											<div class="row text-center">
@@ -311,7 +312,7 @@
 											</div>
 										</div>
 									</div>
-
+								</div>
 								</div>
 								<!-- <span class="top-sub-title text-color-light opacity-6">MULTI PURPOSE CONCEPTS</span> -->
 								<!-- <p class="text-color-light opacity-6">EZY comes with tons of design options. Check out all the demos included in the package.</p> -->

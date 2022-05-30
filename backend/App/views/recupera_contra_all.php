@@ -75,7 +75,7 @@
 			</header>
 
 			<div role="main" class="main">
-				<section class="section bg-white" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;">
+				<section class="section bg-white section-text-overlay" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;">
 					<!-- <span class="text-background font-primary font-weight-bold text-color-light appear-animation" data-appear-animation="textBgFadeInUp" data-appear-animation-delay="500" data-plugin-options="{'accY': 100}">EASY AS 123</span> -->
 					<!-- <h3 class="text-center">Los trabajos que se presentarán durante el congreso se dividen en 3 categorías principales</h3> -->
 					<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
@@ -87,19 +87,26 @@
 										<img width="42" src="vendor/linear-icons/screen.svg" alt="" data-icon data-plugin-options="{'color': '#FFF', 'animated': true, 'delay': 600}" />
 									</div> -->
 									<div class="container text-center">
-										<div class="row" style="margin: 0px auto; display:flex; justify-content: center; width:60%; min-width: 300px;">
-												<div class="col">
-														<h3 class="font-weight-bold text-center">Informes: 
-															<b class="font-weight-bold text-color-dblue">
-																Tel. 5523-5204
-															</b>
-														</h3>
-														<h3> Contacto:
-															<a href="mailto: asociados@amegendoscopia.org.mx" class="font-weight-bold text-color-aqua" style="margin: 0px auto; display:flex; justify-content: center; width:60%; min-width: 330px;">
-																asociados@amegendoscopia.org.mx
-															</a>
-														</h3>
-												</div>
+										<div class="row">
+											<div class="col">
+													<h4 class="font-weight-bold text-center align-items-center" style="margin: 35px;">Recupera tu contraseña, 
+														<b class="font-weight-bold text-color-dblue">
+															ingresa tu correo electrónico
+														</b>
+                                                        <br><br>
+                                                        <div style="margin: 0px auto; display:flex; justify-content: center;">
+                                                            <input type="email" name="usuario" id="usuario" class="form-control text-center" placeholder="usuario@grupolahe.com" aria-label="Email" style="text-align: center; background-color: #ebafff; width:50%;">
+                                                        </div>
+													</h4>
+													<h4> Correo electrónico de
+                                                        <b class="font-weight-bold text-color-dblue">
+															soporte:
+														</b>
+                                                        <a href="mailto: contactoejemplo@soporte.com" class="font-weight-bold text-color-aqua">
+															contactoejemplo@soporte.com
+														</a>
+													</h4>
+											</div>
 										</div>
 										<!-- <span class="top-sub-title text-color-light opacity-6">MULTI PURPOSE CONCEPTS</span> -->
 										<!-- <p class="text-color-light opacity-6">EZY comes with tons of design options. Check out all the demos included in the package.</p> -->
