@@ -237,12 +237,13 @@
 
 															<!-- Adjunto Extenso -->
 
-															<div class="col-12 col-lg-4">
+															<div class="col-12 col-lg-4" id="cont-adjunto-ext">
 																
 																<label class="form-label">Adjunto Extenso *</label>
 																<div class="input-group">
 																<input type="file" class="form-control" id="adjunto_extenso" name="adjunto_extenso" required>
-																</div>
+																</div>															
+
 															</div>
 
 															<div class="col-12 col-lg-4">
@@ -277,13 +278,13 @@
 																</div>
 															</div>
 
-															<div class="col-12 col-lg-4">
+															<!-- <div class="col-12 col-lg-4">
 																
 																<label class="form-label">Revisión Trabajo *</label>
 																<div class="input-group">
 																	<input id="revisiontrabajo" name="revisiontrabajo" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
 																</div>
-															</div>
+															</div> -->
 
 															<div class="col-sm-4 col-12">
 
@@ -297,7 +298,11 @@
 																</select>
 
 
-															</div>													
+															</div>
+															
+															<div class="col-sm-4 col-12" id="cont-url">																
+
+															</div>			
 
 															
 														</div>
@@ -337,6 +342,7 @@
 </body>
 
 </html>
+<?php echo $footer; ?>
 <script>
 	function es_vacio() {
 		var campo1 = document.getElementById("usuario").value;
@@ -357,60 +363,42 @@
 	}
 </script>
 
-<!-- <script>
-            $(document).ready(function(){
-              $('#confirm_usuario').attr("disabled", true);
-              $.validator.addMethod("checkUserCorreo",function(value, element) {
-                var response = false;
-                  $.ajax({
-                      type:"POST",
-                      async: false,
-                      url: "/Register/isUserValidateUser",
-                      data: {email: $("#email").val()},
-                      success: function(data) {
-                          if(data=="true"){
-                              $('#btn_registro_email').attr("disabled", false);
-                              $('#confirm_email').attr("disabled", false);
-                              $('#email').attr("disabled", true);
-
-                              response = true;
-                          }else{
-                              $('#btn_registro_email').attr("disabled", true);
-                              $('#confirm_email').attr("disabled", true);
-                              document.getElementById("confirm_email").value = "";
-                          }
-                      }
-                  });
-
-                  return response;
-              },"<b>Usted ya se encuentra registrado en la plataforma verifique su información.<b>");
+ <script>
+        $(document).ready(function(){
 
 
-              $("#email_form").validate({
-                 rules:{
-                      email:{
-                          required: true,
-                          checkUserCorreo: true
-                      },
-                      confirm_email:{
-                          required: true,
-                          equalTo:"#email"
-                      }
-                  },
-                  messages:{
-                      email:{
-                          required: "Este campo es requerido",
-                      },
-                      confirm_email:{
-                          required: "Este campo es requerido",
-                          equalTo: "El Correo Eléctronico no coincide",
-                      }
-                  }
-              });
-              
+			$("#categoria_id").on("change",function(){
+				var categoria = $("option:selected", this).text();
 
-          });
+				if(categoria == "Cartel"){
+					
+					$("#cont-adjunto-ext").html(`<label class="form-label">Formato</label>
+													<div class="input-group">
+													<a href="#" class="btn btn-primary w-100" id="formato" name="formato">Descargar</a>
+													</div>`);
+					$("#cont-url").html(``);
+
+				}else if(categoria == "Video"){
+					$("#cont-adjunto-ext").html(`<label class="form-label">Adjunto Extenso *</label>
+													<div class="input-group">
+													<input type="file" class="form-control" id="adjunto_extenso" name="adjunto_extenso" required>
+													</div>`);
+
+					$("#cont-url").html(`<label class="form-label">URL * </label>
+											<input id="url_video" name="url_video" maxlength="150"  class="form-control" type="text" placeholder="" required="">`);
+				}else{
+					$("#cont-adjunto-ext").html(`<label class="form-label">Adjunto Extenso *</label>
+													<div class="input-group">
+													<input type="file" class="form-control" id="adjunto_extenso" name="adjunto_extenso" required>
+													</div>`);
+					$("#cont-url").html(``);
+				}
+				// alert($("#categoria_id option:selected").text());
+				// console.log($(this+"option:selected").text());
+				
+			});
+        });
           
-        </script> -->
+        </script> 
 
-<?php echo $footer; ?>
+

@@ -28,8 +28,8 @@ class RegistroTrabajo implements Crud{
     public static function insert($data){
         $mysqli = Database::getInstance(1);
         $query=<<<sql
-            INSERT INTO trabajos2020(categoria_id,especialidad_id,usuario_id,titulo_corto,titulo_en,titulo_es,adjunto,adjunto_extenso,resumen,coautores,autor,postulatrabajo,revisiontrabajo,envio_revista)
-            VALUES(:categoria_id,:especialidad_id,:usuario_id,:titulo_corto,:titulo_en,:titulo_es,:adjunto,:adjunto_extenso,:resumen,:coautores,:autor,:postulatrabajo,:revisiontrabajo,:envio_revista);
+            INSERT INTO trabajos2020(categoria_id,especialidad_id,usuario_id,titulo_corto,titulo_en,titulo_es,adjunto,adjunto_extenso,resumen,coautores,autor,url_video,postulatrabajo,envio_revista)
+            VALUES(:categoria_id,:especialidad_id,:usuario_id,:titulo_corto,:titulo_en,:titulo_es,:adjunto,:adjunto_extenso,:resumen,:coautores,:autor,:url_video,:postulatrabajo,:envio_revista);
 sql;
             $parametros = array(
             
@@ -44,8 +44,8 @@ sql;
             ':resumen'=>$data->_resumen,
             ':coautores'=>$data->_coautores,
             ':autor'=>$data->_autor,
+            ':url_video'=>$data->_url_video,
             ':postulatrabajo'=>$data->_postulatrabajo,
-            ':revisiontrabajo'=>$data->_revisiontrabajo,
             ':envio_revista'=>$data->_envio_revista,
            
             );
