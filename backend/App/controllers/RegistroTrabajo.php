@@ -237,28 +237,45 @@ html;
 
     public function trabajosAdd() {
 
-        $file_adjunto = $_FILES["adjunto"];
-        $file_adjunto_extenso = $_FILES["adjunto_extenso"];
+        $data = new \stdClass();
+
+        //Validar Archivo extenso
+        if(isset($_FILES["adjunto_extenso"])){
+            $file_adjunto_extenso = $_FILES["adjunto_extenso"];
+            $pdf_2 = $this->generateRandomString();
+            $data->_adjunto_extenso = $pdf_2.'.pdf';
+        }else{
+            $pdf_2 = '';
+            $data->_adjunto_extenso ='';
+        }
+
+        //Validar Url
+        if(isset($_POST["url_video"])){            
+            $data->_url_video = $_POST["url_video"];
+        }else{            
+            $data->_url_video ='';
+        }
+
+        $file_adjunto = $_FILES["adjunto"];        
         $pdf_1 = $this->generateRandomString();
-        $pdf_2 = $this->generateRandomString();
+        
 
         // var_dump($file_adjunto);
         // exit;
 
-        $data = new \stdClass();
+       
         $data->_categoria_id = MasterDom::getData('categoria_id');
         $data->_especialidad_id = MasterDom::getData('especialidad_id');
         $data->_usuario_id = MasterDom::getData('usuario_id');
         $data->_titulo_corto = MasterDom::getData('titulo_corto');
         $data->_titulo_en = MasterDom::getData('titulo_en');
         $data->_titulo_es = MasterDom::getData('titulo_es');
-        $data->_adjunto = $pdf_1.'.pdf';
-        $data->_adjunto_extenso = $pdf_2.'.pdf';
+        $data->_adjunto = $pdf_1.'.pdf';        
         $data->_resumen = MasterDom::getData('resumen');
         $data->_coautores = MasterDom::getData('coautores');
         $data->_autor = MasterDom::getData('autor');
         $data->_postulatrabajo = MasterDom::getData('postulatrabajo');
-        $data->_revisiontrabajo = MasterDom::getData('revisiontrabajo');
+        // $data->_revisiontrabajo = MasterDom::getData('revisiontrabajo');
         $data->_envio_revista = MasterDom::getData('envio_revista');
 
         // var_dump($data);
@@ -266,27 +283,52 @@ html;
         // move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto/".$pdf_1.'.pdf');
         // move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".$pdf_2.'.pdf');
 
-        if(move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto/".$pdf_1.'.pdf') && move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".$pdf_2.'.pdf')){
-            $id = RegistroDao::insert($data);
-            if($id >= 1){
-            //   $this->alerta($id,'add');
-              echo '<script>
-                alert("Trabajo registrado con éxito");
-               window.location.href = "/RegistroTrabajo/";
-              </script>';
-    
-            // echo "success";
-      
-             
-            }else{
-              // $this->alerta($id,'error');
-              echo '<script>
-              alert("Error al registrar El trabajo, consulte a soporte");
-             window.location.href = "/RegistroTrabajo/";
-            </script>';
-            // echo "fail";
+        if(isset($_FILES["adjunto_extenso"])){
+
+            if(move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto/".$pdf_1.'.pdf') && move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".$pdf_2.'.pdf')){
+                $id = RegistroDao::insert($data);
+                if($id >= 1){
+                //   $this->alerta($id,'add');
+                echo '<script>
+                    alert("Trabajo registrado con éxito");
+                window.location.href = "/RegistroTrabajo/";
+                </script>';
+        
+                // echo "success";
+        
+                
+                }else{
+                // $this->alerta($id,'error');
+                echo '<script>
+                alert("Error al registrar El trabajo, consulte a soporte");
+                window.location.href = "/RegistroTrabajo/";
+                </script>';
+                // echo "fail";
+                }
             }
-          }
+        }else{
+            if(move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto/".$pdf_1.'.pdf')){
+                $id = RegistroDao::insert($data);
+                if($id >= 1){
+                //   $this->alerta($id,'add');
+                echo '<script>
+                    alert("Trabajo registrado con éxito");
+                window.location.href = "/RegistroTrabajo/";
+                </script>';
+        
+                // echo "success";
+        
+                
+                }else{
+                // $this->alerta($id,'error');
+                echo '<script>
+                alert("Error al registrar El trabajo, consulte a soporte");
+                window.location.href = "/RegistroTrabajo/";
+                </script>';
+                // echo "fail";
+                }
+            }
+        }
     
         
   
