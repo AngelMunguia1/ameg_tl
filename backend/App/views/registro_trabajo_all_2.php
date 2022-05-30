@@ -156,15 +156,9 @@
 										<img width="42" src="vendor/linear-icons/screen.svg" alt="" data-icon data-plugin-options="{'color': '#FFF', 'animated': true, 'delay': 600}" />
 									</div> -->
 							<div class="container text-center">
-<<<<<<< HEAD
-								<div class="row">
+								<div class="row" <?=$permiso_form?>>
 								<div style="margin: auto; display:flex; justify-content: center; width:100%; min-width: 325px;">
 									<div class="col-md-9 text-center ameg-shadow-box-ins bg-white">
-=======
-								<div class="row" <?=$permiso_form?>>
-								<div style="margin: auto; display:flex; justify-content: center; width:90%; min-width: 325px;" >
-									<div class="col-md-9 text-center ameg-shadow-box-tre bg-white">
->>>>>>> e82f3fb9b8bc90a9316307adfae571b27bbafba6
 										<div class="col-md-12 text-center">
 											<div class="row text-center">
 												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3" style="color: #42787e !important;">REGISTRO DE TRABAJO</h2>
