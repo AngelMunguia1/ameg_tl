@@ -128,8 +128,11 @@
 												<h5 class="font-weight-bold ameg-shadow-box-cua align-items-center text-center text-color-blue">TRABAJO EN CARTEL</h5>
 												<br>-->
 													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	Los trabajos deberán someterse estrictamente al Reglamento del Comité de Admisión y 
-														de Evaluación de Trabajos, 
-														que se encuentra en la página web de la Asociación www.amegendoscopia.org.mx.</p>
+														de Evaluación de Trabajos,
+														<a data-toggle="modal" data-target="#doc_programa" class="font-weight-bold text-color-purple">
+															consulta el reglamento.
+														</a> 
+													</p>
 													<!-- <p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	En la página web se encontrarán los enlaces específicos para recepción de documentos y de trabajos libres según la categoría correspondiente a partir del 
 														<b class="text-ameg-size-normal" style="text-decoration:underline;">01 de junio de 2022.</b>
 													</p> -->
@@ -197,12 +200,10 @@
 															asociados@amegendoscopia.org.mx
 														</a>
 													</h5>-->
-													<br><br>
+													<!-- <br><br>
 													<h5 class="font-weight-bold text-center">
-														<a data-toggle="modal" data-target="#doc_programa" class="font-weight-bold text-color-purple">
-															(link) CONSULTE EL REGLAMENTO DE ADMISION Y DE EVALUACIÓN DE TRABAJOS
-														</a>
-													</h5>
+														
+													</h5> -->
 											</div>
 										</div>
 										<!-- <span class="top-sub-title text-color-light opacity-6">MULTI PURPOSE CONCEPTS</span> -->
