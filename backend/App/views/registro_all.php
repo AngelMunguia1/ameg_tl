@@ -382,18 +382,18 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <label>Ciudad del trabajo</label>
+                                                    <label>Ciudad</label>
                                                     <input  id="t_ciudad" name="t_ciudad" type="text" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label>Estado del trabajo</label>
+                                                    <label>Estado</label>
                                                     <input  id="t_estado" name="t_estado" type="text" placeholder="Estado" class="form-control ameg-shadow-box-two">
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <label>Código postal del trabajo</label>
+                                                    <label>Código postal</label>
                                                     <input  id="t_cp" name="t_cp" type="number" min="-99999" max="99999" placeholder="CP" class="form-control ameg-shadow-box-two">
                                                 </div>
                                                 <!--<div class="col-12 col-sm-6 mt-3 mt-sm-0">

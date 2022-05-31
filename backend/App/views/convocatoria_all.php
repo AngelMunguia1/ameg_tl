@@ -130,9 +130,9 @@
 													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	Los trabajos deberán someterse estrictamente al Reglamento del Comité de Admisión y 
 														de Evaluación de Trabajos, 
 														que se encuentra en la página web de la Asociación www.amegendoscopia.org.mx.</p>
-													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	En la página web se encontrarán los enlaces específicos para recepción de documentos y de trabajos libres según la categoría correspondiente a partir del 
+													<!-- <p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	En la página web se encontrarán los enlaces específicos para recepción de documentos y de trabajos libres según la categoría correspondiente a partir del 
 														<b class="text-ameg-size-normal" style="text-decoration:underline;">01 de junio de 2022.</b>
-													</p>
+													</p> -->
 													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	Sólo se recibirán los trabajos ingresados a la plataforma del
 														<b class="text-ameg-size-normal"  style="text-decoration:underline;">01 al 30 de junio de 2022.</b>
 													</p>
