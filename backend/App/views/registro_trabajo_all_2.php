@@ -35,9 +35,9 @@
 												</a>
 											</li>
 											<li class="dropdown dropdown-mega">
-													<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/RegistroTrabajo/">
-														REGISTRO DE TRABAJOS
-													</a>
+												<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/RegistroTrabajo/">
+													REGISTRO DE TRABAJOS
+												</a>
 											</li>
 											<!-- <li class="dropdown dropdown-mega dropdown-mega-style-2">
 												<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login/">
@@ -54,12 +54,12 @@
 												</a>
 											</li>
 											<li class="dropdown">
-                                            <a href="/Login/cerrarSession" class="dropdown-item dropdown-toggle" style="color:#70C7D2;">
-                                                <i class="fa fa-power-off"></i>
-                                                &nbsp;
-                                                LOGOUT
-                                            </a>
-                                        </li>
+												<a href="/Login/cerrarSession" class="dropdown-item dropdown-toggle" style="color:#70C7D2;">
+													<i class="fa fa-power-off"></i>
+													&nbsp;
+													LOGOUT
+												</a>
+											</li>
 										</ul>
 									</nav>
 								</div>
@@ -145,7 +145,7 @@
 					</div>
 				</section> -->
 			<section class="section bg-white text-center section-text-overlay">
-			<!-- <section class="section bg-white text-center section-text-overlay" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;"> -->
+				<!-- <section class="section bg-white text-center section-text-overlay" style="background-image: url('/img/bg-ameg.jpeg'); background-size: cover;"> -->
 				<!-- <span class="text-background font-primary font-weight-bold text-color-light appear-animation" data-appear-animation="textBgFadeInUp" data-appear-animation-delay="500" data-plugin-options="{'accY': 100}">EASY AS 123</span> -->
 				<!-- <h3 class="text-center">Los trabajos que se presentarán durante el congreso se dividen en 3 categorías principales</h3> -->
 				<div class="container container-lg-custom align-content-center text-center">
@@ -157,129 +157,128 @@
 										<img width="42" src="vendor/linear-icons/screen.svg" alt="" data-icon data-plugin-options="{'color': '#FFF', 'animated': true, 'delay': 600}" />
 									</div> -->
 							<div class="container text-center">
-								<div class="row" <?=$permiso_form?>>
-								<div style="margin: auto; display:flex; justify-content: center; width:100%; min-width: 325px;">
-									<div class="col-md-9 text-center ameg-shadow-box-ins bg-white">
-										<div class="col-md-12 text-center">
-											<div class="row text-center">
-												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3" style="color: #42787e !important;">REGISTRO DE TRABAJO</h2>
+								<div class="row" <?= $permiso_form ?>>
+									<div style="margin: auto; display:flex; justify-content: center; width:100%; min-width: 325px;">
+										<div class="col-md-9 text-center ameg-shadow-box-ins bg-white">
+											<div class="col-md-12 text-center">
+												<div class="row text-center">
+													<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3" style="color: #42787e !important;">REGISTRO DE TRABAJO</h2>
+												</div>
 											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="row">
+											<div class="col-md-12">
+												<div class="row">
 
 
-												<div class="col-md-12">
-												<form class="form-horizontal" id="update_form" action="/RegistroTrabajo/trabajosAdd" method="POST" enctype="multipart/form-data" >
-
-														
-													<div class="card-body pt-0">
-														<div class="row">
-															
-															<input type="hidden" id="usuario_id" name="usuario_id" value="<?php echo $_SESSION['id_usuario']; ?>">
-															<div class="col-12 col-lg-4">
-
-																<label class="form-label">Categoria * </label>
-
-																<select class="form-control" style="cursor: pointer;" name="categoria_id" id="categoria_id" tabindex="-1" data-choice="active" required>
-																	<option value="0" selected>Seleccione una Opción</option>
-																	<?php echo $selectCategoria; ?>
-																</select>
+													<div class="col-md-12">
+														<form class="form-horizontal" id="update_form" action="/RegistroTrabajo/trabajosAdd" method="POST" enctype="multipart/form-data">
 
 
-															</div>
+															<div class="card-body pt-0">
+																<div class="row">
 
-															<div class="col-12 col-lg-4">
+																	<input type="hidden" id="usuario_id" name="usuario_id" value="<?php echo $_SESSION['id_usuario']; ?>">
+																	<div class="col-12 col-lg-4">
 
-																<label class="form-label">Especialidad * </label>
+																		<label class="form-label">Categoria * </label>
 
-																<select class="form-control" style="cursor: pointer;" name="especialidad_id" id="especialidad_id" tabindex="-1" data-choice="active" required>
-																	<option value="0" selected>Seleccione una Opción</option>
-																	<?php echo $selectEspecialidad; ?>
-																</select>
+																		<select class="form-control" style="cursor: pointer;" name="categoria_id" id="categoria_id" tabindex="-1" data-choice="active" required>
+																			<option value="0" selected>Seleccione una Opción</option>
+																			<?php echo $selectCategoria; ?>
+																		</select>
 
 
-															</div>
+																	</div>
 
-															<div class="col-12 col-lg-4">
-																
-																<label class="form-label">Título Corto *</label>
-																<div class="input-group">
-																	<input id="titulo_corto" name="titulo_corto" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)"  style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
-																</div>
-															</div>
+																	<div class="col-12 col-lg-4">
 
-															<div class="col-12 col-lg-4">
-																
-																<label class="form-label">Título Ingles *</label>
-																<div class="input-group">
-																	<input id="titulo_en" name="titulo_en" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
-																</div>
-															</div>
+																		<label class="form-label">Especialidad * </label>
 
-															<div class="col-12 col-lg-4">
-																
-																<label class="form-label">Título Español *</label>
-																<div class="input-group">
-																	<input id="titulo_es" name="titulo_es" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
-																</div>
-															</div>
+																		<select class="form-control" style="cursor: pointer;" name="especialidad_id" id="especialidad_id" tabindex="-1" data-choice="active" required>
+																			<option value="0" selected>Seleccione una Opción</option>
+																			<?php echo $selectEspecialidad; ?>
+																		</select>
 
-															<!-- Adjunto -->
+																	</div>
 
-															<div class="col-12 col-lg-4">
-																
-																<label class="form-label">Adjunto Resumen *</label>
-																<div class="input-group">
-																<input type="file" class="form-control" id="adjunto" name="adjunto" required>
-																</div>
-															</div>
-														
+																	<div class="col-12 col-lg-4">
 
-															<!-- Adjunto Extenso -->
+																		<label class="form-label">Título Corto *</label>
+																		<div class="input-group">
+																			<input id="titulo_corto" name="titulo_corto" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																		</div>
+																	</div>
 
-															<div class="col-12 col-lg-4" id="cont-adjunto-ext">
-																
-																<label class="form-label">Adjunto Extenso</label>
-																<div class="input-group">
-																<input type="file" class="form-control" id="adjunto_extenso" name="adjunto_extenso">
-																</div>															
+																	<div class="col-12 col-lg-4">
 
-															</div>
+																		<label class="form-label">Título Ingles *</label>
+																		<div class="input-group">
+																			<input id="titulo_en" name="titulo_en" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																		</div>
+																	</div>
+
+																	<div class="col-12 col-lg-4">
+
+																		<label class="form-label">Título Español *</label>
+																		<div class="input-group">
+																			<input id="titulo_es" name="titulo_es" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																		</div>
+																	</div>
+
+																	<!-- Adjunto -->
+
+																	<div class="col-12 col-lg-4">
+
+																		<label class="form-label">Adjunto Resumen *</label>
+																		<div class="input-group">
+																			<input type="file" class="form-control" id="adjunto" name="adjunto" required>
+																		</div>
+																	</div>
+
+
+																	<!-- Adjunto Extenso -->
+
+																	<div class="col-12 col-lg-4" id="cont-adjunto-ext">
+
+																		<label class="form-label">Adjunto Extenso</label>
+																		<div class="input-group">
+																			<input type="file" class="form-control" id="adjunto_extenso" name="adjunto_extenso">
+																		</div>
+
+																	</div>
 
 																	<input id="resumen" name="resumen" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="hidden" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
 
-															
-															<div class="col-12 col-lg-4">
-																
-																<label class="form-label">Autor *</label>
-																<div class="input-group">
-																	<input id="autor" name="autor" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
-																</div>
-															</div>
 
-															<div class="col-12 col-lg-4">
-																
-																<label class="form-label">Coautores *</label>
-																<div class="input-group">
-																	<input id="coautores" name="coautores" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
-																</div>
-															</div>
+																	<div class="col-12 col-lg-4">
 
-															<div class="col-12 col-lg-4">
-																
-																<label class="form-label">Concursa *</label>
-																<div class="input-group">
-																<select class="form-control" style="cursor: pointer;" name="postulatrabajo" id="postulatrabajo" tabindex="-1" data-choice="active" required>
-																	<option value="0" selected>Seleccione una Opción</option>
-																	<option value="1" >SI</option>
-																	<option value="2" >NO</option>
-																	
-																</select>
-																</div>
-															</div>
+																		<label class="form-label">Autor *</label>
+																		<div class="input-group">
+																			<input id="autor" name="autor" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																		</div>
+																	</div>
 
-															<!-- <div class="col-12 col-lg-4">
+																	<div class="col-12 col-lg-4">
+
+																		<label class="form-label">Coautores *</label>
+																		<div class="input-group">
+																			<input id="coautores" name="coautores" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																		</div>
+																	</div>
+
+																	<div class="col-12 col-lg-4" id="cont-concursa" style="display: none;">
+
+																		<label class="form-label">Concursa *</label>
+
+																		<select class="form-control" style="cursor: pointer;" name="postulatrabajo" id="postulatrabajo" tabindex="-1" data-choice="active" required>
+																			<option value="0" selected>Seleccione una Opción</option>
+																			<option  value="1">SI</option>
+																			<option value="2">NO</option>
+
+																		</select>
+
+																	</div>
+																	<!--
+															<div class="col-12 col-lg-4">
 																
 																<label class="form-label">Revisión Trabajo *</label>
 																<div class="input-group">
@@ -287,48 +286,191 @@
 																</div>
 															</div> -->
 
-															<div class="col-sm-4 col-12">
+																	<div class="col-sm-4 col-12" id="cont-enviar-revista" style="display:none;">
 
-																<label class="form-label">Enviar Revista * </label>
+																		<label class="form-label">Enviar Revista * </label>
 
-																<select class="form-control" style="cursor: pointer;" name="envio_revista" id="envio_revista" tabindex="-1" data-choice="active" required>
-																	<option value="0" selected>Seleccione una Opción</option>
-																	<option value="1" >SI</option>
-																	<option value="2" >NO</option>
+																		<select class="form-control" style="cursor: pointer;" name="envio_revista" id="envio_revista" tabindex="-1" data-choice="active" required>
+																			<option value="0" selected>Seleccione una Opción</option>
+																			<option value="1">SI</option>
+																			<option value="2">NO</option>
+
+																		</select>
+
+																	</div>
+
+
+
+
+																	<div class="col-sm-4 col-lg-12 cont-ing-ingreso"  style="display: none;" >
+
+																		<label class="form-label">Solicitud de ingreso avalada con la firma de dos socios titulares de la AMEG-CP * </label>
+
+																		<div class="input-group">
+																			<input type="file" class="form-control" id="ing_solicitud_ingreso" name="ing_solicitud_ingreso" require>
+																		</div>
+
+																	</div>
+
+
+																	<div class="col-12 col-lg-12 cont-ing-ingreso"  style="display: none ;">
+
+																		<label class="form-label">(2) Cartas de recomendación de dichos socios * </label>
+
+
+																	</div>
+
+
+
+																	<div class="col-12 col-lg-6 cont-ing-ingreso"  style="display: none ;">
+
+																		<label class="form-label">Primer carta * </label >
+
+																		<input type="file" class="form-control" id="ing_carta_rec_uno" name="ing_carta_rec_uno" require>
+
+
+
+																	</div>
+
+
+																	<div class="col-12 col-lg-6 cont-ing-ingreso"  style="display: none ;">
+
+																		<label class="form-label">Segunda carta* </label>
+
+																		<input type="file" class="form-control" id="ing_carta_rec_dos" name="ing_carta_rec_dos" require>
+
+
+																	</div>
+
+
+
+
+
+																	<div class="col-12 col-lg-4" id="cont-ing-ingreso" style="display: none ;">
+
+																		<label class="form-label">Carta de profesor titular *</label>
+																		<div class="input-group">
+																			<input type="file" class="form-control" id="ing_carta_prof" name="ing_carta_prof" require>
+																		</div>
+																	</div>
+
+																	<div class="col-12 col-lg-4 cont-ing-ingreso"  style="display: none ;">
+
+																		<label class="form-label">Acta de nacimiento *</label>
+																		<div class="input-group">
+																			<input type="file" class="form-control" id="ing_acta_naci" name="ing_acta_naci" require>
+																		</div>
+																	</div>
+
+																	<div class="col-12 col-lg-4 cont-ing-ingreso"  style="display: none ;">
+
+																		<label class="form-label">Título  profesional *</label>
+																		<div class="input-group">
+																			<input type="file" class="form-control" id="ing_titulo_prof" name="ing_titulo_prof" require>
+																		</div>
+																	</div>
+
+
 																	
-																</select>
+																	<div class="col-12 col-lg-4 cont-ing-ingreso"  style="display: none ;">
 
-
-															</div>
-															
-															<div class="col-sm-4 col-12" id="cont-url">																
-
-															</div>
-															
-															<div class="col-12 col-lg-12" id="cont-button-desc">																
-																
-															</div>
-
-															<div class="col-12 col-lg-12" id="cont-leyenda">																
-																
-															</div>
+																		<label class="form-label">Cédula profesional *</label>
+																		<div class="input-group">
+																			<input type="file" class="form-control" id="ing_cedula_prof" name="ing_cedula_prof" require>
+																		</div>
+																	</div>
 
 
 
-															
-														</div>
-														<div class="row">
-																<div class="button-row d-flex justify-content-centergit  mt-4 col-12">
-																	<!-- <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Register" title="Prev">Regresar</a> -->
-																	<button class="btn btn-primary btn-lg" type="submit" title="Next">Enviar</button>
+
+																	<div class="col-12 col-lg-4 cont-ing-ingreso"  style="display: none ;">
+
+																		<label class="form-label">Constancia o comprobante *</label>
+																		<div class="input-group">
+																			<input type="file" class="form-control" id="ing_constancia" name="ing_constancia" require>
+																		</div>
+																	</div>
+
+																	<div class="col-12 col-lg-4 cont-ing-ingreso"  style="display: none ;">
+
+																		<label class="form-label">Comprobante de pago *</label>
+																		<div class="input-group">
+																			<input type="file" class="form-control" id="ing_comprobante_pago" name="ing_comprobante_pago" require>
+																		</div>
+																	</div>
+
+																	<!--<div class="col-12 col-lg-4">
+
+																		<label class="form-label">Título y cédula profesional *</label>
+																		<div class="input-group">
+																			<input type="file" class="form-control" id="ing_cedula_profesional" name="ing_cedula_profesional">
+																		</div>
+																	</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+																	<div class="col-sm-4 col-12" id="cont-url">
+
+																	</div>
+
+																	<div class="col-12 col-lg-12" id="cont-button-desc" style="display: none;">
+
+																		<label class="form-label">Formato</label>
+
+																		<div class="input-group">
+																			<a href="#" class="btn btn-primary w-100 d-flex justify-content-center" id="formato" name="formato"><span>Descargar</span></a>
+																		</div>
+
+																	</div>
+
+																	<div class="col-12 col-lg-12" id="cont-leyenda">
+
+																	</div>
+
+
+
+
 																</div>
-															</div>
-													</form>
+																<div class="row">
+																	<div class="button-row d-flex justify-content-centergit  mt-4 col-12">
+																		<!-- <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Register" title="Prev">Regresar</a> -->
+																		<button class="btn btn-primary btn-lg" type="submit" title="Next">Enviar</button>
+																	</div>
+																</div>
+														</form>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
 								</div>
 								<!-- <span class="top-sub-title text-color-light opacity-6">MULTI PURPOSE CONCEPTS</span> -->
 								<!-- <p class="text-color-light opacity-6">EZY comes with tons of design options. Check out all the demos included in the package.</p> -->
@@ -343,7 +485,7 @@
 		</div>
 
 	</div>
-	</section> 
+	</section>
 
 	<hr class="my-0">
 
@@ -374,50 +516,55 @@
 	}
 </script>
 
- <script>
-        $(document).ready(function(){
+<script>
+	$(document).ready(function() {
 
 
-			$("#categoria_id").on("change",function(){
-				var categoria = $("option:selected", this).text();
+		$("#categoria_id").on("change", function() {
+			var categoria = $("option:selected", this).text();
 
-				if(categoria == "Cartel"){
-					$("#cont-adjunto-ext").css("display", "none");
-					$("#cont-adjunto-ext").html(`<label class="form-label">Formato</label>
-													<div class="input-group">
-													<a href="#" class="btn btn-primary w-100" id="formato" name="formato">Descargar</a>
-													</div>`);
-					$("#cont-url").html(``);
-					$("#cont-button-desc").html(`<label class="form-label">Formato</label>
-													<div class="input-group">
-													<a href="#" class="btn btn-primary w-100 d-flex justify-content-center" id="formato" name="formato"><span >Descargar</span></a>
-													</div>`);
-					$("#cont-leyenda").html(``);
+			if (categoria == "Cartel") {
+				$("#cont-concursa").css("display", "none");
+				$("#cont-enviar-revista").css("display", "none");
+				$("#cont-adjunto-ext").css("display", "none");
+				$("#cont-url").html(``);
+				$("#cont-button-desc").css("display", "block");
+				$("#cont-leyenda").html(``);
+				$(".cont-ing-ingreso").css("display", "none");
 
-				}else if(categoria == "Video"){
-					$("#cont-adjunto-ext").css("display", "none");
-					$("#cont-url").html(``);
-					$("#cont-button-desc").html(``);
-					$("#cont-leyenda").html(`<p class="mt-3 bg-success text-white">Favor de mandar el link del video al correo : videosameg@grupolahe.com</p>`);
-
-					// $("#cont-url").html(`<label class="form-label">URL * </label>
-					// 						<input id="url_video" name="url_video" maxlength="150"  class="form-control" type="text" placeholder="" required="">`);
-				}else{
-					$("#cont-adjunto-ext").css("display", "block");
-					$("#cont-adjunto-ext").html(`<label class="form-label">Adjunto Extenso *</label>
-													<div class="input-group">
-													<input type="file" class="form-control" id="adjunto_extenso" name="adjunto_extenso" required>
-													</div>`);
-					$("#cont-url").html(``);
-					$("#cont-button-desc").html(``);
-					$("#cont-leyenda").html(``);
-				}
-				// alert($("#categoria_id option:selected").text());
-				// console.log($(this+"option:selected").text());
+			} else if (categoria == "Oral") {
+				$("#cont-adjunto-ext").css("display", "block");
+				$("#cont-enviar-revista").css("display", "block");
+				$("#cont-concursa").css("display", "block");
+				$("#cont-url").html(``);
+				$("#cont-button-desc").css("display", "none");
+				$("#cont-leyenda").html(``);
+				$(".cont-ing-ingreso").css("display", "none");
 				
-			});
-        });
-          
-</script> 
 
+			} else if (categoria == "Ingreso") {
+				$("#cont-adjunto-ext").css("display", "block");					
+				$("#cont-enviar-revista").css("display", "block");
+				$("#cont-concursa").css("display", "block");
+				$("#cont-url").html(``);
+				$("#cont-button-desc").css("display", "none");
+				$("#cont-leyenda").html(``);
+				$(".cont-ing-ingreso").css("display", "block");
 
+			} else if (categoria == "Video") {
+				$("#cont-adjunto-ext").css("display", "none");
+				$("#cont-enviar-revista").css("display", "none");
+				$("#cont-concursa").css("display", "none");
+				$("#cont-url").html(``);
+				$("#cont-button-desc").css("display", "none");
+				$("#cont-leyenda").html(`<p class="mt-3 bg-success text-white">Favor de mandar el link del video al correo : videosameg@grupolahe.com</p>`);
+				$(".cont-ing-ingreso").css("display", "none");
+				// $("#cont-url").html(`<label class="form-label">URL * </label>
+				// 						<input id="url_video" name="url_video" maxlength="150"  class="form-control" type="text" placeholder="" required="">`);
+			} else {}
+			// alert($("#categoria_id option:selected").text());
+			// console.log($(this+"option:selected").text());
+
+		});
+	});
+</script>

@@ -334,7 +334,7 @@ html;
                 // $this->alerta($id,'error');
                 echo '<script>
                 alert("Error al registrar El trabajo, consulte a soporte");
-                window.location.href = "/RegistroTrabajo/";
+                
                 </script>';
                 // echo "fail";
                 }
