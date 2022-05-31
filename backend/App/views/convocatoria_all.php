@@ -148,11 +148,11 @@
 														<p class="font-weight-bold text-color-dblue text-left text-ameg-size-normal" style="margin-left: 55px; text-decoration:underline;">
 															30 de junio de 2022, 23:59 hrs.
 														</p>
-													<a href="mailto: www.amegendoscopia.org.mx">
+													<!-- <a href="mailto: www.amegendoscopia.org.mx">
 														<p class="font-weight-bold text-left text-color-dblue text-ameg-size-normal" style="margin-left: 55px; text-decoration:underline;">
 															www.amegendoscopia.org.mx
 														</p>
-													</a>
+													</a> -->
 														<p class="text-color-dblue text-left" style="margin-left: 55px; font-size: 20px;">
 															No habrá prorroga
 														</p>
@@ -196,13 +196,13 @@
 														<a href="#" class="font-weight-bold text-color-aqua" style="text-decoration: underline;">
 															asociados@amegendoscopia.org.mx
 														</a>
-													</h5>
+													</h5>-->
+													<br><br>
 													<h5 class="font-weight-bold text-center">
 														<a data-toggle="modal" data-target="#doc_programa" class="font-weight-bold text-color-purple">
 															(link) CONSULTE EL REGLAMENTO DE ADMISION Y DE EVALUACIÓN DE TRABAJOS
 														</a>
-													</h5>-->
-										
+													</h5>
 											</div>
 										</div>
 										<!-- <span class="top-sub-title text-color-light opacity-6">MULTI PURPOSE CONCEPTS</span> -->

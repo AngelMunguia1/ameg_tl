@@ -99,13 +99,14 @@
                                                     <form role="form" class="text-start text-center" id="email_form_recovery_pass" action="/Register/verifyCodePass" method="POST" class="form-horizontal">
                                                         <label style="font-weight:bold; font-size: 15px;">Correo electrónico</label>
 														<div style="margin: 0px auto; display:flex; justify-content: center;">
-                                                            <input type="email" name="usuario" id="usuario" class="form-control text-center" placeholder="usuario@grupolahe.com" aria-label="Email" required="required" style="text-align: center; background-color: #ebafff; width:60%;">
-                                                        </div>
+                                                            <input type="email" name="usuario" id="usuario" class="form-control text-center" placeholder="usuario@grupolahe.com" aria-label="Email" required="required" style="text-align: center; background-color: #DADFFF; width:60%;">
+															<span style="color: red ;" id="texto_obligatorio_email"></span>
+														</div>
 														<br><br>
 													<button type="submit" class="btn btn-danger btn-lg" id="btn_registro_email" name="btn_upload">Recupera mi contraseña</button>
 														<br><br>
 													<a href="/Login/">
-														<button class="btn btn-primary btn-lg">Regresar</button>
+														<button class="btn btn-primary btn-lg" type="submit" id="btn_registro_email">Regresar</button>
 													</a>
 														<br><br>
 													<h4> Correo electrónico de

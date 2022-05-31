@@ -175,6 +175,213 @@ html;
         View::render("registro_all");
     }
 
+    public function codeRecoveryPass($email, $alerta = null)
+    {
+        $extraHeader = <<<html
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/aso_icon.png">
+        <link rel="icon" type="image/vnd.microsoft.icon" href="../../../assets/img/aso_icon.png">
+        <title>
+            Registro Conave
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <!-- Nucleo Icons -->
+        <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- CSS Files -->
+        <link id="pagestyle" href="../../../assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+        <!-- Nucleo Icons -->
+        <link href="../../../assets/css/nucleo-icons.css" rel="stylesheet" />
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- Font Awesome Icons -->
+        <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+        <link href="../../../assets/css/nucleo-svg.css" rel="stylesheet" />
+        <!-- CSS Files -->
+        <link id="pagestyle" href="/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/alertify/alertify.core.css" />
+        <link rel="stylesheet" href="/css/alertify/alertify.default.css" id="toggleCSS" />
+        
+        
+        
+        
+
+html;
+        $extraFooter = <<<html
+     
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/validate/jquery.validate.js"></script>
+        <script src="/js/alertify/alertify.min.js"></script>
+        <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+       <!--   Core JS Files   -->
+          <script src="../../../assets/js/core/popper.min.js"></script>
+          <script src="../../../assets/js/core/bootstrap.min.js"></script>
+          <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+          <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
+          <script src="../../../assets/js/plugins/multistep-form.js"></script>
+         
+          <!-- Kanban scripts -->
+          <script src="../../../assets/js/plugins/dragula/dragula.min.js"></script>
+          <script src="../../../assets/js/plugins/jkanban/jkanban.js"></script>
+          <script>
+            var win = navigator.platform.indexOf('Win') > -1;
+            if (win && document.querySelector('#sidenav-scrollbar')) {
+              var options = {
+                damping: '0.5'
+              }
+              Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+            }
+          </script>
+          <!-- Github buttons -->
+          <script async defer src="https://buttons.github.io/buttons.js"></script>
+          <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+          <script>
+            $(document).ready(function(){
+                $.validator.addMethod("checkUserCorreo",function(value, element) {
+                  var response = false;
+                    $.ajax({
+                        type:"POST",
+                        async: false,
+                        url: "/Register/isUserValidate",
+                        data: {email: $("#email").val()},
+                        success: function(data) {
+                            if(data=="true"){
+                                $('#btn_registro_email').attr("disabled", false);
+                                $('#confirm_email').attr("disabled", false);
+                                $('#email').attr("disabled", true);
+                                response = true;
+                            }else{
+                                $('#btn_registro_email').attr("disabled", true);
+                                $('#confirm_email').attr("disabled", true);
+                                document.getElementById("confirm_email").value = "";
+                            }
+                        }
+                    });
+
+                    return response;
+                },"Usted no está registrado en la Base de Datos CONAVE 2022, verifique con su área y reintente.");
+
+                $("#email_form").validate({
+                   rules:{
+                        email:{
+                            required: true,
+                            checkUserCorreo: true
+                        },
+                        confirm_email:{
+                            required: true,
+                            equalTo:"#email"
+                        }
+                    },
+                    messages:{
+                        email:{
+                            required: "Este campo es requerido",
+                        },
+                        confirm_email:{
+                            required: "Este campo es requerido",
+                            equalTo: "El Correo Eléctronico no coincide",
+                        }
+                    }
+                });
+
+            });
+          
+            var uno = document.getElementById("uno"),
+                dos = document.getElementById("dos"),
+                tres = document.getElementById("tres"),
+                cuatro = document.getElementById("cuatro");
+
+            uno.onkeyup = function() {
+                if (this.value.length === parseInt(this.attributes["maxlength"].value)) {
+                    dos.focus();
+                }
+            }
+
+            dos.onkeyup = function() {
+                if (this.value.length === parseInt(this.attributes["maxlength"].value)) {
+                    tres.focus();
+                }
+            }
+            tres.onkeyup = function() {
+                if (this.value.length === parseInt(this.attributes["maxlength"].value)) {
+                    cuatro.focus();
+                }
+            }
+           
+        </script>
+
+        <script>
+        $(document).ready(function(){
+            $('#confirm_email').attr("disabled", false);
+            $.validator.addMethod("checkUserCorreo",function(value, element) {
+              var response = false;
+                $.ajax({
+                    type:"POST",
+                    async: false,
+                    url: "/Register/isUserValidateUser",
+                    data: {usuario: $("#usuario").val()},
+                    success: function(data) {
+                        if(data=="false"){
+                            $('#btn_upload').attr("disabled", false);
+                            $('#confirm_email').attr("disabled", false);
+                            $('#usuario').attr("disabled", true);
+
+                            response = true;
+                        }else{
+                            $('#btn_upload').attr("disabled", true);
+                            $('#confirm_email').attr("disabled", true);
+                            document.getElementById("usuario").value = "";
+                        }
+                    }
+                });
+
+                return response;
+            },"<b>Usted ya se encuentra registrado en la plataforma verifique su información.<b>");
+
+            $("#usuario").on("keyup",function(){
+                console.log($(this).val());
+                var usuario = $(this).val();
+                $.ajax({
+                    url: "/Registro/isUserValidateUser",
+                    type: "POST",
+                    data: {usuario},                 
+                    beforeSend: function() {
+                        console.log("Procesando....");
+                    },
+                    success: function(respuesta) {
+                        console.log(respuesta);
+                        if(respuesta == 'true'){
+                            $("#texto_obligatorio_email").text("Este correo electrónico ya existe");
+                            $('#btn_upload').setAttribute('disabled', 'disabled');
+                        }
+                        else{
+                            $("#texto_obligatorio_email").text("");
+                            $('#btn_upload').removeAttribute('disabled');
+                        }
+                    },
+                    error: function(respuesta) {
+                        console.log(respuesta);
+                    }
+                });
+            });
+
+        });
+        </script>
+      
+html;
+
+
+        $code = $email;
+        View::set('header', $extraHeader);
+        View::set('footer', $extraFooter);
+        View::set('code', $code);
+        View::set('alerta', $alerta);
+        View::render("codeVerifyPass");
+    }
+
     public function ObtenerEstado(){
         $pais = $_POST['pais'];
         if($pais != 156)
@@ -299,8 +506,45 @@ html;
         return $institucion;
     }
 
+    public function code500()
+    {
+        View::render("500");
+    }
 
+    function generateRandomString($length = 10) { 
+        return substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length); 
+    } 
 
+    public function verifyCodePass()
+    {
+        $register = new \stdClass();
+
+        $email = $_POST['email'];
+
+        $register->_email = $email;
+
+        $codigo_rand = $this->generateRandomString();
+        $register->_code = $codigo_rand;
+
+        $id = RegistroDao::update($register);
+        if ($id >= 1) {
+            $msg = [
+                'email' => $register->_email,
+                'code' =>  $register->_code
+            ];
+
+            $mailer = new Mailer();
+            $mailer->mailerRecoveryPass($msg);
+
+            $this->codeRecoveryPass($register->_email);
+        } else {
+            // echo "holaaaaa";
+            // exit();
+            $this->code500();
+            //$this->Success();
+            //$this->alerta($id,'error',$method_pay, $name_register);
+        }
+    }
 }
 
 class respuesta {

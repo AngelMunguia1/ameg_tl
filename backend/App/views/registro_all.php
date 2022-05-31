@@ -506,7 +506,7 @@
                                             <div class="row mt-3">
 
                                                 <div class="col-md-12">
-                                                    <button type="submit" class="btn btn-primary btn-lg" disabled="disabled" id="btn_upload" name="btn_upload">REGISTRARME</button>
+                                                    <button type="submit" class="btn btn-primary btn-lg" disabled id="btn_upload" name="btn_upload">REGISTRARME</button>
                                                 </div>
                                             </div>
                                         </form>
