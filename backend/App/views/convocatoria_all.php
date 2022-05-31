@@ -130,7 +130,7 @@
 													<p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	Los trabajos deberán someterse estrictamente al Reglamento del Comité de Admisión y 
 														de Evaluación de Trabajos,
 														<a data-toggle="modal" data-target="#doc_programa" class="font-weight-bold text-color-purple">
-															consulta el reglamento.
+															CONSULTA EL REGLAMENTO AQUÍ.
 														</a> 
 													</p>
 													<!-- <p class="text-justify text-color-dblue" style="margin-left: 55px; margin-right: 55px; font-size: 20px;">•	En la página web se encontrarán los enlaces específicos para recepción de documentos y de trabajos libres según la categoría correspondiente a partir del 
