@@ -50,7 +50,7 @@ sql;
             ':titulo_es'=>$data->_titulo_es,
             ':adjunto'=>$data->_adjunto,
             ':adjunto_extenso'=>$data->_adjunto_extenso,
-            ':resumen'=>$data->_resumen,
+            ':resumen'=>$data->_1,
             ':coautores'=>$data->_coautores,
             ':autor'=>$data->_autor,
             ':url_video'=>$data->_url_video,

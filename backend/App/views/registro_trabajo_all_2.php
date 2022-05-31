@@ -249,19 +249,20 @@
 
 																	<input id="resumen" name="resumen" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="hidden" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
 
-															<div class="col-12 col-lg-4">
-																
-																<label class="form-label">Coautores *</label>
-																<div class="input-group">
-																	<input id="coautores" name="coautores" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
-																</div>
-															</div>
-
+															
 															<div class="col-12 col-lg-4">
 																
 																<label class="form-label">Autor *</label>
 																<div class="input-group">
 																	<input id="autor" name="autor" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																</div>
+															</div>
+															
+															<div class="col-12 col-lg-4">
+																
+																<label class="form-label">Coautores *</label>
+																<div class="input-group">
+																	<input id="coautores" name="coautores" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
 																</div>
 															</div>
 
