@@ -257,7 +257,7 @@
 																	<input id="autor" name="autor" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
 																</div>
 															</div>
-															
+
 															<div class="col-12 col-lg-4">
 																
 																<label class="form-label">Coautores *</label>
@@ -268,9 +268,14 @@
 
 															<div class="col-12 col-lg-4">
 																
-																<label class="form-label">Postula Trabajo *</label>
+																<label class="form-label">Concursa *</label>
 																<div class="input-group">
-																	<input id="postulatrabajo" name="postulatrabajo" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																<select class="form-control" style="cursor: pointer;" name="postulatrabajo" id="postulatrabajo" tabindex="-1" data-choice="active" required>
+																	<option value="0" selected>Seleccione una Opción</option>
+																	<option value="1" >SI</option>
+																	<option value="2" >NO</option>
+																	
+																</select>
 																</div>
 															</div>
 
