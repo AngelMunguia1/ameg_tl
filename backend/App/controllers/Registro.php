@@ -151,7 +151,10 @@ html;
                     success: function(respuesta) {
                         console.log(respuesta);
                         if(respuesta == 'true'){
-                            $("#texto_obligatorio_email").text("Este correo electrónico se encuentra ocupado");
+                            $("#texto_obligatorio_email").text("Este correo electrónico ya existe");
+                        }
+                        else{
+                            $("#texto_obligatorio_email").text("");
                         }
                     },
                     error: function(respuesta) {
