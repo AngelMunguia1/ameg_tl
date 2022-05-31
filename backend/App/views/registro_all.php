@@ -382,19 +382,19 @@
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <label>Ciudad</label>
-                                                    <input  id="t_ciudad" name="t_ciudad" type="text" placeholder="Ciudad" class="form-control ameg-shadow-box-two">
+                                                    <label>Ciudad *</label>
+                                                    <input  id="t_ciudad" name="t_ciudad" type="text" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label>Estado</label>
-                                                    <input  id="t_estado" name="t_estado" type="text" placeholder="Estado" class="form-control ameg-shadow-box-two">
+                                                    <label>Estado *</label>
+                                                    <input  id="t_estado" name="t_estado" type="text" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <label>Código postal</label>
-                                                    <input  id="t_cp" name="t_cp" type="number" min="-99999" max="99999" placeholder="CP" class="form-control ameg-shadow-box-two">
+                                                    <label>Código postal *</label>
+                                                    <input  id="t_cp" name="t_cp" type="number" min="-99999" max="99999" placeholder="CP" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <!--<div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <input  id="tel_institucion" name="tel_institucion" type="text" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two">
