@@ -375,8 +375,8 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label>Extensión *</label>
-                                                    <input  id="t_extension" name="t_extension" type="text" placeholder="Extensión" class="form-control ameg-shadow-box-two" required>
+                                                    <label>Teléfono *</label>
+                                                    <input  id="t_extension" name="t_extension" type="text" placeholder="Teléfono" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
