@@ -229,7 +229,7 @@
 
 															<div class="col-12 col-lg-4">
 																
-																<label class="form-label">Adjunto *</label>
+																<label class="form-label">Adjunto Resumen *</label>
 																<div class="input-group">
 																<input type="file" class="form-control" id="adjunto" name="adjunto" required>
 																</div>
@@ -247,13 +247,13 @@
 
 															</div>
 
-															<div class="col-12 col-lg-4">
+															<!-- <div class="col-12 col-lg-4">
 																
 																<label class="form-label">Resumen *</label>
 																<div class="input-group">
 																	<input id="resumen" name="resumen" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
 																</div>
-															</div>
+															</div> -->
 
 															<div class="col-12 col-lg-4">
 																
