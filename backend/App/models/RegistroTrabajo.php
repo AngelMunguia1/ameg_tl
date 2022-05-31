@@ -37,8 +37,8 @@ sql;
     public static function insert($data){
         $mysqli = Database::getInstance(1);
         $query=<<<sql
-            INSERT INTO trabajos2020(categoria_id,especialidad_id,usuario_id,titulo_corto,titulo_en,titulo_es,adjunto,adjunto_extenso,resumen,coautores,autor,postulatrabajo,envio_revista)
-            VALUES(:categoria_id,:especialidad_id,:usuario_id,:titulo_corto,:titulo_en,:titulo_es,:adjunto,:adjunto_extenso,:resumen,:coautores,:autor,:postulatrabajo,:envio_revista);
+            INSERT INTO trabajos2020(categoria_id,especialidad_id,usuario_id,titulo_corto,titulo_en,titulo_es,adjunto,adjunto_extenso,resumen,coautores,autor,postulatrabajo,envio_revista,ing_solicitud_ingreso,ing_carta_rec_uno,ing_carta_rec_dos,ing_carta_prof,ing_acta_naci,ing_titulo_prof,ing_cedula_prof,ing_constancia,ing_comprobante_pago)
+            VALUES(:categoria_id,:especialidad_id,:usuario_id,:titulo_corto,:titulo_en,:titulo_es,:adjunto,:adjunto_extenso,'X',:coautores,:autor,:postulatrabajo,:envio_revista,:ing_solicitud_ingreso,:ing_carta_rec_uno,:ing_carta_rec_dos,:ing_carta_prof,:ing_acta_naci,:ing_titulo_prof,:ing_cedula_prof,:ing_constancia,:ing_comprobante_pago);
 sql;
             $parametros = array(
             
@@ -50,18 +50,24 @@ sql;
             ':titulo_es'=>$data->_titulo_es,
             ':adjunto'=>$data->_adjunto,
             ':adjunto_extenso'=>$data->_adjunto_extenso,
-            ':resumen'=>$data->_1,
             ':coautores'=>$data->_coautores,
             ':autor'=>$data->_autor,
             ':postulatrabajo'=>$data->_postulatrabajo,
             ':envio_revista'=>$data->_envio_revista,
-           
+            ':ing_solicitud_ingreso'=>$data->_ing_solicitud_ingreso,
+            ':ing_carta_rec_uno'=>$data->_ing_carta_rec_uno,
+            ':ing_carta_rec_dos'=>$data->_ing_carta_rec_dos,
+            ':ing_carta_prof'=>$data->_ing_carta_prof,
+            ':ing_acta_naci'=>$data->_ing_acta_naci,
+            ':ing_titulo_prof'=>$data->_ing_titulo_prof,
+            ':ing_cedula_prof'=>$data->_ing_cedula_prof,
+            ':ing_constancia'=>$data->_ing_constancia,
+            ':ing_comprobante_pago'=>$data->_ing_comprobante_pago,
             );
  
             $id = $mysqli->insert($query,$parametros);
             //UtileriasLog::addAccion($accion);
             return $id;
-         
     }
 
     public static function getCategorias(){       

@@ -251,24 +251,54 @@ html;
         $data = new \stdClass();
 
         //Validar Archivo extenso
-        if(isset($_FILES["adjunto_extenso"])){
-            $file_adjunto_extenso = $_FILES["adjunto_extenso"];
-            $pdf_2 = $this->generateRandomString();
-            $data->_adjunto_extenso = $pdf_2.'.pdf';
-        }else{
-            $pdf_2 = '';
-            $data->_adjunto_extenso ='';
-        }
+        // if(isset($_FILES["adjunto_extenso"])){
+        //     $file_adjunto_extenso = $_FILES["adjunto_extenso"];
+        //     $pdf_2 = $this->generateRandomString();
+        //     $data->_adjunto_extenso = $pdf_2.'.pdf';
+        // }else{
+        //     $pdf_2 = '';
+        //     $data->_adjunto_extenso ='';
+        // }
 
         //Validar Url
-        if(isset($_POST["url_video"])){            
-            $data->_url_video = $_POST["url_video"];
-        }else{            
-            $data->_url_video ='';
-        }
+        // if(isset($_POST["url_video"])){            
+        //     $data->_url_video = $_POST["url_video"];
+        // }else{            
+        //     $data->_url_video ='';
+        // }
 
         $file_adjunto = $_FILES["adjunto"];        
         $pdf_1 = $this->generateRandomString();
+
+        $file_adjunto_extenso = $_FILES["adjunto_extenso"];        
+        $pdf_2 = $this->generateRandomString();
+
+        $file_ing_solicitud_ingreso = $_FILES["ing_solicitud_ingreso"];        
+        $pdf_3 = $this->generateRandomString();
+
+        $file_ing_carta_rec_uno = $_FILES["ing_carta_rec_uno"];        
+        $pdf_4 = $this->generateRandomString();
+
+        $file_ing_carta_rec_dos = $_FILES["ing_carta_rec_dos"];        
+        $pdf_5 = $this->generateRandomString();
+
+        $file_ing_carta_prof = $_FILES["ing_carta_prof"];        
+        $pdf_6 = $this->generateRandomString();
+
+        $file_ing_acta_naci = $_FILES["ing_acta_naci"];        
+        $pdf_7 = $this->generateRandomString();
+
+        $file_ing_titulo_prof = $_FILES["ing_titulo_prof"];        
+        $pdf_8 = $this->generateRandomString();
+
+        $file_ing_cedula_prof = $_FILES["ing_cedula_prof"];        
+        $pdf_9 = $this->generateRandomString();
+        
+        $file_ing_constancia = $_FILES["ing_constancia"];        
+        $pdf_10 = $this->generateRandomString();
+
+        $file_ing_comprobante_pago = $_FILES["ing_comprobante_pago"];        
+        $pdf_11 = $this->generateRandomString();
         
 
         // var_dump($file_adjunto);
@@ -281,7 +311,8 @@ html;
         $data->_titulo_corto = MasterDom::getData('titulo_corto');
         $data->_titulo_en = MasterDom::getData('titulo_en');
         $data->_titulo_es = MasterDom::getData('titulo_es');
-        $data->_adjunto = $pdf_1.'.pdf';        
+        $data->_adjunto = $pdf_1.'.pdf'; 
+        $data->_adjunto_extenso = $pdf_2.'.pdf'; 
         $data->_resumen = MasterDom::getData('resumen');
         $data->_coautores = MasterDom::getData('coautores');
         $data->_autor = MasterDom::getData('autor');
@@ -289,14 +320,42 @@ html;
         // $data->_revisiontrabajo = MasterDom::getData('revisiontrabajo');
         $data->_envio_revista = MasterDom::getData('envio_revista');
 
+
+        $data->_ing_solicitud_ingreso = $pdf_3.'.pdf';
+        $data->_ing_carta_rec_uno = $pdf_4.'.pdf'; 
+        $data->_ing_carta_rec_dos = $pdf_5.'.pdf';
+        $data->_ing_carta_prof = $pdf_6.'.pdf';
+        $data->_ing_acta_naci = $pdf_7.'.pdf';
+        $data->_ing_titulo_prof = $pdf_8.'.pdf'; 
+        $data->_ing_cedula_prof = $pdf_9.'.pdf'; 
+        $data->_ing_constancia = $pdf_10.'.pdf'; 
+        $data->_ing_comprobante_pago = $pdf_11.'.pdf';    
+        // $data->_envio_revista = MasterDom::getData('ing_solicitud_ingreso');
+        // $data->_envio_revista = MasterDom::getData('ing_carta_rec_uno');
+        // $data->_envio_revista = MasterDom::getData('ing_carta_rec_dos');
+        // $data->_envio_revista = MasterDom::getData('ing_carta_prof');
+        // $data->_envio_revista = MasterDom::getData('ing_acta_naci');
+        // $data->_envio_revista = MasterDom::getData('ing_titulo_prof');
+        // $data->_envio_revista = MasterDom::getData('ing_cedula_prof');
+        // $data->_envio_revista = MasterDom::getData('ing_constancia');
+        // $data->_envio_revista = MasterDom::getData('ing_comprobante_pago');
+
+
         // var_dump($data);
         // exit();
-        // move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto/".$pdf_1.'.pdf');
-        // move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".$pdf_2.'.pdf');
+        move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto/".$pdf_1.'.pdf');
+        move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".$pdf_2.'.pdf');
+        move_uploaded_file($file_ing_solicitud_ingreso["tmp_name"], "file_ing_solicitud_ingreso/".$pdf_3.'.pdf');
+        move_uploaded_file($file_ing_carta_rec_uno["tmp_name"], "file_ing_carta_rec_uno/".$pdf_4.'.pdf');
+        move_uploaded_file($file_ing_carta_rec_dos["tmp_name"], "file_ing_carta_rec_dos/".$pdf_5.'.pdf');
+        move_uploaded_file($file_ing_carta_prof["tmp_name"], "file_ing_carta_prof/".$pdf_6.'.pdf');
+        move_uploaded_file($file_ing_acta_naci["tmp_name"], "file_ing_acta_naci/".$pdf_7.'.pdf');
+        move_uploaded_file($file_ing_titulo_prof["tmp_name"], "file_ing_titulo_prof/".$pdf_8.'.pdf');
+        move_uploaded_file($file_ing_cedula_prof["tmp_name"], "file_ing_cedula_prof/".$pdf_9.'.pdf');
+        move_uploaded_file($file_ing_constancia["tmp_name"], "file_ing_constancia/".$pdf_10.'.pdf');
+        move_uploaded_file($file_ing_comprobante_pago["tmp_name"], "file_ing_comprobante_pago/".$pdf_11.'.pdf');
 
-        if(isset($_FILES["adjunto_extenso"])){
 
-            if(move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto/".$pdf_1.'.pdf') && move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".$pdf_2.'.pdf')){
                 $id = RegistroDao::insert($data);
                 if($id >= 1){
                 //   $this->alerta($id,'add');
@@ -307,7 +366,6 @@ html;
         
                 // echo "success";
         
-                
                 }else{
                 // $this->alerta($id,'error');
                 echo '<script>
@@ -316,70 +374,11 @@ html;
                 </script>';
                 // echo "fail";
                 }
-            }
-        }else{
-            if(move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto/".$pdf_1.'.pdf')){
-                $id = RegistroDao::insert($data);
-                if($id >= 1){
-                //   $this->alerta($id,'add');
-                echo '<script>
-                    alert("Trabajo registrado con éxito");
-                window.location.href = "/RegistroTrabajo/";
-                </script>';
-        
-                // echo "success";
-        
-                
-                }else{
-                // $this->alerta($id,'error');
-                echo '<script>
-                alert("Error al registrar El trabajo, consulte a soporte");
-                
-                </script>';
-                // echo "fail";
-                }
-            }
-        }
-    
-        
-  
   
     }
 
     function generateRandomString($length = 10) { 
         return substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length); 
     } 
-
-    // public function isUserValidate(){
-    //     echo (count(PrincipalDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
-    // }
-
-    // public function verificarUsuario(){
-    //     $usuario = new \stdClass();
-    //     $usuario->_usuario = MasterDom::getData("usuario");
-    //     $usuario->_password = MD5(MasterDom::getData("password"));
-    //     $user = PrincipalDao::getById($usuario);
-    //     if (count($user)>=1) {
-    //         $user['nombre'] = utf8_encode($user['nombre']);
-    //         echo json_encode($user);
-    //     }
-    // }
-
-    // public function crearSession(){
-    //     $usuario = new \stdClass();
-    //     $usuario->_usuario = MasterDom::getData("usuario");
-    //     $user = PrincipalDao::getById($usuario);
-    //     session_start();
-    //     $_SESSION['usuario'] = $user['usuario'];
-    //     $_SESSION['nombre'] = $user['nombre'];
-    //     header("location: /Home/");
-    // }
-
-    // public function cerrarSession(){
-    //     unset($_SESSION);
-    //     session_unset();
-    //     session_destroy();
-    //     header("Location: /Login/");
-    // }
 
 }
