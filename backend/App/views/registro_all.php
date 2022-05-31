@@ -173,7 +173,7 @@
 												<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Registro de Usuario</h2>
 											</div>
 										</div>
-                                        <form class="form-horizontal" onsubmit="validateSocio();" id="add" action="/Registro/registroAdd" method="POST">
+                                        <form class="form-horizontal" onSubmit="validateSocio()" id="add" action="/Registro/registroAdd" method="POST">
 
                                         Los campos marcados con un * son obligatorios.
 
@@ -182,7 +182,7 @@
                                                 <div class="col-12 col-sm-6">
                                                     <label>Email *</label>
                                                     <input onChange="es_vacio()" id="usuario" name="usuario" type="email" pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$" placeholder="Email" class="form-control ameg-shadow-box-two" require="required">
-                                                    <p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
+                                                    <span style="color: red ;" id="texto_obligatorio_email"></span>
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Contraseña *</label>
@@ -536,6 +536,7 @@
 </body>
 
 </html>
+
 <script>
     function es_vacio(){
   var campo1 = document.getElementById("usuario").value;
@@ -609,22 +610,6 @@
             })
     }
 
-        function validateSocio(){
-    var socio = document.getElementsById("es_socio");
-    var check1 = 0;
-    for(i=0;i<category.length;i++){
-        if(socio[i].checked){
-        check1++;
-        break;
-        }
-    }
-    
-    if(check1){
-    }else{
-        alert("DEBES ELEGIR UNA OPCIÓN");
-        return false;
-        }
-    }
 
 </script>
 

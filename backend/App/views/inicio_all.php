@@ -88,14 +88,14 @@
 					<br><br>
 					<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
 						<div class="row align-items-center">
-							<div class="col-lg-3">
+						<div class="col-lg-3">
 								
-									<div class="text-center ameg-shadow-box-btn">
-										<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajos de ingreso</h2>
-										<img width="70" src="/vendor/iconos/mesa1.png"/>
-									</div>
-	
-							</div>
+								<div class="icon-box-info text-center ameg-shadow-box-btn">
+									<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajos de ingreso</h2>
+									<img width="70" src="/vendor/iconos/mesa1.png"/>
+								</div>
+							
+						</div>
 							<div class="col-lg-3">
 								
 									<div class="icon-box-info text-center ameg-shadow-box-btn">

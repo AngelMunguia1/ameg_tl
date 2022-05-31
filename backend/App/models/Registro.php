@@ -15,9 +15,26 @@ sql;
         return $mysqli->queryAll($query);
           
       }
-      public static function getById($id){
-           
+
+      public static function getById($usuario){
+        $mysqli = Database::getInstance(true);
+        $query =<<<sql
+        SELECT * FROM usuarios WHERE usuario LIKE :usuario
+sql;
+        $params = array(
+            ':usuario'=> $usuario->_usuario,
+        );
+        return $mysqli->queryOne($query,$params);
+    }
+
+      public static function getUser($usuario){
+        $mysqli = Database::getInstance();
+        $query=<<<sql
+        SELECT * FROM usuarios WHERE usuario = '$usuario'
+sql;
+        return $mysqli->queryAll($query);      
       }
+
       public static function update($data){
         
     }

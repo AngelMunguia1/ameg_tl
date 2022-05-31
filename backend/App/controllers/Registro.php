@@ -6,6 +6,7 @@ use \Core\View;
 use \Core\MasterDom;
 use \App\interfaces\Crud;
 use \App\models\Registro AS RegistroDao;
+use mysqli;
 
 class Registro{
     private $_contenedor;
@@ -110,65 +111,58 @@ html;
       
 
         <script>
-            $(document).ready(function(){
-                $.validator.addMethod("checkUserName",function(value, element) {
-                  var response = false;
-                    $.ajax({
-                        type:"POST",
-                        async: false,
-                        url: "/Login/isUserValidate",
-                        data: {usuario: $("#usuario").val()},
-                        success: function(data) {
-                            if(data=="true"){
-                                $('#btnEntrar').attr("disabled", false);
-                                response = true;
-                            }else{
-                                $('#btnEntrar').attr("disabled", true);
-                            }
-                        }
-                    });
+        $(document).ready(function(){
+            $('#confirm_email').attr("disabled", false);
+            $.validator.addMethod("checkUserCorreo",function(value, element) {
+              var response = false;
+                $.ajax({
+                    type:"POST",
+                    async: false,
+                    url: "/Register/isUserValidateUser",
+                    data: {usuario: $("#usuario").val()},
+                    success: function(data) {
+                        if(data=="false"){
+                            $('#btn_upload').attr("disabled", false);
+                            $('#confirm_email').attr("disabled", false);
+                            $('#usuario').attr("disabled", true);
 
-                    return response;
-                },"The user is not registered in our database");
-
-                $("#login").validate({
-                    rules:{
-                        usuario:{
-                            required: true,
-                            checkUserName: true
-                        }
-                    },
-                    messages:{
-                        usuario:{
-                            required: "This field is required",
+                            response = true;
+                        }else{
+                            $('#btn_upload').attr("disabled", true);
+                            $('#confirm_email').attr("disabled", true);
+                            document.getElementById("usuario").value = "";
                         }
                     }
                 });
 
-                $("#btnEntrar").click(function(){
-                    $.ajax({
-                        type: "POST",
-                        url: "/Login/verificarUsuario",
-                        data: $("#login").serialize(),
-                        success: function(response){
-                            if(response!=""){
-                                var usuario = jQuery.parseJSON(response);
-                                if(usuario.nombre!=""){
-                                    $("#login").append('<input type="hidden" name="autentication" id="autentication" value="OK"/>');
-                                    $("#login").append('<input type="hidden" name="nombre" id="nombre" value="'+usuario.nombre+'"/>');
-                                    $("#login").submit();
-                            }else{
-                                alertify.alert("Error de autenticación <br> El usuario o contraseña es incorrecta");
-                            }
-                            }else{
-                                alertify.alert("Error de autenticación <br> El usuario o contraseña es incorrecta");
-                            }
-                        }
-                    });
-                });
+                return response;
+            },"<b>Usted ya se encuentra registrado en la plataforma verifique su información.<b>");
 
+            $("#usuario").on("keyup",function(){
+                console.log($(this).val());
+                var usuario = $(this).val();
+                $.ajax({
+                    url: "/Registro/isUserValidateUser",
+                    type: "POST",
+                    data: {usuario},                 
+                    beforeSend: function() {
+                        console.log("Procesando....");
+                    },
+                    success: function(respuesta) {
+                        console.log(respuesta);
+                        if(respuesta == 'true'){
+                            $("#texto_obligatorio_email").text("Este correo electrónico se encuentra ocupado");
+                        }
+                    },
+                    error: function(respuesta) {
+                        console.log(respuesta);
+                    }
+                });
             });
+
+        });
         </script>
+
 html;
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
@@ -245,16 +239,14 @@ html;
         $data->_apellidom = MasterDom::getData('apellidom');
         $data->_cedula_profesional = MasterDom::getData('p_cedula');
         $data->_cedula_especialista = MasterDom::getData('p_cedula');
-    
         $id = RegistroDao::insert($data);
+
         if($id >= 1){
           // $this->alerta($id,'add');
           echo '<script>
             alert("Usuario registrado con éxito");
             window.location.href = "/Login/";
-          </script>';
-  
-         
+          </script>'; 
         }else{
           // $this->alerta($id,'error');
           echo '<script>
@@ -262,41 +254,11 @@ html;
           window.location.href = "/Inicio/";
         </script>';
         }
-  
-  
       }
 
-    // public function isUserValidate(){
-    //     echo (count(PrincipalDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
-    // }
-
-    // public function verificarUsuario(){
-    //     $usuario = new \stdClass();
-    //     $usuario->_usuario = MasterDom::getData("usuario");
-    //     $usuario->_password = MD5(MasterDom::getData("password"));
-    //     $user = PrincipalDao::getById($usuario);
-    //     if (count($user)>=1) {
-    //         $user['nombre'] = utf8_encode($user['nombre']);
-    //         echo json_encode($user);
-    //     }
-    // }
-
-    // public function crearSession(){
-    //     $usuario = new \stdClass();
-    //     $usuario->_usuario = MasterDom::getData("usuario");
-    //     $user = PrincipalDao::getById($usuario);
-    //     session_start();
-    //     $_SESSION['usuario'] = $user['usuario'];
-    //     $_SESSION['nombre'] = $user['nombre'];
-    //     header("location: /Home/");
-    // }
-
-    // public function cerrarSession(){
-    //     unset($_SESSION);
-    //     session_unset();
-    //     session_destroy();
-    //     header("Location: /Login/");
-    // }
+      public function isUserValidateUser(){
+        echo (count(RegistroDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
+    }
 
     public function getPais(){
         $country = '';
