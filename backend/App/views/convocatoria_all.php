@@ -166,10 +166,10 @@
 														<p class="font-weight-bold text-justify text-color-dblue" style="font-size: 20px;">
 															Esta Convocatoria invita a registrar a concurso a los mejores trabajos de investigación 
 														en las categorías   orales sobre las bases establecidas en el Reglamento del Comité de 
-														Admisión y de Evaluación de Trabajos, siendo premiados:
+														Admisión y de Evaluación de Trabajos.
 														</p>
 													</div>
-													<br><br>
+													<!-- <br><br>
 													<center>
 													<div class="container">
 														<div class="col">
@@ -189,7 +189,7 @@
 															</div>
 														</div>
 													</div>
-													</center>
+													</center> -->
 													
 													
 													<!--<h5 class="font-weight-bold text-center">Informes: 
