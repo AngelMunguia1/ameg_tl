@@ -230,7 +230,7 @@
 
 																		<label class="form-label">Adjunto Resumen *</label>
 																		<div class="input-group">
-																			<input type="file" class="form-control" id="adjunto" name="adjunto" required>
+																			<input type="file" accept=".doc, .docx" class="form-control" id="adjunto" name="adjunto" required>
 																		</div>
 																	</div>
 
@@ -241,7 +241,7 @@
 
 																		<label class="form-label">Adjunto Extenso</label>
 																		<div class="input-group">
-																			<input type="file" class="form-control" id="adjunto_extenso" name="adjunto_extenso">
+																			<input type="file" accept=".doc, .docx" class="form-control" id="adjunto_extenso" name="adjunto_extenso">
 																		</div>
 
 																	</div>
@@ -307,7 +307,7 @@
 																		<label class="form-label">Solicitud de ingreso avalada con la firma de dos socios titulares de la AMEG-CP * </label>
 
 																		<div class="input-group">
-																			<input type="file" class="form-control" id="ing_solicitud_ingreso" name="ing_solicitud_ingreso" require>
+																			<input type="file" accept=".pdf" class="form-control" id="ing_solicitud_ingreso" name="ing_solicitud_ingreso" require>
 																		</div>
 
 																	</div>
@@ -326,7 +326,7 @@
 
 																		<label class="form-label">Primer carta * </label >
 
-																		<input type="file" class="form-control" id="ing_carta_rec_uno" name="ing_carta_rec_uno" require>
+																		<input type="file" accept=".pdf" class="form-control" id="ing_carta_rec_uno" name="ing_carta_rec_uno" require>
 
 
 
@@ -337,7 +337,7 @@
 
 																		<label class="form-label">Segunda carta* </label>
 
-																		<input type="file" class="form-control" id="ing_carta_rec_dos" name="ing_carta_rec_dos" require>
+																		<input type="file" accept=".pdf" class="form-control" id="ing_carta_rec_dos" name="ing_carta_rec_dos" require>
 
 
 																	</div>
@@ -350,7 +350,7 @@
 
 																		<label class="form-label">Carta de profesor titular *</label>
 																		<div class="input-group">
-																			<input type="file" class="form-control" id="ing_carta_prof" name="ing_carta_prof" require>
+																			<input type="file" accept=".pdf" class="form-control" id="ing_carta_prof" name="ing_carta_prof" require>
 																		</div>
 																	</div>
 
@@ -358,7 +358,7 @@
 
 																		<label class="form-label">Acta de nacimiento *</label>
 																		<div class="input-group">
-																			<input type="file" class="form-control" id="ing_acta_naci" name="ing_acta_naci" require>
+																			<input type="file" accept=".pdf" class="form-control" id="ing_acta_naci" name="ing_acta_naci" require>
 																		</div>
 																	</div>
 
@@ -366,7 +366,7 @@
 
 																		<label class="form-label">Título  profesional *</label>
 																		<div class="input-group">
-																			<input type="file" class="form-control" id="ing_titulo_prof" name="ing_titulo_prof" require>
+																			<input type="file" accept=".pdf" class="form-control" id="ing_titulo_prof" name="ing_titulo_prof" require>
 																		</div>
 																	</div>
 
@@ -376,7 +376,7 @@
 
 																		<label class="form-label">Cédula profesional *</label>
 																		<div class="input-group">
-																			<input type="file" class="form-control" id="ing_cedula_prof" name="ing_cedula_prof" require>
+																			<input type="file" accept=".pdf" class="form-control" id="ing_cedula_prof" name="ing_cedula_prof" require>
 																		</div>
 																	</div>
 
@@ -387,7 +387,7 @@
 
 																		<label class="form-label">Constancia o comprobante *</label>
 																		<div class="input-group">
-																			<input type="file" class="form-control" id="ing_constancia" name="ing_constancia" require>
+																			<input type="file" accept=".pdf" class="form-control" id="ing_constancia" name="ing_constancia" require>
 																		</div>
 																	</div>
 
@@ -395,7 +395,7 @@
 
 																		<label class="form-label">Comprobante de pago *</label>
 																		<div class="input-group">
-																			<input type="file" class="form-control" id="ing_comprobante_pago" name="ing_comprobante_pago" require>
+																			<input type="file" accept=".pdf" class="form-control" id="ing_comprobante_pago" name="ing_comprobante_pago" require>
 																		</div>
 																	</div>
 
@@ -497,6 +497,17 @@
 </html>
 <?php echo $footer; ?>
 <script>
+	// function validar()
+    // { 
+    //     var aux = archivo.split('.');    
+    //     if(aux[aux .length-1] == 'docx' || aux[aux .length-1] == 'docx')       
+    //     return true;    
+    //     else{       
+    //         alert('El archivo debe ser .txt');       
+    //         return false;    
+    //     } 
+    // } 
+
 	function es_vacio() {
 		var campo1 = document.getElementById("usuario").value;
 		var campo2 = document.getElementById("contrasena").value;

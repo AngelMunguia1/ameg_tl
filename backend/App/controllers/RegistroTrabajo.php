@@ -272,10 +272,10 @@ html;
       
 
         $file_adjunto = $_FILES["adjunto"];        
-        $pdf_1 = $this->generateRandomString();
+        $word_1 = $this->generateRandomString();
 
         $file_adjunto_extenso = $_FILES["adjunto_extenso"];        
-        $pdf_2 = $this->generateRandomString();
+        $word_2 = $this->generateRandomString();
 
         $file_ing_solicitud_ingreso = $_FILES["ing_solicitud_ingreso"];        
         $pdf_3 = $this->generateRandomString();
@@ -320,8 +320,8 @@ html;
       
 
 
-        $data->_adjunto = $pdf_1.'.pdf'; 
-        $data->_adjunto_extenso = $pdf_2.'.pdf'; 
+        $data->_adjunto = $word_1.'.docx'; 
+        $data->_adjunto_extenso = $word_2.'.docx'; 
         $data->_resumen = MasterDom::getData('resumen');
         $data->_coautores = MasterDom::getData('coautores');
         $data->_autor = MasterDom::getData('autor');
@@ -352,8 +352,8 @@ html;
 
         // var_dump($data);
         // exit();
-        move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto/".$pdf_1.'.pdf');
-        move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".$pdf_2.'.pdf');
+        move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto/".$word_1.'.docx');
+        move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".$word_2.'.docx');
 
         
 
