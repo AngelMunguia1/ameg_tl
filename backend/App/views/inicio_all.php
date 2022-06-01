@@ -89,35 +89,39 @@
 					<div class="container container-lg-custom align-content-center pb-lg-5 mb-lg-4">
 						<div class="row align-items-center">
 						<div class="col-lg-3">
-								
+								<a id="linkIngreso" href="/Instrucciones/?trabajo=trabajos_ingreso">
 								<div class="icon-box-info text-center ameg-shadow-box-btn">
 									<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajos de ingreso</h2>
 									<img width="70" src="/vendor/iconos/mesa1.png"/>
 								</div>
+								</a>
 							
 						</div>
 							<div class="col-lg-3">
-								
+									<a id="linkIngreso" href="/Instrucciones/?trabajo=trabajos_orales">
 									<div class="icon-box-info text-center ameg-shadow-box-btn">
 										<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajo libre oral</h2>
 										<img width="70" src="/vendor/iconos/mesa2.png"/>
 									</div>
+									</a>
 								
 							</div>
 							<div class="col-lg-3">
-								
+									<a id="linkIngreso" href="/Instrucciones/?trabajo=cartel_digital">
 									<div class="icon-box-info text-center ameg-shadow-box-btn">
 										<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajos en cartel</h2>
 										<img width="70" src="/vendor/iconos/mesa3.png"/>
 									</div>
+									</a>
 								
 							</div>
 							<div class="col-lg-3">
-								
+									<a id="linkIngreso" href="/Instrucciones/?trabajo=trabajo_en_video">
 									<div class="text-center ameg-shadow-box-btn">
 										<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajos en video</h2>
 										<img width="70" src="/vendor/iconos/mesa4.png"/>
 									</div>
+									</a>
 								
 							</div>
 						</div>

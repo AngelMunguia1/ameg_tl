@@ -1,0 +1,119 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 05-05-2022 a las 00:16:51
+-- Versión del servidor: 10.4.22-MariaDB
+-- Versión de PHP: 7.4.27
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `tematicas_lol`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `campeones`
+--
+
+CREATE TABLE `campeones` (
+  `id_campeon` int(11) NOT NULL,
+  `nombre` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `reales`
+--
+
+CREATE TABLE `reales` (
+  `id_real` int(11) NOT NULL,
+  `nombre` int(11) NOT NULL,
+  `nickname` int(11) NOT NULL,
+  `es_feik` int(11) NOT NULL COMMENT '1 = SI\r\n2 = NO'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sets_campeon`
+--
+
+CREATE TABLE `sets_campeon` (
+  `id_set` int(11) NOT NULL,
+  `id_campeon` int(11) NOT NULL,
+  `id_tematica` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tematicas`
+--
+
+CREATE TABLE `tematicas` (
+  `id_tematica` int(11) NOT NULL,
+  `nombre` varchar(80) NOT NULL,
+  `seccion` int(11) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `campeones`
+--
+ALTER TABLE `campeones`
+  ADD PRIMARY KEY (`id_campeon`);
+
+--
+-- Indices de la tabla `reales`
+--
+ALTER TABLE `reales`
+  ADD PRIMARY KEY (`id_real`);
+
+--
+-- Indices de la tabla `tematicas`
+--
+ALTER TABLE `tematicas`
+  ADD PRIMARY KEY (`id_tematica`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `campeones`
+--
+ALTER TABLE `campeones`
+  MODIFY `id_campeon` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `reales`
+--
+ALTER TABLE `reales`
+  MODIFY `id_real` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `tematicas`
+--
+ALTER TABLE `tematicas`
+  MODIFY `id_tematica` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

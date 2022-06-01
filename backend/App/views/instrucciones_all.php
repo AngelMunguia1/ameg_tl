@@ -92,7 +92,7 @@
 		</section>
 
 		<div role="main" class="main">
-
+			<input type="hidden" id="get_trabajo" name="get_trabajo" value="<?=$trabajo?>">
 			<!-- <section class="section bg-light-5">
 					<div class="container-fluid">
 						<div class="responsive-images responsive-images-left">
@@ -172,7 +172,7 @@
 
 									<div class="col-md-9 ameg-shadow-box-ins">
 										<div class="col-md-12">
-											<div class="row"   id="trabajos_ingreso">
+											<div class="row"   id="trabajos_ingreso" style="display: none;">
 												<center>
 													<div class="col-md-12">
 														<a href="#">
@@ -303,17 +303,17 @@
 													</div>
 												</center>
 												<div style="text-align: justify; margin: 16px;">
-													<h4><span style="font-weight: bold;">5.8.1</span> La elección de presentación de trabajo libre en cartel será decisión del Comité de Admisión. </h4>
-														<h4><span style="font-weight: bold;">8.1</span> El cartel deberá ser compatible para su proyección en pantalla HD de 1896 pixeles (67 cm) de alto por 1035 pixeles (36.5 cm) de ancho. Deberán ser registrados en formato PDF. No se aceptarán carteles impresos para su presentación. </h4>
-														<h4><span style="font-weight: bold;">8.2</span> Una vez aceptado su cartel y en caso de que se le haya solicitado realizar alguna modificación, deberá enviarlo a más tardar el 15 de agosto del año en curso con las especificaciones solicitadas a la dirección  videosameg@grupolahe.com., el título del cartel deberá ser igual al que fue registrado. </h4>
+													<h4><span style="font-weight: bold;">8.1</span> La elección de presentación de trabajo libre en cartel será decisión del Comité de Admisión. </h4>
+														<h4><span style="font-weight: bold;">8.2</span> El cartel deberá ser compatible para su proyección en pantalla HD de 1896 pixeles (67 cm) de alto por 1035 pixeles (36.5 cm) de ancho. Deberán ser registrados en formato PDF. No se aceptarán carteles impresos para su presentación. </h4>
+														<h4><span style="font-weight: bold;">8.3</span> Una vez aceptado su cartel y en caso de que se le haya solicitado realizar alguna modificación, deberá enviarlo a más tardar el 15 de agosto del año en curso con las especificaciones solicitadas a la dirección  videosameg@grupolahe.com., el título del cartel deberá ser igual al que fue registrado. </h4>
 														
 														
-														<h4><span style="font-weight: bold;">8.3</span> Incluir los nombres completos del autor seguido de los coautores; nombre oficial de la institución donde fue efectuado, marcar con un asterisco el miembro titular que lo avala, cuando así sea necesario.</h4>
-														<h4><span style="font-weight: bold;">8.4</span> Requisitos de contenido: antecedentes, resumen clínico y conclusiones o antecedentes, objetivos, material y métodos, resultados, conclusiones y bibliografía, según corresponda.</h4>
-														<h4><span style="font-weight: bold;">8.5</span> Puede incluir fotografías, gráficas, cuadros y esquemas.</h4>
-														<h4><span style="font-weight: bold;">8.6</span> El tamaño de la letra empleada en el texto deberá ser de tamaño suficiente para ser leída con facilidad a un metro de distancia.</h4>
-														<h4><span style="font-weight: bold;">8.7</span> El autor deberá presentarse 30 minutos antes de la hora programada y estar presente en el tiempo determinado en la carta de aceptación.</h4>
-														<h4><span style="font-weight: bold;">8.8</span> Los trabajos en cartel no serán considerados para concurso.</h4>
+														<h4><span style="font-weight: bold;">8.4</span> Incluir los nombres completos del autor seguido de los coautores; nombre oficial de la institución donde fue efectuado, marcar con un asterisco el miembro titular que lo avala, cuando así sea necesario.</h4>
+														<h4><span style="font-weight: bold;">8.5</span> Requisitos de contenido: antecedentes, resumen clínico y conclusiones o antecedentes, objetivos, material y métodos, resultados, conclusiones y bibliografía, según corresponda.</h4>
+														<h4><span style="font-weight: bold;">8.6</span> Puede incluir fotografías, gráficas, cuadros y esquemas.</h4>
+														<h4><span style="font-weight: bold;">8.7</span> El tamaño de la letra empleada en el texto deberá ser de tamaño suficiente para ser leída con facilidad a un metro de distancia.</h4>
+														<h4><span style="font-weight: bold;">8.8</span> El autor deberá presentarse 30 minutos antes de la hora programada y estar presente en el tiempo determinado en la carta de aceptación.</h4>
+														<h4><span style="font-weight: bold;">8.9</span> Los trabajos en cartel no serán considerados para concurso.</h4>
 
 												</div>
 											</div>
@@ -391,6 +391,16 @@
 
 <script>
 	$(document).ready(function(){
+
+		var trabajo = $("#get_trabajo").val();
+		if(trabajo==""){
+			$("#trabajos_ingreso").css("display", "block");
+		}else{
+			$("#"+trabajo).css('display','block');
+		}
+
+		
+
 		$("#mostrar_trabajo_ingreso").click(function(){			
 	 
 			$("#cartel_digital").css("display", "none");
@@ -400,11 +410,9 @@
 		 });
 		$("#mostrar_trabajo_libre_oral").click(function(){			
 			$("#trabajos_ingreso").css("display", "none");
-			$("#trabajos_ingreso").css("display", "none");
 			$("#cartel_digital").css("display", "none");
 			$("#trabajo_en_video").css("display", "none");
 			$("#trabajos_orales").css("display", "block");
-			
 		 });
 		 $("#mostrar_trabajo_video").click(function(){			
 			$("#trabajos_orales").css("display", "none");
@@ -423,7 +431,6 @@
 		 });
 		
 	});
-
 
 
 	$(document).ready(function() {

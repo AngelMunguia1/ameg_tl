@@ -169,35 +169,39 @@ html;
             });
         </script>
 html;
+
+        $trabajo = $_GET['trabajo'];
+       
+        View::set('trabajo',$trabajo);
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
         View::render("instrucciones_all");
     }
 
-    public function isUserValidate(){
-        echo (count(PrincipalDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
-    }
+    // public function isUserValidate(){
+    //     echo (count(PrincipalDao::getUser($_POST['usuario']))>=1)? 'true' : 'false';
+    // }
 
-    public function verificarUsuario(){
-        $usuario = new \stdClass();
-        $usuario->_usuario = MasterDom::getData("usuario");
-        $usuario->_password = MD5(MasterDom::getData("password"));
-        $user = PrincipalDao::getById($usuario);
-        if (count($user)>=1) {
-            $user['nombre'] = utf8_encode($user['nombre']);
-            echo json_encode($user);
-        }
-    }
+    // public function verificarUsuario(){
+    //     $usuario = new \stdClass();
+    //     $usuario->_usuario = MasterDom::getData("usuario");
+    //     $usuario->_password = MD5(MasterDom::getData("password"));
+    //     $user = PrincipalDao::getById($usuario);
+    //     if (count($user)>=1) {
+    //         $user['nombre'] = utf8_encode($user['nombre']);
+    //         echo json_encode($user);
+    //     }
+    // }
 
-    public function crearSession(){
-        $usuario = new \stdClass();
-        $usuario->_usuario = MasterDom::getData("usuario");
-        $user = PrincipalDao::getById($usuario);
-        session_start();
-        $_SESSION['usuario'] = $user['usuario'];
-        $_SESSION['nombre'] = $user['nombre'];
-        header("location: /Home/");
-    }
+    // public function crearSession(){
+    //     $usuario = new \stdClass();
+    //     $usuario->_usuario = MasterDom::getData("usuario");
+    //     $user = PrincipalDao::getById($usuario);
+    //     session_start();
+    //     $_SESSION['usuario'] = $user['usuario'];
+    //     $_SESSION['nombre'] = $user['nombre'];
+    //     header("location: /Home/");
+    // }
 
     public function cerrarSession(){
         unset($_SESSION);

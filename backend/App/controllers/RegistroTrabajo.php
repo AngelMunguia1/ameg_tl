@@ -267,6 +267,10 @@ html;
         //     $data->_url_video ='';
         // }
 
+  
+
+      
+
         $file_adjunto = $_FILES["adjunto"];        
         $pdf_1 = $this->generateRandomString();
 
@@ -311,6 +315,11 @@ html;
         $data->_titulo_corto = MasterDom::getData('titulo_corto');
         $data->_titulo_en = MasterDom::getData('titulo_en');
         $data->_titulo_es = MasterDom::getData('titulo_es');
+
+
+      
+
+
         $data->_adjunto = $pdf_1.'.pdf'; 
         $data->_adjunto_extenso = $pdf_2.'.pdf'; 
         $data->_resumen = MasterDom::getData('resumen');
@@ -345,6 +354,9 @@ html;
         // exit();
         move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto/".$pdf_1.'.pdf');
         move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".$pdf_2.'.pdf');
+
+        
+
         move_uploaded_file($file_ing_solicitud_ingreso["tmp_name"], "file_ing_solicitud_ingreso/".$pdf_3.'.pdf');
         move_uploaded_file($file_ing_carta_rec_uno["tmp_name"], "file_ing_carta_rec_uno/".$pdf_4.'.pdf');
         move_uploaded_file($file_ing_carta_rec_dos["tmp_name"], "file_ing_carta_rec_dos/".$pdf_5.'.pdf');
