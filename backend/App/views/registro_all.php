@@ -376,7 +376,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label>Teléfono *</label>
-                                                    <input  id="t_extension" name="t_extension" type="text" placeholder="Teléfono" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="t_extension" name="t_extension" type="number" min="-999999999999" max="999999999999" placeholder="Teléfono" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 

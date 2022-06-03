@@ -101,16 +101,63 @@ sql;
         $mysqli = Database::getInstance();
         $query=<<<sql
        INSERT INTO usuarios (id_usuario, nombre, apellidop, apellidom, usuario, contrasena, titulo_id, rol_id, cedpro, cedulaesp, calle, numext, numint, colonia, delomun, estado_id, pais_id, cp, telefono, celular, p_lugar_nacimiento, p_fecha_nacimiento, p_edad, p_sexo, p_domicilio_particular, p_especialidad, p_cedula, t_institucion, t_cargo, t_direccion_institucion, t_telefono, t_extension, t_ciudad, t_estado, t_cp, telinstitucion, e_facultad, e_fecha_inicial, e_fecha_fin, e_fecha_examen, e_hospital, e_fecha_inicial_hospital, e_fecha_fin_hospital, e_residencia, e_fecha_inicial_residencia, e_fecha_fin_residencia, e_posgrado, e_fecha_inicial_posgrado, e_fecha_fin_posgrado, inf_institucion, fecha_ingreso, es_socio, fecha_ingreso_ameg, status) 
-       VALUES (NULL, :nombre, :apellidop, :apellidom, :usuario, MD5(:contrasena), NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1');
+       VALUES (NULL, :nombre, :apellidop, :apellidom, :usuario, MD5(:contrasena), '0', '1', :cedpro, :cedulaesp, :calle, :numext, :numint, :colonia, :delomun, :estado_id, :pais_id, :cp, :telefono, :celular, :p_lugar_nacimiento, :p_fecha_nacimiento, :p_edad, :p_sexo, :p_domicilio_particular, :p_especialidad, :p_cedula, :t_institucion, :t_cargo, :t_direccion_institucion, :t_telefono, :t_extension, :t_ciudad, :t_estado, :t_cp, :telinstitucion, :e_facultad, :e_fecha_inicial, :e_fecha_fin, :e_fecha_examen, :e_hospital, :e_fecha_inicial_hospital, :e_fecha_fin_hospital, :e_residencia, :e_fecha_inicial_residencia, :e_fecha_fin_residencia, :e_posgrado, :e_fecha_inicial_posgrado, :e_fecha_fin_posgrado, :inf_institucion, :fecha_ingreso, :es_socio, :fecha_ingreso_ameg, '1');
 sql;
 
 
             $parametros = array(
+
+
             ':nombre'=>$data->_nombre,
             ':apellidop'=>$data->_apellidop,
             ':apellidom'=>$data->_apellidom,
             ':usuario'=>$data->_usuario,
-            ':contrasena'=>$data->_contrasena
+            ':contrasena'=>$data->_contrasena,
+            ':cedpro'=>$data->_cedpro,
+            ':cedulaesp'=>$data->_cedulaesp,
+            ':calle'=>$data->_calle,
+            ':numext'=>$data->_numext,
+            ':numint'=>$data->_numint,
+            ':colonia'=>$data->_colonia,
+            ':delomun'=>$data->_delomun,
+            ':estado_id'=>$data->_estado_id,
+            ':pais_id'=>$data->_pais_id,
+            ':cp'=>$data->_cp,
+            ':telefono'=>$data->_telefono,
+            ':celular'=>$data->_celular,
+            ':p_lugar_nacimiento'=>$data->_p_lugar_nacimiento,
+            ':p_fecha_nacimiento'=>$data->_p_fecha_nacimiento,
+            ':p_edad'=>$data->_p_edad,
+            ':p_sexo'=>$data->_p_sexo,
+            ':p_domicilio_particular'=>$data->_p_domicilio_particular,
+            ':p_especialidad'=>$data->_p_especialidad,
+            ':p_cedula'=>$data->_p_cedula,
+            ':t_institucion'=>$data->_t_institucion,
+            ':t_cargo'=>$data->_t_cargo,
+            ':t_direccion_institucion'=>$data->_t_direccion_institucion,
+            ':t_telefono'=>$data->_t_telefono,
+            ':t_extension'=>$data->_t_extension,
+            ':t_ciudad'=>$data->_t_ciudad,
+            ':t_estado'=>$data->_t_estado,
+            ':t_cp'=>$data->_t_cp,
+            ':telinstitucion'=>$data->_telinstitucion,
+            ':e_facultad'=>$data->_e_facultad,
+            ':e_fecha_inicial'=>$data->_e_fecha_inicial,
+            ':e_fecha_fin'=>$data->_e_fecha_fin,
+            ':e_fecha_examen'=>$data->_e_fecha_examen,
+            ':e_hospital'=>$data->_e_hospital,
+            ':e_fecha_inicial_hospital'=>$data->_e_fecha_inicial_hospital,
+            ':e_fecha_fin_hospital'=>$data->_e_fecha_fin_hospital,
+            ':e_residencia'=>$data->_e_residencia,
+            ':e_fecha_inicial_residencia'=>$data->_e_fecha_inicial_residencia,
+            ':e_fecha_fin_residencia'=>$data->_e_fecha_fin_residencia,
+            ':e_posgrado'=>$data->_e_posgrado,
+            ':e_fecha_inicial_posgrado'=>$data->_e_fecha_inicial_posgrado,
+            ':e_fecha_fin_posgrado'=>$data->_e_fecha_fin_posgrado,
+            ':inf_institucion'=>$data->_inf_institucion,
+            ':fecha_ingreso'=>$data->_fecha_ingreso,
+            ':es_socio'=>$data->_es_socio,
+            ':fecha_ingreso_ameg'=>$data->_fecha_ingreso_ameg
             );
  
             $id = $mysqli->insert($query,$parametros);
