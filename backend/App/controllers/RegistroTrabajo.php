@@ -113,6 +113,35 @@ html;
             
             <!-- Examples -->
             <script src="/js/examples/examples.landing.js"></script>
+            <script src="../../assets/js/soft-ui-dashboard.min.js?v=1.0.5"></script>
+            <script src="/assets/js/soft-ui-dashboard.min.js?v=1.0.5"></script>
+            <script src="../../assets/js/soft-ui-dashboard.js?v=1.0.5"></script>
+            <script src="/assets/js/soft-ui-dashboard.js?v=1.0.5"></script>
+            <script src="/js/jquery.min.js"></script>
+            
+            
+            <!-- LIBRERIAS SWAL MODAL IFRAME -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+              
+            <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js" defer></script>
+            <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css" />
+            
+            <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js" defer></script>
+            <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css" />
+
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+            <script charset="UTF-8" src="//web.webpushs.com/js/push/9d0c1476424f10b1c5e277f542d790b8_1.js" async></script>
       
 
         <script>
@@ -206,12 +235,37 @@ html;
                     <option value="{$value['id']}">{$value['especialidad']}</option>
 html;
         }
-        
+
+
+
+        $trabajos_libres = '';
+        $card_trabajos_libres = '';
+        $trabajos_libres =  RegistroDao::getTableTrabajosLibres($_SESSION['id_trabajo_libre']);
+
+        foreach ($trabajos_libres as $key => $value) {
+
+        $card_trabajos_libres .= <<<html
+            
+            
+            <div class="col-12 col-md-4 text-center " >
+                <div class="card card-body card-course p-0 border-radius-15 ameg-shadow-box-btn">
+                <img class="caratula-trabajo-img border-radius-15" src="/trabajos_files/img/caratula_word.jpg">
+                        <div class="mt-2 color-black font-5 text-bold iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}"><p class="font-14"><b> {$value['titulo_corto']} <span class="fa fa-mouse-pointer" aria-hidden="true"></span></b></p>
+                        </div>
+                        <div class="color-black font-14"><p>{$value['titulo_es']}</p></div>
+                        <div class="color-vine font-12"><p>{$value['autor']}</p></div>
+                        <!--<span id="video_{$value['clave']}" data-clave="{$value['clave']}" class="fas fa-heart heart-like p-2"></span>-->
+                </div>
+            </div>
+html;
+        }
+
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
         View::set('selectCategoria',$selectCategoria);
         View::set('selectEspecialidad',$selectEspecialidad);
         View::set('permiso_form',$permiso_form);
+        View::set('card_trabajos_libres',$card_trabajos_libres);
         View::render("registro_trabajo_all_2");
     }
 

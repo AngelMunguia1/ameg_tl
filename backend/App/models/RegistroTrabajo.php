@@ -24,6 +24,15 @@ sql;
         return $mysqli->queryAll($query);
           
       }
+
+      public static function getTableTrabajosLibres()
+        {
+                $mysqli = Database::getInstance(true);
+                $query =<<<sql
+                SELECT * FROM trabajos2020
+                sql;
+                return $mysqli->queryAll($query);
+        }
       public static function getById($id){
            
       }

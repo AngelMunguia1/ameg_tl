@@ -9,7 +9,7 @@
 					<div class="header-row">
 						<div class="header-column justify-content-start">
 							<div class="header-logo px-3">
-								<a href="/Inicio/">
+								<a href="/Home/">
 									<img src="/img/logo_ameg.png" width="210" height="100" alt="" />
 								</a>
 							</div>
@@ -20,7 +20,7 @@
 									<nav class="collapse">
 										<ul class="nav flex-column flex-lg-row" id="mainNav">
 											<li class="dropdown dropdown-mega">
-												<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Inicio/">
+												<a class="dropdown-item dropdown-toggle active" style="color:#70C7D2;" href="/Home/">
 													INICIO
 												</a>
 											</li>
@@ -49,7 +49,7 @@
 												</a>
 											</li> -->
 											<li class="dropdown">
-												<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Contacto">
+												<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Contacto/">
 													CONTACTO
 												</a>
 											</li>
@@ -230,7 +230,7 @@
 
 																		<label class="form-label">Adjunto Resumen *</label>
 																		<div class="input-group">
-																			<input type="file" accept=".doc, .docx" class="form-control" id="adjunto" name="adjunto" required>
+																			<input type="file" accept=".doc,.docx" class="form-control" id="adjunto" name="adjunto" required>
 																		</div>
 																	</div>
 
@@ -241,7 +241,7 @@
 
 																		<label class="form-label">Adjunto Extenso</label>
 																		<div class="input-group">
-																			<input type="file" accept=".doc, .docx" class="form-control" id="adjunto_extenso" name="adjunto_extenso">
+																			<input type="file" accept=".doc,.docx" class="form-control" id="adjunto_extenso" name="adjunto_extenso">
 																		</div>
 
 																	</div>
@@ -487,6 +487,16 @@
 	</div>
 	</section>
 
+						<!--Aqui va la variable-->
+                        
+                        <div class="card-body p-3">
+                        <br>
+                        <p class="text-center">Nota: Si usted desea visualizar el documento de clic sobre el nombre del trabajo libre.</p>
+                            <div class="row mt-3">
+                                    <?php echo $card_trabajos_libres; ?>
+                            </div>
+                        </div>
+                        
 	<hr class="my-0">
 
 	</div>
@@ -496,6 +506,29 @@
 
 </html>
 <?php echo $footer; ?>
+
+
+<!-- Modal -->
+<div class="modal fade" id="pdf" tabindex="-1" role="dialog" aria-labelledby="pdfTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Trabajo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: transparent;">
+          <span aria-hidden="true" style="font-size: 25px;">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body cont-modal">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script>
 	// function validar()
     // { 
@@ -525,6 +558,24 @@
 
 		}
 	}
+</script>
+
+<script>
+    $(document).ready(function(){
+
+        Swal.fire(
+            '<h5>Podrá observar los trabajos libres registrados debajo del formulario.<strong></br> Nota: Recargue la página para observar su trabajo recién registrado.</strong></h5>',
+            '',
+            'info'
+        )
+
+        $('.iframe').on('click',function(){
+            var pdf = $(this).attr('data-pdf');
+            //alert(pdf);
+
+            $('.cont-modal').html('<iframe src="https://docs.google.com/gview?url=https://trabajoslibresameg.com/file_adjunto_extenso/'+pdf+'&embedded=true" style="width:100%; height:700px;" frameborder="0" ></iframe>');
+        })
+    });
 </script>
 
 <script>
