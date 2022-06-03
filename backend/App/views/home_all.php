@@ -91,7 +91,7 @@
 						<div class="col-lg-3">
 								<a id="linkIngreso" href="/Instrucciones/?trabajo=trabajos_ingreso">
 								<div class="icon-box-info text-center ameg-shadow-box-btn">
-									<h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Trabajos de ingreso</h2>
+									<h2 class="font-weight-bold text-center text-color-dark text-3 mb-3">Trabajos de ingreso</h2>
 									<img width="70" src="/vendor/iconos/mesa1.png"/>
 								</div>
 								</a>

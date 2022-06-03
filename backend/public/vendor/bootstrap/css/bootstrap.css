@@ -6836,6 +6836,11 @@ a.close.disabled {
 	   transition-duration: .95s;
 }
 
+.ameg-shadow-box-ins-tl{
+	padding: 15px;
+	box-shadow: 5px 5px 5px 5px #5c1f6975;
+}
+
 .ameg-shadow-box-two{
 	padding: 15px;
     box-shadow: 1px 1px 1px 3px #E2EDFF;

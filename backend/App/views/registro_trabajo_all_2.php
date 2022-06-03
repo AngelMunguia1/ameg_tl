@@ -490,11 +490,37 @@
 						<!--Aqui va la variable-->
                         
                         <div class="card-body p-3">
-                        <br>
-                        <p class="text-center">Nota: Si usted desea visualizar el documento de clic sobre el nombre del trabajo libre.</p>
-                            <div class="row mt-3">
-                                    <?php echo $card_trabajos_libres; ?>
-                            </div>
+							<br>
+							<h3 class="text-center font-weight-bold"> TRABAJOS LIBRES REGISTRADOS</h3>
+								<p class="text-center font-weight-bold">Nota: Si usted desea visualizar el documento de clic sobre el recuadro del trabajo libre.</p>
+								<div class="container text-center">
+									<div class="row">
+										<div style="margin: auto; display:flex; justify-content: center; width:100%; min-width: 325px;">
+											<div class="col-md-9 text-center ameg-shadow-box-ins-tl bg-white">
+								
+									<h4 class="text-center font-weight-bold" <?= $mostrar_trabajo_o ?>>Trabajos libres oral</h4>
+										<div class="row mt-3">
+												<?php echo $card_trabajos_libres_o; ?>
+										</div>
+										<br>
+									<h4 class="text-center font-weight-bold" <?= $mostrar_trabajo_c ?>>Trabajos en cartel</h4>
+										<div class="row mt-3">
+												<?php echo $card_trabajos_libres_c; ?>
+										</div>
+										<br>
+									<h4 class="text-center font-weight-bold" <?= $mostrar_trabajo_v ?>>Trabajos en vídeo</h4>
+										<div class="row mt-3">
+												<?php echo $card_trabajos_libres_v; ?>
+										</div>
+										<br>
+									<h4 class="text-center font-weight-bold" <?= $mostrar_trabajo_i ?>>Trabajos de ingreso</h4>
+										<div class="row mt-3">
+												<?php echo $card_trabajos_libres_i; ?>
+										</div>
+								</div>
+								</div>
+								</div>
+								</div>
                         </div>
                         
 	<hr class="my-0">

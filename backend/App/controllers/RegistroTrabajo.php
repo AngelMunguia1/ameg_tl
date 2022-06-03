@@ -246,11 +246,131 @@ html;
 
         $card_trabajos_libres .= <<<html
             
-            
-            <div class="col-12 col-md-4 text-center " >
-                <div class="card card-body card-course p-0 border-radius-15 ameg-shadow-box-btn">
+            <div class="col-sm-4 text-center " >
+                <div class="card card-body card-course p-1 ameg-shadow-box-btn iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
                 <img class="caratula-trabajo-img border-radius-15" src="/trabajos_files/img/caratula_word.jpg">
-                        <div class="mt-2 color-black font-5 text-bold iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}"><p class="font-14"><b> {$value['titulo_corto']} <span class="fa fa-mouse-pointer" aria-hidden="true"></span></b></p>
+                        <div class="mt-2 color-black font-5 text-bold font-weight-bold" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}"><p class="font-14 font-weight-bold"><b> {$value['titulo_corto']}</b></p>
+                        </div>
+                        <div class="color-black font-14"><p>{$value['titulo_es']}</p></div>
+                        <div class="color-vine font-12"><p>{$value['autor']}</p></div>
+                        <!--<span id="video_{$value['clave']}" data-clave="{$value['clave']}" class="fas fa-heart heart-like p-2"></span>-->
+                </div>
+            </div>
+html;
+        }
+
+
+        $trabajos_libres_o = '';
+        $card_trabajos_libres_o = '';
+        $muestra_o = '';
+        $trabajos_libres_o =  RegistroDao::getTableTrabajosLibresOral($_SESSION['id_trabajo_libre']);
+        //echo("total registros o".count($trabajos_libres_o));
+
+        $total_registros_o = count($trabajos_libres_o);
+
+        if($total_registros_o == 0){                
+            $muestra_o = 1;
+        }
+        $mostrar_trabajo_o = $muestra_o == 1 ? "style=\"display:none;\"" : "";
+
+        foreach ($trabajos_libres_o as $key => $value) {
+
+        $card_trabajos_libres_o .= <<<html
+            
+            <div class="col-sm-4 text-center " >
+                <div class="card card-body card-course p-0 ameg-shadow-box-btn iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
+                <img class="caratula-trabajo-img border-radius-15" src="/trabajos_files/img/caratula_word.jpg">
+                        <div class="mt-2 color-black font-5 text-bold font-weight-bold" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}"><p class="font-14 font-weight-bold"><b> {$value['titulo_corto']}</b></p>
+                        </div>
+                        <div class="color-black font-14"><p>{$value['titulo_es']}</p></div>
+                        <div class="color-vine font-12"><p>{$value['autor']}</p></div>
+                        <!--<span id="video_{$value['clave']}" data-clave="{$value['clave']}" class="fas fa-heart heart-like p-2"></span>-->
+                </div>
+            </div>
+html;
+        }
+
+        $trabajos_libres_c = '';
+        $card_trabajos_libres_c = '';
+        $muestra_c = '';
+        $trabajos_libres_c =  RegistroDao::getTableTrabajosLibresCartel($_SESSION['id_trabajo_libre']);
+        //echo("total registros c".count($trabajos_libres_c));
+
+        $total_registros_c = count($trabajos_libres_c);
+
+        if($total_registros_c == 0){                
+            $muestra_c = 1;
+        }
+        $mostrar_trabajo_c = $muestra_c == 1 ? "style=\"display:none;\"" : "";
+
+        foreach ($trabajos_libres_c as $key => $value) {
+
+        $card_trabajos_libres_c .= <<<html
+            
+            <div class="col-sm-4 text-center " >
+                <div class="card card-body card-course p-0 ameg-shadow-box-btn iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
+                <img class="caratula-trabajo-img border-radius-15" src="/trabajos_files/img/caratula_word.jpg">
+                        <div class="mt-2 color-black font-5 text-bold font-weight-bold" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}"><p class="font-14 font-weight-bold"><b> {$value['titulo_corto']}</b></p>
+                        </div>
+                        <div class="color-black font-14"><p>{$value['titulo_es']}</p></div>
+                        <div class="color-vine font-12"><p>{$value['autor']}</p></div>
+                        <!--<span id="video_{$value['clave']}" data-clave="{$value['clave']}" class="fas fa-heart heart-like p-2"></span>-->
+                </div>
+            </div>
+html;
+        }
+
+        $trabajos_libres_v = '';
+        $card_trabajos_libres_v = '';
+        $muestra_v = '';
+        $trabajos_libres_v =  RegistroDao::getTableTrabajosLibresVideo($_SESSION['id_trabajo_libre']);
+        //echo("total registros v".count($trabajos_libres_v));
+
+        $total_registros_v = count($trabajos_libres_v);
+
+        if($total_registros_v == 0){                
+            $muestra_v = 1;
+        }
+        $mostrar_trabajo_v = $muestra_v == 1 ? "style=\"display:none;\"" : "";
+
+        foreach ($trabajos_libres_v as $key => $value) {
+
+        $card_trabajos_libres_v .= <<<html
+            
+            <div class="col-sm-4 text-center " >
+                <div class="card card-body card-course p-0 ameg-shadow-box-btn iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
+                <img class="caratula-trabajo-img border-radius-15" src="/trabajos_files/img/caratula_word.jpg">
+                        <div class="mt-2 color-black font-5 text-bold font-weight-bold" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}"><p class="font-14 font-weight-bold"><b> {$value['titulo_corto']}</b></p>
+                        </div>
+                        <div class="color-black font-14"><p>{$value['titulo_es']}</p></div>
+                        <div class="color-vine font-12"><p>{$value['autor']}</p></div>
+                        <!--<span id="video_{$value['clave']}" data-clave="{$value['clave']}" class="fas fa-heart heart-like p-2"></span>-->
+                </div>
+            </div>
+html;
+        }
+
+        $trabajos_libres_i = '';
+        $card_trabajos_libres_i = '';
+        $muestra_i = '';
+        $trabajos_libres_i =  RegistroDao::getTableTrabajosLibresIngreso($_SESSION['id_trabajo_libre']);
+        //echo("total registros i".count($trabajos_libres_i));
+
+        $total_registros_i = count($trabajos_libres_i);
+
+        if($total_registros_i == 0){                
+            $muestra_i = 1;
+        }
+        $mostrar_trabajo_i = $muestra_i == 1 ? "style=\"display:none;\"" : "";
+
+        foreach ($trabajos_libres_i as $key => $value) {
+
+        $card_trabajos_libres_i .= <<<html
+            
+            <div class="col-sm-4 text-center " >
+                <div class="card card-body card-course p-0 ameg-shadow-box-btn iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
+                <img class="caratula-trabajo-img border-radius-15" src="/trabajos_files/img/caratula_word.jpg">
+                        <div class="mt-2 color-black font-5 text-bold font-weight-bold" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}"><p class="font-14 font-weight-bold"><b> {$value['titulo_corto']}</b></p>
                         </div>
                         <div class="color-black font-14"><p>{$value['titulo_es']}</p></div>
                         <div class="color-vine font-12"><p>{$value['autor']}</p></div>
@@ -265,7 +385,15 @@ html;
         View::set('selectCategoria',$selectCategoria);
         View::set('selectEspecialidad',$selectEspecialidad);
         View::set('permiso_form',$permiso_form);
+        View::set('mostrar_trabajo_o',$mostrar_trabajo_o);
+        View::set('mostrar_trabajo_c',$mostrar_trabajo_c);
+        View::set('mostrar_trabajo_v',$mostrar_trabajo_v);
+        View::set('mostrar_trabajo_i',$mostrar_trabajo_i);
         View::set('card_trabajos_libres',$card_trabajos_libres);
+        View::set('card_trabajos_libres_o',$card_trabajos_libres_o);
+        View::set('card_trabajos_libres_c',$card_trabajos_libres_c);
+        View::set('card_trabajos_libres_v',$card_trabajos_libres_v);
+        View::set('card_trabajos_libres_i',$card_trabajos_libres_i);
         View::render("registro_trabajo_all_2");
     }
 

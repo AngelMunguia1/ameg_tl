@@ -24,15 +24,6 @@ sql;
         return $mysqli->queryAll($query);
           
       }
-
-      public static function getTableTrabajosLibres()
-        {
-                $mysqli = Database::getInstance(true);
-                $query =<<<sql
-                SELECT * FROM trabajos2020
-                sql;
-                return $mysqli->queryAll($query);
-        }
       public static function getById($id){
            
       }
@@ -99,7 +90,6 @@ sql;
         return $mysqli->queryAll($query);
       }
 
-      
 
       public static function getEspecialidades(){       
         $mysqli = Database::getInstance();
@@ -108,4 +98,58 @@ sql;
 sql;
         return $mysqli->queryAll($query);
       }
+
+      public static function getTableTrabajosLibres()
+      {
+              $mysqli = Database::getInstance(true);
+              $query =<<<sql
+              SELECT * FROM trabajos2020
+              sql;
+              return $mysqli->queryAll($query);
+      }
+
+      public static function getTableTrabajosLibresOral()
+        {
+                $mysqli = Database::getInstance(true);
+                $query =<<<sql
+                SELECT * FROM trabajos2020
+                WHERE categoria_id = '3'
+                ORDER BY id ASC
+                sql;
+                return $mysqli->queryAll($query);
+        }
+
+        public static function getTableTrabajosLibresCartel()
+        {
+                $mysqli = Database::getInstance(true);
+                $query =<<<sql
+                SELECT * FROM trabajos2020
+                WHERE categoria_id = '4'
+                ORDER BY id ASC
+                sql;
+                return $mysqli->queryAll($query);
+        }
+
+        public static function getTableTrabajosLibresVideo()
+        {
+                $mysqli = Database::getInstance(true);
+                $query =<<<sql
+                SELECT * FROM trabajos2020
+                WHERE categoria_id = '5'
+                ORDER BY id ASC
+                sql;
+                return $mysqli->queryAll($query);
+        }
+
+        public static function getTableTrabajosLibresIngreso()
+        {
+                $mysqli = Database::getInstance(true);
+                $query =<<<sql
+                SELECT * FROM trabajos2020
+                WHERE categoria_id = '6'
+                ORDER BY id ASC
+                sql;
+                return $mysqli->queryAll($query);
+        }
+
 }

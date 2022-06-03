@@ -120,10 +120,7 @@ class Contenedor extends Controller{
 		<script src="/vendor/vide/jquery.vide.min.js"></script>
 		<script src="/vendor/vivus/vivus.min.js"></script>
 		<script src="/master/style-switcher/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
-		
-		
-		
-            <!-- TEMPLATE VIEJO-->
+
         </head>
 html;
 $menu =<<<html
