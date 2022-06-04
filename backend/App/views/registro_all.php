@@ -245,7 +245,7 @@
 
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Calle *</label>
-                                                    <input onChange="es_vacio()" id="calle" name="calle" type="text" placeholder="Calle" class="form-control ameg-shadow-box-two" require="required">
+                                                    <input onChange="es_vacio()" id="calle" name="calle" type="text" placeholder="Calle" class="form-control ameg-shadow-box-two" required>
                                                     <p class="hiden" style="color: red ;" id="texto_obligatorio"></p>
                                                 </div>
                                                 <div class="col-12 col-sm-3 mt-3 mt-sm-0">
@@ -255,8 +255,8 @@
                                                 </div>
 
                                                 <div class="col-12 col-sm-3 mt-3 mt-sm-0">
-                                                    <label># Int </label>
-                                                    <input onChange="es_vacio()" id="numint" name="numint" type="number" placeholder="# Int" class="form-control ameg-shadow-box-two">
+                                                    <label># Int *</label>
+                                                    <input onChange="es_vacio()" id="numint" name="numint" type="number" placeholder="# Int" class="form-control ameg-shadow-box-two" required>
                                                     <p style="color: red ;" id="texto_obligatorio"></p>
                                                 </div>
 
@@ -312,8 +312,8 @@
                                                     <input  id="celular" name="celular" min="-999999999999" max="999999999999" type="number" placeholder="Celular" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
-                                                    <label>Teléfono de institución</label>
-                                                    <input  id="telinstitucion" name="telinstitucion" min="-999999999999" max="999999999999" type="number" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two">
+                                                    <label>Teléfono de institución *</label>
+                                                    <input  id="telinstitucion" name="telinstitucion" min="-999999999999" max="999999999999" type="number" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
@@ -324,7 +324,7 @@
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Fecha de Nacimiento *</label>
-                                                    <input  id="p_fecha_nacimiento" name="p_fecha_nacimiento" require type="date" placeholder="Fecha de nacimiento" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="p_fecha_nacimiento" name="p_fecha_nacimiento" require type="date" min="1900-01-01" max="2022-01-01" placeholder="Fecha de nacimiento" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
@@ -415,15 +415,15 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Inicio *</label>
-                                                    <input  id="e_fecha_inicial" name="e_fecha_inicial" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_fecha_inicial" name="e_fecha_inicial" type="date" min="1900-01-01" max="2030-01-01" placeholder="Fecha" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Fecha de Fin *</label>
-                                                    <input  id="e_fecha_fin" name="e_fecha_fin" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_fecha_fin" name="e_fecha_fin" type="date" min="1900-01-01" max="2030-01-01" placeholder="Fecha" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha Exámen *</label>
-                                                    <input  id="e_fecha_examen" name="e_fecha_examne" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_fecha_examen" name="e_fecha_examen" type="date" min="1900-01-01" max="2030-01-01" placeholder="Fecha" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
                                             <div class="row mt-3">
@@ -435,11 +435,11 @@
 
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Inicio Hospital *</label>
-                                                    <input  id="e_fecha_inicial_hospital" name="e_fecha_inicial_hospital" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_fecha_inicial_hospital" name="e_fecha_inicial_hospital" type="date" min="1900-01-01" max="2030-01-01" placeholder="Fecha" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Fecha de Fin Hospital*</label>
-                                                    <input  id="e_fecha_fin_hospital" name="e_fecha_fin_hospital" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_fecha_fin_hospital" name="e_fecha_fin_hospital" type="date" min="1900-01-01" max="2030-01-01" placeholder="Fecha" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
@@ -450,11 +450,11 @@
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Inicio Residencia *</label>
-                                                    <input  id="e_fecha_inicial_residencia" name="e_fecha_inicial_residencia" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_fecha_inicial_residencia" name="e_fecha_inicial_residencia" min="1900-01-01" max="2030-01-01" type="date" placeholder="Fecha" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Fecha Fin de Residencia*</label>
-                                                    <input  id="e_fecha_fin_residencia" name="e_fecha_fin_residencia" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_fecha_fin_residencia" name="e_fecha_fin_residencia" min="1900-01-01" max="2030-01-01" type="date" placeholder="Fecha" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
 
@@ -465,11 +465,11 @@
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Inicio Posgrado *</label>
-                                                    <input  id="e_fecha_inicial_posgrado" name="e_fecha_inicial_posgrado" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_fecha_inicial_posgrado" name="e_fecha_inicial_posgrado" min="1900-01-01" max="2030-01-01" type="date" placeholder="Fecha" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label>Fecha Fin de Posgrado *</label>
-                                                    <input  id="e_fecha_fin_posgrado" name="e_fecha_fin_posgrado" type="date" placeholder="Estado" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="e_fecha_fin_posgrado" name="e_fecha_fin_posgrado" min="1900-01-01" max="2030-01-01" type="date" placeholder="Fecha" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
                                             <br>
@@ -482,7 +482,7 @@
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha Ingreso *</label>
-                                                    <input  id="fecha_ingreso" name="fecha_ingreso" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="fecha_ingreso" name="fecha_ingreso" type="date" min="1900-01-01" max="2030-01-01" placeholder="Fecha" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Es Socio *</label>
@@ -496,7 +496,7 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Ingreso AMEG *</label>
-                                                    <input  id="fecha_ingreso_ameg" name="fecha_ingreso_ameg" type="date" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="fecha_ingreso_ameg" name="fecha_ingreso_ameg" type="date" min="1900-01-01" placeholder="Fecha" class="form-control ameg-shadow-box-two" required>
                                                 </div>
 
                                             </div>

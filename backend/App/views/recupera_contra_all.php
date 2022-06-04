@@ -88,7 +88,7 @@
 										<img width="42" src="vendor/linear-icons/screen.svg" alt="" data-icon data-plugin-options="{'color': '#FFF', 'animated': true, 'delay': 600}" />
 									</div> -->
 									<div class="container text-center">
-										<div class="row" style="margin: 0px auto; display:flex; justify-content: center; width:60%; min-width: 325px;">
+										<div class="row ameg-shadow-box-ins-tl" style="margin: 0px auto; display:flex; justify-content: center; width:60%; min-width: 325px;">
 											<div class="col">
 													<h4 class="font-weight-bold text-center align-items-center" style="margin: 35px;">Recupera tu contraseña, 
 														<b class="font-weight-bold text-color-dblue">
