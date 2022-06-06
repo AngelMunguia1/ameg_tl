@@ -450,11 +450,15 @@
 																	</div>
 
 																	<div class="col-12 col-lg-12" id="cont-button-desc-formato" style="display: none;">
-
+																		<br><br>
 																		<label class="form-label bg-success text-white">DESCARGA LA SOLICITUD Y AGRÉGALA EN EL CAMPO DE LA PARTE SUPERIOR PARA CONTINUAR CON TU REGISTRO</label>
 
-																		<div class="input-group">
-																			<a onclick="pon_Enviar()" href="/img/SOLICITUD PARA SOCIOS NUEVO INGRESO.pdf" download class="btn btn-primary w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud"><span>Descargar Solicitud de ingreso avalada con la firma de dos socios titulares de la AMEG-CP</span></a>
+																		<div class="input-group" style="margin: 0px auto; display:flex; justify-content: center; width:40%; min-width: 330px;" >
+																			<a onclick="pon_Enviar()" href="/img/SOLICITUD PARA SOCIOS NUEVO INGRESO.pdf" 
+																				download class="btn btn-primary w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+																				<span>Descargar Solicitud de ingreso avalada con la firma de dos socios titulares de la AMEG-CP
+																				</span>
+																			</a>
 																		</div>
 
 																	</div>
