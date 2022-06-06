@@ -298,22 +298,26 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label>Código Postal *</label>
-                                                    <input  id="cp" name="cp" type="number" min="-99999" max="99999" placeholder="Código postal" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="cp" name="cp" type="number" min="-99999" maxlength="5" placeholder="Código postal" class="form-control ameg-shadow-box-two" required
+                                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Telefono Fijo*</label>
-                                                    <input  id="telefono" name="telefono" min="-999999999999" max="999999999999" type="number" placeholder="Teléfono" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="telefono" name="telefono" maxlength="12" min="100000000000" type="number" placeholder="Teléfono" class="form-control ameg-shadow-box-two" required
+                                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                 </div>
                                             </div>
 
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label>Telefono Celular *</label>
-                                                    <input  id="celular" name="celular" min="-999999999999" max="999999999999" type="number" placeholder="Celular" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="celular" name="celular" maxlength="12" min="100000000000" type="number" placeholder="Celular" class="form-control ameg-shadow-box-two" required
+                                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Teléfono de institución *</label>
-                                                    <input  id="telinstitucion" name="telinstitucion" min="-999999999999" max="999999999999" type="number" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="telinstitucion" name="telinstitucion" maxlength="12" min="100000000000" type="number" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two" required
+                                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                 </div>
                                             </div>
 
@@ -376,7 +380,8 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label>Teléfono *</label>
-                                                    <input  id="t_extension" name="t_extension" type="number" min="-999999999999" max="999999999999" placeholder="Teléfono" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="t_extension" name="t_extension" type="number" maxlength="12" min="100000000000" placeholder="Teléfono" class="form-control ameg-shadow-box-two" required
+                                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                 </div>
                                             </div>
 
@@ -394,7 +399,8 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Código postal *</label>
-                                                    <input  id="t_cp" name="t_cp" type="number" min="-99999" max="99999" placeholder="CP" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="t_cp" name="t_cp" type="number" min="-99999" maxlength="5" placeholder="CP" class="form-control ameg-shadow-box-two" required
+                                                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                 </div>
                                                 <!--<div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <input  id="tel_institucion" name="tel_institucion" type="text" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two">
@@ -609,7 +615,6 @@
                 alert("Ocurrio un error al actualizar el estado intenta de nuevo");
             })
     }
-
 
 </script>
 

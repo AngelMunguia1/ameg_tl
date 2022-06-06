@@ -286,7 +286,7 @@
 																</div>
 															</div> -->
 
-																	<div class="col-sm-4 col-12" id="cont-enviar-revista" style="display:none;">
+																	<div class="col-12 col-lg-4" id="cont-enviar-revista" style="display:none;">
 
 																		<label class="form-label">Enviar Revista * </label>
 
@@ -315,7 +315,7 @@
 
 																	<div class="col-12 col-lg-12 cont-ing-ingreso"  style="display: none ;">
 
-																		<label class="form-label">(2) Cartas de recomendación de dichos socios * </label>
+																		<label class="form-label">(2) Cartas de recomendación * </label>
 
 
 																	</div>
@@ -380,22 +380,19 @@
 																		</div>
 																	</div>
 
-
-
-
-																	<div class="col-12 col-lg-4 cont-ing-ingreso"  style="display: none ;">
-
-																		<label class="form-label">Constancia o comprobante *</label>
-																		<div class="input-group">
-																			<input type="file" accept=".pdf" class="form-control" id="ing_constancia" name="ing_constancia" require>
-																		</div>
-																	</div>
-
 																	<div class="col-12 col-lg-4 cont-ing-ingreso"  style="display: none ;">
 
 																		<label class="form-label">Comprobante de pago *</label>
 																		<div class="input-group">
 																			<input type="file" accept=".pdf" class="form-control" id="ing_comprobante_pago" name="ing_comprobante_pago" require>
+																		</div>
+																	</div>
+
+																	<div class="col-sm-4 col-lg-12 cont-ing-ingreso"  style="display: none ;">
+
+																		<label class="form-label">Constancia o comprobante de haber cursado por lo menos 11 meses de un curso universitario en Endoscopía Gastrointestinal *</label>
+																		<div class="input-group">
+																			<input type="file" accept=".pdf" class="form-control" id="ing_constancia" name="ing_constancia" require>
 																		</div>
 																	</div>
 
