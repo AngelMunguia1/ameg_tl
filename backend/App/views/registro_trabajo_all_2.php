@@ -346,7 +346,7 @@
 
 
 
-																	<div class="col-12 col-lg-4" id="cont-ing-ingreso" style="display: none ;">
+																	<div class="col-12 col-lg-6 cont-ing-ingreso" style="display: none ;">
 
 																		<label class="form-label">Carta de profesor titular *</label>
 																		<div class="input-group">
@@ -354,7 +354,7 @@
 																		</div>
 																	</div>
 
-																	<div class="col-12 col-lg-4 cont-ing-ingreso"  style="display: none ;">
+																	<div class="col-12 col-lg-6 cont-ing-ingreso"  style="display: none ;">
 
 																		<label class="form-label">Acta de nacimiento *</label>
 																		<div class="input-group">
@@ -395,6 +395,7 @@
 																			<input type="file" accept=".pdf" class="form-control" id="ing_constancia" name="ing_constancia" require>
 																		</div>
 																	</div>
+																	<br><br>
 
 																	<!--<div class="col-12 col-lg-4">
 
@@ -448,6 +449,16 @@
 
 																	</div>
 
+																	<div class="col-12 col-lg-12" id="cont-button-desc-formato" style="display: none;">
+
+																		<label class="form-label bg-success text-white">DESCARGA LA SOLICITUD Y AGRÉGALA EN EL CAMPO DE LA PARTE SUPERIOR PARA CONTINUAR CON TU REGISTRO</label>
+
+																		<div class="input-group">
+																			<a onclick="pon_Enviar()" href="/img/SOLICITUD PARA SOCIOS NUEVO INGRESO.pdf" download class="btn btn-primary w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud"><span>Descargar Solicitud de ingreso avalada con la firma de dos socios titulares de la AMEG-CP</span></a>
+																		</div>
+
+																	</div>
+
 																	<div class="col-12 col-lg-12" id="cont-leyenda">
 
 																	</div>
@@ -459,7 +470,7 @@
 																<div class="row">
 																	<div class="button-row d-flex justify-content-centergit  mt-4 col-12">
 																		<!-- <a class="btn bg-gradient-light mb-0 js-btn-prev" href="/Register" title="Prev">Regresar</a> -->
-																		<button class="btn btn-primary btn-lg" type="submit" title="Next">Enviar</button>
+																		<button class="btn btn-primary btn-lg" type="submit" id="btn_upload" title="Next">Enviar</button>
 																	</div>
 																</div>
 														</form>
@@ -581,6 +592,11 @@
 
 		}
 	}
+
+	function pon_Enviar(){
+		document.getElementById("btn_upload").removeAttribute('disabled');
+	}
+	
 </script>
 
 <script>
@@ -604,7 +620,6 @@
 <script>
 	$(document).ready(function() {
 
-
 		$("#categoria_id").on("change", function() {
 			var categoria = $("option:selected", this).text();
 
@@ -616,7 +631,19 @@
 				$("#cont-button-desc").css("display", "block");
 				$("#cont-leyenda").html(``);
 				$(".cont-ing-ingreso").css("display", "none");
+				$("#cont-button-desc-formato").css("display", "none");
+				document.getElementById("btn_upload").removeAttribute('disabled');
 
+
+				document.getElementById("ing_solicitud_ingreso").removeAttribute('required');
+				document.getElementById("ing_carta_rec_uno").removeAttribute('required');
+				document.getElementById("ing_carta_rec_dos").removeAttribute('required');
+				document.getElementById("ing_carta_prof").removeAttribute('required');
+				document.getElementById("ing_acta_naci").removeAttribute('required');
+				document.getElementById("ing_titulo_prof").removeAttribute('required');
+				document.getElementById("ing_cedula_prof").removeAttribute('required');
+				document.getElementById("ing_comprobante_pago").removeAttribute('required');
+				document.getElementById("ing_constancia").removeAttribute('required');
 			} else if (categoria == "Oral") {
 				$("#cont-adjunto-ext").css("display", "block");
 				$("#cont-enviar-revista").css("display", "block");
@@ -625,8 +652,19 @@
 				$("#cont-button-desc").css("display", "none");
 				$("#cont-leyenda").html(``);
 				$(".cont-ing-ingreso").css("display", "none");
-				
+				$("#cont-button-desc-formato").css("display", "none");
+				document.getElementById("btn_upload").removeAttribute('disabled');
 
+
+				document.getElementById("ing_solicitud_ingreso").removeAttribute('required');
+				document.getElementById("ing_carta_rec_uno").removeAttribute('required');
+				document.getElementById("ing_carta_rec_dos").removeAttribute('required');
+				document.getElementById("ing_carta_prof").removeAttribute('required');
+				document.getElementById("ing_acta_naci").removeAttribute('required');
+				document.getElementById("ing_titulo_prof").removeAttribute('required');
+				document.getElementById("ing_cedula_prof").removeAttribute('required');
+				document.getElementById("ing_comprobante_pago").removeAttribute('required');
+				document.getElementById("ing_constancia").removeAttribute('required');
 			} else if (categoria == "Ingreso") {
 				$("#cont-adjunto-ext").css("display", "block");					
 				$("#cont-enviar-revista").css("display", "block");
@@ -635,7 +673,19 @@
 				$("#cont-button-desc").css("display", "none");
 				$("#cont-leyenda").html(``);
 				$(".cont-ing-ingreso").css("display", "block");
+				$("#cont-button-desc-formato").css("display", "block");
+				document.getElementById("btn_upload").setAttribute('disabled', 'disabled');
 
+
+				document.getElementById("ing_solicitud_ingreso").setAttribute('required', 'required');
+				document.getElementById("ing_carta_rec_uno").setAttribute('required', 'required');
+				document.getElementById("ing_carta_rec_dos").setAttribute('required', 'required');
+				document.getElementById("ing_carta_prof").setAttribute('required', 'required');
+				document.getElementById("ing_acta_naci").setAttribute('required', 'required');
+				document.getElementById("ing_titulo_prof").setAttribute('required', 'required');
+				document.getElementById("ing_cedula_prof").setAttribute('required', 'required');
+				document.getElementById("ing_comprobante_pago").setAttribute('required', 'required');
+				document.getElementById("ing_constancia").setAttribute('required', 'required');
 			} else if (categoria == "Video") {
 				$("#cont-adjunto-ext").css("display", "none");
 				$("#cont-enviar-revista").css("display", "none");
@@ -644,6 +694,19 @@
 				$("#cont-button-desc").css("display", "none");
 				$("#cont-leyenda").html(`<p class="mt-3 bg-success text-white">Favor de mandar el link del video al correo : videosameg@grupolahe.com</p>`);
 				$(".cont-ing-ingreso").css("display", "none");
+				$("#cont-button-desc-formato").css("display", "none");
+				document.getElementById("btn_upload").removeAttribute('disabled');
+
+
+				document.getElementById("ing_solicitud_ingreso").removeAttribute('required');
+				document.getElementById("ing_carta_rec_uno").removeAttribute('required');
+				document.getElementById("ing_carta_rec_dos").removeAttribute('required');
+				document.getElementById("ing_carta_prof").removeAttribute('required');
+				document.getElementById("ing_acta_naci").removeAttribute('required');
+				document.getElementById("ing_titulo_prof").removeAttribute('required');
+				document.getElementById("ing_cedula_prof").removeAttribute('required');
+				document.getElementById("ing_comprobante_pago").removeAttribute('required');
+				document.getElementById("ing_constancia").removeAttribute('required');
 				// $("#cont-url").html(`<label class="form-label">URL * </label>
 				// 						<input id="url_video" name="url_video" maxlength="150"  class="form-control" type="text" placeholder="" required="">`);
 			} else {}
