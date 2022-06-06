@@ -201,7 +201,7 @@
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Apellido Paterno *</label>
-                                                    <input  onChange="es_vacio()" id="apellidop" name="apellidop" type="text" placeholder="Apellido paterno" class="form-control ameg-shadow-box-two" required>
+                                                    <input  onChange="es_vacio()" id="apellidop" name="apellidop" type="text" placeholder="Apellido paterno" class="form-control ameg-shadow-box-two" required="required">
                                                 </div>
 
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
@@ -371,7 +371,7 @@
                                             <h2 class="font-weight-bold text-center text-color-dark text-4 mb-3">Domicilio de Trabajo</h2>
 
                                             <div class="row mt-3">
-                                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                <div class="col-md-6">
                                                     <label>Institución *</label>
                                                     <select class="multisteps-form__select form-control all_input_select" id="t_institucion" name="t_institucion" required>
                                                         <option value="" disabled selected>Selecciona una Opción</option>
@@ -386,7 +386,7 @@
                                             </div>
 
                                             <div class="row mt-3">
-                                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                <div class="col-md-6">
                                                     <label>Ciudad *</label>
                                                     <input  id="t_ciudad" name="t_ciudad" type="text" placeholder="Ciudad" class="form-control ameg-shadow-box-two" required>
                                                 </div>
@@ -397,7 +397,7 @@
                                             </div>
 
                                             <div class="row mt-3">
-                                                <div class="col-12 col-sm-6 mt-3 mt-sm-0">
+                                                <div class="col-md-6">
                                                     <label>Código postal *</label>
                                                     <input  id="t_cp" name="t_cp" type="number" min="-99999" maxlength="5" placeholder="CP" class="form-control ameg-shadow-box-two" required
                                                     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
@@ -484,11 +484,11 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Nombre Asociación *</label>
-                                                    <input  id="inf_institucion" name="inf_institucion" type="text" placeholder="Asociación" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="inf_institucion" name="inf_institucion" type="text" placeholder="Asociación" class="form-control ameg-shadow-box-two" required="required">
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha Ingreso *</label>
-                                                    <input  id="fecha_ingreso" name="fecha_ingreso" type="date" min="1900-01-01" max="2030-01-01" placeholder="Fecha" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="fecha_ingreso" name="fecha_ingreso" type="date" min="1900-01-01" max="2030-01-01" placeholder="Fecha" class="form-control ameg-shadow-box-two" required="required">
                                                 </div>
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Es Socio *</label>
@@ -502,7 +502,7 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Fecha de Ingreso AMEG *</label>
-                                                    <input  id="fecha_ingreso_ameg" name="fecha_ingreso_ameg" type="date" min="1900-01-01" placeholder="Fecha" class="form-control ameg-shadow-box-two" required>
+                                                    <input  id="fecha_ingreso_ameg" name="fecha_ingreso_ameg" type="date" min="1900-01-01" placeholder="Fecha" class="form-control ameg-shadow-box-two" required="required">
                                                 </div>
 
                                             </div>
@@ -637,8 +637,8 @@
             document.getElementById("inf_institucion").removeAttribute('disabled');
             document.getElementById("fecha_ingreso_ameg").removeAttribute('disabled');
 
-            document.getElementById("fecha_ingreso_ameg").setAttribute('required', 'required');
-            document.getElementById("fecha_ingreso_ameg").setAttribute('required', 'required');
+            document.getElementById("fecha_ingreso").setAttribute('required', 'required');
+            document.getElementById("inf_institucion").setAttribute('required', 'required');
             document.getElementById("fecha_ingreso_ameg").setAttribute('required', 'required');
         }
         else{
