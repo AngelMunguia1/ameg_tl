@@ -493,8 +493,8 @@
                                                 <div class="col-12 col-sm-4 mt-3 mt-sm-0">
                                                     <label>Es Socio *</label>
                                                     <br>
-                                                    <input type="radio" name="color" value="azul" id="es_socio" name="es_socio"> SI
-                                                    <input type="radio" name="color" value="azul" id="es_socio" name="es_socio"> NO
+                                                    <input onChange="valida_btn_true()" type="radio" name="color" value="azul" id="es_socio_true" name="es_socio_true" checked> SI
+                                                    <input onChange="valida_btn()" type="radio" name="color" value="azul" id="es_socio_false" name="es_socio_false"> NO
                                                 </div>
 
                                             </div>
@@ -616,6 +616,36 @@
             })
     }
 
+    function valida_btn(){
+        if (document.getElementById("es_socio_false").checked = true){
+            document.getElementById("fecha_ingreso").setAttribute('disabled', 'disabled');
+            document.getElementById("inf_institucion").setAttribute('disabled', 'disabled');
+            document.getElementById("fecha_ingreso_ameg").setAttribute('disabled', 'disabled');
+
+            document.getElementById("fecha_ingreso").removeAttribute('required');
+            document.getElementById("inf_institucion").removeAttribute('required');
+            document.getElementById("fecha_ingreso_ameg").removeAttribute('required');
+        }
+        else{
+            
+        }
+    }
+
+    function valida_btn_true(){
+        if (document.getElementById("es_socio_true").checked = true){
+            document.getElementById("fecha_ingreso").removeAttribute('disabled');
+            document.getElementById("inf_institucion").removeAttribute('disabled');
+            document.getElementById("fecha_ingreso_ameg").removeAttribute('disabled');
+
+            document.getElementById("fecha_ingreso_ameg").setAttribute('required', 'required');
+            document.getElementById("fecha_ingreso_ameg").setAttribute('required', 'required');
+            document.getElementById("fecha_ingreso_ameg").setAttribute('required', 'required');
+        }
+        else{
+            
+        }
+    }
+    
 </script>
 
 <?php echo $footer; ?>
