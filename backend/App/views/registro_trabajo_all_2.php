@@ -302,7 +302,7 @@
 
 
 
-																	<div class="col-sm-4 col-lg-12 cont-ing-ingreso"  style="display: none;" >
+																	<div class="col-12 col-lg-12 cont-ing-ingreso"  style="display: none;" >
 
 																		<label class="form-label">Solicitud de ingreso avalada con la firma de dos socios titulares de la AMEG-CP * </label>
 
@@ -388,7 +388,7 @@
 																		</div>
 																	</div>
 
-																	<div class="col-sm-4 col-lg-12 cont-ing-ingreso"  style="display: none ;">
+																	<div class="col-12 col-lg-12 cont-ing-ingreso"  style="display: none ;">
 
 																		<label class="form-label">Constancia o comprobante de haber cursado por lo menos 11 meses de un curso universitario en Endoscopía Gastrointestinal *</label>
 																		<div class="input-group">
