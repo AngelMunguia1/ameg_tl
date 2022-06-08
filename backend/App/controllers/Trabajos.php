@@ -194,7 +194,6 @@ html;
     foreach ($trabajos_libres as $key => $value) {
 
     $tabla.= <<<html
-        
             <tr>
                 <td style="text-align:left; vertical-align:middle;"> 
                         
@@ -238,20 +237,24 @@ html;
                         <span>{$value['postulatrabajo']}</span> 
                 </td>
 
-                <td style="text-align:left; vertical-align:middle;">        
+                <td style="text-align:left; vertical-align:middle;">
+                <div data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}">         
                     <a " 
-                        class="btn btn-primary w-100 d-flex justify-content-center" data-toggle="modal" data-target="#pdf1" data-pdf1="{$value['adjunto']}" id="formato_solicitud" name="formato_solicitud">
+                        class="btn btn-primary w-100 d-flex justify-content-center iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}">
                         <span>Abrir resumen
                         </span>
                     </a>
+                </div>
                 </td>
 
-                <td style="text-align:left; vertical-align:middle;">        
+                <td style="text-align:left; vertical-align:middle;">
+                <div data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">        
                     <a " 
-                        class="btn btn-primary w-100 d-flex justify-content-center" data-toggle="modal" data-target="#pdf2" data-pdf2="{$value['adjunto_extenso']}" id="formato_solicitud" name="formato_solicitud">
+                        class="btn btn-primary w-100 d-flex justify-content-center" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
                         <span>Abrir extenso
                         </span>
                     </a>
+                </div>
                 </td>
 
                 <!--<td style="text-align:left; vertical-align:middle;">        

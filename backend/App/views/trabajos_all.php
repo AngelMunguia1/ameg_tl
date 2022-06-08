@@ -1,5 +1,5 @@
 <?php echo $header; ?>
-<body>
+<body> 
 		<div class="body">
 
 			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 70}">
@@ -219,66 +219,43 @@
 
 			</div>
 
-			<script>
+			<!-- Modal -->
+<div class="modal fade" id="pdf" tabindex="-1" role="dialog" aria-labelledby="pdfTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Trabajo</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: transparent;">
+          <span aria-hidden="true" style="font-size: 25px;">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body cont-modal">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
     $(document).ready(function(){
 
-        $('.iframe').on('click',function(){
-            var pdf = $(this).attr('data-pdf1');
-            //alert(pdf);
-
-            $('.cont-modal1').html('<iframe src="https://docs.google.com/gview?url=https://trabajoslibresameg.com/file_adjunto/'+pdf+'&embedded=true" style="width:100%; height:700px;" frameborder="0" ></iframe>');
-        })
-    });
-
-	$(document).ready(function(){
+        Swal.fire(
+            '<h5>Podrá observar los trabajos libres registrados debajo del formulario.<strong></br> Nota: Recargue la página para observar su trabajo recién registrado.</strong></h5>',
+            '',
+            'info'
+        )
 
         $('.iframe').on('click',function(){
-            var pdf = $(this).attr('data-pdf2');
+            var pdf = $(this).attr('data-pdf');
             //alert(pdf);
 
-            $('.cont-modal2').html('<iframe src="https://docs.google.com/gview?url=https://trabajoslibresameg.com/file_adjunto_extenso/'+pdf+'&embedded=true" style="width:100%; height:700px;" frameborder="0" ></iframe>');
+            $('.cont-modal').html('<iframe src="https://docs.google.com/gview?url=https://trabajoslibresameg.com/file_adjunto_extenso/'+pdf+'&embedded=true" style="width:100%; height:700px;" frameborder="0" ></iframe>');
         })
     });
-        </script>
-        <!-- Modal -->
-        <div class="modal fade" id="pdf1" tabindex="-1" role="dialog" aria-labelledby="pdfTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-            <div class="modal-content ">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Trabajo</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: transparent;">
-                  <span aria-hidden="true" style="font-size: 25px;">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body cont-modal1">
-                
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-		<div class="modal fade" id="pdf2" tabindex="-1" role="dialog" aria-labelledby="pdfTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-            <div class="modal-content ">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Trabajo</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: transparent;">
-                  <span aria-hidden="true" style="font-size: 25px;">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body cont-modal2">
-                
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
+</script>
 <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");
