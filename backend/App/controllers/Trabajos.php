@@ -238,23 +238,21 @@ html;
                 </td>
 
                 <td style="text-align:left; vertical-align:middle;">
-                <div data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">         
-                    <a " 
-                        class="btn btn-primary w-100 d-flex justify-content-center iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
-                        <span>Abrir resumen
-                        </span>
-                    </a>
-                </div>
+                    <div data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}">         
+                        <a  class="btn btn-primary w-100 d-flex justify-content-center iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}">
+                            <span>Abrir resumen
+                            </span>
+                        </a>
+                    </div>
                 </td>
 
                 <td style="text-align:left; vertical-align:middle;">
-                <div data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">        
-                    <a " 
-                        class="btn btn-primary w-100 d-flex justify-content-center" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
-                        <span>Abrir extenso
-                        </span>
-                    </a>
-                </div>
+                    <div data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">        
+                        <a  class="btn btn-primary w-100 d-flex justify-content-center iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
+                            <span>Abrir extenso
+                            </span>
+                        </a>
+                    </div>
                 </td>
 
                 <!--<td style="text-align:left; vertical-align:middle;">        
