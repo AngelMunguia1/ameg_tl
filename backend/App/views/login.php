@@ -167,7 +167,7 @@
                                             <h3 class="font-weight-bold text-center text-color-dark text-4 mb-3">Ingresa tus datos para iniciar sesión</h3>
                                         </div>
                                         <div class="col-md-12">
-                                            <div class="card card-plain mt-7">
+                                            <div class="card card-plain mt-1">
                                                 <div class="card-header pb-0 text-start">
                                                     <h5 class="font-weight-bolder text-info text-dark text-center">
                                                         Asociación Mexicana de Endoscopia Gastrointestinal y Colegio de Profesionistas A. C.
@@ -180,14 +180,14 @@
                                                 <div class="card-body">
                                                     <form role="form" class="text-start text-center" id="login" action="/Login/crearSession" method="POST" class="form-horizontal">
                                                         <label style="font-weight:bold; font-size: 15px;">Correo electrónico</label>
-                                                        <div class="mb-5">
+                                                        <div class="mb-3">
                                                             <input type="email" name="usuario" id="usuario" class="form-control text-center" placeholder="usuario@grupolahe.com" aria-label="Email">
                                                         </div>
                                                         <label style="font-weight:bold; font-size: 15px;">Contraseña</label>
-                                                        <div class="mb-5">
+                                                        <div class="mb-3">
                                                             <input type="password" name="password" id="password" class="form-control text-center btn-outline-relog" placeholder="•••••••••" aria-label="Password">
                                                         </div>
-                                                        <a href="/Recupera/" class="text-center">¿Olvidaste tu contraseña?</a>
+                                                        <a href="/Register/recuperarPass" class="text-center">¿Olvidaste tu contraseña?</a>
                                                         <br><br>
                                                         <div class="text-center">
                                                             <center><button  type="button" id="btnEntrar" class="btn bg-gradient-secondary mt-1 mb-0"><b style="color: #FFFFFF; text-align: center;"><center>INICIAR</center></b></button></center>

@@ -132,8 +132,7 @@
 				</section>
 				
 						</div>
-					</div>
-				</section> 
+					</div> 
 				<hr class="my-0">
 			</div>
 

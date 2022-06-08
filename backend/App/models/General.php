@@ -72,6 +72,15 @@ sql;
     return $mysqli->queryAll($query);
   }
 
+  public static function getAllColaboradoresByName(){
+    $mysqli = Database::getInstance();
+    $query =<<<sql
+    SELECT *
+    FROM trabajos2020;
+sql;
+    return $mysqli->queryAll($query);
+  }
+
   public static function getPeriodo($data){
     $mysqli = Database::getInstance();
     if($data->_tipo_busqueda == 0){ /* CUANDO SE BUSCA UN UNICO PERIODO ABIERTO*/

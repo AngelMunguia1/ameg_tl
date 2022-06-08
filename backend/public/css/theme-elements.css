@@ -4,6 +4,68 @@ Written by: 	Okler Themes - (http://www.okler.net)
 Theme Version:	2.1.0
 */
 /* Headings */
+/* Fixed sidenav, full height */
+.sidenav {
+	height: 100%;
+	width: 75px;
+	position: absolute;
+	z-index: 1;
+	top: 125;
+	left: 0;
+	background-color: #1c1f21;
+	overflow-x: hidden;
+	padding-top: 20px;
+  }
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 18px;
+	color: #fff;
+	display: block;
+	border: none;
+	background: none;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+	outline: none;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+	color: #f1f1f1;
+  }
+  
+  /* Main content */
+  /* .main {
+	margin-left: 95px; Same as the width of the sidenav
+  } */
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+	background-color: #1C1F21;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+	display: none;
+	background-color: #1C1F21;
+	padding-left: 8px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+	float: right;
+	padding-right: 8px;
+  }
+  
+  /* Some media queries for responsiveness */
+  @media screen and (max-height: 450px) {
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 18px;}
+  }
+  
 h1, h2, h3, h4, h5, h6 {
 	color: #1c1f21;
 	font-weight: 400;
@@ -105,7 +167,7 @@ p.taller {
 
 /* Links */
 a {
-	color: #707070;
+	color: #344767;
 	transition: ease color 300ms;
 }
 
