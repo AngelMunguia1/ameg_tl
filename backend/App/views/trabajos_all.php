@@ -241,7 +241,7 @@
     });
         </script>
         <!-- Modal -->
-        <div class="modal fade" id="pdf" tabindex="-1" role="dialog" aria-labelledby="pdfTitle" aria-hidden="true">
+        <div class="modal fade" id="pdf1" tabindex="-1" role="dialog" aria-labelledby="pdfTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content ">
               <div class="modal-header">
@@ -261,7 +261,7 @@
         </div>
 
 
-		<div class="modal fade" id="pdf" tabindex="-1" role="dialog" aria-labelledby="pdfTitle" aria-hidden="true">
+		<div class="modal fade" id="pdf2" tabindex="-1" role="dialog" aria-labelledby="pdfTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
             <div class="modal-content ">
               <div class="modal-header">

@@ -239,16 +239,16 @@ html;
                 </td>
 
                 <td style="text-align:left; vertical-align:middle;">        
-                    <a href="/file_adjunto/{$value['adjunto']}" 
-                        class="btn btn-primary w-100 d-flex justify-content-center" data-toggle="modal" data-target="#pdf" data-pdf1="{$value['adjunto']}" id="formato_solicitud" name="formato_solicitud">
+                    <a " 
+                        class="btn btn-primary w-100 d-flex justify-content-center" data-toggle="modal" data-target="#pdf1" data-pdf1="{$value['adjunto']}" id="formato_solicitud" name="formato_solicitud">
                         <span>Abrir resumen
                         </span>
                     </a>
                 </td>
 
                 <td style="text-align:left; vertical-align:middle;">        
-                    <a href="/file_adjunto_extenso/{$value['adjunto_extenso']}" 
-                        class="btn btn-primary w-100 d-flex justify-content-center" data-toggle="modal" data-target="#pdf" data-pdf2="{$value['adjunto_extenso']}" id="formato_solicitud" name="formato_solicitud">
+                    <a " 
+                        class="btn btn-primary w-100 d-flex justify-content-center" data-toggle="modal" data-target="#pdf2" data-pdf2="{$value['adjunto_extenso']}" id="formato_solicitud" name="formato_solicitud">
                         <span>Abrir extenso
                         </span>
                     </a>
