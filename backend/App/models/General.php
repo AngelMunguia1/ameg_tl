@@ -72,11 +72,14 @@ sql;
     return $mysqli->queryAll($query);
   }
 
-  public static function getAllColaboradoresByName(){
+  public static function getAllTrabajosByName(){
     $mysqli = Database::getInstance();
     $query =<<<sql
-    SELECT *
-    FROM trabajos2020;
+    SELECT * FROM trabajos2020
+    INNER JOIN categorias_trabajos cate ON (cate.id = categoria_id)
+    INNER JOIN especialidades espe ON (espe.id = especialidad_id)
+    INNER JOIN usuarios users ON (users.id_usuario = usuario_id)
+    INNER JOIN instituciones ins ON (ins.id = users.id_usuario);
 sql;
     return $mysqli->queryAll($query);
   }
@@ -189,23 +192,6 @@ sql;
 
 
     public static function update($datos){
-        $mysqli = Database::getInstance(true);
-      $query=<<<sql
-UPDATE catalogo_dia_festivo SET nombre = '122', descripcion = '1233', fecha = '2017-08-24', status = 2 WHERE catalogo_dia_festivo.catalogo_dia_festivo_id = :catalogo_dia_festivo_id;
-sql;
-      $parametros = array(
-          ':catalogo_dia_festivo_id'=>$lectores->_catalogo_dia_festivo_id,
-          ':nombre'=>$lectores->_nombre,
-          ':descripcion'=>$lectores->_descripcion,
-          ':fecha'=>$lectores->_fecha,
-          ':status'=>$lectores->_status
-        );
-        $accion = new \stdClass();
-        $accion->_sql= $query;
-        $accion->_parametros = $parametros;
-        $accion->_id = $lectores->_catalogo_dia_festivo_id;
-        UtileriasLog::addAccion($accion);
-        return $mysqli->update($query, $parametros);
     }
 
     public static function delete($id){
@@ -224,16 +210,6 @@ sql;
     }
 
     public static function deleteById($id){
-        $mysqli = Database::getInstance();
-        $query=<<<sql
-DELETE FROM catalogo_dia_festivo WHERE catalogo_dia_festivo.catalogo_dia_festivo_id = $id
-sql;
-      $accion = new \stdClass();
-      $accion->_sql= $query;
-      $accion->_parametros = $parametros;
-      $accion->_id = $id;
-      UtileriasLog::addAccion($accion);
-        return $mysqli->queryOne($query);
     }
 
     public static function getById($id){

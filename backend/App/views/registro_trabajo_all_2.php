@@ -270,10 +270,9 @@
 																		<label class="form-label">Concursa *</label>
 
 																		<select class="form-control" style="cursor: pointer;" name="postulatrabajo" id="postulatrabajo" tabindex="-1" data-choice="active" required>
-																			<option value="0" selected>Seleccione una Opción</option>
-																			<option  value="1">SI</option>
-																			<option value="2">NO</option>
-
+																			<option value="SIN RESPUESTA" selected>Seleccione una Opción</option>
+																			<option  value="SI">SI</option>
+																			<option value="NO">NO</option>
 																		</select>
 
 																	</div>

@@ -182,20 +182,30 @@
                     <b class="navbar-brand" style="font-size: 18px;">Mis trabajos</b>
                 </nav>
                 <!--AQUI VA TODO EL CONTENIDO DE TABLAS-->
-                		<div class="tab-content" id="v-pills-tabContent">
-                                <div class="tab-pane fade show position-relative active height-350 border-radius-lg" id="Invitados" role="tabpanel" aria-labelledby="Invitados" style="overflow: scroll">
+                		<div class="tab-content" id="v-pills-tabContent" style="padding-right: 12px;">
+                                <div class="tab-pane fade show position-relative active height-350 border-radius-lg" id="Invitados" role="tabpanel" aria-labelledby="Invitados">
                                     <div class="table-responsive p-0">
-                                        <table class="align-items-center mb-0 table table-borderless" id="user_list_table">
+                                        <table class="align-items-center mb-0 table table-borderless" id="user_list_table" style="overflow: auto">
                                             <thead class="thead-light">
                                             <tr>
 
-                                                <th class="text-uppercase text-secondary text-center text-xxs font-weight-bolder opacity-7">Usuario</th>
-                                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Especialidad</th>
-                                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Acciones</th>
+                                                <th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">ID Trabajo</th>
+												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">ID Usuario</th>
+                                                <th class="text-center text-uppercase font-weight-bolder opacity-9">Título</th>
+                                                <th class="text-uppercase text-xxs font-weight-bolder opacity-9">Autores</th>
+												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Coautores</th>
+												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Institución</th>
+												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Categoría</th>
+												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Especialidad</th>
+												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">¿Concursa?</th>
+												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Archivo de resumen</th>
+												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Archivo extenso</th>
+												<!-- <th class="text-uppercase text-xxs font-weight-bolder opacity-9">Carta recomendación</th>
+												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Segunda carta de recomendación</th> -->
                                                 <!-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Imprimir</th> -->
                                             </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody style="background-color: #FFF;">
                                             <?php echo $tabla;
                                             ?>
                                             </tbody>
@@ -209,6 +219,66 @@
 
 			</div>
 
+			<script>
+    $(document).ready(function(){
+
+        $('.iframe').on('click',function(){
+            var pdf = $(this).attr('data-pdf1');
+            //alert(pdf);
+
+            $('.cont-modal1').html('<iframe src="https://docs.google.com/gview?url=https://trabajoslibresameg.com/file_adjunto/'+pdf+'&embedded=true" style="width:100%; height:700px;" frameborder="0" ></iframe>');
+        })
+    });
+
+	$(document).ready(function(){
+
+        $('.iframe').on('click',function(){
+            var pdf = $(this).attr('data-pdf2');
+            //alert(pdf);
+
+            $('.cont-modal2').html('<iframe src="https://docs.google.com/gview?url=https://trabajoslibresameg.com/file_adjunto_extenso/'+pdf+'&embedded=true" style="width:100%; height:700px;" frameborder="0" ></iframe>');
+        })
+    });
+        </script>
+        <!-- Modal -->
+        <div class="modal fade" id="pdf" tabindex="-1" role="dialog" aria-labelledby="pdfTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content ">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Trabajo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: transparent;">
+                  <span aria-hidden="true" style="font-size: 25px;">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body cont-modal1">
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+		<div class="modal fade" id="pdf" tabindex="-1" role="dialog" aria-labelledby="pdfTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content ">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Trabajo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: transparent;">
+                  <span aria-hidden="true" style="font-size: 25px;">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body cont-modal2">
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
 <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
 var dropdown = document.getElementsByClassName("dropdown-btn");

@@ -182,9 +182,100 @@ html;
 
             });
         </script>
+
+        
 html;
+
+    $trabajos_libres = '';
+    $tabla = '';
+    $trabajos_libres =  GeneralDao::getAllTrabajosByName($_SESSION['id']);
+    //echo("total registros i".count($trabajos_libres_i));
+
+    foreach ($trabajos_libres as $key => $value) {
+
+    $tabla.= <<<html
+        
+            <tr>
+                <td style="text-align:left; vertical-align:middle;"> 
+                        
+                    #<span>{$value['id']}</span>
+
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;"> 
+                        
+                    #<span>{$value['usuario_id']}</span>
+
+                </td>
+         
+                <td style="text-align:left; vertical-align:middle;"> 
+                    
+                    <span>{$value['titulo_corto']}</span>
+
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span class="fa fa-user-md" style="font-size: 13px"></span> {$value['autor']}
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span class="fa fa-user-md" style="font-size: 13px"></span> {$value['coautores']}
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span>{$value['institucion']}</span>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span>{$value['categoria']}</span>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span>{$value['especialidad']}</span>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span>{$value['postulatrabajo']}</span> 
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                    <a href="/file_adjunto/{$value['adjunto']}" 
+                        class="btn btn-primary w-100 d-flex justify-content-center" data-toggle="modal" data-target="#pdf" data-pdf1="{$value['adjunto']}" id="formato_solicitud" name="formato_solicitud">
+                        <span>Abrir resumen
+                        </span>
+                    </a>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                    <a href="/file_adjunto_extenso/{$value['adjunto_extenso']}" 
+                        class="btn btn-primary w-100 d-flex justify-content-center" data-toggle="modal" data-target="#pdf" data-pdf2="{$value['adjunto_extenso']}" id="formato_solicitud" name="formato_solicitud">
+                        <span>Abrir extenso
+                        </span>
+                    </a>
+                </td>
+
+                <!--<td style="text-align:left; vertical-align:middle;">        
+                    <a href="/file_ing_carta_rec_uno/{$value['ing_carta_rec_uno']}" 
+                        class="btn btn-primary w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                        <span>Abrir carta
+                        </span>
+                    </a>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                    <a href="/file_ing_carta_rec_dos/{$value['ing_carta_rec_dos']}" 
+                        class="btn btn-primary w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                        <span>Abrir carta
+                        </span>
+                    </a>
+                </td> -->  
+        </tr>
+    html;
+    }
+
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
+        View::set('tabla',$tabla);
         View::render("trabajos_all");
     }
 
@@ -219,209 +310,5 @@ html;
         session_destroy();
         header("Location: /Login/");
     }
-
-    public function Usuario() {
     
-        $modalEdit = '';
-        foreach (GeneralDao::getAllColaboradoresByName() as $key => $value) {
-            $modalEdit .= $this->generarModalEditUser($value);
-        }
-
-
-
-        $especialidades = EspecialidadesDao::getAll();
-        $optionEspecialidad = '';
-
-        foreach($especialidades as $key => $value){
-            $optionEspecialidad .= <<<html
-                <option value="{$value['nombre']}">{$value['nombre']}</option>
-html;
-        }
-
-        $paises = UsuariosDao::getPais();
-        $optionPais = '';
-        foreach($paises as $key => $value){
-            $optionPais .= <<<html
-                    <option value="{$value['id_pais']}">{$value['pais']}</option>
-html;
-        }
-
-        View::set('asideMenu',$this->_contenedor->asideMenu());
-        View::set('optionEspecialidad', $optionEspecialidad);
-        View::set('optionPais', $optionPais);
-        View::set('tabla', $this->getAllColaboradoresAsignadosByName());
-        View::set('modalEdit',$modalEdit);
-        View::render("usuarios_all");
-    }
-
-
-    public function generarModalEditUser($datos){
-        $modal = <<<html
-            <div class="modal fade" id="editar-usuario{$datos['id_registrado']}" role="dialog" aria-labelledby="" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">
-                        Editar Usuario
-                    </h5>
-
-                    <span type="button" class="btn bg-gradient-danger" data-dismiss="modal" aria-label="Close">
-                        X
-                    </span>
-                </div>
-                <div class="modal-body">
-                    <p style="font-size: 12px">A continuación ingrese los datos del usuario.</p>
-                    <hr>
-                    <form method="POST" enctype="multipart/form-data" class="form_datos_edit">
-                        <div class="form-group row">
-                            <div class="form-group col-md-4">
-                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="nombre">Nombre <span class="required">*</span></label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="{$datos['nombre']}" require>
-                            </div>
-
-                            <div class="form-group col-md-4">
-                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="apellidop">Apellido Paterno <span class="required">*</span></label>
-                                <input type="text" class="form-control" id="apellidop" name="apellidop" placeholder="Apellido Paterno" value="{$datos['apellidop']}" require>
-                            </div>
-
-                            <div class="form-group col-md-4">
-                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="apellidom">Apellido Materno <span class="required">*</span></label> 
-                                <input type="text" class="form-control" id="apellidom" name="apellidom" placeholder="Apellido Materno" value="{$datos['apellidom']}" require>
-                            </div>
-
-                            <div class="form-group col-md-4">
-                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="email">Email <span class="required">*</span></label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="{$datos['email']}" require readonly>
-                                <span id="msg_email" style="font-size: 0.75rem; font-weight: 700;margin-bottom: 0.5rem;"></span>
-                            </div>
-
-                            <div class="form-group col-md-4">
-                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="prefijo">Prefijo <span class="required">*</span></label>
-                                <select class="multisteps-form__select form-control all_input_select" name="prefijo" id="prefijo" required>
-                                <option value="" selected disabled>Seleciona una opción</option>
-                                <option value="Dr.">Dr.</option>
-                                <option value="Dra.">Dra.</option>
-                                <option value="Sr.">Sr.</option>
-                                <option value="Sra.">Sra.</option>                          
-                                
-                                </select>
-                            </div>
-
-                           
-
-                            <div class="form-group col-md-4">
-                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="telefono">Telefono <span class="required">*</span></label>
-                                <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono" value="{$datos['telefono']}" require>
-                            </div>
-
-                            <div class="form-group col-md-4">
-                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="pais">País <span class="required">*</span></label>
-                                <select class="multisteps-form__select form-control all_input_select" name="pais" id="pais_edit" required>
-html;
-
-        foreach(UsuariosDao::getPais() as $key => $value){
-            $selectedPais = ($value['id_pais'] == $datos['id_pais']) ? 'selected' : '';
-            $modal .= <<<html
-                                            <option value="{$value['id_pais']}" $selectedPais>{$value['pais']}</option>
-html;
-        }
-        $modal .= <<<html
-                                </select>
-                            </div>
-
-                            <div class="form-group col-md-4">
-                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="estado">Estado <span class="required">*</span></label>
-                                <select class="multisteps-form__select form-control all_input_select" name="estado" id="estado_edit" required>
-html;
-
-
-        foreach(UsuariosDao::getStateByCountry($datos['id_pais']) as $key => $value){
-            $selectedEstado = ($value['id_estado'] == $datos['id_estado']) ? 'selected' : '';
-            $modal .= <<<html
-                                            <option value="{$value['id_estado']}" $selectedEstado>{$value['estado']}</option>
-html;
-        }
-
-        $modal .= <<<html
-
-                                </select>
-                            </div>
-
-                            <div class="modal-footer">
-                                <button type="submit" class="btn bg-gradient-success" id="btn_upload" name="btn_upload">Aceptar</button>
-                                <button type="button" class="btn bg-gradient-secondary" data-dismiss="modal">Cancelar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-                </div>
-            </div>
-html;
-
-        return $modal;
-    }
-
-    public function getAllColaboradoresAsignadosByName(){
-
-        $html = "";
-        foreach (GeneralDao::getAllColaboradoresByName() as $key => $value) {
-
-
-            $value['apellidop'] = utf8_encode($value['apellidop']);
-            $value['apellidom'] = utf8_encode($value['apellidom']);
-            $value['nombre'] = utf8_encode($value['nombre']);
-
-            // if (empty($value['img']) || $value['img'] == null) {
-            //     $img_user = "/img/user.png";
-            // } else {
-            //     $img_user = "https://registro.foromusa.com/img/users_musa/{$value['img']}";
-            // }
-
-            $estatus = '';
-            if ($value['activo'] == 1) {
-                $estatus .= <<<html
-                <span class="badge badge-success">Activo</span>
-html;
-            } else {
-                $estatus .= <<<html
-                <span class="badge badge-success">Inactivo</span>
-html;
-            }
-
-
-            $html .= <<<html
-            <tr>
-                <td>
-                    <div class="d-flex px-3 py-1">
-                        
-                        <div class="d-flex flex-column justify-content-center text-black">
-                    
-                            
-                                <h6 class="mb-0 text-sm text-move text-black">
-                                    <span class="fa fa-user-md" style="font-size: 13px"></span> {$value['nombre']} {$value['apellidop']} {$value['apellidom']}
-                                    <hr>
-                                    <span>{$value['email']}</span>
-                                </h6>
-                        </div>
-                    </div>
-                </td>
-         
-                <td style="text-align:left; vertical-align:middle;"> 
-                    
-                    <span>{$value['nombre_especialidad']}</span>
-
-                </td>
-
-                <td>
-                     <button class="btn bg-gradient-primary mb-0 btn-icon-only" type="button" title="Editar Usuario" data-toggle="modal" data-target="#editar-usuario{$value['id_registrado']}"><i class="fa fa-edit" aria-hidden="true"></i></button>
-                     <a href="/Usuarios/abrirpdfGafete/{$value['clave']}/{$value['ticket_virtual']}" class="btn mb-0 bg-pink btn-icon-only morado-musa-text" title="Imprimir Gafetes" data-bs-placement="top" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Imprimir Gafetes" target="_blank"><i class="fas fa-print"> </i></a>
-                </td>
-        </tr>
-html;
-        }
-
-        return $html;
-    }
 }
