@@ -238,9 +238,9 @@ html;
                 </td>
 
                 <td style="text-align:left; vertical-align:middle;">
-                <div data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}">         
+                <div data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">         
                     <a " 
-                        class="btn btn-primary w-100 d-flex justify-content-center iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}">
+                        class="btn btn-primary w-100 d-flex justify-content-center iframe">
                         <span>Abrir resumen
                         </span>
                     </a>
@@ -250,7 +250,7 @@ html;
                 <td style="text-align:left; vertical-align:middle;">
                 <div data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">        
                     <a " 
-                        class="btn btn-primary w-100 d-flex justify-content-center" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
+                        class="btn btn-primary w-100 d-flex justify-content-center">
                         <span>Abrir extenso
                         </span>
                     </a>
