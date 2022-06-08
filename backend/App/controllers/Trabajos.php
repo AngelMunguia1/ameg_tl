@@ -197,7 +197,7 @@ html;
             <tr>
                 <td style="text-align:left; vertical-align:middle;"> 
                         
-                    #<span>{$value['id']}</span>
+                    #<span>{$value['id_trabajo']}</span>
 
                 </td>
 
