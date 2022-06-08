@@ -1,5 +1,11 @@
 <?php echo $header; ?>
 <body> 
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css"></script>
+	<script src="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"></script>
+	<script src="https://cdn.datatables.net/1.12.1/css/dataTables.jqueryui.min.css"></script>
 		<div class="body">
 
 			<header id="header" class="header-effect-shrink" data-plugin-options="{'stickyEnabled': true, 'stickyEnableOnBoxed': true, 'stickyEnableOnMobile': true, 'stickyStartAt': 70}">
@@ -185,7 +191,7 @@
                 		<div class="tab-content" id="v-pills-tabContent" style="padding-right: 12px;">
                                 <div class="tab-pane fade show position-relative active height-350 border-radius-lg" id="Invitados" role="tabpanel" aria-labelledby="Invitados">
                                     <div class="table-responsive p-0">
-                                        <table class="align-items-center mb-0 table table-borderless" id="user_list_table" style="overflow: auto">
+                                        <table class="align-items-center mb-0 table table-borderless" id="myTable" style="overflow: auto">
                                             <thead class="thead-light">
                                             <tr>
 
@@ -241,13 +247,6 @@
 
 <script>
     $(document).ready(function(){
-
-        Swal.fire(
-            '<h5>Podrá observar los trabajos libres registrados debajo del formulario.<strong></br> Nota: Recargue la página para observar su trabajo recién registrado.</strong></h5>',
-            '',
-            'info'
-        )
-
         $('.iframe').on('click',function(){
             var pdf = $(this).attr('data-pdf');
             //alert(pdf);
@@ -272,5 +271,10 @@ for (i = 0; i < dropdown.length; i++) {
     }
   });
 }
+</script>
+<script>
+	$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
 </script>
 	</body>
