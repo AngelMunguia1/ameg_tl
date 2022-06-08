@@ -195,17 +195,17 @@
                                             <thead class="thead-light">
                                             <tr>
 
-                                                <th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">ID Trabajo</th>
-												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">ID Usuario</th>
-                                                <th class="text-center text-uppercase font-weight-bolder opacity-9">Título</th>
-                                                <th class="text-uppercase text-xxs font-weight-bolder opacity-9">Autores</th>
-												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Coautores</th>
-												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Institución</th>
-												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Categoría</th>
-												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Especialidad</th>
-												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">¿Concursa?</th>
-												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Archivo de resumen</th>
-												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Archivo extenso</th>
+                                                <th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9 ">ID Trabajo<i class="fas fa-sort"></i></th>
+												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">ID Usuario<i class="fas fa-sort"></i></th>
+                                                <th class="text-center text-xxs text-uppercase font-weight-bolder opacity-9">Título<i class="fas fa-sort"></i></th>
+                                                <th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Autores<i class="fas fa-sort"></i></th>
+												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Coautores<i class="fas fa-sort"></i></th>
+												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Institución<i class="fas fa-sort"></i></th>
+												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Categoría<i class="fas fa-sort"></i></th>
+												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Especialidad<i class="fas fa-sort"></i></th>
+												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">¿Concursa?<i class="fas fa-sort"></i></th>
+												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Archivo de resumen<i class="fas fa-sort"></i></th>
+												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Archivo extenso<i class="fas fa-sort"></i></th>
 												<!-- <th class="text-uppercase text-xxs font-weight-bolder opacity-9">Carta recomendación</th>
 												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Segunda carta de recomendación</th> -->
                                                 <!-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Imprimir</th> -->
