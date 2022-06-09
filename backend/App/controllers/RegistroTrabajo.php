@@ -502,8 +502,8 @@ html;
       
 
 
-        $data->_adjunto = $word_1.'.docx'; 
-        $data->_adjunto_extenso = $word_2.'.docx'; 
+        $data->_adjunto = 'adj_'.$word_1.'.docx'; 
+        $data->_adjunto_extenso = 'adj_ext_'.$word_2.'.docx'; 
         $data->_resumen = MasterDom::getData('resumen');
         $data->_coautores = MasterDom::getData('coautores');
         $data->_autor = MasterDom::getData('autor');
@@ -534,8 +534,8 @@ html;
 
         // var_dump($data);
         // exit();
-        move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto_extenso/".$word_1.'.docx');
-        move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".$word_2.'.docx');
+        move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto_extenso/".'adj_'.$word_1.'.docx');
+        move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".'adj_ext_'.$word_1.'.docx');
 
         
 

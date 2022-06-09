@@ -114,7 +114,7 @@ sql;
                 $query =<<<sql
                 SELECT * FROM trabajos2020
                 WHERE categoria_id = '3'
-                ORDER BY id ASC
+                ORDER BY id_trabajo ASC
                 sql;
                 return $mysqli->queryAll($query);
         }
@@ -125,7 +125,7 @@ sql;
                 $query =<<<sql
                 SELECT * FROM trabajos2020
                 WHERE categoria_id = '4'
-                ORDER BY id ASC
+                ORDER BY id_trabajo ASC
                 sql;
                 return $mysqli->queryAll($query);
         }
@@ -136,7 +136,7 @@ sql;
                 $query =<<<sql
                 SELECT * FROM trabajos2020
                 WHERE categoria_id = '5'
-                ORDER BY id ASC
+                ORDER BY id_trabajo ASC
                 sql;
                 return $mysqli->queryAll($query);
         }
@@ -147,7 +147,7 @@ sql;
                 $query =<<<sql
                 SELECT * FROM trabajos2020
                 WHERE categoria_id = '6'
-                ORDER BY id ASC
+                ORDER BY id_trabajo ASC
                 sql;
                 return $mysqli->queryAll($query);
         }
