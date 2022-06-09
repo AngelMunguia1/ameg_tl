@@ -105,19 +105,23 @@ sql;
     public static function update($data){
         $mysqli = Database::getInstance(true);
         $query=<<<sql
-      UPDATE registrados SET nombre = :nombre, apellidop = :apellidop, apellidom = :apellidom, prefijo = :prefijo, telefono = :telefono, id_pais = :id_pais, id_estado= :id_estado WHERE email = :email
+        UPDATE trabajos2020, usuarios
+        SET trabajos2020.titulo_corto = :titulo_corto, trabajos2020.autor = :autor, trabajos2020.coautores = :coautores
+        , usuarios.t_institucion = :t_institucion, trabajos2020.categoria_id = :categoria_id, trabajos2020.especialidad_id = :especialidad_id,trabajos2020.postulatrabajo_id = :postulatrabajo_id
+        WHERE trabajos2020.id_trabajo = :id_trabajo AND usuarios.id_usuario = :id_usuario;
 sql;
 
 
         $parametros = array(
-            ':nombre'=>$data->_nombre,
-            ':apellidop'=>$data->_apellidop,
-            ':apellidom'=>$data->_apellidom,
-            ':prefijo'=>$data->_prefijo,
-            ':telefono'=>$data->_telefono,
-            ':id_pais'=>$data->_pais,
-            ':id_estado' =>$data->_estado,
-            ':email' =>$data->_email
+            ':id_trabajo'=>$data->_id_trabajo,
+            ':id_usuario'=>$data->_id_usuario,
+            ':titulo_corto'=>$data->_titulo_corto,
+            ':autor'=>$data->_autor,
+            ':coautores'=>$data->_coautores,
+            ':t_institucion'=>$data->_institucion,
+            ':categoria_id'=>$data->_categoria,
+            ':especialidad_id'=>$data->_especialidad,
+            ':postulatrabajo_id' =>$data->_postulatrabajo,
         );
 
         // var_dump($parametros);

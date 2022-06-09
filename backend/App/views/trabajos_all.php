@@ -206,6 +206,7 @@
 												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">¿Concursa?<i class="fas fa-sort"></i></th>
 												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Archivo de resumen<i class="fas fa-sort"></i></th>
 												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Archivo extenso<i class="fas fa-sort"></i></th>
+												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Editar<i class="fas fa-sort"></i></th>
 												<!-- <th class="text-uppercase text-xxs font-weight-bolder opacity-9">Carta recomendación</th>
 												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Segunda carta de recomendación</th> -->
                                                 <!-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Imprimir</th> -->
@@ -245,6 +246,8 @@
   </div>
 </div>
 
+<?php echo $modalEdit; ?>
+
 <script>
     $(document).ready(function(){
         $('.iframe').on('click',function(){
@@ -254,6 +257,55 @@
             $('.cont-modal').html('<iframe src="https://docs.google.com/gview?url=https://trabajoslibresameg.com/file_adjunto_extenso/'+pdf+'&embedded=true" style="width:100%; height:700px;" frameborder="0" ></iframe>');
         })
     });
+</script>
+<script>
+	$(".form_datos_edit").on("submit",function(event){
+            event.preventDefault();
+            // var formData = new FormData(document.getElementById("form_datos_edit"));
+            var formData = $(this).serialize();
+
+            console.log(formData);
+
+            // for (var value of formData.values()) {
+            //     console.log(value);
+            // }
+            $.ajax({
+                url: "/Trabajos/updateData",
+                type: "POST",
+                data: formData,
+                // contentType: false,
+                // processData: false,
+                beforeSend: function() {
+                    console.log("Procesando....");
+                    // alert('Se está borrando');
+
+                },
+                success: function(respuesta) {
+                    console.log(respuesta);
+
+                    if(respuesta == 'success'){
+                        Swal.fire("¡Se actualizo el usuario correctamente!", "", "success").
+                        then((value) => {
+                            window.location.reload();
+                        });
+                    }else{
+                        Swal.fire("¡Hubo un error al actualizar el usuario!", "", "warning").
+                        then((value) => {
+                            window.location.reload();
+                        });
+                    }
+                },
+                error: function(respuesta) {
+                    console.log(respuesta);
+                    // alert('Error');
+                    Swal.fire("¡Hubo un error al crear el archivo!", "", "warning").
+                    then((value) => {
+                        window.location.reload();
+                    });
+                }
+            });
+        });
+
 </script>
 <script>
 /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */

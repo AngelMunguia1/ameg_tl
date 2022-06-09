@@ -236,6 +236,15 @@ html;
 html;
         }
 
+        $selectConcursa = '';
+
+        foreach(RegistroDao::getConcursa() as $key => $value){
+            // $selectedPais = ($value['id_pais'] == $userData['id_nationality']) ? 'selected' : '';  
+            $selectConcursa .= <<<html
+                    <option value="{$value['id']}">{$value['concursa']}</option>
+html;
+        }
+
 
 
         $trabajos_libres = '';
@@ -384,6 +393,7 @@ html;
         View::set('footer',$extraFooter);
         View::set('selectCategoria',$selectCategoria);
         View::set('selectEspecialidad',$selectEspecialidad);
+        View::set('selectConcursa',$selectConcursa);
         View::set('permiso_form',$permiso_form);
         View::set('mostrar_trabajo_o',$mostrar_trabajo_o);
         View::set('mostrar_trabajo_c',$mostrar_trabajo_c);
@@ -507,7 +517,7 @@ html;
         $data->_resumen = MasterDom::getData('resumen');
         $data->_coautores = MasterDom::getData('coautores');
         $data->_autor = MasterDom::getData('autor');
-        $data->_postulatrabajo = MasterDom::getData('postulatrabajo');
+        $data->_postulatrabajo_id = MasterDom::getData('postulatrabajo_id');
         // $data->_revisiontrabajo = MasterDom::getData('revisiontrabajo');
         $data->_envio_revista = MasterDom::getData('envio_revista');
 

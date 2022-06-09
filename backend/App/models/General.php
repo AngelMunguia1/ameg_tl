@@ -77,6 +77,7 @@ sql;
     $query =<<<sql
     SELECT * FROM trabajos2020
     INNER JOIN categorias_trabajos cate ON (cate.id = categoria_id)
+    INNER JOIN concursa c ON (c.id = postulatrabajo_id)
     INNER JOIN especialidades espe ON (espe.id = especialidad_id)
     INNER JOIN usuarios users ON (users.id_usuario = usuario_id)
     INNER JOIN instituciones ins ON (ins.id = users.id_usuario);

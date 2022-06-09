@@ -269,10 +269,9 @@
 
 																		<label class="form-label">Concursa *</label>
 
-																		<select class="form-control" style="cursor: pointer;" name="postulatrabajo" id="postulatrabajo" tabindex="-1" data-choice="active" required>
-																			<option value="SIN RESPUESTA" selected>Seleccione una Opción</option>
-																			<option  value="SI">SI</option>
-																			<option value="NO">NO</option>
+																		<select class="form-control" style="cursor: pointer;" name="postulatrabajo_id" id="postulatrabajo_id" tabindex="-1" data-choice="active" required>
+																			<option value="0" selected>Seleccione una Opción</option>
+																			<?php echo $selectConcursa; ?>
 																		</select>
 
 																	</div>

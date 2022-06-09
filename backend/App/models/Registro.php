@@ -88,6 +88,28 @@ sql;
         //$mysqli -> set_charset("utf8");
     }
 
+    public static function getCategoria()
+    {
+        $mysqli = Database::getInstance();
+        $query = <<<sql
+      SELECT * FROM categorias_trabajos ORDER BY id ASC
+sql;
+
+        return $mysqli->queryAll($query);
+        //$mysqli -> set_charset("utf8");
+    }
+
+    public static function getConcursa()
+    {
+        $mysqli = Database::getInstance();
+        $query = <<<sql
+      SELECT * FROM concursa ORDER BY id ASC
+sql;
+
+        return $mysqli->queryAll($query);
+        //$mysqli -> set_charset("utf8");
+    }
+
     public static function getState($pais)
     {
         $mysqli = Database::getInstance();

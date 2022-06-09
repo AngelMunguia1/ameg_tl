@@ -6,6 +6,7 @@ use \Core\View;
 use \Core\MasterDom;
 use \App\models\Home AS HomeDao;
 use \App\models\General as GeneralDao;
+use \App\models\Registro as RegistroDao;
 use \App\models\Asistentes as AsistentesDao;
 use \App\models\Especialidades as EspecialidadesDao;
 use \App\models\Usuarios as UsuariosDao;
@@ -186,6 +187,11 @@ html;
         
 html;
 
+    $modalEdit = '';
+    foreach (GeneralDao::getAllTrabajosByName() as $key => $value) {
+        $modalEdit .= $this->generarModalEditUser($value);
+    }
+
     $trabajos_libres = '';
     $tabla = '';
     $trabajos_libres =  GeneralDao::getAllTrabajosByName($_SESSION['id']);
@@ -234,7 +240,7 @@ html;
                 </td>
 
                 <td style="text-align:left; vertical-align:middle;">        
-                        <span>{$value['postulatrabajo']}</span> 
+                        <span>{$value['concursa']}</span> 
                 </td>
 
                 <td style="text-align:left; vertical-align:middle;">
@@ -253,6 +259,12 @@ html;
                             </span>
                         </a>
                     </div>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">
+                     <button class="btn btn-primary w-80 justify-content-center" type="button" title="Editar Usuario" data-toggle="modal" data-target="#editar-usuario{$value['id_trabajo']}">
+                     <i class="fa fa-edit" aria-hidden="true"></i>
+                     </button>
                 </td>
 
                 <!--<td style="text-align:left; vertical-align:middle;">        
@@ -276,8 +288,169 @@ html;
 
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
+        View::set('modalEdit',$modalEdit);
         View::set('tabla',$tabla);
         View::render("trabajos_all");
+    }
+
+    public function generarModalEditUser($datos){
+        $modal = <<<html
+            <div class="modal fade" id="editar-usuario{$datos['id_trabajo']}" role="dialog" aria-labelledby="" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        Editar Trabajo
+                    </h5>
+
+                    <span type="button" class="btn bg-gradient-danger" data-dismiss="modal" aria-label="Close">
+                        X
+                    </span>
+                </div>
+                <div class="modal-body">
+                    <p style="font-size: 12px">A continuación ingrese los del trabajo seleccionado.</p>
+                    <hr>
+                    <form method="POST" enctype="multipart/form-data" class="form_datos_edit">
+                        <div class="form-group row">
+
+                             <div class="form-group col-md-4">
+                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="id_trabajo">Id Trabajo <span class="required">*</span></label>
+                                <input type="email" class="form-control" id="id_trabajo" name="id_trabajo" placeholder="Id Trabajo" value="{$datos['id_trabajo']}" require readonly>
+                                <span id="msg_email" style="font-size: 0.75rem; font-weight: 700;margin-bottom: 0.5rem;"></span>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="id_usuario">Id Usuario <span class="required">*</span></label>
+                                <input type="email" class="form-control" id="id_usuario" name="id_usuario" placeholder="ID Usuario" value="{$datos['id_usuario']}" require readonly>
+                                <span id="msg_email" style="font-size: 0.75rem; font-weight: 700;margin-bottom: 0.5rem;"></span>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="titulo">Título <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="titulo_corto" name="titulo_corto" placeholder="Título" value="{$datos['titulo_corto']}" required>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="autor">Autor <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="autor" name="autor" placeholder="Autor" value="{$datos['autor']}" required>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="coautores">Coautor <span class="required">*</span></label> 
+                                <input type="text" class="form-control" id="coautores" name="coautores" placeholder="Coautor" value="{$datos['coautores']}" required>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="t_institucion">Institución <span class="required">*</span></label>
+                                <select class="multisteps-form__select form-control all_input_select" name="t_institucion" id="t_institucion" required>
+html;
+
+        foreach(RegistroDao::getInstitucion() as $key => $value){
+            $selectedInsti = ($value['id'] == $datos['id']) ? 'selected' : '';
+            $modal .= <<<html
+            <option value="{$value['id']}" $selectedInsti>{$value['institucion']}</option>
+html;
+        }
+        $modal .= <<<html
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="categoria_id">Categoría <span class="required">*</span></label>
+                                <select class="multisteps-form__select form-control all_input_select" name="categoria_id" id="categoria_id" required>
+html;
+        
+        foreach(RegistroDao::getCategoria() as $key => $value){
+            $selectedCate = ($value['id'] == $datos['id']) ? 'selected' : '';
+            $modal .= <<<html
+            <option value="{$value['id']}" $selectedCate>{$value['categoria']}</option>
+html;
+        }
+
+        $modal .= <<<html
+
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="especialidad_id">Especialidad <span class="required">*</span></label>
+                                <select class="multisteps-form__select form-control all_input_select" name="especialidad_id" id="especialidad_id" required>
+html;
+        
+        foreach(RegistroDao::getEspecialidad() as $key => $value){
+            $selectedEsp = ($value['id'] == $datos['id']) ? 'selected' : '';
+            $modal .= <<<html
+            <option value="{$value['id']}" $selectedEsp>{$value['especialidad']}</option>
+html;
+        }
+
+        $modal .= <<<html
+
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                            <label class="control-label col-md-12 col-sm-1 col-xs-12" for="postulatrabajo_id">Concursa <span class="required">*</span></label>
+                            <select class="multisteps-form__select form-control all_input_select" name="postulatrabajo_id" id="postulatrabajo_id" required>
+html;
+    
+    foreach(RegistroDao::getConcursa() as $key => $value){
+        $selectedConcursa = ($value['id'] == $datos['id']) ? 'selected' : '';
+        $modal .= <<<html
+        <option value="{$value['id']}" $selectedConcursa>{$value['concursa']}</option>
+html;
+    }
+
+    $modal .= <<<html
+
+                            </select>
+                        </div>
+
+                            
+                            <div class="modal-footer">
+                                <button type="submit" class="btn-ameg-bg-success" id="btn_upload" name="btn_upload">Aceptar</button>
+                                <button type="button" class="btn-ameg-bg-danger" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+                </div>
+            </div>
+html;
+
+        return $modal;
+    }
+
+    public function updateData()
+    {
+        $data = new \stdClass();
+        $data->_id_trabajo = MasterDom::getData('id_trabajo');
+        $data->_id_usuario = MasterDom::getData('id_usuario');
+        $data->_titulo_corto = MasterDom::getData('titulo_corto');
+        $data->_autor = MasterDom::getData('autor');
+        $data->_coautores = MasterDom::getData('coautores');
+        $data->_t_institucion = MasterDom::getData('t_institucion');
+        $data->_categoria = MasterDom::getData('categoria_id');
+        $data->_especialidad = MasterDom::getData('especialidad_id');
+        $data->_postulatrabajo = MasterDom::getData('postulatrabajo_id');
+        // $data->_utilerias_administrador_id = $_SESSION['utilerias_administradores_id'];
+
+        // var_dump($data);
+
+        $id = UsuariosDao::update($data);
+
+        // var_dump($id);
+        if ($id) {
+            echo "success";
+            // $this->alerta($id,'add');
+            //header('Location: /PickUp');
+        } else {
+            echo "error";
+            // header('Location: /PickUp');
+            //var_dump($id);
+        }
     }
 
     public function isUserValidate(){
