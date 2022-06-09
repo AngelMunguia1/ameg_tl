@@ -535,7 +535,7 @@ html;
         // var_dump($data);
         // exit();
         move_uploaded_file($file_adjunto["tmp_name"], "file_adjunto_extenso/".'adj_'.$word_1.'.docx');
-        move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".'adj_ext_'.$word_1.'.docx');
+        move_uploaded_file($file_adjunto_extenso["tmp_name"], "file_adjunto_extenso/".'adj_ext_'.$word_2.'.docx');
 
         
 
