@@ -308,9 +308,9 @@ html;
         $card_trabajos_libres_c .= <<<html
             
             <div class="col-sm-4 text-center " >
-                <div class="card card-body card-course p-0 ameg-shadow-box-btn iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
+                <div class="card card-body card-course p-0 ameg-shadow-box-btn iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}">
                 <img class="caratula-trabajo-img border-radius-15" src="/trabajos_files/img/caratula_word.jpg">
-                        <div class="mt-2 color-black font-5 text-bold font-weight-bold" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}"><p class="font-14 font-weight-bold"><b> {$value['titulo_corto']}</b></p>
+                        <div class="mt-2 color-black font-5 text-bold font-weight-bold" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}"><p class="font-14 font-weight-bold"><b> {$value['titulo_corto']}</b></p>
                         </div>
                         <div class="color-black font-14"><p>{$value['titulo_es']}</p></div>
                         <div class="color-vine font-12"><p>{$value['autor']}</p></div>
@@ -338,9 +338,9 @@ html;
         $card_trabajos_libres_v .= <<<html
             
             <div class="col-sm-4 text-center " >
-                <div class="card card-body card-course p-0 ameg-shadow-box-btn iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
+                <div class="card card-body card-course p-0 ameg-shadow-box-btn iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}">
                 <img class="caratula-trabajo-img border-radius-15" src="/trabajos_files/img/caratula_word.jpg">
-                        <div class="mt-2 color-black font-5 text-bold font-weight-bold" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}"><p class="font-14 font-weight-bold"><b> {$value['titulo_corto']}</b></p>
+                        <div class="mt-2 color-black font-5 text-bold font-weight-bold" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}"><p class="font-14 font-weight-bold"><b> {$value['titulo_corto']}</b></p>
                         </div>
                         <div class="color-black font-14"><p>{$value['titulo_es']}</p></div>
                         <div class="color-vine font-12"><p>{$value['autor']}</p></div>
