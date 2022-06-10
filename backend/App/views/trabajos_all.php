@@ -149,10 +149,10 @@
 					<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-container">
-					<a href="#" style="margin: 8px; margin-bottom: 20px;">
+					<a href="/Home/" style="margin: 8px; margin-bottom: 20px;">
 						<i class="fas fa-home"></i>
 					</a>
-					<a href="#" style="margin: 8px; margin-bottom: 20px;">
+					<!-- <a href="#" style="margin: 8px; margin-bottom: 20px;">
 						<i class="fas fa-paste"></i>
 					</a>
 					<a href="#" style="margin: 8px; margin-bottom: 20px;">
@@ -175,7 +175,7 @@
 					</a>
 					<a href="#" style="margin: 8px; margin-bottom: 20px;">
 						<i class="fas fa-users"></i>
-					</a>
+					</a> -->
 				</div>
 			</div>	
 

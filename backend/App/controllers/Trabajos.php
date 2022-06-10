@@ -262,7 +262,7 @@ html;
                 </td>
 
                 <td style="text-align:left; vertical-align:middle;">
-                     <button class="btn btn-primary h-50 w-80 justify-content-center" type="button" title="Editar Usuario" data-toggle="modal" data-target="#editar-usuario{$value['id_trabajo']}">
+                     <button class="btn btn-primary w-80 justify-content-center" type="button" title="Editar Usuario" data-toggle="modal" data-target="#editar-usuario{$value['id_trabajo']}">
                      <i class="fa fa-edit" aria-hidden="true"></i>
                      </button>
                 </td>
