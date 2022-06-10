@@ -262,7 +262,7 @@ html;
                 </td>
 
                 <td style="text-align:left; vertical-align:middle;">
-                     <button class="btn btn-primary w-80 justify-content-center" type="button" title="Editar Usuario" data-toggle="modal" data-target="#editar-usuario{$value['id_trabajo']}">
+                     <button class="btn btn-primary h-50 w-80 justify-content-center" type="button" title="Editar Usuario" data-toggle="modal" data-target="#editar-usuario{$value['id_trabajo']}">
                      <i class="fa fa-edit" aria-hidden="true"></i>
                      </button>
                 </td>
@@ -346,7 +346,7 @@ html;
 html;
 
         foreach(RegistroDao::getInstitucion() as $key => $value){
-            $selectedInsti = ($value['id'] == $datos['id']) ? 'selected' : '';
+            $selectedInsti = ($value['id'] == $datos['t_institucion']) ? 'selected' : '';
             $modal .= <<<html
             <option value="{$value['id']}" $selectedInsti>{$value['institucion']}</option>
 html;
@@ -361,7 +361,7 @@ html;
 html;
         
         foreach(RegistroDao::getCategoria() as $key => $value){
-            $selectedCate = ($value['id'] == $datos['id']) ? 'selected' : '';
+            $selectedCate = ($value['id'] == $datos['categoria_id']) ? 'selected' : '';
             $modal .= <<<html
             <option value="{$value['id']}" $selectedCate>{$value['categoria']}</option>
 html;
@@ -378,7 +378,7 @@ html;
 html;
         
         foreach(RegistroDao::getEspecialidad() as $key => $value){
-            $selectedEsp = ($value['id'] == $datos['id']) ? 'selected' : '';
+            $selectedEsp = ($value['id'] == $datos['especialidad_id']) ? 'selected' : '';
             $modal .= <<<html
             <option value="{$value['id']}" $selectedEsp>{$value['especialidad']}</option>
 html;
@@ -395,7 +395,7 @@ html;
 html;
     
     foreach(RegistroDao::getConcursa() as $key => $value){
-        $selectedConcursa = ($value['id'] == $datos['id']) ? 'selected' : '';
+        $selectedConcursa = ($value['id'] == $datos['postulatrabajo_id']) ? 'selected' : '';
         $modal .= <<<html
         <option value="{$value['id']}" $selectedConcursa>{$value['concursa']}</option>
 html;

@@ -80,7 +80,7 @@ sql;
     INNER JOIN concursa c ON (c.id = postulatrabajo_id)
     INNER JOIN especialidades espe ON (espe.id = especialidad_id)
     INNER JOIN usuarios users ON (users.id_usuario = usuario_id)
-    INNER JOIN instituciones ins ON (ins.id = users.id_usuario);
+    INNER JOIN instituciones ins ON (ins.id = users.t_institucion);
 sql;
     return $mysqli->queryAll($query);
   }

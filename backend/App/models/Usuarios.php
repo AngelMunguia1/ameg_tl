@@ -118,7 +118,7 @@ sql;
             ':titulo_corto'=>$data->_titulo_corto,
             ':autor'=>$data->_autor,
             ':coautores'=>$data->_coautores,
-            ':t_institucion'=>$data->_institucion,
+            ':t_institucion'=>$data->_t_institucion,
             ':categoria_id'=>$data->_categoria,
             ':especialidad_id'=>$data->_especialidad,
             ':postulatrabajo_id' =>$data->_postulatrabajo,
