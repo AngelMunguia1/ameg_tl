@@ -157,7 +157,8 @@
 										<img width="42" src="vendor/linear-icons/screen.svg" alt="" data-icon data-plugin-options="{'color': '#FFF', 'animated': true, 'delay': 600}" />
 									</div> -->
 							<div class="container text-center">
-								<div class="row" <?= $permiso_form ?>>
+								<div class="row">
+								<!-- <div class="row" <?= $permiso_form ?>> -->
 									<div style="margin: auto; display:flex; justify-content: center; width:100%; min-width: 325px;">
 										<div class="col-md-9 text-center ameg-shadow-box-ins bg-white">
 											<div class="col-md-12 text-center">
@@ -302,7 +303,7 @@
 
 																	<div class="col-12 col-lg-12 cont-ing-ingreso"  style="display: none;" >
 
-																		<label class="form-label">Solicitud de ingreso avalada con la firma de dos socios titulares de la AMEG-CP * </label>
+																		<label class="form-label">Solicitud de ingreso avalada con la firma de tres socios titulares de la AMEG-CP * </label>
 
 																		<div class="input-group">
 																			<input type="file" accept=".pdf" class="form-control" id="ing_solicitud_ingreso" name="ing_solicitud_ingreso" require>
@@ -451,10 +452,10 @@
 																		<br><br>
 																		<label class="form-label bg-success text-white">DESCARGA LA SOLICITUD Y AGRÉGALA EN EL CAMPO DE LA PARTE SUPERIOR PARA CONTINUAR CON TU REGISTRO</label>
 
-																		<div class="input-group" style="margin: 0px auto; display:flex; justify-content: center; width:40%; min-width: 330px;" >
+																		<div class="input-group" style="margin: 0px auto; display:flex; justify-content: center; width:35%; min-width: 250px;" >
 																			<a onclick="pon_Enviar()" href="/img/SOLICITUD PARA SOCIOS NUEVO INGRESO.pdf" 
 																				download class="btn btn-primary w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
-																				<span>Descargar Solicitud de ingreso avalada con la firma de dos socios titulares de la AMEG-CP
+																				<span>Descargar Solicitud de ingreso avalada con la firma de tres socios titulares de la AMEG-CP
 																				</span>
 																			</a>
 																		</div>
