@@ -212,6 +212,12 @@ html;
                     #<span>{$value['usuario_id']}</span>
 
                 </td>
+
+                <td style="text-align:left; vertical-align:middle;"> 
+                        
+                    <span>{$value['status']}</span>
+
+                </td>
          
                 <td style="text-align:left; vertical-align:middle;"> 
                     
@@ -326,6 +332,21 @@ html;
                             </div>
 
                             <div class="form-group col-md-4">
+                                <label class="control-label col-md-12 col-sm-1 col-xs-12" for="status_id">Status <span class="required">*</span></label>
+                                <select class="multisteps-form__select form-control all_input_select" name="status_id" id="status_id" required>
+html;
+
+        foreach(RegistroDao::getStatus() as $key => $value){
+            $selectedStatus = ($value['id'] == $datos['status_id']) ? 'selected' : '';
+            $modal .= <<<html
+            <option value="{$value['id']}" $selectedStatus>{$value['status']}</option>
+html;
+        }
+        $modal .= <<<html
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-4">
                                 <label class="control-label col-md-12 col-sm-1 col-xs-12" for="titulo">Título <span class="required">*</span></label>
                                 <input type="text" class="form-control" id="titulo_corto" name="titulo_corto" placeholder="Título" value="{$datos['titulo_corto']}" required>
                             </div>
@@ -340,7 +361,7 @@ html;
                                 <input type="text" class="form-control" id="coautores" name="coautores" placeholder="Coautor" value="{$datos['coautores']}" required>
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-6">
                                 <label class="control-label col-md-12 col-sm-1 col-xs-12" for="t_institucion">Institución <span class="required">*</span></label>
                                 <select class="multisteps-form__select form-control all_input_select" name="t_institucion" id="t_institucion" required>
 html;
@@ -355,7 +376,7 @@ html;
                                 </select>
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-6">
                                 <label class="control-label col-md-12 col-sm-1 col-xs-12" for="categoria_id">Categoría <span class="required">*</span></label>
                                 <select class="multisteps-form__select form-control all_input_select" name="categoria_id" id="categoria_id" required>
 html;
@@ -372,7 +393,7 @@ html;
                                 </select>
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-6">
                                 <label class="control-label col-md-12 col-sm-1 col-xs-12" for="especialidad_id">Especialidad <span class="required">*</span></label>
                                 <select class="multisteps-form__select form-control all_input_select" name="especialidad_id" id="especialidad_id" required>
 html;
@@ -389,7 +410,7 @@ html;
                                 </select>
                             </div>
 
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-6">
                             <label class="control-label col-md-12 col-sm-1 col-xs-12" for="postulatrabajo_id">Concursa <span class="required">*</span></label>
                             <select class="multisteps-form__select form-control all_input_select" name="postulatrabajo_id" id="postulatrabajo_id" required>
 html;
@@ -435,6 +456,7 @@ html;
         $data->_categoria = MasterDom::getData('categoria_id');
         $data->_especialidad = MasterDom::getData('especialidad_id');
         $data->_postulatrabajo = MasterDom::getData('postulatrabajo_id');
+        $data->_status = MasterDom::getData('status_id');
         // $data->_utilerias_administrador_id = $_SESSION['utilerias_administradores_id'];
 
         // var_dump($data);

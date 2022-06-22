@@ -70,14 +70,6 @@ sql;
             return $id;
     }
 
-    public static function getCategorias(){       
-        $mysqli = Database::getInstance();
-        $query=<<<sql
-        SELECT * FROM categorias_trabajos
-sql;
-        return $mysqli->queryAll($query);
-      }
-
       public static function getCategoriasByUser($id){       
         $mysqli = Database::getInstance();
         $query=<<<sql
@@ -90,6 +82,21 @@ sql;
         return $mysqli->queryAll($query);
       }
 
+      public static function getCategorias(){       
+        $mysqli = Database::getInstance();
+        $query=<<<sql
+        SELECT * FROM categorias_trabajos
+sql;
+        return $mysqli->queryAll($query);
+      }
+
+      public static function getStatus(){       
+        $mysqli = Database::getInstance();
+        $query=<<<sql
+        SELECT * FROM status
+sql;
+        return $mysqli->queryAll($query);
+      }
 
       public static function getEspecialidades(){       
         $mysqli = Database::getInstance();

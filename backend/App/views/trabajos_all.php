@@ -197,6 +197,7 @@
 
                                                 <th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9 ">ID Trabajo<i class="fas fa-sort"></i></th>
 												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">ID Usuario<i class="fas fa-sort"></i></th>
+												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Status<i class="fas fa-sort"></i></th>
                                                 <th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Título<i class="fas fa-sort"></i></th>
                                                 <th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Autores<i class="fas fa-sort"></i></th>
 												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Coautores<i class="fas fa-sort"></i></th>

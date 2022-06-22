@@ -227,6 +227,14 @@ html;
 html;
         }
 
+        $selectStatus = '';
+        foreach(RegistroDao::getStatus() as $key => $value){
+            // $selectedPais = ($value['id_pais'] == $userData['id_nationality']) ? 'selected' : '';  
+            $selectStatus .= <<<html
+                    <option value="{$value['id']}">{$value['status']}</option>
+html;
+        }
+
         $selectEspecialidad = '';
 
         foreach(RegistroDao::getEspecialidades() as $key => $value){

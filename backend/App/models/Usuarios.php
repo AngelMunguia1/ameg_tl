@@ -107,7 +107,8 @@ sql;
         $query=<<<sql
         UPDATE trabajos2020, usuarios
         SET trabajos2020.titulo_corto = :titulo_corto, trabajos2020.autor = :autor, trabajos2020.coautores = :coautores
-        , usuarios.t_institucion = :t_institucion, trabajos2020.categoria_id = :categoria_id, trabajos2020.especialidad_id = :especialidad_id,trabajos2020.postulatrabajo_id = :postulatrabajo_id
+        , usuarios.t_institucion = :t_institucion, trabajos2020.categoria_id = :categoria_id, trabajos2020.especialidad_id = :especialidad_id,
+        trabajos2020.postulatrabajo_id = :postulatrabajo_id, trabajos2020.status_id = :status_id
         WHERE trabajos2020.id_trabajo = :id_trabajo AND usuarios.id_usuario = :id_usuario;
 sql;
 
@@ -122,6 +123,7 @@ sql;
             ':categoria_id'=>$data->_categoria,
             ':especialidad_id'=>$data->_especialidad,
             ':postulatrabajo_id' =>$data->_postulatrabajo,
+            ':status_id' =>$data->_status,
         );
 
         // var_dump($parametros);

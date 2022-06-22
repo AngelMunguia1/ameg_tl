@@ -81,7 +81,7 @@ sql;
     {
         $mysqli = Database::getInstance();
         $query = <<<sql
-      SELECT * FROM instituciones ORDER BY id ASC
+      SELECT * FROM instituciones ORDER BY institucion ASC
 sql;
 
         return $mysqli->queryAll($query);
@@ -93,6 +93,17 @@ sql;
         $mysqli = Database::getInstance();
         $query = <<<sql
       SELECT * FROM categorias_trabajos ORDER BY id ASC
+sql;
+
+        return $mysqli->queryAll($query);
+        //$mysqli -> set_charset("utf8");
+    }
+
+    public static function getStatus()
+    {
+        $mysqli = Database::getInstance();
+        $query = <<<sql
+      SELECT * FROM status ORDER BY id ASC
 sql;
 
         return $mysqli->queryAll($query);
