@@ -303,7 +303,7 @@
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Telefono Fijo*</label>
-                                                    <input  id="telefono" name="telefono" maxlength="12" min="100000000000" type="number" placeholder="Teléfono" class="form-control ameg-shadow-box-two" required
+                                                    <input  id="telefono" name="telefono" maxlength="14" min="100000" type="number" placeholder="Teléfono" class="form-control ameg-shadow-box-two" required
                                                     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                 </div>
                                             </div>
@@ -311,12 +311,12 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label>Telefono Celular *</label>
-                                                    <input  id="celular" name="celular" maxlength="12" min="100000000000" type="number" placeholder="Celular" class="form-control ameg-shadow-box-two" required
+                                                    <input  id="celular" name="celular" maxlength="14" min="100000" type="number" placeholder="Celular" class="form-control ameg-shadow-box-two" required
                                                     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label>Teléfono de institución *</label>
-                                                    <input  id="telinstitucion" name="telinstitucion" maxlength="12" min="100000000000" type="number" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two" required
+                                                    <input  id="telinstitucion" name="telinstitucion" maxlength="14" min="100000" type="number" placeholder="Teléfono de institución" class="form-control ameg-shadow-box-two" required
                                                     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                 </div>
                                             </div>
@@ -380,7 +380,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label>Teléfono *</label>
-                                                    <input  id="t_extension" name="t_extension" type="number" maxlength="12" min="100000000000" placeholder="Teléfono" class="form-control ameg-shadow-box-two" required
+                                                    <input  id="t_extension" name="t_extension" type="number" maxlength="14" min="100000" placeholder="Teléfono" class="form-control ameg-shadow-box-two" required
                                                     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                                                 </div>
                                             </div>
