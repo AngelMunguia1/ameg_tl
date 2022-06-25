@@ -223,11 +223,11 @@
                                             <div class="row mt-3">
                                                 <div class="col-12 col-sm-6">
                                                     <label> Cédula profesional *</label>
-                                                    <input onChange="es_vacio()" id="cedpro" name="cedpro" type="text" placeholder="Cédula profesional" class="form-control ameg-shadow-box-two" require="required">
+                                                    <input onChange="es_vacio()" id="cedpro" name="cedpro" type="text" placeholder="Cédula profesional" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                                 <div class="col-12 col-sm-6 mt-3 mt-sm-0">
                                                     <label> Cédula de Especialidad *</label>
-                                                    <input onChange="es_vacio()" id="cedulaesp" name="cedulaesp" type="text" placeholder="Cédula especialista" class="form-control ameg-shadow-box-two" require="required">
+                                                    <input onChange="es_vacio()" id="cedulaesp" name="cedulaesp" type="text" placeholder="Cédula especialista" class="form-control ameg-shadow-box-two" required>
                                                 </div>
                                             </div>
                                             <div class="row mt-3">
