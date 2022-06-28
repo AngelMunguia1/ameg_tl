@@ -123,6 +123,15 @@ sql;
               return $mysqli->queryAll($query);
       }
 
+      public static function getTrabajosAdmin($id_usuario)
+      {
+              $mysqli = Database::getInstance(true);
+              $query =<<<sql
+              SELECT * FROM usuarios WHERE id_usuario = "$id_usuario" AND rol_id = 5;
+              sql;
+              return $mysqli->queryAll($query);
+      }
+
       public static function getTableTrabajosLibresOral()
         {
                 $mysqli = Database::getInstance(true);

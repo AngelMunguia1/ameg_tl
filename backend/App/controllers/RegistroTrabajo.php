@@ -253,6 +253,28 @@ html;
 html;
         }
 
+        $id_user = RegistroDao::getUserByEmail($this->getUsuario())[0]['id_usuario'];
+        $usuario_admin = '';
+        $trabajos_nav = '';
+        $usuario_admin =  RegistroDao::getTrabajosAdmin($id_user);
+        $value_admin;
+
+        foreach ($usuario_admin as $key => $value) {
+            $value_admin = $value['rol_id'];
+        }
+
+        if($value_admin == 5){
+            $trabajos_nav .= <<<html
+            
+        <li class="dropdown dropdown-mega">
+            <a class="dropdown-item dropdown-toggle active" style="color:#FFF; background-color:#70C7D2;" href="/Trabajos/">
+                ADMIN TRABAJOS
+            </a>
+        </li>
+html;
+        }
+        
+        
 
 
         $trabajos_libres = '';
@@ -399,6 +421,7 @@ html;
 
         View::set('header',$extraHeader);
         View::set('footer',$extraFooter);
+        View::set('trabajos_nav',$trabajos_nav);
         View::set('selectCategoria',$selectCategoria);
         View::set('selectEspecialidad',$selectEspecialidad);
         View::set('selectConcursa',$selectConcursa);

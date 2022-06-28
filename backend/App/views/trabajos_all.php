@@ -44,6 +44,11 @@
 														REGISTRO DE TRABAJOS
 													</a>
 											    </li>
+												<li class="dropdown dropdown-mega">
+													<a class="dropdown-item dropdown-toggle active" style="color:#FFF; background-color:#70C7D2;" href="/Trabajos/">
+														ADMIN TRABAJOS
+													</a>
+												</li>
 												<li class="dropdown">
 													<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Contacto/">
 														CONTACTO

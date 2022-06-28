@@ -39,6 +39,7 @@
 													REGISTRO DE TRABAJOS
 												</a>
 											</li>
+											<?php echo $trabajos_nav; ?>
 											<!-- <li class="dropdown dropdown-mega dropdown-mega-style-2">
 												<a class="dropdown-item dropdown-toggle" style="color:#70C7D2;" href="/Login/">
 													<i class="fa fa-user"></i>
