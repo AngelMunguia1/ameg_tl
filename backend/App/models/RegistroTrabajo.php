@@ -77,7 +77,7 @@ sql;
         FROM usuarios u 
         INNER JOIN trabajos2020 t ON(u.id_usuario = t.usuario_id)
         INNER JOIN categorias_trabajos c ON(c.id = t.categoria_id)
-        WHERE u.id_usuario = $id
+        WHERE u.id_usuario = '$id';
 sql;
         return $mysqli->queryAll($query);
       }

@@ -256,12 +256,28 @@ html;
                             </span>
                         </a>
                     </div>
+            
+                    <div>
+                        <a href="/file_adjunto_extenso/{$value['adjunto']}" 
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
+                            </span>
+                        </a>
+                    </div>
                 </td>
 
                 <td style="text-align:left; vertical-align:middle;">
                     <div data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">        
                         <a  class="btn btn-primary w-100 d-flex justify-content-center iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
                             <span>Abrir extenso
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <a href="/file_adjunto_extenso/{$value['adjunto_extenso']}" 
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
                             </span>
                         </a>
                     </div>
