@@ -229,8 +229,7 @@
 				<!--AQUI VA TODO EL CONTENIDO DE TABLAS-->
             </div>
         </div>
-
-			</div>
+	</div>
 
 			<!-- Modal -->
 <div class="modal fade" id="pdf" tabindex="-1" role="dialog" aria-labelledby="pdfTitle" aria-hidden="true">

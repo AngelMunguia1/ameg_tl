@@ -203,13 +203,13 @@ html;
             <tr>
                 <td style="text-align:left; vertical-align:middle;"> 
                         
-                    #<span>{$value['id_trabajo']}</span>
+                    <span>{$value['id_trabajo']}</span>
 
                 </td>
 
                 <td style="text-align:left; vertical-align:middle;"> 
                         
-                    #<span>{$value['usuario_id']}</span>
+                    <span>{$value['usuario_id']}</span>
 
                 </td>
 
