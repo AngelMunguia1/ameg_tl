@@ -38,7 +38,7 @@ sql;
         $mysqli = Database::getInstance(1);
         $query=<<<sql
             INSERT INTO trabajos2020(categoria_id,especialidad_id,usuario_id,titulo_corto,titulo_en,titulo_es,adjunto,adjunto_extenso,resumen,coautores,autor,postulatrabajo_id,envio_revista,ing_solicitud_ingreso,ing_carta_rec_uno,ing_carta_rec_dos,ing_carta_prof,ing_acta_naci,ing_titulo_prof,ing_cedula_prof,ing_constancia,ing_comprobante_pago)
-            VALUES(:categoria_id,:especialidad_id,:usuario_id,:titulo_corto,:titulo_en,:titulo_es,:adjunto,:adjunto_extenso,'X',:coautores,:autor,:postulatrabajo_id,:envio_revista,:ing_solicitud_ingreso,:ing_carta_rec_uno,:ing_carta_rec_dos,:ing_carta_prof,:ing_acta_naci,:ing_titulo_prof,:ing_cedula_prof,:ing_constancia,:ing_comprobante_pago);
+            VALUES(:categoria_id,:especialidad_id,:usuario_id,:titulo_corto,:titulo_en,:titulo_es,:adjunto,:adjunto_extenso,'X',:coautores,:autor,1,:envio_revista,:ing_solicitud_ingreso,:ing_carta_rec_uno,:ing_carta_rec_dos,:ing_carta_prof,:ing_acta_naci,:ing_titulo_prof,:ing_cedula_prof,:ing_constancia,:ing_comprobante_pago);
 sql;
             $parametros = array(
             
@@ -52,7 +52,6 @@ sql;
             ':adjunto_extenso'=>$data->_adjunto_extenso,
             ':coautores'=>$data->_coautores,
             ':autor'=>$data->_autor,
-            ':postulatrabajo_id'=>$data->_postulatrabajo_id,
             ':envio_revista'=>$data->_envio_revista,
             ':ing_solicitud_ingreso'=>$data->_ing_solicitud_ingreso,
             ':ing_carta_rec_uno'=>$data->_ing_carta_rec_uno,

@@ -548,7 +548,7 @@ html;
         $data->_resumen = MasterDom::getData('resumen');
         $data->_coautores = MasterDom::getData('coautores');
         $data->_autor = MasterDom::getData('autor');
-        $data->_postulatrabajo_id = MasterDom::getData('postulatrabajo_id');
+        // $data->_postulatrabajo_id = MasterDom::getData('postulatrabajo_id');
         // $data->_revisiontrabajo = MasterDom::getData('revisiontrabajo');
         $data->_envio_revista = MasterDom::getData('envio_revista');
 
