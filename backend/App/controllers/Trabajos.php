@@ -256,7 +256,7 @@ html;
                             </span>
                         </a>
                     </div>
-            
+                    <hr>
                     <div>
                         <a href="/file_adjunto_extenso/{$value['adjunto']}" 
                             class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
@@ -273,7 +273,7 @@ html;
                             </span>
                         </a>
                     </div>
-                    
+                    <hr>
                     <div>
                         <a href="/file_adjunto_extenso/{$value['adjunto_extenso']}" 
                             class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">

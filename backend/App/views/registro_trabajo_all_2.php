@@ -206,7 +206,7 @@
 
 																		<label class="form-label">Título Corto *</label>
 																		<div class="input-group">
-																			<input id="titulo_corto" name="titulo_corto" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																			<input id="titulo_corto" name="titulo_corto" maxlength="45" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
 																		</div>
 																	</div>
 
@@ -214,7 +214,7 @@
 
 																		<label class="form-label">Título Ingles *</label>
 																		<div class="input-group">
-																			<input id="titulo_en" name="titulo_en" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																			<input id="titulo_en" name="titulo_en" maxlength="45" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
 																		</div>
 																	</div>
 
@@ -222,7 +222,7 @@
 
 																		<label class="form-label">Título Español *</label>
 																		<div class="input-group">
-																			<input id="titulo_es" name="titulo_es" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																			<input id="titulo_es" name="titulo_es" maxlength="45" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
 																		</div>
 																	</div>
 
@@ -243,19 +243,19 @@
 
 																		<label class="form-label">Adjunto Extenso</label>
 																		<div class="input-group">
-																			<input type="file" accept=".doc,.docx" class="form-control" id="adjunto_extenso" name="adjunto_extenso">
+																			<input type="file" accept=".doc,.docx" class="form-control" id="adjunto_extenso" name="adjunto_extenso" require>
 																		</div>
 
 																	</div>
 
-																	<input id="resumen" name="resumen" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="hidden" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																	<input id="resumen" name="resumen" maxlength="45"  class="form-control" type="hidden" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
 
 
 																	<div class="col-12 col-lg-4">
 
 																		<label class="form-label">Autor *</label>
 																		<div class="input-group">
-																			<input id="autor" name="autor" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																			<input id="autor" name="autor" maxlength="45"  class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
 																		</div>
 																	</div>
 
@@ -263,7 +263,7 @@
 
 																		<label class="form-label">Coautores *</label>
 																		<div class="input-group">
-																			<input id="coautores" name="coautores" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																			<input id="coautores" name="coautores" maxlength="45"  class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
 																		</div>
 																	</div>
 
@@ -282,7 +282,7 @@
 																
 																<label class="form-label">Revisión Trabajo *</label>
 																<div class="input-group">
-																	<input id="revisiontrabajo" name="revisiontrabajo" maxlength="45" pattern="[a-zA-Z ÑñáÁéÉíÍóÚ]*" class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+																	<input id="revisiontrabajo" name="revisiontrabajo" maxlength="45"  class="form-control" type="text" placeholder="" required="" onfocus="focused(this)" onfocusout="defocused(this)" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
 																</div>
 															</div> -->
 
@@ -637,7 +637,7 @@
 				$("#cont-button-desc-formato").css("display", "none");
 				document.getElementById("btn_upload").removeAttribute('disabled');
 
-
+				document.getElementById("adjunto_extenso").removeAttribute('required');
 				document.getElementById("ing_solicitud_ingreso").removeAttribute('required');
 				document.getElementById("ing_carta_rec_uno").removeAttribute('required');
 				document.getElementById("ing_carta_rec_dos").removeAttribute('required');
@@ -659,6 +659,7 @@
 				document.getElementById("btn_upload").removeAttribute('disabled');
 
 
+				document.getElementById("adjunto_extenso").setAttribute('required', 'required');
 				document.getElementById("ing_solicitud_ingreso").removeAttribute('required');
 				document.getElementById("ing_carta_rec_uno").removeAttribute('required');
 				document.getElementById("ing_carta_rec_dos").removeAttribute('required');
@@ -679,7 +680,7 @@
 				$("#cont-button-desc-formato").css("display", "block");
 				document.getElementById("btn_upload").setAttribute('disabled', 'disabled');
 
-
+				document.getElementById("adjunto_extenso").setAttribute('required', 'required');
 				document.getElementById("ing_solicitud_ingreso").setAttribute('required', 'required');
 				document.getElementById("ing_carta_rec_uno").setAttribute('required', 'required');
 				document.getElementById("ing_carta_rec_dos").setAttribute('required', 'required');
@@ -701,6 +702,7 @@
 				document.getElementById("btn_upload").removeAttribute('disabled');
 
 
+				document.getElementById("adjunto_extenso").removeAttribute('required');
 				document.getElementById("ing_solicitud_ingreso").removeAttribute('required');
 				document.getElementById("ing_carta_rec_uno").removeAttribute('required');
 				document.getElementById("ing_carta_rec_dos").removeAttribute('required');
