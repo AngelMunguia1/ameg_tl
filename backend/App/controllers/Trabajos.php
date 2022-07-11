@@ -198,6 +198,21 @@ html;
     //echo("total registros i".count($trabajos_libres_i));
 
     foreach ($trabajos_libres as $key => $value) {
+        $estado_trabajo = '';
+
+        if($value['status_id'] == 3){
+            $estado_trabajo .= <<<html
+            <span class="badge badge-success" style="background-color: #dc3545; color:white "><strong>{$value['status']}</strong></span> 
+html;        
+        }else if($value['status_id'] == 1){
+            $estado_trabajo .= <<<html
+            <span class="badge badge-success" style="background-color: #0c6300; color:white "><strong>{$value['status']}</strong></span> 
+html;        
+        }else{
+            $estado_trabajo .= <<<html
+            <span class="badge badge-success" style="background-color: #fadc3c; color:white "><strong>{$value['status']}</strong></span> 
+html;        
+        }
 
     $tabla.= <<<html
             <tr>
@@ -215,7 +230,7 @@ html;
 
                 <td style="text-align:left; vertical-align:middle;"> 
                         
-                    <span>{$value['status']}</span>
+                {$estado_trabajo}
 
                 </td>
          

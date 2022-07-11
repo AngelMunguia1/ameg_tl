@@ -6780,8 +6780,14 @@ a.close.disabled {
 
 .btn-ameg-bg{
 		padding: 10px;
-		background-color: #5C1F69 !important;
-		color: #FFFFFF;
+		background-color: #EEEEEE !important;
+		color: #000;
+}
+
+.btn-ameg-bg-nav{
+	padding: 10px;
+	background-color: #5C1F69 !important;
+	color: #FFFFFF;
 }
 
 .btn-ameg-filter-bg{

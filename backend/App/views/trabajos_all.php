@@ -205,7 +205,7 @@
                                                 <th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Título<i class="fas fa-sort"></i></th>
                                                 <th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Autores<i class="fas fa-sort"></i></th>
 												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Coautores<i class="fas fa-sort"></i></th>
-												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Institución<i class="fas fa-sort"></i></th>
+												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Hospital<i class="fas fa-sort"></i></th>
 												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Categoría<i class="fas fa-sort"></i></th>
 												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Especialidad<i class="fas fa-sort"></i></th>
 												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">¿Concursa?<i class="fas fa-sort"></i></th>
