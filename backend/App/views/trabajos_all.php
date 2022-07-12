@@ -212,8 +212,15 @@
 												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Archivo de resumen<i class="fas fa-sort"></i></th>
 												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Archivo extenso<i class="fas fa-sort"></i></th>
 												<th class="text-uppercase text-center text-xxs font-weight-bolder opacity-9">Editar<i class="fas fa-sort"></i></th>
-												<!-- <th class="text-uppercase text-xxs font-weight-bolder opacity-9">Carta recomendación</th>
-												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Segunda carta de recomendación</th> -->
+												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Solicitud de Ingreso</th>
+                        <th class="text-uppercase text-xxs font-weight-bolder opacity-9">Carta recomendación</th>
+												<th class="text-uppercase text-xxs font-weight-bolder opacity-9">Segunda carta de recomendación</th>
+                        <th class="text-uppercase text-xxs font-weight-bolder opacity-9">Carta profesor</th>
+                        <th class="text-uppercase text-xxs font-weight-bolder opacity-9">Acta de nacimiento</th>
+                        <th class="text-uppercase text-xxs font-weight-bolder opacity-9">Título profesor</th>
+                        <th class="text-uppercase text-xxs font-weight-bolder opacity-9">Cédula profesor</th>
+                        <th class="text-uppercase text-xxs font-weight-bolder opacity-9">Constancia</th>
+                        <th class="text-uppercase text-xxs font-weight-bolder opacity-9">Comprobante de pago</th>
                                                 <!-- <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Imprimir</th> -->
                                             </tr>
                                             </thead>

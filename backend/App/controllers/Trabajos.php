@@ -214,7 +214,8 @@ html;
 html;        
         }
 
-    $tabla.= <<<html
+        if($value['categoria_id'] == 4 || $value['categoria_id'] == 5){
+            $tabla.= <<<html
             <tr>
                 <td style="text-align:left; vertical-align:middle;"> 
                         
@@ -228,7 +229,7 @@ html;
 
                 </td>
 
-                <td style="text-align:left; vertical-align:middle;"> 
+                <td style="text-align:center; vertical-align:middle;"> 
                         
                 {$estado_trabajo}
 
@@ -260,7 +261,292 @@ html;
                         <span>{$value['especialidad']}</span>
                 </td>
 
+                <td style="text-align:center; vertical-align:middle;">        
+                        <span>{$value['concursa']}</span> 
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <div data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}">         
+                        <a  class="btn btn-primary w-100 d-flex justify-content-center iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}">
+                            <span>Abrir resumen
+                            </span>
+                        </a>
+                    </div>
+                    <hr>
+                    <div>
+                        <a href="/file_adjunto_extenso/{$value['adjunto']}" 
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
+                            </span>
+                        </a>
+                    </div>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                     <button class="btn btn-primary w-80 justify-content-center" type="button" title="Editar Usuario" data-toggle="modal" data-target="#editar-usuario{$value['id_trabajo']}">
+                     <i class="fa fa-edit" aria-hidden="true"></i>
+                     </button>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+        </tr>
+    html;}
+    
+    
+    else if ($value['categoria_id'] == 3){
+            $tabla.= <<<html
+            <tr>
+                <td style="text-align:left; vertical-align:middle;"> 
+                        
+                    <span>{$value['id_trabajo']}</span>
+
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;"> 
+                        
+                    <span>{$value['usuario_id']}</span>
+
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;"> 
+                        
+                {$estado_trabajo}
+
+                </td>
+         
+                <td style="text-align:left; vertical-align:middle;"> 
+                    
+                    <span>{$value['titulo_corto']}</span>
+
+                </td>
+
                 <td style="text-align:left; vertical-align:middle;">        
+                        <span class="fa fa-user-md" style="font-size: 13px"></span> {$value['autor']}
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span class="fa fa-user-md" style="font-size: 13px"></span> {$value['coautores']}
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span>{$value['institucion']}</span>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span>{$value['categoria']}</span>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span>{$value['especialidad']}</span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">        
+                        <span>{$value['concursa']}</span> 
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <div data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}">         
+                        <a  class="btn btn-primary w-100 d-flex justify-content-center iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto']}">
+                            <span>Abrir resumen
+                            </span>
+                        </a>
+                    </div>
+                    <hr>
+                    <div>
+                        <a href="/file_adjunto_extenso/{$value['adjunto']}" 
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
+                            </span>
+                        </a>
+                    </div>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">
+                    <div data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">        
+                        <a  class="btn btn-primary w-100 d-flex justify-content-center iframe" data-toggle="modal" data-target="#pdf" data-pdf="{$value['adjunto_extenso']}">
+                            <span>Abrir extenso
+                            </span>
+                        </a>
+                    </div>
+                    <hr>
+                    <div>
+                        <a href="/file_adjunto_extenso/{$value['adjunto_extenso']}" 
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
+                            </span>
+                        </a>
+                    </div>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                     <button class="btn btn-primary w-80 justify-content-center" type="button" title="Editar Usuario" data-toggle="modal" data-target="#editar-usuario{$value['id_trabajo']}">
+                     <i class="fa fa-edit" aria-hidden="true"></i>
+                     </button>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>NO DISPONIBLE</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>EN ESTA</strong></span>
+                    <span class="badge badge-success" style="background-color: #5C1F69; color:white; text-align: center;"><strong>CATEGORIA</strong></span>
+                </td>
+        </tr>
+html;}
+
+        
+        else{
+            $tabla.= <<<html
+            <tr>
+                <td style="text-align:left; vertical-align:middle;"> 
+                        
+                    <span>{$value['id_trabajo']}</span>
+
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;"> 
+                        
+                    <span>{$value['usuario_id']}</span>
+
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;"> 
+                        
+                {$estado_trabajo}
+
+                </td>
+         
+                <td style="text-align:left; vertical-align:middle;"> 
+                    
+                    <span>{$value['titulo_corto']}</span>
+
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span class="fa fa-user-md" style="font-size: 13px"></span> {$value['autor']}
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span class="fa fa-user-md" style="font-size: 13px"></span> {$value['coautores']}
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span>{$value['institucion']}</span>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span>{$value['categoria']}</span>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">        
+                        <span>{$value['especialidad']}</span>
+                </td>
+
+                <td style="text-align:center; vertical-align:middle;">        
                         <span>{$value['concursa']}</span> 
                 </td>
 
@@ -298,29 +584,105 @@ html;
                     </div>
                 </td>
 
-                <td style="text-align:left; vertical-align:middle;">
+                <td style="text-align:center; vertical-align:middle;">
                      <button class="btn btn-primary w-80 justify-content-center" type="button" title="Editar Usuario" data-toggle="modal" data-target="#editar-usuario{$value['id_trabajo']}">
                      <i class="fa fa-edit" aria-hidden="true"></i>
                      </button>
                 </td>
 
-                <!--<td style="text-align:left; vertical-align:middle;">        
-                    <a href="/file_ing_carta_rec_uno/{$value['ing_carta_rec_uno']}" 
-                        class="btn btn-primary w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
-                        <span>Abrir carta
-                        </span>
-                    </a>
+                <td style="text-align:left; vertical-align:middle;">
+                    <div>
+                        <a href="/file_ing_solicitud_ingreso/{$value['ing_solicitud_ingreso']}" target="_blank"
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
+                            </span>
+                        </a>
+                    </div>
                 </td>
 
-                <td style="text-align:left; vertical-align:middle;">        
-                    <a href="/file_ing_carta_rec_dos/{$value['ing_carta_rec_dos']}" 
-                        class="btn btn-primary w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
-                        <span>Abrir carta
-                        </span>
-                    </a>
-                </td> -->  
+                <td style="text-align:left; vertical-align:middle;">
+                    <div>
+                        <a href="/file_ing_carta_rec_uno/{$value['ing_carta_rec_uno']}" target="_blank"
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
+                            </span>
+                        </a>
+                    </div>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">
+                    <div>
+                        <a href="/file_ing_carta_rec_dos/{$value['ing_carta_rec_dos']}" target="_blank"
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
+                            </span>
+                        </a>
+                    </div>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">
+                    <div>
+                        <a href="/file_ing_carta_prof/{$value['ing_carta_prof']}" target="_blank"
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
+                            </span>
+                        </a>
+                    </div>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">
+                    <div>
+                        <a href="/file_ing_acta_naci/{$value['ing_acta_naci']}" target="_blank"
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
+                            </span>
+                        </a>
+                    </div>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">
+                    <div>
+                        <a href="/file_ing_titulo_prof/{$value['ing_titulo_prof']}" target="_blank"
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
+                            </span>
+                        </a>
+                    </div>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">
+                    <div>
+                        <a href="/file_ing_cedula_prof/{$value['ing_cedula_prof']}" target="_blank"
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
+                            </span>
+                        </a>
+                    </div>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">
+                    <div>
+                        <a href="/file_ing_constancia/{$value['ing_constancia']}" target="_blank"
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
+                            </span>
+                        </a>
+                    </div>
+                </td>
+
+                <td style="text-align:left; vertical-align:middle;">
+                    <div>
+                        <a href="/file_ing_comprobante_pago/{$value['ing_comprobante_pago']}" target="_blank" 
+                            class="btn btn-danger w-100 d-flex justify-content-center" id="formato_solicitud" name="formato_solicitud">
+                            <span>Descargar
+                            </span>
+                        </a>
+                    </div>
+                </td>
         </tr>
     html;
+        
+        }
     }
 
         View::set('header',$extraHeader);
