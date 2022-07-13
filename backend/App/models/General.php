@@ -397,4 +397,80 @@ sql;
     }
 
 
+    public static function getAllTrabajosByZamora(){
+      $mysqli = Database::getInstance();
+      $query =<<<sql
+      SELECT * FROM trabajos2020
+      INNER JOIN categorias_trabajos cate ON (cate.id = categoria_id)
+      INNER JOIN concursa c ON (c.id = postulatrabajo_id)
+      INNER JOIN especialidades espe ON (espe.id = especialidad_id)
+      INNER JOIN usuarios users ON (users.id_usuario = usuario_id)
+      INNER JOIN instituciones ins ON (ins.id = users.t_institucion)
+      INNER JOIN status sta ON (sta.id = status_id)
+      WHERE id_trabajo IN (2,3,4,7,9,11,12,13,144,23,5,22,42,8,10,14,18,19,20,25,26,149,152,27,28,6);
+  sql;
+      return $mysqli->queryAll($query);
+    }
+
+    public static function getAllTrabajosByMiguel(){
+      $mysqli = Database::getInstance();
+      $query =<<<sql
+      SELECT * FROM trabajos2020
+      INNER JOIN categorias_trabajos cate ON (cate.id = categoria_id)
+      INNER JOIN concursa c ON (c.id = postulatrabajo_id)
+      INNER JOIN especialidades espe ON (espe.id = especialidad_id)
+      INNER JOIN usuarios users ON (users.id_usuario = usuario_id)
+      INNER JOIN instituciones ins ON (ins.id = users.t_institucion)
+      INNER JOIN status sta ON (sta.id = status_id)
+      WHERE id_trabajo IN (38,43,47,51,53,54,58,61,62,63,44,101,122,64,65,68,71,73,77,78,80,83,84,85,89,102);
+  sql;
+      return $mysqli->queryAll($query);
+    }
+
+    public static function getAllTrabajosByArmando(){
+      $mysqli = Database::getInstance();
+      $query =<<<sql
+      SELECT * FROM trabajos2020
+      INNER JOIN categorias_trabajos cate ON (cate.id = categoria_id)
+      INNER JOIN concursa c ON (c.id = postulatrabajo_id)
+      INNER JOIN especialidades espe ON (espe.id = especialidad_id)
+      INNER JOIN usuarios users ON (users.id_usuario = usuario_id)
+      INNER JOIN instituciones ins ON (ins.id = users.t_institucion)
+      INNER JOIN status sta ON (sta.id = status_id)
+      WHERE id_trabajo IN (69,55,81,82,87,91,95,97,99,105,66,70,72,74,75,29,30,35,36,37,41,45,57,59,67,24,100);
+  sql;
+      return $mysqli->queryAll($query);
+    }
+
+    public static function getAllTrabajosByLara(){
+      $mysqli = Database::getInstance();
+      $query =<<<sql
+      SELECT * FROM trabajos2020
+      INNER JOIN categorias_trabajos cate ON (cate.id = categoria_id)
+      INNER JOIN concursa c ON (c.id = postulatrabajo_id)
+      INNER JOIN especialidades espe ON (espe.id = especialidad_id)
+      INNER JOIN usuarios users ON (users.id_usuario = usuario_id)
+      INNER JOIN instituciones ins ON (ins.id = users.t_institucion)
+      INNER JOIN status sta ON (sta.id = status_id)
+      WHERE id_trabajo IN (106,110,111,112,115,116,117,120,125,76,79,90,49,52,92,93,94,96,98,107,108,109,113,118,119,154,21);
+  sql;
+      return $mysqli->queryAll($query);
+    }
+
+    public static function getAllTrabajosByAurelio(){
+      $mysqli = Database::getInstance();
+      $query =<<<sql
+      SELECT * FROM trabajos2020
+      INNER JOIN categorias_trabajos cate ON (cate.id = categoria_id)
+      INNER JOIN concursa c ON (c.id = postulatrabajo_id)
+      INNER JOIN especialidades espe ON (espe.id = especialidad_id)
+      INNER JOIN usuarios users ON (users.id_usuario = usuario_id)
+      INNER JOIN instituciones ins ON (ins.id = users.t_institucion)
+      INNER JOIN status sta ON (sta.id = status_id)
+      WHERE id_trabajo IN (129,133,135,138,146,150,15,151,155,17,130,145,153,121,123,127,136,137,140,141,142,143,147,148,104,103);
+  sql;
+      return $mysqli->queryAll($query);
+    }
+
+
 }

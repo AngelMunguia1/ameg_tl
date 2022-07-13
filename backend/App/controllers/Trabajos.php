@@ -194,8 +194,20 @@ html;
 
     $trabajos_libres = '';
     $tabla = '';
+    if($_SESSION['id_usuario'] == 139){
+        $trabajos_libres =  GeneralDao::getAllTrabajosByZamora($_SESSION['id']);
+    }else if($_SESSION['id_usuario'] == 140){
+        $trabajos_libres =  GeneralDao::getAllTrabajosByMiguel($_SESSION['id']);
+    }else if($_SESSION['id_usuario'] == 141){
+        $trabajos_libres =  GeneralDao::getAllTrabajosByArmando($_SESSION['id']);
+    }else if($_SESSION['id_usuario'] == 142){
+        $trabajos_libres =  GeneralDao::getAllTrabajosByLara($_SESSION['id']);
+    }else if($_SESSION['id_usuario'] == 143){
+        $trabajos_libres =  GeneralDao::getAllTrabajosByAurelio($_SESSION['id']);
+    }
+    else{
     $trabajos_libres =  GeneralDao::getAllTrabajosByName($_SESSION['id']);
-    //echo("total registros i".count($trabajos_libres_i));
+    }//echo("total registros i".count($trabajos_libres_i));
 
     foreach ($trabajos_libres as $key => $value) {
         $estado_trabajo = '';
