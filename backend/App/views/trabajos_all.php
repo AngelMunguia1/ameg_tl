@@ -255,6 +255,26 @@
   </div>
 </div>
 
+  <!-- Modal video -->
+<div class="modal fade" id="video" tabindex="-1" role="dialog" aria-labelledby="videoTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+    <div class="modal-content ">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Trabajo de video</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border: none; background: transparent;">
+          <span aria-hidden="true" style="font-size: 25px;">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body cont-modal-video">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <?php echo $modalEdit; ?>
 
 <script>
@@ -264,6 +284,16 @@
             //alert(pdf);
 
             $('.cont-modal').html('<iframe src="https://docs.google.com/gview?url=https://trabajoslibresameg.com/file_adjunto_extenso/'+pdf+'&embedded=true" style="width:100%; height:700px;" frameborder="0" ></iframe>');
+        })
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        $('.iframe').on('click',function(){
+            var video = $(this).attr('data-video');
+            //alert(pdf);
+
+            $('.cont-modal-video').html('<iframe src="/assets/vid/'+video+'" style="width:100%; height:400px;" frameborder="0" ></iframe>');
         })
     });
 </script>

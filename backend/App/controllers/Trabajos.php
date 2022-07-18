@@ -211,6 +211,18 @@ html;
 
     foreach ($trabajos_libres as $key => $value) {
         $estado_trabajo = '';
+        $modalVideo = '';
+        
+        if($value['categoria_id'] == 5 && $value['url_video'] != NULL){
+            $modalVideo .= <<<html
+            <div data-toggle="modal" data-target="#video" data-video="{$value['url_video']}">         
+                <a  class="btn btn-primary w-100 d-flex justify-content-center iframe" data-toggle="modal" data-target="#video" data-video="{$value['url_video']}">
+                    <span>Abrir resumen
+                    </span>
+                </a>
+            </div>
+html;
+        }else{$modalVideo = '';}
 
         if($value['status_id'] == 3){
             $estado_trabajo .= <<<html
@@ -265,8 +277,9 @@ html;
                         <span>{$value['institucion']}</span>
                 </td>
 
-                <td style="text-align:left; vertical-align:middle;">        
+                <td style="text-align:center; vertical-align:middle;">        
                         <span>{$value['categoria']}</span>
+                        {$modalVideo}
                 </td>
 
                 <td style="text-align:left; vertical-align:middle;">        
@@ -402,7 +415,7 @@ html;
                         <span>{$value['institucion']}</span>
                 </td>
 
-                <td style="text-align:left; vertical-align:middle;">        
+                <td style="text-align:center; vertical-align:middle;">        
                         <span>{$value['categoria']}</span>
                 </td>
 
@@ -550,7 +563,7 @@ html;}
                         <span>{$value['institucion']}</span>
                 </td>
 
-                <td style="text-align:left; vertical-align:middle;">        
+                <td style="text-align:center; vertical-align:middle;">        
                         <span>{$value['categoria']}</span>
                 </td>
 
