@@ -217,7 +217,7 @@ html;
             $modalVideo .= <<<html
             <div data-toggle="modal" data-target="#video" data-video="{$value['url_video']}">         
                 <a  class="btn btn-primary w-100 d-flex justify-content-center iframe" data-toggle="modal" data-target="#video" data-video="{$value['url_video']}">
-                    <span>Abrir resumen
+                    <span>Abrir Video
                     </span>
                 </a>
             </div>
