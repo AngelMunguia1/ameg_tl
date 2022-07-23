@@ -194,6 +194,7 @@ html;
 
     $trabajos_libres = '';
     $tabla = '';
+    $admin_full = [1,8];
     if($_SESSION['id_usuario'] == 139){
         $trabajos_libres =  GeneralDao::getAllTrabajosByZamora($_SESSION['id']);
     }else if($_SESSION['id_usuario'] == 140){
@@ -204,6 +205,8 @@ html;
         $trabajos_libres =  GeneralDao::getAllTrabajosByLara($_SESSION['id']);
     }else if($_SESSION['id_usuario'] == 143){
         $trabajos_libres =  GeneralDao::getAllTrabajosByAurelio($_SESSION['id']);
+    }else if(in_array($_SESSION['id_usuario'],$admin_full)){
+        $trabajos_libres =  GeneralDao::getAllTrabajosByNameFull($_SESSION['id']);
     }
     else{
     $trabajos_libres =  GeneralDao::getAllTrabajosByName($_SESSION['id']);

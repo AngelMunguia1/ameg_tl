@@ -81,6 +81,21 @@ sql;
     INNER JOIN especialidades espe ON (espe.id = especialidad_id)
     INNER JOIN usuarios users ON (users.id_usuario = usuario_id)
     INNER JOIN instituciones ins ON (ins.id = users.t_institucion)
+    INNER JOIN status sta ON (sta.id = status_id)
+    WHERE status_id != 3;
+sql;
+    return $mysqli->queryAll($query);
+  }
+  
+  public static function getAllTrabajosByNameFull(){
+    $mysqli = Database::getInstance();
+    $query =<<<sql
+    SELECT * FROM trabajos2020
+    INNER JOIN categorias_trabajos cate ON (cate.id = categoria_id)
+    INNER JOIN concursa c ON (c.id = postulatrabajo_id)
+    INNER JOIN especialidades espe ON (espe.id = especialidad_id)
+    INNER JOIN usuarios users ON (users.id_usuario = usuario_id)
+    INNER JOIN instituciones ins ON (ins.id = users.t_institucion)
     INNER JOIN status sta ON (sta.id = status_id);
 sql;
     return $mysqli->queryAll($query);
