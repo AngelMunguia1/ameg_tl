@@ -188,7 +188,7 @@ html;
 html;
 
     $modalEdit = '';
-    foreach (GeneralDao::getAllTrabajosByName() as $key => $value) {
+    foreach (GeneralDao::getAllTrabajosByNameFull() as $key => $value) {
         $modalEdit .= $this->generarModalEditUser($value);
     }
 

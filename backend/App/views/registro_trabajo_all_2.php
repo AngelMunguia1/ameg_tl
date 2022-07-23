@@ -605,11 +605,11 @@
 <script>
     $(document).ready(function(){
 
-        Swal.fire(
-            '<h5>Podrá observar los trabajos libres registrados debajo del formulario.<strong></br> Nota: Recargue la página para observar su trabajo recién registrado.</strong></h5>',
-            '',
-            'info'
-        )
+        // Swal.fire(
+        //     '<h5>Podrá observar los trabajos libres registrados debajo del formulario.<strong></br> Nota: Recargue la página para observar su trabajo recién registrado.</strong></h5>',
+        //     '',
+        //     'info'
+        // )
 
         $('.iframe').on('click',function(){
             var pdf = $(this).attr('data-pdf');
